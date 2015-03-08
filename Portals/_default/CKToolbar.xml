@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfToolbar xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Toolbar>
+    <sToolbarName>Basic</sToolbarName>
+    <sToolbarSet>['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','About']</sToolbarSet>
+    <iPriority>10</iPriority>
+  </Toolbar>
+  <Toolbar>
+    <sToolbarName>Standard</sToolbarName>
+    <sToolbarSet>['Source'],['Cut', 'Copy', 'Paste'],['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'],['NumberedList', 'BulletedList'],['Link', 'Unlink', 'Image'],['Blockquote'],['SelectAll', 'RemoveFormat'],['About'],'/',['Bold', 'Italic', 'Underline', '-', 'TextColor', 'Font', 'FontSize'],['JustifyLeft', 'JustifyCenter', 'JustifyRight']</sToolbarSet>
+    <iPriority>15</iPriority>
+  </Toolbar>
+  <Toolbar>
+    <sToolbarName>Full</sToolbarName>
+    <sToolbarSet>['Source','-','Preview','-','Templates'], ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],'/',['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],['BidiLtr','BidiRtl'],['Link','Unlink','Anchor'],['Image','Flash', 'MediaEmbed','syntaxhighlight', 'Table','HorizontalRule','Smiley','SpecialChar','PageBreak', 'Iframe','qrcodes'],'/',['Styles','Format','Font','FontSize'],['TextColor','BGColor'],['Maximize', 'ShowBlocks','-','About']</sToolbarSet>
+    <iPriority>20</iPriority>
+  </Toolbar>
+</ArrayOfToolbar>

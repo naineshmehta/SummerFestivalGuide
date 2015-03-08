@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System" name="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
+    <value>Private</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.TrayLargeIcon" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.TrayAutoArrange" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Schliessen</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="lblHeader.Text" xml:space="preserve">
+    <value>Informationen</value>
+  </data>
+  <data name="lblModInst.Text" xml:space="preserve">
+    <value>Modul Instanz:</value>
+  </data>
+  <data name="lblModName.Text" xml:space="preserve">
+    <value>Modulname:</value>
+  </data>
+  <data name="lblModType.Text" xml:space="preserve">
+    <value>Modultyp:</value>
+  </data>
+  <data name="lblSettings.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="lblUName.Text" xml:space="preserve">
+    <value>Benutzername:</value>
+  </data>
+  <data name="Error1.Text" xml:space="preserve">
+    <value>Sie sind nicht Berechtigt diese Seite zu betrachten!</value>
+  </data>
+  <data name="lblPage.Text" xml:space="preserve">
+    <value>Seite:</value>
+  </data>
+  <data name="lblSetFor.Text" xml:space="preserve">
+    <value>Bearbeite Einstellungen für ...</value>
+  </data>
+  <data name="lblBrowAllow.Text" xml:space="preserve">
+    <value>Erlaubte Gruppen:</value>
+  </data>
+  <data name="lblBrowser.Text" xml:space="preserve">
+    <value>Datei Browser:</value>
+  </data>
+  <data name="lblBrowsSec.Text" xml:space="preserve">
+    <value>Datei Browser</value>
+  </data>
+  <data name="lblCSSURL.Text" xml:space="preserve">
+    <value>Editor Bereich CSS:</value>
+  </data>
+  <data name="lblPortal.Text" xml:space="preserve">
+    <value>Portalname:</value>
+  </data>
+  <data name="lblStyles.Text" xml:space="preserve">
+    <value>Editor Styles</value>
+  </data>
+  <data name="lblStylesURL.Text" xml:space="preserve">
+    <value>Liste der verfügbaren Styles</value>
+  </data>
+  <data name="lblToolbars.Text" xml:space="preserve">
+    <value>Toolbars:</value>
+  </data>
+  <data name="lnkRemove.Text" xml:space="preserve">
+    <value>Einstellungen Entfernen</value>
+  </data>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>Einstellungen gespeichert, Laden Sie die Seite neu um die Änderungen zu sehen!</value>
+  </data>
+  <data name="lblInfoDel.Text" xml:space="preserve">
+    <value>Einstellungen gelöscht</value>
+  </data>
+  <data name="lblBlanktext.Text" xml:space="preserve">
+    <value>Blank Text:</value>
+  </data>
+  <data name="lblRole.Text" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="lblSelToolb.Text" xml:space="preserve">
+    <value>Toolbar auswählen:</value>
+  </data>
+  <data name="Options.Text" xml:space="preserve">
+    <value>Editor Optionen</value>
+  </data>
+  <data name="Refresh.Text" xml:space="preserve">
+    <value>Editor Neuladen</value>
+  </data>
+  <data name="lblMainSet.Text" xml:space="preserve">
+    <value>Haupt Einstellungen</value>
+  </data>
+  <data name="lblBrowserDirs.Text" xml:space="preserve">
+    <value>Unterordner für nicht Admins benutzen (..\Portals\0\userfiles\username)?</value>
+  </data>
+  <data name="lblTemplates.Text" xml:space="preserve">
+    <value>Editor Vorlagen</value>
+  </data>
+  <data name="lblTemplFiles.Text" xml:space="preserve">
+    <value>Editor Vorlagen Datei:</value>
+  </data>
+  <data name="lblCustomConfig.Text" xml:space="preserve">
+    <value>Eigene Config Datei:</value>
+  </data>
+  <data name="AddToolbar.Text" xml:space="preserve">
+    <value>Neue Toolbar Set hinzufügen</value>
+  </data>
+  <data name="CancelToolbar.Text" xml:space="preserve">
+    <value>Editieren abbrechen</value>
+  </data>
+  <data name="DeleteToolbar.Text" xml:space="preserve">
+    <value>Ausgewählte Toolbar löschen</value>
+  </data>
+  <data name="EditToolbar.Text" xml:space="preserve">
+    <value>Ausgewählte Toolbar bearbeiten</value>
+  </data>
+  <data name="lblCustomToolbars.Text" xml:space="preserve">
+    <value>Eigene Toolbars</value>
+  </data>
+  <data name="lblToolbarList.Text" xml:space="preserve">
+    <value>Eigene Toolbarliste:</value>
+  </data>
+  <data name="lblToolbName.Text" xml:space="preserve">
+    <value>Toolbar Name:</value>
+  </data>
+  <data name="lblToolbSet.Text" xml:space="preserve">
+    <value>Toolbar Set:</value>
+  </data>
+  <data name="SaveToolbar.Text" xml:space="preserve">
+    <value>Toolbar Set speichern</value>
+  </data>
+  <data name="lblUseJquery.Text" xml:space="preserve">
+    <value>jQuery Adapter benutzen?</value>
+  </data>
+  <data name="lblHeight.Text" xml:space="preserve">
+    <value>Editor Höhe ('px' oder '%') :</value>
+  </data>
+  <data name="lblWidth.Text" xml:space="preserve">
+    <value>Editor Breite ('px' oder '%') :</value>
+  </data>
+  <data name="lblImExport.Text" xml:space="preserve">
+    <value>Einstellungen Importieren/Exportieren....</value>
+  </data>
+  <data name="lblResizeHeight.Text" xml:space="preserve">
+    <value>Standard Bildverkleinerungs Höhe:</value>
+  </data>
+  <data name="lblResizeWidth.Text" xml:space="preserve">
+    <value>Standard Bildverkleinerungs Breite:</value>
+  </data>
+  <data name="lnkExport.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="lnkImport.Text" xml:space="preserve">
+    <value>Importieren</value>
+  </data>
+  <data name="BadImportXml.Text" xml:space="preserve">
+    <value>Falsche XML Datei!</value>
+  </data>
+  <data name="Export.Text" xml:space="preserve">
+    <value>Aktuelle Editor Einstellungen Exportiert</value>
+  </data>
+  <data name="Imported.Text" xml:space="preserve">
+    <value>Editor Einstellungen Importiert für</value>
+  </data>
+  <data name="lblToolbarGuide.Text" xml:space="preserve">
+    <value>&amp;lt;h1&amp;gt;Toolbar Sets&amp;lt;/h1&amp;gt;
+            &amp;lt;p&amp;gt;Every toolbar definition is composed of a series of &amp;amp;quot;toolbar bands &amp;amp;quot; that are grouped in the final toolbar layout. The bands items move together on new rows when resizing the editor. &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;As you can see in the default definitions &amp;#39;Basic&amp;#39; and &amp;#39;Full&amp;#39;, every toolbar set is defined as a separated Java Script array of strings. Every string indicates toolbar item to be used. Toolbar items are defined by plugins. &amp;lt;/p&amp;gt;
+            &amp;lt;p&amp;gt;You can also include a separator in the tool bar band by including the dash (&amp;amp;quot;-&amp;amp;quot;) character on it.&amp;lt;/p&amp;gt;
+            &amp;lt;h1&amp;gt;Forcing Row Break &amp;lt;/h1&amp;gt;
+            &amp;lt;p&amp;gt;Looking at the &amp;amp;quot;Full&amp;amp;quot; definition you will note some slash (&amp;amp;quot;/&amp;amp;quot;) characters between tool bar bands. This slash can be used to force a break at that point, having the next band to be rendered in a new row and not following the previous one.&amp;lt;/p&amp;gt;</value>
+  </data>
+  <data name="lblToolbarGuideLnk.Text" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="lblInjectSyntaxJs.Text" xml:space="preserve">
+    <value>SyntaxHighlighter Js Link injezieren?</value>
+  </data>
+  <data name="UploadFolderLabel.Text" xml:space="preserve">
+    <value>Standard Upload Ordner:</value>
+  </data>
+  <data name="BrowserRootFolder.Text" xml:space="preserve">
+    <value>Standard Browser Start Ordner:</value>
+  </data>
+  <data name="lblAutoCreateFileThumbNails.Text" xml:space="preserve">
+    <value>Auto. Thumbnails für Vorschaubilder erstellen:</value>
+  </data>
+  <data name="lblShowPageLinksTabFirst.Text" xml:space="preserve">
+    <value>Seiten Link Tab zuerst anzeigen:</value>
+  </data>
+  <data name="lblUseAnchorSelector.Text" xml:space="preserve">
+    <value>Anker Auswahl anzeigen (Finded autom. alle Anker auf der gewählen Seite):</value>
+  </data>
+  <data name="UploadFolderLabel.Text1" xml:space="preserve">
+    <value>Default Upload Folder:</value>
+  </data>
+  <data name="FileListViewModeLabel.Text" xml:space="preserve">
+    <value>Standard Datei Listen Ansicht:</value>
+  </data>
+  <data name="SettingsExportTitle.Text" xml:space="preserve">
+    <value>Einstellungen Exportieren</value>
+  </data>
+  <data name="SettingsImportTitle.Text" xml:space="preserve">
+    <value>Einstellungen Importieren</value>
+  </data>
+  <data name="ExportNow.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="ImportNow.Text" xml:space="preserve">
+    <value>Importieren</value>
+  </data>
+  <data name="FileListPageSizeLabel.Text" xml:space="preserve">
+    <value>Dateien pro Seite (0=Keine Seiten):</value>
+  </data>
+</root>

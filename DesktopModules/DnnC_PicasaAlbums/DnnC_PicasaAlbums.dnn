@@ -1,0 +1,163 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="DnnC_PicasaAlbums" type="Module" version="0.0.1">
+  <friendlyName>DnnC_PicasaAlbums</friendlyName>
+  <description>DnnC_PicasaAlbums</description>
+  <iconFile />
+  <owner>
+    <name>Geoff Barlow</name>
+    <organization>DnnConsulting.nl</organization>
+    <url>http://www.dnnconsulting.nl</url>
+    <email>info@DnnConsulting.nl</email>
+  </owner>
+  <license src="license.txt"></license>
+  <releaseNotes src="releasenotes.txt"></releaseNotes>
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>DnnC_PicasaAlbums</moduleName>
+        <foldername>DnnC_PicasaAlbums</foldername>
+        <businessControllerClass>DnnC.Modules.DnnC_PicasaAlbums</businessControllerClass>
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>DnnC_PicasaAlbums</friendlyName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/DnnC_PicasaAlbums/Gallery.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+              </moduleControl>
+              <moduleControl>
+                <controlKey>Settings</controlKey>
+                <controlSrc>DesktopModules/DnnC_PicasaAlbums/Settings.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle>Settings</controlTitle>
+                <controlType>Admin</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+      <eventMessage>
+        <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+        <processorCommand>UpgradeModule</processorCommand>
+        <attributes>
+          <businessControllerClass>DnnC.Modules.DnnC_PicasaAlbums</businessControllerClass>
+          <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+          <upgradeVersionsList />
+        </attributes>
+      </eventMessage>
+    </component>
+    <component type="Assembly">
+      <assemblies>
+        <basePath>bin</basePath>
+        <assembly>
+          <name>DnnC_PicasaAlbums.dll</name>
+        </assembly>
+        <assembly>
+          <name>Google.GData.Client.dll</name>
+        </assembly>
+        <assembly>
+          <name>Google.GData.Extensions.dll</name>
+        </assembly>
+        <assembly>
+          <name>Google.GData.Photos.dll</name>
+        </assembly>
+      </assemblies>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\DnnC_PicasaAlbums</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>Settings.ascx.resx</name>
+        </file>
+        <file>
+          <name>DnnC_PicasaAlbums.dnn</name>
+        </file>
+        <file>
+          <path>css</path>
+          <name>basic.css</name>
+        </file>
+        <file>
+          <path>css</path>
+          <name>caption.png</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>loader.gif</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>loaderWhite.gif</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>nextPageArrow.gif</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>nextPageArrowWhite.gif</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>prevPageArrow.gif</name>
+        </file>
+        <file>
+          <path>images</path>
+          <name>prevPageArrowWhite.gif</name>
+        </file>
+        <file>
+          <path>files</path>
+          <name>Category_style.txt</name>
+        </file>
+        <file>
+          <path>files</path>
+          <name>Galleriffic_html.txt</name>
+        </file>
+        <file>
+          <path>files</path>
+          <name>Galleriffic_script.txt</name>
+        </file>
+        <file>
+          <path>files</path>
+          <name>Galleriffic_style.txt</name>
+        </file>
+        <file>
+          <path>js</path>
+          <name>jquery.galleriffic.js</name>
+        </file>
+        <file>
+          <path>js</path>
+          <name>jquery.opacityrollover.js</name>
+        </file>
+        <file>
+          <name>license.txt</name>
+        </file>
+        <file>
+          <name>releasenotes.txt</name>
+        </file>
+        <file>
+          <name>Settings.ascx</name>
+        </file>
+        <file>
+          <name>Gallery.ascx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>Gallery.ascx.resx</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SettingBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FileListPageSize>20</FileListPageSize>
+  <FileListViewMode>DetailView</FileListViewMode>
+  <AutoCreateFileThumbNails>false</AutoCreateFileThumbNails>
+  <UseAnchorSelector>true</UseAnchorSelector>
+  <ShowPageLinksTabFirst>false</ShowPageLinksTabFirst>
+  <bSubDirs>false</bSubDirs>
+  <bUseJquery>false</bUseJquery>
+  <injectSyntaxJs>true</injectSyntaxJs>
+  <BrowserRootDirId>-1</BrowserRootDirId>
+  <UploadDirId>-1</UploadDirId>
+  <iResizeHeight>0</iResizeHeight>
+  <iResizeWidth>0</iResizeWidth>
+  <sBlankText />
+  <sBrowser>standard</sBrowser>
+  <sBrowserRoles>0;</sBrowserRoles>
+  <sConfig />
+  <sCss />
+  <sSkin>black</sSkin>
+  <sStyles />
+  <sTemplates />
+  <settingMode>Portal</settingMode>
+  <uHeight />
+  <uWidth />
+</SettingBase>

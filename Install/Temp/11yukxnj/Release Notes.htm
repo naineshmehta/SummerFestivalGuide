@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>iFinity Google Sitemap Providers Release Notes</title>
+		<style type="text/css">
+		.note
+		{
+		    padding:10px;border:solid 1px black;
+		}
+		.codebit
+		{
+		    padding:10px;font-family:courier;font-size:10px;
+		}
+		th
+		{
+		    padding:5px;
+		}
+		td
+		{
+		    padding-left:5px;
+		    padding-top:5px;
+		    padding-bottom:10px;
+		    padding-right:20px;
+		}
+		</style>
+	</head>
+	<body>
+	<h1>Release History for Google Sitemap Providers</h1>
+	<h2>01.05.00 Release - 5th August 2011</h2>
+	<ul>
+	    <li>855 : Don't return multiple domains for a portal which uses multiple domains </li>
+	    <li>854 : Blog module 4.1 has changed method signature for GetBlogMonths(int,int)</li>
+	</ul>
+	<h2>01.04.00 Release</h2>
+	<h3>Bug Fixes</h3>
+	<ul>
+	    <li>714 : Blog provider not working with Blog module 4.0</li>
+	    <li>715 : Output blog module URls from permalink values instead of constructing urls</li>
+	</ul>
+	<h2>01.03.10 Release</h2>
+	<h3>Bug Fixes</h3>
+	<ul>
+	    <li>696 : Tagger provider always defaults yearly</li>
+	    <li>711 : Child portals not identified correctly, and have parent sitemaps generated instead</li>
+	</ul>
+	<h2>01.03.08 Release</h2>
+	<h3>Bug Fixes</h3>
+	<ul>
+	    <li>693 : websites with no locales enabled have no output values</li>
+	    <li>694 : ping function for verification of installation</li>
+	    <li>395 : index out of range error for News Articles provider</li>
+	</ul>
+	<h2>1.03.07 Release</h2>
+	<h3>Bug Fixes</h3>
+	<ul>
+	    <li>680 : If in sitemap index mode, empty sitemaps continue to be indexed</li>
+	    <li>678 : Forum sitemap returns null dates if no threads in a forum</li>
+	    <li>679 : Forum sitemap returns only 10 threads per forum, regardless of maxThredsPerForum setting</li>
+	</ul>
+	
+    <h2>1.03.06 Release</h2>
+    <h3>
+        Enhancements</h3>
+    <ul>
+        <li>646 : DNN Forum 4.5 Support</li>
+    </ul>
+    <h3>Bug Fixes</h3>
+    <ul>
+        <li>646 : Blog provider outputs duplicate urls when more than one blog post in a day</li>
+    </ul>
+	<h2>1.03.05 Release</h2>
+        <h3>
+            Enhancements</h3>
+        <ul>
+            <li>633 : Allow specification of pages to exclude with new 'excludePages' attribute</li>
+            <li>614 : New Admin pages regex to filter out Admin tabs if needed </li>
+            <li>635 : Use DNN 5.1 Page Priority value where available</li>
+            <li>636 : Support News Articles short Url Format with new 'useShortUrls' attribute</li>
+            <li>634 : Support News Articles secured format with new 'showSecured' attribute</li>
+        </ul>
+        <h3>
+            Bug Fixes</h3>
+        <ul>
+            <li>634 : News Articles output Secure articles in some versions</li>
+            <li>613 : Mixed case portal alias can cause invalid urls to be output</li>
+        </ul>
+        <h2>
+            1.03.02 Release</h2>
+	<p>This release introduces the Forum provider as a standard provider for the set.</p>
+	<h3>Enhancements</h3>
+	<ul>
+	    <li>New Forum Module provider</li>
+	</ul>
+	<h2>1.03.00 Release</h2>
+	<p>This release introduces the concepts of caching and sitemap index files, as well as giving greater control
+	over the number of urls per sitemap file.  It implements a new override for the SitePages() call to allow custom module
+	providers to return a limited set of urls per sitemap.</p>
+	<h3>Enhancements</h3>
+	<ul>
+	    <li>Allow for sitemap index files (591)</li>
+	    <li>Implement sitemap caching to speed output (590)</li>
+	</ul>
+	<h3>Bug Fixes</h3>
+	<ul>
+	    <li>Increase sitemap limit to 50,000 urls (552)</li>
+	    <li>News Articles add in language information into Urls (600)</li>
+	</ul>
+	<h2>1.02.14 Release</h2>
+    <p>This release contains an update for the Ventrian Articles provider to version 07.03.</p>
+    <h3>Bug Fixes / Enhancements</h3>
+    <ul>
+        <li>Fix duplicate entries when multi language portals with URl language parameter turned off (504)</li>
+        <li>Update Ventrian News Articles supported version to 07.03 (526)</li>
+    </ul>
+
+    <h2>1.02.12 Release</h2>
+    <p>This release contains an update for the Ventrian Articles provider so that it supports multiple versions, plus a fix to the 
+    property agent to support the latest version.</p>
+    <h3>Bug Fixes</h3>
+    <ul>
+        <li>Property Agent licensing code update to latest version</li>
+        <li>Update Property Agent supported version to 1.07.07</li>
+        <li>Output correct property agent 'agentType' parameters (508)</li>
+        <li>Change portal alias selection method (507)</li>
+    </ul>
+    <h2>1.02.08 Release</h2>
+    <p>This release contains an update for the Ventrian Articles provider, plus a change to the Property Agent sitemap provider,
+    so that it supports different settings of 'Search Status'.</p>
+    <h3>Enhancements</h3>
+    <ul>
+        <li>Support latest version of Ventrian News Articles module by changing call to no-longer-supported method (500)</li>
+        <li>Change Property Agent sitemap to allow specification of the search status type (501)</li>
+        <li>Include instructions for IIS 7</li>
+    </ul>
+    <h2>1.02.07</h2>
+    <p>Small Enhancement release - following up further from the changes in 1.02.06</p>
+    <h3>Enhancements</h3>
+    <ul>
+        <li>Add in 'author' to the list of filters for News Article provider(473)</li>
+        <li>Add new overload for module providers to take specified locale and generate set of Urls with it (478)</li>
+    </ul>
+    <h3>Bug Fixes </h3>
+    <ul>
+        <li>Recognise when 'All' option is ticked in Category filters for News ARticles provider(473)</li>
+        <li>Output correct archive dates for Blog Provider (479)</li>
+    </ul>
+    <h2>1.02.06</h2>
+    <p>Bug fix release.  Thanks to Scott Schecter for pointing out bugs and providing fixes.</p>
+    <h3>Bug Fixes</h3>
+    <ul>
+        <li>Case insensitive comparison on portal alias when running with Friendly Url Provider that doesn't set
+        alias for .axd request types (ver 4.7 standard provider and up) (472)</li>
+        <li>Ventrian News Articles provider : use inbuilt title encoding function for article Urls. (444)</li>
+    </ul>
+    <h3>Enhancements</h3>
+    <ul>
+        <li>Ventrian News articles provider : automatically select best choice for retrieving articles
+        based on category filters (473)</li>
+    </ul>	
+	</body>
+</html>

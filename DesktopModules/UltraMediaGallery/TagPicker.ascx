@@ -1,0 +1,2 @@
+<%@ Control Language="vb" AutoEventWireup="false" Codebehind="TagPicker.ascx.vb" Inherits="BizModules.UltraPhotoGallery.TagPicker" %>
+	<asp:TextBox id="txtTag" runat="server" CssClass="NormalTextBox TagInput" Width="400px"></asp:TextBox>

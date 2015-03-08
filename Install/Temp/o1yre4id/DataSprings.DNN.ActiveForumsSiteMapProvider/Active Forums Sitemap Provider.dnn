@@ -1,0 +1,68 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="Active Forums Search Engine Sitemap" type="Module" version="02.00.00">
+      <friendlyName>Active Forums Search Engine Sitemap</friendlyName>
+      <description>This search engine sitemap provider returns a list of sitemap entries for installed Active Forums modules.</description>
+      <owner>
+        <name>Chad Nash</name>
+        <organization>DataSprings</organization>
+        <url><![CDATA[<a href="http://www.ifinity.com.au" target="_new">www.datasprings.com</a>]]></url>
+        <email><![CDATA[]]></email>
+      </owner>
+      <license>
+        Copyright DataSpring 2011
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </license>
+      <releaseNotes >
+        <![CDATA[
+            <p style="font-weight:bolder">Version 02.00.00</p>
+                Version 02.00.00 of the Active Forums sitemap provider
+            </p>
+          ]]>
+      </releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">05.02.00</dependency>
+        <dependency type="Package">Search Engine Sitemaps</dependency>
+        <dependency type="Package">Active Forums</dependency>
+      </dependencies>
+      <components>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <path>bin</path>
+              <name>DataSprings.DNN.ActiveForumsSiteMapProvider.dll</name>
+              <sourceFileName>DataSprings.DNN.ActiveForumsSiteMapProvider.dll</sourceFileName>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/dotnetnuke/searchEngineSitemap/providers" action="update" key="name" collision="ignore">
+                    <add name="Active Forums.SearchEngineSiteMapProvider" type="DataSprings.DNN.Modules.ActiveForumsSiteMapProvider, DataSprings.DNN.ActiveForumsSiteMapProvider" defaultPagePriority="0.5" defaultPageUpdateFrequency="daily" hideForumIds="" maxForumEntries="">
+                    </add >
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+            <uninstall>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/dotnetnuke/searchEngineSitemap/providers/add[@name='Active Forums.SearchEngineSiteMapProvider']" action="remove" />
+                </nodes>
+              </configuration>
+            </uninstall>
+          </config>
+        </component>        
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

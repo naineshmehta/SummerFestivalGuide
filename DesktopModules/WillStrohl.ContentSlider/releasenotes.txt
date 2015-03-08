@@ -1,0 +1,12 @@
+﻿<h3>Version 01.02.00</h3>
+<p><strong>Date Released:</strong> 02/25/2012</p>
+<ul>
+	<li>Feature: One-Click Enabling of Pager Setting</li>
+	<li>Feature: Cache Sliders for Performance</li>
+	<li>Feature: Configurable Cache Setting</li>
+	<li>Enhancement: Transitions can be Selected</li>
+	<li>Bug: Secure Folder Images not Viewable</li>
+	<li>Bug: Sliders Disappear on Postback</li>
+	<li>Bug: Remote Images Cause Error</li>
+	<li>Bug: Deleted Images Cause Error</li>
+</ul>

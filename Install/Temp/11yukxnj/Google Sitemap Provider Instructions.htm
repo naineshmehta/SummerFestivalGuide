@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>iFinity Google Sitemap Provider Instructions</title>
+		<style type="text/css">
+		.note
+		{
+		    padding:10px;border:solid 1px black;
+		}
+		.codebit
+		{
+		    padding:10px;font-family:courier;font-size:10px;
+		}
+		th
+		{
+		    padding:5px;
+		}
+		td
+		{
+		    padding-left:5px;
+		    padding-top:5px;
+		    padding-bottom:10px;
+		    padding-right:20px;
+		}
+		</style>
+	</head>
+	<body>
+	<h1>Installing and Using the iFinity DotNetNuke Google Sitemap Provider</h1>
+	<p>
+	The iFinity Google Sitemap Provider is a simple install, but you will need FTP/File access to the /bin directory of your DNN install.</P>
+	<p class="note"><strong>Step 0: Backup your web.config file!</strong></p>
+	<p>Step 1: Unzip the iFinity.DNN.GoogleSitemap.zip file contents, and copy the iFinity.DNN.GoogleSiteMapProvider.dll and iFinity.Utilities files contained into the /bin directory of your website.  You can safely do this before changing your web.config.
+	</p>
+	<p>Step 2: Choose from the Module-Specific providers in the zip file, and copy across the relevant files.  ONLY copy these if you have at least one of the modules installed in at least one of the portals in the DotNetNuke installtion.</p>
+	<table cellspacing="2" cellpadding="1">
+	    <tr>
+	        <th>Module Name</th>
+	        <th>Sitemap Provider</th>
+	        <th>Web.Config Provider Name</th>
+	    </tr>
+	    <tr>
+	        <td>DotNetNuke Blog Module</td>
+	        <td>iFinity.DNN.BlogGoogleSiteMapProvider.dll</td>
+	        <td>name="View_Blog.GoogleSiteMapProvider"</td>
+	    </tr>
+        <tr>
+	        <td>Ventrian News Articles Module</td>
+	        <td>iFinity.DNN.ArticlesSiteMapProvider.dll</td>
+	        <td>name="DnnForge - NewsArticles.GoogleSiteMapProvider"</td>
+	    </tr>
+	    <tr>
+	        <td>iFinity Tagger Module</td>
+	        <td>iFinity.DNN.TagGoogleSiteMapProvider.dll</td>
+	        <td>name="Tag List.GoogleSiteMapProvider"</td>
+	    </tr>
+        <tr>
+            <td>
+                DotNetNuke Forum Module</td>
+            <td>
+                iFinity.DNN.ForumSitemapProvider.dll</td>
+            <td>
+                name="Forum.GoogleSiteMapProvider"</td>
+        </tr>
+	</table>
+	<p class="note"><i>NOTE: In this section, you will see [yourdomain].  This means substitute in the domain name of your website, like www.ifinity.com.au</i></p>
+	<p>Step 3: Open the example.web.config file, and copy across the sections from the example.web.config file to your web.config file, taking extra care that the relevant entries are located in the right sections.  Most of the problems associated with the provider are due to incorrect web.config entries, so please double check your work.</p>
+	<p>In the example.web.config, you will see the module-specific provider entries. Only enter those that correspond with the modules installed in your DNN installation.  See the above table for the entries.  Adding in a provider entry to the web.config without the corresponding DLL will cause your sitemap to fail.
+	</p>
+	<p>Step 4: Go to a web browser and type in [yourdomain]/GoogleSiteMap.axd</p>
+	<p>Your browser should serve up the Xml sitemap, showing all the Url's within the site.  Scan the list of Url's in the Xml file and ensure that all of the Url's you expect are there.</p>
+	<p>Step 5: Open your Robots.txt file for your website, and add the following entry:</p>
+	<p class="note">If you don't have a robots.txt file for your website, simply create a text file using Notepad and call it 'robots.txt' and drop it in the root directory of your website.</p>
+	<p>Sitemap: http://[yourdomain]/GoogleSiteMap.axd </p>
+	<p>Note: if you don't get a response, try requesting this url http://[yourdomain]/GoogleSiteMap.axd?_smpdebug=ping This is a special feature which allows you to verify that you have created your
+	web.config entries OK.  If it is setup ok, you'll get text back in your response which says "Google Sitemap Generator Ping OK" (you may get a browser error due to an invalid format, but the text should be in the response).  This means the installation is correct, as far as the web.config entries go.</p>
+	<p>Step 6: You may also like to sign up to the Google Webmaster service, and the Yahoo Sitemap service to submit and verify your Sitemap file.</p>
+    <p>You're now done!  Now choose from the list of Module-specific providers</p>	
+        <h2>
+            Caching the Sitemap Output</h2>
+        <p>
+            You can set the sitemap provider to cache the output of your sitemap for a set period
+            of time.&nbsp; This means that the sitemap provider will only regenerate the sitemap
+            file once the 'old' version of the file has expired.&nbsp; This greatly reduces
+            the load on your site for generating the sitemap on a frequent basis.&nbsp; There
+            is no correct time for setting the cache timeout value of the sitemap : this will
+            depend on how often the pages in your site change, or how often a particular module
+            with a custom provider generates new Urls.&nbsp; You should check your site logs
+            for requests to the sitemap Url to see how often search engine bots are accessing
+            the sitemap to help guide you with the cache time.</p>
+        <p>
+            To setup the cache, add these two attributes to the web.config entry of "BaseGoogleSiteMapProvider":</p>
+        <p>
+            1. useCachedSitemap="true"</p>
+        <p>
+            2. sitemapCacheMinutes="10080"&nbsp; Note this value is in whole minutes. There
+            are 1440 minutes in a day, 10080 minutes in a week : calculate your own value.</p>
+        <p>
+            Using these options will create a sitemaps directory in your portal home directory
+            (for the requested portal).&nbsp; In this directory, a cached sitemap.xml file will
+            be created.&nbsp; You can delete this file at any time, and the provider will generate
+            and output a new one.&nbsp; Note that the sitemap provider will overwrite this file
+            whenever the cache time has expired.</p>
+        <p>
+            Also please note the index file will initially show only one sitemap file.&nbsp;
+            Each subsequent sitemap file will be generated as the total number of Urls in the
+            sitemap is known.</p>
+        <h2>
+            Using Sitemap Index Files</h2>
+        <p>
+            Sitemap index files are used to split all the urls for a site into specific individual
+            sitemap files.&nbsp; There is an upper limit of 50,000 urls for a sitemap file as
+            part of the sitemaps specification.&nbsp; If the number of urls in a sitemap file
+            exceed the maximum allowed, the site urls are split into multiple sitemap files,
+            and a sitemap index file is need to show which files exist.</p>
+        <p>
+            The sitemap provider can output a sitemap index by including the attribute 'useSitemapIndex="true"'.&nbsp;
+            When this option is switched on, the following happens:</p>
+        <p>
+            1.&nbsp; Sitemap caching is automatically switched on (same as 'useCachedSitemap="true"')</p>
+        <p>
+            2.&nbsp; The standard request (googlesitemap.axd) will return a sitemap index file
+            instead of a sitemap file.</p>
+        <p>
+            3.&nbsp; Each of the sitemap files will be requested with googlesitemap.axd?sitemap=n
+            where n is the number of the file in the index.</p>
+        <p>
+            4. Because caching is automatically used, you must add a value for 'sitemapCacheMinutes'
+            (see above)</p>
+        <p>
+            It cannot be known exactly how many urls are going to be generated by the sitemap
+            at the time of the first request, so the sitemap index will initially only show
+            one sitemap file.&nbsp; After the first sitemap file is requested, if the number
+            of urls exceed the stated maximum, a second sitemap file stub will be created in
+            the portals/n/sitemaps/ directory. &nbsp; The sitemap index will then show this
+            second file as being avilable.&nbsp; This process repeats untill all possible urls
+            for the sitemap are indexed and returned.&nbsp;
+        </p>
+        <p>
+            Because the cache is automatically switched on for sitemap index file usage, there
+            will always be a series of sitemap xml files in the portals/n/sitemaps directory.&nbsp;
+            Removing any of these files will cause the process to automatically regenerate that
+            specific file, but only when the previous file in the list is generated (ie, by
+            deleting sitemap2.xml, it will only be recreated once sitemap1.xml has been requested
+            and found to contain more urls than is allowed).</p>
+        <p>
+            The maximum number of urls per file can also set with the custom attribute maxEntriesPerSitemap.&nbsp;
+            The value must be a whole integer number.&nbsp; By default this number is 50,000
+            unless otherwise specified.</p>
+        <p>
+            &nbsp;</p>
+    
+    <h1>Writing your own Google Sitemap Provider for a Custom Module</h1>
+    <p class="note">If you're a competent .NET programmer, you can create your own custom Module Sitemap Provider.  Even a basic programmer should be able to master the steps.  They can be written in any .NET language, including C#, VB.NET and others. In this example, you will see [YourModuleName] and [YourNamespace].  Just substitute your module name and namespace in these areas, and <i>don't</i> include the square brackets.</p>
+    <p class="note">The Plug : If you don't have the skills or the time, get iFinity to create a Module Sitemap Provider for your module.  It's quick and easy!  Go to <a href="http://www.iFinity.com.au/Talk_To_Us">the iFinity Enquiries page</a> to make a request.</p>
+    <p>An Overview: The GoogleSitemap provider works by dynamically reading all the DotNetNuke modules on a page and then looking for module-specific Sitemap Providers for each of those modules.  If it finds one, it loads it up and then calls the 'SitePagesForTab' function, and appends the results from that function to the overall list of Urls (objects of type <i>SitePage</i>), which is then output as an XML file.</p>
+    <h2>Making a Simple Sitemap Generator</h2>
+    <p>Step 1: Create a new Project in Visual Studio, call it [YourModuleName]SiteMapProvider</p>
+    <p>Step 2: Add a Project reference to the iFinity.DNN.GoogleSiteMapProvider.dll</p>
+    <p>Step 3: Add a new class to your project, and make this class inherit from the iFinity.DNN.Modules.GoogleSiteMap.GoogleSiteMapProvider class</p>
+    <pre class="codebit">        //C#
+        public class [YourModuleName]GoogleSiteMapProvider : iFinity.DNN.Modules.GoogleSiteMap.GoogleSiteMapProvider
+        
+        'VB.NET
+        Public Class [YourModuleName]GoogleSiteMapProvider 
+                Inherits iFinity.DNN.Modules.GoogleSiteMap.GoogleSiteMapProvider
+       
+    </pre>
+    <p>Step 4: Implement the overriden SitePagesForTab method</p>    
+    <pre class="codebit">        //C#
+        public override List&lt;SitePage&gt; SitePagesForTab(PortalAliasInfo portalAlias, TabInfo tab)
+        {}
+        'VB.NET
+        Public Function Overrides List&lt;Of SitePage&gt; SitePagesForTab(portalAlias as PortalAliasInfo ,tab as  TabInfo)
+        End Function
+    </pre>
+    <p>Step 5: Write your custom code to return the list of SitePage objects for the given tab.  This is the main part of your provider.  How this is done depends on the actual module.  You may be able to return a list of all the 'items' on the page, call NavigateUrl() to get the page url (including any query string items) and just add that.  There are examples in the free source code that can be adapted.</p>
+    <pre class="codebit">        //This is an excerpt from the iFinity Tagger module Sitemap Provider (C#)
+        public override List&lt;SitePage&gt; SitePagesForTab(PortalAliasInfo portalAlias, TabInfo tab)
+        {
+            List&lt;SitePage&gt; sitePages = new List&lt;SitePage&gt;();  //initalise new value
+            base.SetBaseURL(portalAlias.HTTPAlias); //get the base url and portal alias url
+            //observe the hiddenPages attribute and tab visibility, so we do what the web.config says
+            if (_includeHiddenPages == true && tab.IsVisible == false || tab.IsVisible == true)
+            {
+                sitePages = GetSitePagesForTagList(portalAlias, tab);
+            }
+            return sitePages;
+        }
+        private List&lt;SitePage&gt; GetTagListUrls(ModuleInfo mod, TabInfo tab, PortalAliasInfo portalAlias)
+        {
+            //get down to brass tacks - we want a list of all tag list page combinations for 
+            //the tag list page
+            //this means a different tag list page url with tag as the querystring
+            //ie taglist/tag/tag1/
+            //   taglist/tag/tag2/
+            //... and so on and so on
+            List&lt;SitePage&gt; tagListUrls = new List&lt;SitePage&gt;();  //initalise new list
+            //first get the list of tags in the portal
+            TaggerController tc = new TaggerController();
+            //this is a custom method in the TaggerController business controller class.
+            //you may need to write your own, or inspect the business controller class for a suitable method
+            TagInfoCol tags = tc.GetTagsForPortal(portalAlias.PortalID, _options, _maxNumTags);
+            //get the url for the tag list page - ALWAYS use the DNN Navigate Url call to generate the Urls
+            //so that the generated URls observe the FriendlyUrl settings
+            string url = DotNetNuke.Common.Globals.NavigateURL(tab.TabID, "", "Tag", "_tagtext_");
+            foreach (TagInfo tag in tags)
+            {
+                //custom code to set the priority on the entries, based on how often the tags are used
+                //you do not need this, can just use the 'defaultPagePriority' and 'changeFrequency' values
+                //which are loaded from the web.config file
+                double thisTagPriority = _defaultPagePriority;
+                TimeSpan sinceFirstTag = DateTime.Now - tag.FirstTagDate;
+                double updatesPerDay = 0;
+                if (sinceFirstTag.Days> 0)
+                    updatesPerDay = tag.NumberTags  / sinceFirstTag.Days;
+                else 
+                    updatesPerDay = 1;
+
+                ChangeFrequencies freq ;
+                if (updatesPerDay > 1)
+                {
+                    if (updatesPerDay > 2)
+                        freq = ChangeFrequencies.hourly;
+                    else
+                        freq = ChangeFrequencies.daily;
+                }
+                else 
+                    if (updatesPerDay > 0.5)
+                        freq = ChangeFrequencies.weekly;
+                    else
+                        if (updatesPerDay > 0.25)
+                            freq = ChangeFrequencies.monthly;
+                        else
+                            freq = ChangeFrequencies.yearly;
+                //specify the different Tag/{tagText} url values
+                string tagListUrl = url.Replace("_tagtext_", tag.TagText);
+                //create and add the New SitePage object for this tag.
+                tagListUrls.Add(new SitePage(tagListUrl, tag.LastTagDate,freq, thisTagPriority));
+            }
+            //return the list of SitePages, to be included in the overall Sitemap
+            return tagListUrls;
+        }
+
+
+    </pre>
+    <p>Step 6: If your code compiles OK, then copy the output Dll file from your project into your website \bin directory.</p>
+    <p>Step 7: Modify your web.config file to include your new provider.  You need to know your module <i>Friendly Name</i> to create this entry.   If you don't know it, run this Sql against your DotNetNuke database:
+    </p>
+        <pre class="codebit">            select * from dnn_ModuleDefinitions
+        </pre>
+        Then just pick out your friendly name from the list of definitions.  
+    <p>Your web.config entry is like this:
+    </p>
+    <pre class="codebit">        &lt;add name="[Friendly Name].GoogleSiteMapProvider" type="[YourNamespace].[YourModuleName]GoogleSiteMapProvider, [YourAssemblyName]" defaultPagePriority="0.5" defaultPageUpdateFrequency="daily" includeHiddenPages="true" /&gt;
+    </pre>
+    Note that you can set the defaultPagePriority, includeHiddenPages and  defaultPageUpdateFrequency values to whatever you like in the accepted ranges (see example.web.config for details).
+    <p>Step 8: You're now done.  Request your Googlesitemap by trying out [YourDomain]/GoogleSiteMap.axd, and scan through the list until you find the sitemap Url's generated by your sitemap provider.  Troubleshoot by attaching the debugger to the aspnet worker process and stepping through your code.</p>
+    <p>Common Errors:</p>
+        <ul>
+            <li>Sitemap Provider never gets loaded : You have specified the wrong friendly name in the &lt;add name="..." web.config entry.  You must match the friendly name exactly.</li>
+            <li>Generated sitemap is empty except for a comment with exception text in it: You have an exception somewhere in the source code.  Inspect the exception details and determine the line of code, then set breakpoints and debug.</li>
+        </ul>
+       
+     <h2>More Advanced Options</h2> 
+     <p>You may want to put some options into your web.config for your sitemap, to control things like the number of Url's generated by your module, or some type of option to control the page priorities.</p>
+     <h3>Adding Options to the Web.Config</h3>
+     <p>Step 1: Create private class-level variables to hold the attribute values.</p>
+     <pre class="codebit">        //C#
+        private int _maxNumUrls;
+        'VB.NET
+        Private _maxNumUrls as Integer
+     </pre>
+     <p>Step 2: Create an Initialize method to read these from the web.config</p>
+     <pre>        //C#
+        public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)
+        {
+            //allow the base class to run the initialise code - this gets the default values such as includeHiddenPages et al
+            base.Initialize(name, config);
+            if (config["maxNumUrls"] != null)
+            {
+                string rawVal = config["maxNumUrls"];
+                //this just checks for a valid int - but you can use anything
+		int.TryParse(rawVal, out _maxNumUrls);
+            }
+        }
+        'VB.NET
+        Public Overloads Overrides Sub Initialize(ByVal name As String, ByVal config As System.Collections.Specialized.NameValueCollection) 
+            'allow the base class to run the initialise code - this gets the default values such as includeHiddenPages et al 
+            MyBase.Initialize(name, config) 
+            If config("maxNumUrls") IsNot Nothing Then 
+                Dim rawVal As String = config("maxNumUrls") 
+                'this just checks for a valid int - but you can use anything 
+		Int32.TryParse(rawVal, out _maxNumUrls)
+            End If 
+        End Sub 
+     </pre>
+     <p>Step 3: In your custom code, utilise this value in your code to affect the output</p>
+     <pre>        /pseudo code
+            counter = 0
+            for every value in my Urls
+                if counter > _maxNumUrls
+                    exit loop
+                else
+                    sitepages.add(myUrl)
+                    increment counter
+            return sitepages
+     </pre>
+     <p>Source code is provided for all the free iFinity Google Sitemap Providers.  This provides a style and programming guide for creating your own providers.  
+     </p>
+     <p class="note">You can also post questions and research answers at the <a href="http://www.ifinity.com.au/Products/Support_Forums">iFinity Support Forums</a></p>
+ 	<div style="font-size:smaller">This information is Copyright iFinity 2008.  All rights reserved.  Royalty free reproduction or redistribution may be supplied on request, contact the author through iFinity.com.au.&nbsp;
+    </div>
+	</body>
+</html>

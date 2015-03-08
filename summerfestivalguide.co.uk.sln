@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "summerfestivalguide.co.uk", ".", "{F26A4094-C897-457E-8C0D-C301700E0097}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/summerfestivalguide.co.uk"
+		Debug.AspNetCompiler.PhysicalPath = "..\summerfestivalguide.co.uk\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\summerfestivalguide.co.uk\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/summerfestivalguide.co.uk"
+		Release.AspNetCompiler.PhysicalPath = "..\summerfestivalguide.co.uk\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\summerfestivalguide.co.uk\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F26A4094-C897-457E-8C0D-C301700E0097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26A4094-C897-457E-8C0D-C301700E0097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26A4094-C897-457E-8C0D-C301700E0097}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26A4094-C897-457E-8C0D-C301700E0097}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

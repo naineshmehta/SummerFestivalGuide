@@ -1,0 +1,86 @@
+
+/*========================================================+
+|  Design Elements                                        |
++========================================================*/
+
+.logoDiv {
+	float: right !important;
+	margin: 0 15px 0 0 !important;
+}
+
+.breadCrumb {
+	float:right !important;
+}
+
+.breadCrumb:before { 
+    border-width: 11px 11px 11px 0px !important;
+	border-color: transparent #EFEFEF transparent transparent !important;
+}
+
+.breadCrumb:after {
+	border-width: 11px 11px 11px 0px !important;
+	border-color: #EFEFEF transparent #EFEFEF #EFEFEF !important;
+}
+
+/*========================================================+
+|  Login/Social Elements                                  |
++========================================================*/
+
+.loginLinks {
+	float: left !important;
+	margin: 10px 0px 0 10px !important;
+}
+
+.mobileButtons {
+	float: left !important;
+}
+
+.mobileButtons li {
+	margin: 0 0 0 10px !important;
+}
+
+/*========================================================+
+|  Navigation                                             |
++========================================================*/
+
+#dnnMenu {
+	left: 10px !important;
+    right:auto !important;
+}
+
+#dnnMenu .topLevel li {
+	float: right !important;
+}
+
+
+#dnnMenu .subLevel {
+	right: -15px;
+    left:auto !important;
+}
+
+#dnnMenu .subLevel li {
+    width: 100% !important;
+}
+
+#dnnMenu .subLevel .subLevelRight li a {
+    padding-left:0px !important;
+	padding-right: 25px;
+}
+
+#dnnMenu .subLevel .subLevelRight .subLevelRight li a {
+    padding-left:0px !important;
+	padding-right: 35px;
+}
+
+/*========================================================+
+|  Responsive Styles                                      |
++========================================================*/
+
+@media only screen and (max-width: 767px) {
+
+    .buttonDiv {
+	    right:auto !important;
+        left: 0px;
+    }
+
+}

@@ -1,0 +1,5 @@
+﻿Install the DnnC_Picasa module as you would any other module in DotNetNuke.
+
+Before the module will display you Picasa albums and photos you must first configure the module by going to the Settings and entering you Picasa username and password.
+
+This module will only show the first (root) albums and their photos.

@@ -1,0 +1,321 @@
+07/17/2013 22:01:54 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.01
+07/17/2013 22:01:54 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+07/17/2013 22:01:54 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.02
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.03
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+07/17/2013 22:01:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.04
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.05
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+07/17/2013 22:02:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+07/17/2013 22:02:03 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+07/17/2013 22:02:03 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+07/17/2013 22:02:03 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.00
+07/17/2013 22:02:03 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+07/17/2013 22:02:03 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.01
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+07/17/2013 22:02:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.02
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.03
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.04
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.04.SqlDataProvider
+07/17/2013 22:02:09 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.04.SqlDataProvider
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.04.SqlDataProvider
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.04.SqlDataProvider
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.05
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.05.SqlDataProvider
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.05.SqlDataProvider
+07/17/2013 22:02:10 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.05.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.05.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.06
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.06.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.06.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.06.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.00.06.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.01.00
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.01.00.SqlDataProvider
+07/17/2013 22:02:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.01.00.SqlDataProvider
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.01.00.SqlDataProvider
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\websites\summerfestivalguide.co.uk\Providers\DataProviders\SqlDataProvider\07.01.00.SqlDataProvider
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.1
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.1
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.2
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.2
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.3
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.3
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.4
+07/17/2013 22:02:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.4
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.5
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.5
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.0
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.0
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleDefinition:AdvancedSettings
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleControl:194
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPages:Advanced Settings
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Advanced Settings
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+07/17/2013 22:02:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Advanced Settings
+07/17/2013 22:02:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:194
+07/17/2013 22:02:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:194
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateChildPortalsDefaultPage
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.1
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.1
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.2
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.2
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.3
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.3
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.4
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.4
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.5
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.5
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.6
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.6
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.1.0
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.1.0
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddProfessionalPreviewPage:98
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:Advanced URL Management
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Advanced URL Management
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:164
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:164
+07/17/2013 22:02:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeFolders
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPages:Search Admin
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Search Admin
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Search Admin
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:85
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:85
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.01
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.01
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.2
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.02
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.2
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.2
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.02
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.3
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.03
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.3
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.3
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.03
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.4
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.04
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.4
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.4
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.04
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.5
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.05
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.5
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.5
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.05
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.0
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.00
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.0
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:<providerOption name="CompilerVersion" value="v3.5" /><providerOption name="OptionInfer" value="true" /><providerOption name="WarnAsError" value="false" />
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:<providerOption name="CompilerVersion" value="v3.5" /><providerOption name="WarnAsError" value="false" />
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=assembly
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=assembly
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=expressionPrefix
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.0
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.00
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.01
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.1
+07/17/2013 22:02:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.01
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.2
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.02
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.2
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.2
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.02
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.3
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.03
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.3
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.3
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.03
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.4
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.04
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.4
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.4
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.04
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.5
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.05
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.5
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.5
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.05
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.6
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.06
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.6
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=requestPathInvalidCharacters
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.6
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.06
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.1.0
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.01.00
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.1.0
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.1.0
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.01.00
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.1
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.01
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.2
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.02
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.3
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.03
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.4
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.04
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.5
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.05
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.0
+07/17/2013 22:02:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.00
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.1
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.01
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.2
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.02
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.3
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.03
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.4
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.04
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.5
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.05
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.6
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.06
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.1.0
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.01.00
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Module
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DDRMenu_02.00.03_Install.zip
+07/17/2013 22:02:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DDRMenu_02.00.03_Install.zip
+07/17/2013 22:02:24 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:24 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_CoreMessaging_07.01.00_Install.zip
+07/17/2013 22:02:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_CoreMessaging_07.01.00_Install.zip
+07/17/2013 22:02:25 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_DigitalAssetsManagement_07.01.00_Install.zip
+07/17/2013 22:02:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_DigitalAssetsManagement_07.01.00_Install.zip
+07/17/2013 22:02:27 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_HTML_07.01.00_Install.zip
+07/17/2013 22:02:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_HTML_07.01.00_Install.zip
+07/17/2013 22:02:29 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Journal_07.01.00_Install.zip
+07/17/2013 22:02:29 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_Journal_07.01.00_Install.zip
+07/17/2013 22:02:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MemberDirectory_07.01.00_Install.zip
+07/17/2013 22:02:30 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_MemberDirectory_07.01.00_Install.zip
+07/17/2013 22:02:32 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MobileManagement_07.01.00_Install.zip
+07/17/2013 22:02:32 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_MobileManagement_07.01.00_Install.zip
+07/17/2013 22:02:32 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_PreviewProfileManagement_07.01.00_Install.zip
+07/17/2013 22:02:32 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_PreviewProfileManagement_07.01.00_Install.zip
+07/17/2013 22:02:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+07/17/2013 22:02:33 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_RazorHost_07.01.00_Install.zip
+07/17/2013 22:02:33 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_RazorHost_07.01.00_Install.zip
+07/17/2013 22:02:33 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_SocialGroups_07.01.00_Install.zip
+07/17/2013 22:02:33 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_SocialGroups_07.01.00_Install.zip
+07/17/2013 22:02:34 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Taxonomy_07.01.00_Install.zip
+07/17/2013 22:02:34 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_Taxonomy_07.01.00_Install.zip
+07/17/2013 22:02:35 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_UrlManagement_07.01.00_Install.zip
+07/17/2013 22:02:35 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\DNNCE_UrlManagement_07.01.00_Install.zip
+07/17/2013 22:02:35 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - Telerik_07.00.06_Install.zip
+07/17/2013 22:02:35 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Module\Telerik_07.00.06_Install.zip
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=path
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=path
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Skin
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Container
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Language
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Provider
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - DNNMenuNavigationProvider_07.01.00_Install.zip
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Provider\DNNMenuNavigationProvider_07.01.00_Install.zip
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - FiftyOneClientCapabilityProvider_07.01.00_Install.zip
+07/17/2013 22:02:40 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Provider\FiftyOneClientCapabilityProvider_07.01.00_Install.zip
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=defaultProvider
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - RadEditorProvider_07.01.00_Install.zip
+07/17/2013 22:02:41 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\websites\summerfestivalguide.co.uk\Install\Provider\RadEditorProvider_07.01.00_Install.zip
+07/17/2013 22:02:42 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:42 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+07/17/2013 22:02:42 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - AuthSystem
+07/17/2013 22:02:42 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Package
+07/17/2013 22:02:58 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:File Management
+07/17/2013 22:02:58 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:File Management
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:195
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:195
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:File Management
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+07/17/2013 22:02:59 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:File Management
+07/17/2013 22:03:00 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:195
+07/17/2013 22:03:00 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:195
+07/17/2013 22:03:00 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start RemoveHostPage:File Manager
+07/17/2013 22:03:01 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start RemoveAdminPages://Admin//FileManager

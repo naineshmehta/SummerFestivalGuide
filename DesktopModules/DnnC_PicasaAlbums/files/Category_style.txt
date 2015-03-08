@@ -1,0 +1,37 @@
+﻿.DnnC_CatDiv { padding: 6px; border: 1px solid #999; background:#fff; }
+.DnnC_CatList { padding: 3px; border: 1px solid #999; background:#fff; width:250px; }
+.DnnC_BackToCat { color:#666; font-weight:bold; }
+.DnnC_BackToCat:hover { color:#333; text-decoration:none; }
+
+.thumbs .DnnC_CatImageStyle { padding: 2px; border: 1px solid #ccc; background:#fff;}
+.thumbs .DnnC_CatImageStyle:hover { padding: 2px; border: 1px solid #999;}
+.thumbs .DnnC_CatLinkStyle { color:#666; font-weight:bold; }
+.thumbs .DnnC_CatLinkStyle:hover { color:#333; text-decoration:none; }
+.thumbs .DnnC_CatTextStyle { color:#666; font-weight:normal; }
+
+ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 10px 5px 0;
+	list-style: none;
+}
+a.thumb {
+	padding: 2px;
+	display: block;
+	border: 1px solid #ccc;
+}
+ul.thumbs li.selected a.thumb {
+	background: #000;
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+}

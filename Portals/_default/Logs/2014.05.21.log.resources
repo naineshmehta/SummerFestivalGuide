@@ -1,0 +1,20 @@
+2014-05-21 08:08:01,682 [NaineshDesktop][Thread:9][ERROR] DotNetNuke.Framework.Reflection - DnnC.Modules.DnnC_PicasaAlbums
+System.Web.HttpException (0x80004005): Could not load type 'DnnC.Modules.DnnC_PicasaAlbums'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2014-05-21 08:08:02,102 [NaineshDesktop][Thread:9][ERROR] DotNetNuke.Services.Search.ModuleIndexer - System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 portalId)
+2014-05-21 08:08:02,210 [NaineshDesktop][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Error Creating BusinessControllerClass 'DnnC.Modules.DnnC_PicasaAlbums' of module(DnnC_PicasaAlbums) id=(592) in tab(116) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 portalId)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.ThrowLogError(ModuleInfo module, Exception ex)
+2014-05-21 08:08:21,914 [NaineshDesktop][Thread:8][ERROR] DotNetNuke.Framework.Reflection - DnnC.Modules.DnnC_PicasaAlbums
+System.Web.HttpException (0x80004005): Could not load type 'DnnC.Modules.DnnC_PicasaAlbums'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

@@ -1,0 +1,138 @@
+﻿.ohHidden {display: none !important;}
+
+.ohCenter {
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+}
+
+.escher {
+    text-align:center;
+}
+
+.escher img {
+    opacity:1.0;
+    border: solid 1px #636363;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.escher tr 
+{
+    vertical-align:top;
+}
+.escher span 
+{
+    font-size:xx-small;
+    display: block;
+}
+.escher a span 
+{
+    padding-top:10px;
+    display:block;
+}
+
+.escher tbody a, .escher tbody a:link, .escher tbody a:visited, .escher tbody a:active {
+    background-color:#F6F6F6;
+    border:1px solid #E6E6E6;
+    display:block;
+    float:left;
+    margin:0px 5px 5px 0px;
+    padding:9px;
+    text-decoration:none;
+    color:#808080;
+}
+.escher tbody a:hover {background-color:#F3F3F3; border:1px solid #CCCCCC;text-decoration:none;color:#808080;}
+.escher > ul li {list-style-type:none;}
+
+/* pager styles */
+.escher tfoot a, .escher tfoot a:link, .escher tfoot a:visited, .escher tfoot a:active {
+    background-color:#F6F6F6;
+    border:1px solid #E6E6E6;
+    margin:0px 5px 5px 0px;
+    padding:7px;
+    text-decoration:none;
+    color:#808080;
+}
+.escher tfoot a:hover {background-color:#F3F3F3; border:1px solid #CCCCCC;text-decoration:none;color:#808080;}
+
+.escher .escher-page, .escher .escher-currentpage { display: inline-block;}
+.escher .escher-currentpage { display: inline-block;background-color:#F3F3F3 !important; border:1px solid #CCCCCC !important;color:#808080 !important;}
+
+.escher-pager { }
+.escher-pager-numbers {display: inline-block;overflow-x: hidden; overflow-y: none; white-space:nowrap;}
+
+.ohNextPage, .ohLastPage {float:right;}
+
+.ohPrevPage, .ohFirstPage {float:left;}
+
+.tooltip {
+	background-color:#000;
+	border:1px solid #fff;
+	padding:10px 15px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	font-size:12px;
+
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}
+
+.escher-settings .SubHead {width:150px; text-align:right;}
+.escher-settings td {white-space:nowrap;}
+
+.escher-overlay {overflow:auto;position:absolute;left:5%;top:5%;z-index:9999;}
+.escher-overlay-bg {background:#000;
+                    display:none;
+                    height:100%;
+                    left:0;
+                    filter:alpha(opacity=50);
+                    opacity:0.5;
+                    top:0;
+                    width:100%;
+                    z-index:9998;
+                    position:fixed;}
+                    
+
+.escher-albums img {
+    opacity:0.9;
+    border: solid 1px #636363;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.escher-albums tr 
+{
+    vertical-align:top;
+}
+.escher-albums span 
+{
+    font-size:xx-small;
+}
+.escher-albums a span 
+{
+    padding-top:5px;
+    display:block;
+}
+.escher-albums a, .escher-albums a:link, .escher-albums a:visited, .escher-albums a:active 
+{
+    background-color:#F6F6F6;
+    border:1px solid #E6E6E6;
+    display:block;
+    float:left;
+    margin:0px 3px 3px 3px;
+    padding:3px;
+    text-decoration:none;
+    color:#000;
+}
+.escher-albums a:hover 
+{
+    background-color:#A3A3A3; border:1px solid #9f9f9f;text-decoration:none;color:#fff;
+}
+
+.escher-albums {}

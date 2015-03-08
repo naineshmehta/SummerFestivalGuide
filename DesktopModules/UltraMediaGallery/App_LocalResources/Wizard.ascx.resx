@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<data name="Wizard.Text">
+		<value>New Gallery Wizard</value>
+	</data>
+	<data name="SmallGallery.Text">
+		<value>Small Gallery</value>
+	</data>
+	<data name="LargeGallery.Text">
+		<value>Large Gallery</value>
+	</data>
+	<data name="SlidersAndRotators.Text">
+		<value>Sliders &amp; Rotators</value>
+	</data>
+	<data name="NextStep.Text">
+		<value>Next</value>
+	</data>
+	<data name="Step1.Text">
+		<value>Step 1</value>
+	</data>
+	<data name="Step2.Text">
+		<value>Step 2</value>
+	</data>
+	<data name="Step3.Text">
+		<value>Step 3</value>
+	</data>
+	<data name="Step4.Text">
+		<value>Step 4</value>
+	</data>
+	<data name="PreferedPresentation.Text">
+		<value>Prefered presentation</value>
+	</data>
+	<data name="SelectAPresentation.Text">
+		<value>Please select a presentation for your gallery, when use UMG Standard Edition you can't choose all of them.</value>
+	</data>
+	<data name="PictureSource.Text">
+		<value>Image source</value>
+	</data>
+	<data name="WebUpload.Text">
+		<value>Web Upload</value>
+	</data>
+	<data name="WebUpload.Help">
+		<value>Medias are uploaded to this gallery by site users</value>
+	</data>
+	<data name="RssSubscription.Text">
+		<value>Rss Subscription</value>
+	</data>
+	<data name="RssSubscription.Help">
+		<value>This gallery subscribe to one or more flickr and/or picasa rss feeds</value>
+	</data>
+	<data name="ServerDirectory.Text">
+		<value>Server Directory</value>
+	</data>
+	<data name="ServerDirectory.Help">
+		<value>This gallery is used to show existing medias in a server directory</value>
+	</data>
+	<data name="GallerySize.Text">
+		<value>Gallery Size</value>
+	</data>
+	<data name="Width.Text">
+		<value>Width</value>
+	</data>
+	<data name="Height.Text">
+		<value>Height</value>
+	</data>
+	<data name="lblChoosePresentation.Text">
+		<value>Choose the viewer you would like to use, if the &lt;u&gt;Next&lt;/u&gt; button is disabled please ensure you have &lt;u&gt;Edit&lt;/u&gt; permission and you are working in &lt;u&gt;Edit&lt;/u&gt; mode in &lt;u&gt;Page Functions&lt;/u&gt; section at the top of this page.</value>
+	</data>
+
+	
+	<data name="SelectSource.Text">
+		<value>Please select the origin of your medias</value>
+	</data>
+	
+	
+	<data name="SourceFolder.Text">
+		<value>Source folder</value>
+	</data>
+	<data name="SourceFolder.Help">
+		<value>&lt;p&gt;Choose a folder on your website which contains medias, we will scan it and add all of them to your gallery within a few minutes.&lt;/p&gt;&lt;p&gt;Folders created by UMG itself are ignored in this list.&lt;/p&gt;</value>
+	</data>
+	<data name="NeedDirectory.Text">
+		<value>To build a gallery from a server directory, you need to choose an existing directory on your website.</value>
+	</data>
+
+	<data name="FeaturedDisplayOnly.Text">
+		<value>This wizard only shows featured viewers, you can see a full list in Settings page after finishing it.</value>
+	</data>
+</root>

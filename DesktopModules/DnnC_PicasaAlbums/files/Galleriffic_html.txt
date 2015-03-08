@@ -1,0 +1,22 @@
+﻿    <div id="page">
+        <div id="container">
+            <div>
+                <asp:LinkButton ID="btnBackToAlbums" runat="server" />
+                &nbsp;
+                <asp:DropDownList ID="ddlAlbums" runat="server" AutoPostBack="true" />
+            </div>
+            <div id="gallery" class="content">
+            
+                <div id="controls" class="controls"></div>
+                <div class="slideshow-container">
+                    <div id="loading" class="loader"></div>
+                    <div id="slideshow" class="slideshow"></div>
+                </div>
+                <div id="caption" class="caption-container"></div>
+            </div>
+            <div id="thumbs" class="navigation">
+                <div id="divSlider" runat="server"></div>            
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>

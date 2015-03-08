@@ -1,0 +1,227 @@
+.umg_grid
+{
+	position:relative;
+	overflow:hidden;
+	text-align:left;
+	font: 12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	border:1px solid #ccc;
+}
+
+.umg_grid .left
+{
+	width:185px;
+	vertical-align:top;
+}
+
+.tags
+{
+	float:left;
+	margin-top:0px;
+	margin-left:0px;
+
+	width:100%;
+	height:100%;
+	border-right:1px solid #ccc;
+	background-color:#eee;
+	background-image:url('navglare.png');
+	background-repeat:no-repeat;
+}
+
+.tags a
+{
+	color:#000;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #ccc;
+	height:30px;
+	line-height:30px;
+	width:100%;
+	box-sizing:border-box; 
+	-moz-box-sizing: border-box; 
+	padding-left:10px;
+	display:block;
+}
+
+.tags a:hover
+{
+	background-color:#ddd;
+}
+
+a.active, a.active:hover
+{
+	color:#fff;
+	cursor:auto;
+	background-color:#111;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+
+.right
+{
+	background-color:#fff;
+	vertical-align:top;
+	padding:10px;
+}
+
+.mediaGroup
+{
+}
+
+.searchLeft
+{
+	width:13px;
+	height:55px;
+	background-image:url('SearchLeft.png');
+}
+
+.searchCenter
+{
+	height:55px;
+	background-image:url('SearchCenter.png');
+}
+
+.searchRight
+{
+	width:13px;
+	height:55px;
+	background-image:url('SearchRight.png');
+}
+
+.tagHeaderLeft
+{
+	width:7px;
+	height:36px;
+	background-image:url('TagHeaderLeft.png');
+}
+
+.tagHeaderCenter1
+{
+	background-image:url('TagHeaderCenter.png');
+	text-align:left;
+	padding-bottom:5px;
+	font-weight:bold;
+}
+
+.tagHeaderCenter2
+{
+	background-image:url('TagHeaderCenter.png');
+	width:80px;
+	padding-bottom:5px;
+}
+
+.tagHeaderRight
+{
+	width:7px;
+	height:36px;
+	background-image:url('TagHeaderRight.png');
+}
+
+.tagBody
+{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+
+.datahtml
+{
+	width:100%;
+	height:100%;
+	margin-left:0px;
+	background-color:#fff;
+	margin:0px;
+}
+
+.seeMore
+{
+	background-image:url('viewMoreBtn.jpg');
+	width:74px;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+	font-size:11px;
+	display:block;
+}
+
+.title
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#4871A8;
+	line-height:18px;
+	text-align:left;
+}
+
+.author
+{
+	font-size:12px;
+	font-weight:bold;
+	line-height:18px;
+	text-align:left;
+}
+
+.createdtime
+{
+	font-size:10px;
+	color:#888;
+	line-height:16px;
+	text-align:left;
+}
+
+.searchInput
+{
+	width:130px;
+	height:30px;
+	padding-left:10px;
+	line-height:28px;
+	background-image:url(searchinputbg.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	border:none;
+	background-color:transparent;
+}
+
+.selection
+{
+	font-weight:bold;
+	font-size:18px;
+}
+
+.noResults
+{
+	padding-top:50px;
+	padding-bottom:50px;
+	display:block;
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.largeItem
+{
+	border:1px solid #cdcdcd;
+	background-color:#ebebeb;
+	padding:4px;
+}
+
+.largeItemInner
+{
+	border:1px solid #cdcdcd;
+	background-color:#fff;
+	padding:5px;
+}
+
+.largeItemTitle
+{
+	font-size:15px;
+	font-weight:bold;
+	line-height:20px;
+}
+
+.largeItemDescription
+{
+	font-size:12px;
+}
+
+
