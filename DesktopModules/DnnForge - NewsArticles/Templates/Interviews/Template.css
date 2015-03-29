@@ -1,6 +1,8 @@
 .article{clear:both;text-align:left;padding-bottom:10px;float:left;border-bottom:1px solid #3A2417;}
 .articleLatest{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
 .articleList{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
+.articleHeadline h1{margin-bottom:0; line-height:150%; border:0px;}
+.articleHeadline a{font-size:110%;}
 .articleAuthor{margin-top:5px;clear:both;}
 .articleCalendar{float:left;margin-right:6px;width:42px;height:42px;}
 .articleCalendarIcon-01{background:url(images/01.gif);}
