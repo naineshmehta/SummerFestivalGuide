@@ -65,7 +65,7 @@
 <!-- nav bar same size as grid -->
 <div class="contain-to-grid sticky"><!-- nav bar same size as grid -->
     <!-- Begin navigation -->    
-    <nav class="top-bar" data-topbar data-options="is_hover: false">
+    <nav class="top-bar" data-topbar data-options="is_hover: true">
         <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
