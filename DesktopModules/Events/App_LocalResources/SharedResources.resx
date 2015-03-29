@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -770,7 +770,7 @@ to [NOTALLDAYEVENT][event:enddate][/NOTALLDAYEVENT][ALLDAYEVENT][event:enddate|D
     <value>RSS Feed - Event Description</value>
   </data>
   <data name="txtRSSTitle.Text" xml:space="preserve">
-    <value>[event:title] - [NOTALLDAYEVENT][event:startdate|g][/NOTALLDAYEVENT][ALLDAYEVENT][event:alldayeventtext][/ALLDAYEVENT]</value>
+    <value>[event:title] - [NOTALLDAYEVENT][event:startdate|g][/NOTALLDAYEVENT][ALLDAYEVENT][event:startdate|d] [event:alldayeventtext][/ALLDAYEVENT]</value>
   </data>
   <data name="txtRSSTitleName.Text" xml:space="preserve">
     <value>RSS Feed - Event Title</value>
@@ -827,13 +827,13 @@ to [NOTALLDAYEVENT][event:enddate][/NOTALLDAYEVENT][ALLDAYEVENT][event:enddate|D
     <value>Month View No Cell Events Text</value>
   </data>
   <data name="TokenSignupdateLabel.Text" xml:space="preserve">
-    <value>Enrolment Date/Time:</value>
+    <value>Enrollment Date/Time:</value>
   </data>
   <data name="EnrollNo.Text" xml:space="preserve">
     <value>Qty</value>
   </data>
   <data name="TokenNoenroleesLabel.Text" xml:space="preserve">
-    <value>Number of people enroled</value>
+    <value>Number of people enrolled</value>
   </data>
   <data name="txtEnrollMessageWaiting.Text" xml:space="preserve">
     <value> - Enrollment for user [event:signupusername] is awaiting approval</value>
@@ -900,6 +900,9 @@ to [NOTALLDAYEVENT][event:enddate][/NOTALLDAYEVENT][ALLDAYEVENT][event:enddate|D
   </data>
   <data name="RecurringEveryMonth.Text" xml:space="preserve">
     <value>Every {0} month(s) on the {1}</value>
+  </data>
+  <data name="RecurringEveryMonth2.Text" xml:space="preserve">
+    <value>Every {0} months on the {1} {2}</value>
   </data>
   <data name="RecurringInMonth.Text" xml:space="preserve">
     <value>On the {0} {1} of the month</value>
@@ -998,5 +1001,98 @@ to [NOTALLDAYEVENT][event:enddate][/NOTALLDAYEVENT][ALLDAYEVENT][event:enddate|D
   </data>
   <data name="TokenDurationDaysLabel.Text" xml:space="preserve">
     <value>Days</value>
+  </data>
+  <data name="txtEnrollMessageApprovedMsgName.Text" xml:space="preserve">
+    <value>Enrollment Email - Approved</value>
+  </data>
+  <data name="txtEnrollMessageWaitingMsgName.Text" xml:space="preserve">
+    <value>Enrollment Email - Awaiting Approval</value>
+  </data>
+  <data name="AnonUser.Text" xml:space="preserve">
+    <value>Unauthenticated User</value>
+  </data>
+  <data name="TokenSocialGroupRoleNameLabel.Text" xml:space="preserve">
+    <value>Group Name:</value>
+  </data>
+  <data name="TokenSummaryLabel.Text" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+  <data name="TokenSocialUserDisplayNameLabel.Text" xml:space="preserve">
+    <value>Display Name:</value>
+  </data>
+  <data name="TokenSocialUserUserNameLabel.Text" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="invalidReminderDays.Text" xml:space="preserve">
+    <value>Invalid Reminder Time (1-30 days)</value>
+  </data>
+  <data name="invalidReminderHours.Text" xml:space="preserve">
+    <value>Invalid Reminder Time (1-24 hours)</value>
+  </data>
+  <data name="invalidReminderMinutes.Text" xml:space="preserve">
+    <value>Invalid Reminder Time (15-60 minutes)</value>
+  </data>
+  <data name="AllLocations.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="NoLocations.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="SelectAllLocations.Text" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="TokenLocationAddressLabel.Text" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="TokenNoVacanciesLabel.Text" xml:space="preserve">
+    <value>No. Vacancies:</value>
+  </data>
+  <data name="City.Header" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Company.Header" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Country.Header" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Email.Header" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enrollee.Header" xml:space="preserve">
+    <value>Enrollee</value>
+  </data>
+  <data name="EnrollmentsFile.Text" xml:space="preserve">
+    <value>Enrollments</value>
+  </data>
+  <data name="Event Name.Header" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="FirstName.Header" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FullName.Header" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="JobTitle.Header" xml:space="preserve">
+    <value>Job Title</value>
+  </data>
+  <data name="LastName.Header" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Phone.Header" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PostalCode.Header" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="ReferenceNumber.Header" xml:space="preserve">
+    <value>Reference Number</value>
+  </data>
+  <data name="Region.Header" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Street.Header" xml:space="preserve">
+    <value>Street</value>
   </data>
 </root>

@@ -2,35 +2,11 @@
   <files>
     <file>
       <path />
-      <name>Actions.ascx</name>
-    </file>
-    <file>
-      <path>App_LocalResources/</path>
-      <name>MenuSettings.ascx.resx</name>
-    </file>
-    <file>
-      <path>App_LocalResources/</path>
-      <name>MenuView.ascx.resx</name>
+      <name>02.00.03.txt</name>
     </file>
     <file>
       <path />
-      <name>DefaultTemplate.xslt</name>
-    </file>
-    <file>
-      <path>DNNMenu/</path>
-      <name>DNNMenu-menudef.xml</name>
-    </file>
-    <file>
-      <path>DNNMenu/</path>
-      <name>DNNMenu.min.js</name>
-    </file>
-    <file>
-      <path>DumpXML/</path>
-      <name>DumpXML-menudef.xml</name>
-    </file>
-    <file>
-      <path>DumpXML/</path>
-      <name>DumpXML.xslt</name>
+      <name>Actions.ascx</name>
     </file>
     <file>
       <path />
@@ -49,12 +25,56 @@
       <name>SolPartMenu.ascx</name>
     </file>
     <file>
+      <path />
+      <name>DefaultTemplate.xslt</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>MenuSettings.ascx.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>MenuView.ascx.resx</name>
+    </file>
+    <file>
+      <path>DNNMenu/</path>
+      <name>DNNMenu-menudef.xml</name>
+    </file>
+    <file>
+      <path>DNNMenu/</path>
+      <name>DNNMenu.js</name>
+    </file>
+    <file>
+      <path>DNNMenu/</path>
+      <name>DNNMenu.min.js</name>
+    </file>
+    <file>
+      <path>DumpXML/</path>
+      <name>DumpXML-menudef.xml</name>
+    </file>
+    <file>
+      <path>DumpXML/</path>
+      <name>DumpXML.xslt</name>
+    </file>
+    <file>
       <path>SolPart/</path>
       <name>SolPart-menudef.xml</name>
     </file>
     <file>
       <path>SolPart/</path>
+      <name>SolPartMenu.js</name>
+    </file>
+    <file>
+      <path>SolPart/</path>
       <name>SolPartMenu.min.js</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>DDRMenu.js</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>jquery.effects.js</name>
     </file>
   </files>
 </dotnetnuke>

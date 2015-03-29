@@ -9,13 +9,13 @@
    </style>
   </head>
  <body>
-    <form id="DialogForm" runat="server">
+     <form id="DialogForm" runat="server">
       <div>
-        <p>Select the News Articles Module Instance:</p>
+        <p><%= DotNetNuke.Services.Localization.Localization.GetString("NewsArcticlesModuleList.Text", this.ResXFile, this.LangCode) %></p>
 	    <p style="margin-left:10px;"><asp:DropDownList runat="server" id="ModuleListDropDown" AutoPostBack="True"></asp:DropDownList></p>
       </div>
       <div>
-        <p>Select an Article:</p>
+        <p><%= DotNetNuke.Services.Localization.Localization.GetString("NewsArcticlesArticlesList.Text", this.ResXFile, this.LangCode) %></p>
         <p style="margin-left:10px;"><asp:DropDownList runat="server" id="ArticlesList"></asp:DropDownList></p>
       </div>
 	</form>

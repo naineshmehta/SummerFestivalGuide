@@ -19,11 +19,7 @@ function __dnn_ClientAPIEnabled()
 function __dnn_Page_OnLoad()
 {
 	if (__dnn_ClientAPIEnabled())
-	{
-		var sLoadHandlers = dnn.getVar('__dnn_pageload');
-		if (sLoadHandlers != null)
-			eval(sLoadHandlers);
-		
+	{	
 		dnn.dom.attachEvent(window, 'onscroll', __dnn_bodyscroll);
 	}
 	__dnn_m_bPageLoaded = true;

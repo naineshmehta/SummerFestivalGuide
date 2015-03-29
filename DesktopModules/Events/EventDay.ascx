@@ -1,7 +1,9 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EventDay.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventDay" %>
 <%@ Register TagPrefix="evt" TagName="Category" Src="~/DesktopModules/Events/SubControls/SelectCategory.ascx" %>
+<%@ Register TagPrefix="evt" TagName="Location" Src="~/DesktopModules/Events/SubControls/SelectLocation.ascx" %>
 <%@ Register TagPrefix="evt" TagName="Icons" Src="~/DesktopModules/Events/SubControls/EventIcons.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+
 <dnn:DnnToolTipManager 
         ID="toolTipManager" runat="server"  HideEvent="LeaveTargetAndToolTip" Modal="False" EnableShadow="True" CssClass="HTMLNtooltip" ShowCallout="False" />
 <asp:Panel ID="pnlEventsModuleDay" runat="server">
@@ -9,6 +11,7 @@
         <div class="EvtHdrLftCol"></div>
         <div class="EvtHdrMdlCol">
             <evt:Category ID="SelectCategory" runat="server"></evt:Category>
+            <evt:Location ID="SelectLocation" runat="server"></evt:Location>
         </div>
         <div class="TopIconBar EvtHdrRgtCol">
             <evt:Icons ID="EventIcons" runat="server"></evt:Icons>

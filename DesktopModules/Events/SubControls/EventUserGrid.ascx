@@ -3,7 +3,7 @@
 <div class="SubHead" style="vertical-align:top">
     <select id="dropdownFilterItem" onchange="ChangedropdownFilterItem(event);" class="NormalTextBox" runat="server"></select>
     &nbsp;<asp:Label ID="lblStartswith" runat="server" Text="Starts with"></asp:Label>
-    &nbsp;<asp:TextBox ID="txtFilterUsers" CssClass="NormalTextBox" runat="server"></asp:TextBox>
+    &nbsp;<asp:TextBox ID="txtFilterUsers" CssClass="NormalTextBox evtGridInput" runat="server"></asp:TextBox>
     &nbsp;<dnn:CommandButton ID="cmdRefreshList" runat="server" IconKey="Refresh" CssClass="CommandButton" ></dnn:CommandButton>
 </div>
 <div>

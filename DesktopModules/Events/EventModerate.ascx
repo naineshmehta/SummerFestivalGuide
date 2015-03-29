@@ -1,6 +1,5 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EventModerate.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventModerate" Explicit="True" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Register Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn" %>
 <asp:Panel ID="pnlEventsModuleModerate" runat="server">
     <div class="dnnForm EventModerate">
         <div class="dnnFormItem">

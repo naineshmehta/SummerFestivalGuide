@@ -244,4 +244,12 @@
             capabilityValuesCombo.clearItems();
         }
     }
+    
+	function ItemsLoaded(combo, eventArqs) {
+        if (combo.get_items().get_count() > 0) {
+            // pre-select the first item
+            combo.set_text(combo.get_items().getItem(0).get_text());
+            combo.get_items().getItem(0).highlight();
+        }
+    }
 </script>

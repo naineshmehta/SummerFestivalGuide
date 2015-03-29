@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -175,7 +175,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
                     {
                         pType = Request.QueryString["ptype"];
                     }
-                    _PackageType = PackageController.GetPackageType(pType);
+                    _PackageType = PackageController.Instance.GetExtensionPackageType(t => t.PackageType == pType);
                 }
                 return _PackageType;
             }
@@ -408,6 +408,8 @@ namespace DotNetNuke.Modules.Admin.Extensions
                     lblInstallMessage.Text = Localization.GetString("InstallError", LocalResourceFile);
                 }
                 phInstallLogs.Controls.Add(Installer.InstallerInfo.Log.GetLogsTable());
+
+				DeleteInstallFile();
             }
             else
             {
@@ -447,6 +449,9 @@ namespace DotNetNuke.Modules.Admin.Extensions
                 case "CoreLanguagePack":
                 case "ExtensionLanguagePack":
                     installFolder = "Language";
+                    break;
+                case "JavaScript_Library":
+                    installFolder = "JavaScriptLibrary";
                     break;
                 case "Module":
                 case "Skin":
@@ -493,9 +498,11 @@ namespace DotNetNuke.Modules.Admin.Extensions
             {
                 ManifestFile = Path.GetFileName(Installer.InstallerInfo.ManifestFile.TempFileName);
             }
+
+            var azureCompact = AzureCompact();
             if (string.IsNullOrEmpty(ManifestFile))
             {
-                if (rblLegacySkin.SelectedValue != "None")
+                if (!string.IsNullOrEmpty(rblLegacySkin.SelectedValue))
                 {
 					//We need to create a manifest file so the installer can continue to run
                     CreateManifest();
@@ -557,7 +564,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
             else if (Installer.InstallerInfo.Installed && !chkRepairInstall.Checked)
             {
                 lblWarningMessageWrapper.Visible = true;
-				if (UserController.GetCurrentUserInfo().IsSuperUser || Installer.InstallerInfo.PortalID == InstallPortalId)
+				if (UserController.Instance.GetCurrentUserInfo().IsSuperUser || Installer.InstallerInfo.PortalID == InstallPortalId)
                 {
                     pnlRepair.Visible = true;
                 }
@@ -566,7 +573,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
 				pnlAzureCompact.Visible = false;
                 lblWarningMessage.Text = Localization.GetString("PackageInstalled", LocalResourceFile);
             }
-			else if (!AzureCompact() && !chkAzureCompact.Checked)
+			else if ((!azureCompact.HasValue || !azureCompact.Value) && !chkAzureCompact.Checked)
 			{
 				lblWarningMessageWrapper.Visible = true;
 				pnlRepair.Visible = false;
@@ -574,6 +581,14 @@ namespace DotNetNuke.Modules.Admin.Extensions
 				pnlLegacy.Visible = false;
 				pnlAzureCompact.Visible = true;
 				lblWarningMessage.Text = Localization.GetString("AzureCompactMessage", LocalResourceFile);
+                lblAzureCompact.Text = Localization.GetString("AzureCompactHelp", LocalResourceFile);
+                if (azureCompact.HasValue)
+                {
+                    wizInstall.FindControl("StepNavigationTemplateContainerID").FindControl("nextButtonStep").Visible = chkAzureCompact.Visible = false;
+
+                    lblWarningMessage.Text = Localization.GetString("NoAzureCompactMessage", LocalResourceFile);
+                    lblAzureCompact.Text = Localization.GetString("NoAzureCompactHelp", LocalResourceFile);
+                }
 			}
             else
             {
@@ -582,18 +597,36 @@ namespace DotNetNuke.Modules.Admin.Extensions
             return isValid;
         }
 
-		private bool AzureCompact()
+		private bool? AzureCompact()
 		{
-			var compact = true;
-			var manifestFile = Installer.InstallerInfo.ManifestFile.TempFileName;
-			if (manifestFile != null && File.Exists(manifestFile) && IsAzureDatabase())
+			bool? compact = null;
+			string manifestFile = null;
+            if (Installer.InstallerInfo.ManifestFile != null)
+            {
+                manifestFile = Installer.InstallerInfo.ManifestFile.TempFileName;
+            }
+            if (PackageType!=null)
+            {
+		        if (PackageType.PackageType == "CoreLanguagePack" || PackageType.PackageType == "ExtensionLanguagePack")
+		        {
+		            compact = true;
+		        }
+            }
+            if (!IsAzureDatabase())
+            {
+                compact = true;
+            }
+            else if (manifestFile != null && File.Exists(manifestFile))
 			{
 				try
 				{
 					var document = new XmlDocument();
 					document.Load(manifestFile);
 					var compactNode = document.SelectSingleNode("/dotnetnuke/packages/package/azureCompatible");
-					compact = compactNode != null && !string.IsNullOrEmpty(compactNode.InnerText) && compactNode.InnerText.ToLowerInvariant() == "true";
+					if (compactNode != null && !string.IsNullOrEmpty(compactNode.InnerText))
+					{
+					    compact = compactNode.InnerText.ToLowerInvariant() == "true";
+					}
 				}
 				catch (Exception ex)
 				{
@@ -608,6 +641,35 @@ namespace DotNetNuke.Modules.Admin.Extensions
 		private bool IsAzureDatabase()
 		{
 			return PetaPocoHelper.ExecuteScalar<int>(DataProvider.Instance().ConnectionString, CommandType.Text, "SELECT CAST(ServerProperty('EngineEdition') as INT)") == 5;
+		}
+
+		private void DeleteInstallFile()
+		{
+			try
+			{
+				if (!String.IsNullOrEmpty(TempInstallFolder) && Directory.Exists(TempInstallFolder))
+				{
+					Directory.Delete(TempInstallFolder, true);
+				}
+
+				if (DeleteFile && File.Exists(FileName))
+				{
+					// delete file
+					try
+					{
+						File.SetAttributes(FileName, FileAttributes.Normal);
+						File.Delete(FileName);
+					}
+					catch (Exception exc)
+					{
+						Logger.Error(exc);
+					}
+				}
+			}
+			catch (Exception exc)
+			{
+				Exceptions.ProcessModuleLoadException(this, exc);
+			}
 		}
 
 		#endregion
@@ -770,34 +832,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
         /// -----------------------------------------------------------------------------
         protected void wizInstall_FinishButtonClick(object sender, WizardNavigationEventArgs e)
         {
-            try
-            {
-                if (!String.IsNullOrEmpty(TempInstallFolder) && Directory.Exists(TempInstallFolder))
-                {
-                    Directory.Delete(TempInstallFolder, true);
-                }
-
-                if (DeleteFile)
-                {
-                    // delete file
-                    try
-                    {
-                        File.SetAttributes(FileName, FileAttributes.Normal);
-                        File.Delete(FileName);
-                    }
-                    catch (Exception exc)
-                    {
-                        Logger.Error(exc);
-                    }
-                }
-  				
-                //Redirect to Definitions page
-                Response.Redirect(ReturnURL, true);
-            }
-            catch (Exception exc)
-            {
-                Exceptions.ProcessModuleLoadException(this, exc);
-            }
+            Response.Redirect(ReturnURL, true);
         }
 
         /// -----------------------------------------------------------------------------

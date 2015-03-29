@@ -234,7 +234,7 @@ function migrateToAUM() {
                         txtMigrateStatus.val(txtMigrateStatus.val() + "...Success\n" + results);
                     } else {
 
-                        txtMigrateStatus.val(txtMigrateStatus.val() + "...Failed\n" + "AUM Activation Unsuccessful");
+                        txtMigrateStatus.val(txtMigrateStatus.val() + "...Failed\n" + "AUM Activation Unsuccessful" + "\n" + data.ErrorMessage);
                     }
                 }).fail(function (xhr, result, status) {
                     txtMigrateStatus.val(txtMigrateStatus.val() + "...Failed\n" + "Operation Failed : " + status);

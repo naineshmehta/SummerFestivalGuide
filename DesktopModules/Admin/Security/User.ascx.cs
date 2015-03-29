@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -23,10 +23,12 @@
 using System;
 using System.Collections;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 
 using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Host;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Profile;
@@ -157,7 +159,7 @@ namespace DotNetNuke.Modules.Admin.Users
             }
 
             //can only update username if a host/admin and account being managed is not a superuser
-            if (UserController.GetCurrentUserInfo().IsSuperUser)
+            if (UserController.Instance.GetCurrentUserInfo().IsSuperUser)
             {
                 //only allow updates for non-superuser accounts
                 if (User.IsSuperUser==false)
@@ -167,7 +169,7 @@ namespace DotNetNuke.Modules.Admin.Users
             }
 
             //if an admin, check if the user is only within this portal
-            if (UserController.GetCurrentUserInfo().IsInRole(PortalSettings.AdministratorRoleName))
+            if (UserController.Instance.GetCurrentUserInfo().IsInRole(PortalSettings.AdministratorRoleName))
             {
                 //only allow updates for non-superuser accounts
                 if (User.IsSuperUser)
@@ -377,6 +379,7 @@ namespace DotNetNuke.Modules.Admin.Users
                     numSites.Text=String.Format(Localization.GetString("UpdateUserName", LocalResourceFile), portals.Count.ToString());
                     cboSites.Visible = true;
                     cboSites.DataSource = portals;
+                    cboSites.DataTextField = "PortalName";
                     cboSites.DataBind();
 
                     renameUserPortals.Visible = true;
@@ -419,7 +422,6 @@ namespace DotNetNuke.Modules.Admin.Users
                 lastName.Visible = false;
             }
 
-
             userForm.DataSource = User;
 			if (!Page.IsPostBack)
 			{
@@ -431,16 +433,6 @@ namespace DotNetNuke.Modules.Admin.Users
 		#endregion
 
 		#region Event Handlers
-
-        protected override void OnInit(EventArgs e)
-        {
-            base.OnInit(e);
-            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.jquery.extensions.js");
-            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.jquery.tooltip.js");
-            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.PasswordStrength.js");
-
-            jQuery.RequestDnnPluginsRegistration();
-        }
 
         /// -----------------------------------------------------------------------------
         /// <summary>
@@ -463,23 +455,60 @@ namespace DotNetNuke.Modules.Admin.Users
 
         protected override void OnPreRender(EventArgs e)
         {
+            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.jquery.extensions.js");
+            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.jquery.tooltip.js");
+            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/scripts/dnn.PasswordStrength.js");
+            ClientResourceManager.RegisterScript(Page, "~/DesktopModules/Admin/Security/Scripts/dnn.PasswordComparer.js");
+
+            jQuery.RequestDnnPluginsRegistration();
+
             base.OnPreRender(e);
 
-            var options = new DnnPaswordStrengthOptions();
-            var optionsAsJsonString = Json.Serialize(options);
-            var script = string.Format("dnn.initializePasswordStrength('.{0}', {1});{2}",
-                "password-strength", optionsAsJsonString, Environment.NewLine);
 
-            if (ScriptManager.GetCurrent(Page) != null)
-            {
-                // respect MS AJAX
-                ScriptManager.RegisterStartupScript(Page, GetType(), "PasswordStrength", script, true);
-            }
-            else
-            {
-                Page.ClientScript.RegisterStartupScript(GetType(), "PasswordStrength", script, true);
-            }
-            }
+			if (Host.EnableStrengthMeter)
+			{
+				passwordContainer.CssClass = "password-strength-container";
+				txtPassword.CssClass = "password-strength";
+				txtConfirm.CssClass = string.Format("{0} checkStength", txtConfirm.CssClass);
+				
+				var options = new DnnPaswordStrengthOptions();
+				var optionsAsJsonString = Json.Serialize(options);
+				var passwordScript = string.Format("dnn.initializePasswordStrength('.{0}', {1});{2}",
+					"password-strength", optionsAsJsonString, Environment.NewLine);
+
+				if (ScriptManager.GetCurrent(Page) != null)
+				{
+					// respect MS AJAX
+					ScriptManager.RegisterStartupScript(Page, GetType(), "PasswordStrength", passwordScript, true);
+				}
+				else
+				{
+					Page.ClientScript.RegisterStartupScript(GetType(), "PasswordStrength", passwordScript, true);
+				}
+			}
+
+			var confirmPasswordOptions = new DnnConfirmPasswordOptions()
+			{
+				FirstElementSelector = "#" + passwordContainer.ClientID + " input[type=password]",
+				SecondElementSelector = ".password-confirm",
+				ContainerSelector = ".dnnFormPassword",
+				UnmatchedCssClass = "unmatched",
+				MatchedCssClass = "matched"
+			};
+
+			var confirmOptionsAsJsonString = Json.Serialize(confirmPasswordOptions);
+			var confirmScript = string.Format("dnn.initializePasswordComparer({0});{1}", confirmOptionsAsJsonString, Environment.NewLine);
+
+			if (ScriptManager.GetCurrent(Page) != null)
+			{
+				// respect MS AJAX
+				ScriptManager.RegisterStartupScript(Page, GetType(), "ConfirmPassword", confirmScript, true);
+			}
+			else
+			{
+				Page.ClientScript.RegisterStartupScript(GetType(), "ConfirmPassword", confirmScript, true);
+			}
+        }
 
 
         /// -----------------------------------------------------------------------------
@@ -562,6 +591,7 @@ namespace DotNetNuke.Modules.Admin.Users
             {
                 return;
             }
+
             if (AddUser)
             {
                 if (IsValid)

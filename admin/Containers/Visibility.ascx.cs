@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -138,21 +138,21 @@ namespace DotNetNuke.UI.Containers
                 {
                     case VisibilityState.Maximized:
                     case VisibilityState.Minimized:
-                        //return DNNClientAPI.MinMaxContentVisibile(cmdVisibility,
-                        //                                          ModuleControl.ModuleContext.ModuleId,
-                        //                                          ModuleControl.ModuleContext.Configuration.Visibility == VisibilityState.Minimized,
-                        //                                          DNNClientAPI.MinMaxPersistanceType.Cookie);
+                        return DNNClientAPI.MinMaxContentVisibile(cmdVisibility,
+                                                                  ModuleControl.ModuleContext.ModuleId,
+                                                                  ModuleControl.ModuleContext.Configuration.Visibility == VisibilityState.Minimized,
+                                                                  DNNClientAPI.MinMaxPersistanceType.Cookie);
                     default:
                         return true;
                 }
             }
             set
             {
-                //DNNClientAPI.MinMaxContentVisibile(cmdVisibility,
-                //                                   ModuleControl.ModuleContext.ModuleId,
-                //                                   ModuleControl.ModuleContext.Configuration.Visibility == VisibilityState.Minimized,
-                //                                   DNNClientAPI.MinMaxPersistanceType.Cookie,
-                //                                   value);
+                DNNClientAPI.MinMaxContentVisibile(cmdVisibility,
+                                                   ModuleControl.ModuleContext.ModuleId,
+                                                   ModuleControl.ModuleContext.Configuration.Visibility == VisibilityState.Minimized,
+                                                   DNNClientAPI.MinMaxPersistanceType.Cookie,
+                                                   value);
             }
         }
 

@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -22,12 +22,13 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
-
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
@@ -35,12 +36,11 @@ using DotNetNuke.Instrumentation;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
+using DotNetNuke.Services.Log.EventLog;
 using DotNetNuke.Services.Personalization;
 using DotNetNuke.UI.Skins.Controls;
 using DotNetNuke.UI.Utilities;
-
 using Telerik.Web.UI;
-
 using DataCache = DotNetNuke.Common.Utilities.DataCache;
 using DNNControls = DotNetNuke.UI.WebControls;
 using Globals = DotNetNuke.Common.Globals;
@@ -62,7 +62,7 @@ namespace DotNetNuke.Modules.Admin.Languages
     /// -----------------------------------------------------------------------------
     public partial class LanguageEditor : PortalModuleBase, IActionable
     {
-    	private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof (LanguageEditor));
+        private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(LanguageEditor));
         #region Private Enums
 
         /// -----------------------------------------------------------------------------
@@ -104,7 +104,7 @@ namespace DotNetNuke.Modules.Admin.Languages
         {
             get
             {
-                int _PageSize = 10;
+                int _PageSize = 1000;
                 if (Settings["PageSize"] != null)
                 {
                     _PageSize = Convert.ToInt32(Settings["PageSize"]);
@@ -112,7 +112,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                     //Make sure Page Size is not invalid
                     if (_PageSize < 1)
                     {
-                        _PageSize = 10;
+                        _PageSize = 1000;
                     }
                 }
                 return _PageSize;
@@ -159,6 +159,10 @@ namespace DotNetNuke.Modules.Admin.Languages
             }
         }
 
+        private static string GetResourceKeyXPath(string resourceKeyName)
+        {
+            return "//root/data[@name=" + XmlUtils.XPathLiteral(resourceKeyName) + "]";
+        }
         private XmlNode AddResourceKey(XmlDocument resourceDoc, string resourceKey)
         {
             XmlNode nodeData = null;
@@ -232,8 +236,8 @@ namespace DotNetNuke.Modules.Admin.Languages
                     else
                     {
                         // Update default value
-                        var p = (Pair) EditTable[key];
-                        p.Second = ((Pair) DefaultTable[key]).First;
+                        var p = (Pair)EditTable[key];
+                        p.Second = ((Pair)DefaultTable[key]).First;
                         EditTable[key] = p;
                     }
                 }
@@ -261,16 +265,23 @@ namespace DotNetNuke.Modules.Admin.Languages
         private void LoadRootNodes()
         {
             var node = new RadTreeNode();
-            node.Text = "Local Resources";
+            node.Text = LocalizeString("LocalResources");
             node.Value = "Local Resources";
             node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
             resourceFiles.Nodes.Add(node);
 
             node = new RadTreeNode();
-            node.Text = "Global Resources";
+            node.Text = LocalizeString("GlobalResources");
             node.Value = "Global Resources";
             node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
             resourceFiles.Nodes.Add(node);
+
+            node = new RadTreeNode();
+            node.Text = LocalizeString("SiteTemplates");
+            node.Value = "Site Templates";
+            node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
+            resourceFiles.Nodes.Add(node);
+
         }
 
         /// -----------------------------------------------------------------------------
@@ -482,7 +493,7 @@ namespace DotNetNuke.Modules.Admin.Languages
 
             resourcesGrid.AllowPaging = UsePaging;
             resourcesGrid.PageSize = PageSize;
-
+            resourcesGrid.ScreenRowNumber = PageSize;
             resourcesGrid.MasterTableView.NoMasterRecordsText = Localization.GetString("NoRecords", LocalResourceFile);
         }
 
@@ -692,16 +703,19 @@ namespace DotNetNuke.Modules.Admin.Languages
                 }
                 defDoc.Load(ResourceFile(Localization.SystemLocale, "System"));
 
+                //store all changed resources
+                var changedResources = new Dictionary<string, string>();
+
                 // only items different from default will be saved
                 foreach (GridDataItem di in resourcesGrid.Items)
                 {
                     if ((di.ItemType == GridItemType.Item || di.ItemType == GridItemType.AlternatingItem))
                     {
-                        var resourceKey = (Label) di.FindControl("resourceKey");
-                        var txtValue = (TextBox) di.FindControl("txtValue");
-                        var txtDefault = (TextBox) di.FindControl("txtDefault");
+                        var resourceKey = (Label)di.FindControl("resourceKey");
+                        var txtValue = (TextBox)di.FindControl("txtValue");
+                        var txtDefault = (TextBox)di.FindControl("txtDefault");
 
-                        node = resDoc.SelectSingleNode("//root/data[@name='" + resourceKey.Text + "']/value");
+                        node = resDoc.SelectSingleNode(GetResourceKeyXPath(resourceKey.Text) + "/value");
 
                         switch (rbMode.SelectedValue)
                         {
@@ -712,7 +726,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                                     node = AddResourceKey(resDoc, resourceKey.Text);
                                 }
                                 node.InnerXml = Server.HtmlEncode(txtValue.Text);
-
+                                if (txtValue.Text != txtDefault.Text) changedResources.Add(resourceKey.Text, txtValue.Text); 
                                 break;
                             case "Host":
                             case "Portal":
@@ -725,6 +739,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                                         node = AddResourceKey(resDoc, resourceKey.Text);
                                     }
                                     node.InnerXml = Server.HtmlEncode(txtValue.Text);
+                                    changedResources.Add(resourceKey.Text, txtValue.Text);
                                 }
                                 else if ((node != null))
                                 {
@@ -740,7 +755,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                 foreach (XmlNode node_loopVariable in resDoc.SelectNodes("//root/data"))
                 {
                     node = node_loopVariable;
-                    if (defDoc.SelectSingleNode("//root/data[@name='" + node.Attributes["name"].Value + "']") == null)
+                    if (defDoc.SelectSingleNode(GetResourceKeyXPath(node.Attributes["name"].Value)) == null)
                     {
                         parent = node.ParentNode;
                         parent.RemoveChild(node);
@@ -750,7 +765,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                 foreach (XmlNode node_loopVariable in resDoc.SelectNodes("//root/data"))
                 {
                     node = node_loopVariable;
-                    if (resDoc.SelectNodes("//root/data[@name='" + node.Attributes["name"].Value + "']").Count > 1)
+                    if (resDoc.SelectNodes(GetResourceKeyXPath(node.Attributes["name"].Value)).Count > 1)
                     {
                         parent = node.ParentNode;
                         parent.RemoveChild(node);
@@ -780,11 +795,19 @@ namespace DotNetNuke.Modules.Admin.Languages
                         break;
                 }
                 string selectedFile = SelectedResourceFile.Replace(Server.MapPath(Globals.ApplicationPath + "/"), "");
+                if (changedResources.Count > 0)
+                {
+                    string values = string.Join("; ", changedResources.Select(x => x.Key + "=" + x.Value).ToArray());
+                    var log = new LogInfo {LogTypeKey = EventLogController.EventLogType.ADMIN_ALERT.ToString()};
+                    log.LogProperties.Add(new LogDetailInfo(Localization.GetString("ResourceUpdated", LocalResourceFile), ResourceFile(Locale, rbMode.SelectedValue)));
+                    log.LogProperties.Add(new LogDetailInfo("Updated Values", values));
+                    LogController.Instance.AddLog(log);
+                }
+                UI.Skins.Skin.AddModuleMessage(this,
+                                string.Format(Localization.GetString("Updated", LocalResourceFile), ResourceFile(Locale, rbMode.SelectedValue)),
+                                ModuleMessage.ModuleMessageType.GreenSuccess);
+
                 BindGrid(true);
-                //Response.Redirect(NavigateURL(TabId, "", "Locale=" & Locale, "resourceFile=" & QueryStringEncode(selectedFile), _
-                //                              "mode=" & rbMode.SelectedValue, "highlight=" & chkHighlight.Checked.ToString().ToLower(), _
-                //                              "ctl=Editor", "mid=" & ModuleId, "Page=" & dgEditor.CurrentPageIndex.ToString, "message=FileSaved"), True)
-                //Module failed to load
             }
             catch (Exception exc)
             {
@@ -876,75 +899,90 @@ namespace DotNetNuke.Modules.Admin.Languages
                     node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
                     e.Node.Nodes.Add(node);
 
-                    node = new RadTreeNode();
-                    node.Text = "HostSkins";
-                    node.Value = Path.Combine(Globals.HostMapPath, "Skins");
-                    node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
-                    e.Node.Nodes.Add(node);
+                    if (HasLocalResources(Path.Combine(Globals.HostMapPath, "Skins")))
+                    {
+                        node = new RadTreeNode();
+                        node.Text = LocalizeString("HostSkins");
+                        node.Value = Path.Combine(Globals.HostMapPath, "Skins");
+                        node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
+                        e.Node.Nodes.Add(node);
+                    }
 
                     string portalSkinFolder = Path.Combine(PortalSettings.HomeDirectoryMapPath, "Skins");
                     if (Directory.Exists(portalSkinFolder) && (PortalSettings.ActiveTab.ParentId == PortalSettings.AdminTabId))
                     {
                         node = new RadTreeNode();
-                        node.Text = "PortalSkins";
+                        node.Text = LocalizeString("PortalSkins");
                         node.Value = Path.Combine(PortalSettings.HomeDirectoryMapPath, "Skins");
                         node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
                         e.Node.Nodes.Add(node);
                     }
                     break;
                 case "Global Resources":
-                    node = new RadTreeNode();
-                    node.Text = "Exceptions";
-                    node.Value = Server.MapPath("~/App_GlobalResources/Exceptions");
-                    e.Node.Nodes.Add(node);
-                    node = new RadTreeNode();
-                    node.Text = Path.GetFileNameWithoutExtension(Localization.GlobalResourceFile);
-                    node.Value = Server.MapPath(Localization.GlobalResourceFile);
-                    e.Node.Nodes.Add(node);
-                    node = new RadTreeNode();
-                    node.Text = Path.GetFileNameWithoutExtension(Localization.SharedResourceFile);
-                    node.Value = Server.MapPath(Localization.SharedResourceFile);
-                    e.Node.Nodes.Add(node);
-                    node = new RadTreeNode();
-                    node.Text = "Template";
-                    node.Value = Server.MapPath("~/App_GlobalResources/Template");
-                    e.Node.Nodes.Add(node);
-                    node = new RadTreeNode();
-                    node.Text = "WebControls";
-                    node.Value = Server.MapPath("~/App_GlobalResources/WebControls");
-                    e.Node.Nodes.Add(node);
+                    GetResxFiles(Server.MapPath("~/App_GlobalResources"), e);
+                    break;
+                case "Site Templates":
+                    GetResxFiles(Server.MapPath("~/Portals/_default"), e);
                     break;
                 default:
-                    foreach (string folder in Directory.GetDirectories(e.Node.Value))
-                    {
-                        var folderInfo = new DirectoryInfo(folder);
-                        node = new RadTreeNode();
-                        node.Value = folderInfo.FullName;
-                        node.Text = folderInfo.Name;
-                        node.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
-
-                        if (folderInfo.GetFiles("*.resx").Length > 0 || folderInfo.GetDirectories().Length > 0)
-                        {
-                            e.Node.Nodes.Add(node);
-                        }
-                    }
-
-                    // split filenames at dots,
-                    // only accept filenames with 3 elements or less, that means these types of filenames:
-                    // SharedResources.resx and HtmlModule.ascx.resx
-                    // explicitly ignore these filenames:
-                    // EditHtml.ascx.Host.resx, EditHtml.ascx.[culture].Host.resx and , EditHtml.ascx.[culture].Portal-n.resx, 
-                    // SharedResources.[culture].Host.resx and SharedResources.culture.Portal-n.resx
-                    foreach (var fileInfo in from file in Directory.GetFiles(e.Node.Value, "*.resx") select new FileInfo(file) into fileInfo let s = fileInfo.Name.Split('.') where s.Length <= 3 select fileInfo)
-                    {
-                        node = new RadTreeNode { Value = fileInfo.FullName, Text = fileInfo.Name.Replace(".resx", "") };
-                        e.Node.Nodes.Add(node);
-                    }
-
+                    GetResxDirectories(e.Node.Value, e);
+                    GetResxFiles(e.Node.Value, e);
                     break;
             }
 
             e.Node.Expanded = true;
+        }
+
+        private void GetResxDirectories(string path, RadTreeNodeEventArgs e)
+        {
+            foreach (string folder in Directory.GetDirectories(path))
+            {
+                var folderInfo = new DirectoryInfo(folder);
+                var node = new RadTreeNode { Value = folderInfo.FullName, Text = folderInfo.Name, ExpandMode = TreeNodeExpandMode.ServerSideCallBack };
+
+                if (HasLocalResources(folderInfo.FullName))
+                {
+                    e.Node.Nodes.Add(node);
+                }
+            }
+        }
+
+        private bool HasLocalResources(string path)
+        {
+            var folderInfo = new DirectoryInfo(path);
+
+            if (path.ToLowerInvariant().EndsWith(Localization.LocalResourceDirectory))
+            {
+                return true;
+            }
+
+            bool hasResources = false;
+            foreach (string folder in Directory.GetDirectories(path))
+            {
+                if ((File.GetAttributes(folder) & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
+                {
+                    folderInfo = new DirectoryInfo(folder);
+                    hasResources = hasResources || HasLocalResources(folderInfo.FullName);
+                }
+            }
+            return hasResources || folderInfo.GetFiles("*.resx").Length > 0;
+
+        }
+
+        private void GetResxFiles(string path, RadTreeNodeEventArgs e)
+        {
+            foreach (string file in Directory.GetFiles(path, "*.resx"))
+            {
+                var fileInfo = new FileInfo(file);
+                var match = Regex.Match(fileInfo.Name, @"\.(\w\w\-\w\w)\.resx");
+
+                if (match.Success && match.Groups[1].Value.ToLowerInvariant() != "en-us")
+                {
+                    continue;
+                }
+                var node = new RadTreeNode { Value = fileInfo.FullName, Text = fileInfo.Name.Replace(".resx", "") };
+                e.Node.Nodes.Add(node);
+            }
         }
 
         protected void resourcesGrid_ItemDataBound(object sender, GridItemEventArgs e)
@@ -954,17 +992,16 @@ namespace DotNetNuke.Modules.Admin.Languages
                 if (e.Item.ItemType == GridItemType.AlternatingItem || e.Item.ItemType == GridItemType.Item)
                 {
                     HyperLink c = null;
-                    c = (HyperLink) e.Item.FindControl("lnkEdit");
+                    c = (HyperLink)e.Item.FindControl("lnkEdit");
                     if ((c != null))
                     {
                         ClientAPI.AddButtonConfirm(c, Localization.GetString("SaveWarning", LocalResourceFile));
                     }
 
-                    var p = (Pair) ((DictionaryEntry) e.Item.DataItem).Value;
+                    var p = (Pair)((DictionaryEntry)e.Item.DataItem).Value;
 
                     var t = (TextBox)e.Item.FindControl("txtValue");
                     var d = (TextBox)e.Item.FindControl("txtDefault");
-                    var lblDefault = (Label)e.Item.FindControl("lblDefault");
 
                     if (p.First.ToString() == p.Second.ToString() && chkHighlight.Checked && !string.IsNullOrEmpty(p.Second.ToString()))
                     {
@@ -977,7 +1014,7 @@ namespace DotNetNuke.Modules.Admin.Languages
                     }
                     if (length > 30)
                     {
-                        int height = 18*(length/30);
+                        int height = 18 * (length / 30);
                         if (height > 108)
                         {
                             height = 108;
@@ -986,16 +1023,10 @@ namespace DotNetNuke.Modules.Admin.Languages
                         t.TextMode = TextBoxMode.MultiLine;
                         d.Height = new Unit(height);
                         d.TextMode = TextBoxMode.MultiLine;
-                        lblDefault.CssClass += " dnnTextArea";
+                        d.CssClass += " dnnTextArea";
                     }
                     t.Text = Server.HtmlDecode(p.First.ToString());
                     d.Text = Server.HtmlDecode(p.Second.ToString());
-                    lblDefault.Text = p.Second.ToString()
-                                            .Replace("    ", "&nbsp;&nbsp;&nbsp;&nbsp;")
-                                            .Replace("\r\n", "<br />")
-                                            .Replace("\r\n", "<br />")
-                                            .Replace("\n", "<br />")
-                                            .Replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;");
                 }
                 //Module failed to load
             }

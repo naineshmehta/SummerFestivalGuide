@@ -345,6 +345,230 @@
       <name>VentrianValidators.js</name>
     </file>
     <file>
+      <path>Tracking/</path>
+      <name>Trackback.aspx</name>
+    </file>
+    <file>
+      <path>Tracking/</path>
+      <name>Pingback.ashx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucNotAuthorized.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucSubmitNews.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucSubmitNewsComplete.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucTemplateEditor.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucViewOptions.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewArchive.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewArticle.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewAuthor.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewCategory.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewCurrent.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewSearch.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ViewTag.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>Archives.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>NewsArticles.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucAdminOptions.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucApproveArticles.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucApproveComments.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditCategories.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditCategory.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditComment.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditCustomField.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditCustomFields.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditPage.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditPages.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditPageSortOrder.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditTag.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEditTags.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucEmailTemplates.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucHeader.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucImportFeed.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucImportFeeds.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucMyArticles.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>ucNotAuthenticated.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>web.config</name>
+    </file>
+    <file>
+      <path />
+      <name>module.css</name>
+    </file>
+    <file>
+      <path />
+      <name>icon_comment.gif</name>
+    </file>
+    <file>
+      <path />
+      <name>icon_xml.gif</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>close.png</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>loading.gif</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>next.png</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>pause.png</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>play.png</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>previous.png</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>shadowbox.css</name>
+    </file>
+    <file>
+      <path>Includes/Shadowbox/</path>
+      <name>shadowbox.js</name>
+    </file>
+    <file>
+      <path />
+      <name>ImageHandler.ashx</name>
+    </file>
+    <file>
+      <path />
+      <name>Print.aspx</name>
+    </file>
+    <file>
+      <path />
+      <name>Rss.aspx</name>
+    </file>
+    <file>
+      <path />
+      <name>RssComments.aspx</name>
+    </file>
+    <file>
+      <path />
+      <name>NewsSearch.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>NewsSearchOptions.ascx</name>
+    </file>
+    <file>
+      <path>API/MetaWebLog/</path>
+      <name>Handler.ashx</name>
+    </file>
+    <file>
+      <path>API/MetaWebLog/</path>
+      <name>wlwmanifest.xml</name>
+    </file>
+    <file>
+      <path>API/</path>
+      <name>Rsd.ashx</name>
+    </file>
+    <file>
       <path>Templates/Default/</path>
       <name>Comment.Footer.html</name>
     </file>
@@ -631,230 +855,6 @@
     <file>
       <path>Templates/Standard/</path>
       <name>View.Title.Html</name>
-    </file>
-    <file>
-      <path>Tracking/</path>
-      <name>Trackback.aspx</name>
-    </file>
-    <file>
-      <path>Tracking/</path>
-      <name>Pingback.ashx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucNotAuthorized.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucSubmitNews.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucSubmitNewsComplete.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucTemplateEditor.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucViewOptions.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewArchive.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewArticle.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewAuthor.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewCategory.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewCurrent.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewSearch.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ViewTag.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>Archives.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>NewsArticles.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucAdminOptions.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucApproveArticles.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucApproveComments.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditCategories.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditCategory.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditComment.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditCustomField.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditCustomFields.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditPage.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditPages.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditPageSortOrder.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditTag.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEditTags.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucEmailTemplates.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucHeader.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucImportFeed.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucImportFeeds.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucMyArticles.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>ucNotAuthenticated.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>web.config</name>
-    </file>
-    <file>
-      <path />
-      <name>module.css</name>
-    </file>
-    <file>
-      <path />
-      <name>icon_comment.gif</name>
-    </file>
-    <file>
-      <path />
-      <name>icon_xml.gif</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>close.png</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>loading.gif</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>next.png</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>pause.png</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>play.png</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>previous.png</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>shadowbox.css</name>
-    </file>
-    <file>
-      <path>Includes/Shadowbox/</path>
-      <name>shadowbox.js</name>
-    </file>
-    <file>
-      <path />
-      <name>ImageHandler.ashx</name>
-    </file>
-    <file>
-      <path />
-      <name>Print.aspx</name>
-    </file>
-    <file>
-      <path />
-      <name>Rss.aspx</name>
-    </file>
-    <file>
-      <path />
-      <name>RssComments.aspx</name>
-    </file>
-    <file>
-      <path />
-      <name>NewsSearch.ascx</name>
-    </file>
-    <file>
-      <path />
-      <name>NewsSearchOptions.ascx</name>
-    </file>
-    <file>
-      <path>API/MetaWebLog/</path>
-      <name>Handler.ashx</name>
-    </file>
-    <file>
-      <path>API/MetaWebLog/</path>
-      <name>wlwmanifest.xml</name>
-    </file>
-    <file>
-      <path>API/</path>
-      <name>Rsd.ashx</name>
     </file>
   </files>
 </dotnetnuke>

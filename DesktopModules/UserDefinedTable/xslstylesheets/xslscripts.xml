@@ -103,9 +103,9 @@
     <value> &lt;!-- DEFINE ANY HEADERS HERE, EXAMPLE IS FOR TABLE TYPE LISTING --&gt;
       &lt;!-- Parameter header is optional! --&gt;
       &lt;!--
-      &lt;tr&gt;
+      &lt;tr class="dnnGridHeader"&gt;
         &lt;td/&gt;
-        &lt;td class="NormalBold UDT_Table_Head"&gt;
+        &lt;td&gt;
           &lt;xsl:apply-templates select ="udt:Fields[udt:FieldTitle='NameOfColumn']"&gt;
             &lt;xsl:with-param name ="header" select ="NewHeaderName"/&gt;
           &lt;/xsl:apply-templates&gt;
@@ -212,7 +212,7 @@
   &lt;xsl:param name="maxPages" select="ceiling(count(//udt:Data) div $paging)" /&gt;
   &lt;xsl:variable name="previous" select="number($param_page) - 1" /&gt;
   &lt;xsl:variable name="next" select="number($param_page) + 1" /&gt;
-  &lt;table class="PagingTable" bordercolor="Gray" border="0" style="border-color:Gray;border-width:1px;border-style:Solid;width:100%;"&gt;
+  &lt;table class="dnnFormItem" bordercolor="Gray" border="0" style="border-color:Gray;border-width:1px;border-style:Solid;width:100%;"&gt;
   &lt;tr&gt;
   &lt;td class="Normal" align="Left"&gt;
   &lt;xsl:value-of select ="//udt:Context/udt:LocalizedString_Page"/&gt;&amp;amp;#160;&lt;xsl:value-of select="number($param_page)"/&gt;&amp;amp;#160;&lt;xsl:value-of select ="//udt:Context/udt:LocalizedString_Of"/&gt;&amp;amp;#160;&lt;xsl:value-of select="$maxPages"/&gt;

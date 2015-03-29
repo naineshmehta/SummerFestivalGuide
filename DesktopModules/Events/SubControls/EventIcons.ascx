@@ -20,6 +20,5 @@
     <asp:ImageButton ID="btnEnroll" runat="server" AlternateText="My Enrollments" 
         ImageUrl="~/DesktopModules/Events/Images/cal-enroll.gif" visible="false" />
     <asp:HyperLink ID="hypiCal" runat="server" visible="false" imageurl="~/DesktopModules/Events/Images/iCal.gif" />
-    <asp:ImageButton ID="btnRSS" runat="server" AlternateText="Events RSS" 
-        ImageUrl="~/DesktopModules/Events/Images/rss.gif" visible="false" />
+    <asp:Hyperlink ID="btnRSS" runat="server" visible="false" ImageUrl="~/DesktopModules/Events/Images/rss.gif"  />
 </div>

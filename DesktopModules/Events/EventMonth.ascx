@@ -1,21 +1,24 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EventMonth.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventMonth" %>
 <%@ Register TagPrefix="evt" Namespace="DotNetNuke.Modules.Events.ScheduleControl.MonthControl" Assembly="DotNetNuke.Modules.Events.ScheduleControl" %>
 <%@ Register TagPrefix="evt" TagName="Category" Src="~/DesktopModules/Events/SubControls/SelectCategory.ascx" %>
+<%@ Register TagPrefix="evt" TagName="Location" Src="~/DesktopModules/Events/SubControls/SelectLocation.ascx" %>
 <%@ Register TagPrefix="evt" TagName="Icons" Src="~/DesktopModules/Events/SubControls/EventIcons.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+
 <dnn:DnnToolTipManager 
         ID="toolTipManager" runat="server"  HideEvent="LeaveTargetAndToolTip" Modal="False" EnableShadow="True" CssClass="Eventtooltip" ShowCallout="False" />
 <div>
     <div class="EvtHdrLftCol"></div>
     <div class="EvtHdrMdlCol">
         <div>
-            <asp:panel id="pnlDateControls" Runat="server" Visible="True">
+            <asp:panel id="pnlDateControls" Runat="server" Visible="True" CssClass="EvtDateControls">
                 <asp:LinkButton ID="lnkToday" runat="server" CssClass="CommandButton"> Today</asp:LinkButton>&nbsp;
                 <dnn:DnnDatePicker id="dpGoToDate" AutoPostBack="true" runat="server" DateInput-CssClass="DateFormat" CssClass="DatePicker"></dnn:DnnDatePicker>
             </asp:panel>
         </div>
         <div style="text-align:center;">
             <evt:Category ID="SelectCategory" runat="server"></evt:Category>
+            <evt:Location ID="SelectLocation" runat="server"></evt:Location>
         </div>
     </div>
     <div class="TopIconBar EvtHdrRgtCol" >

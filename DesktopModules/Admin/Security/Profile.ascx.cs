@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -21,7 +21,7 @@
 #region Usings
 
 using System;
-
+using DotNetNuke.Common.Lists;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Profile;
@@ -163,7 +163,7 @@ namespace DesktopModules.Admin.Security
 		
             //Before we bind the Profile to the editor we need to "update" the visible data
             var properties = new ProfilePropertyDefinitionCollection();
-
+			var imageType = new ListController().GetListEntryInfo("DataType", "Image");
             foreach (ProfilePropertyDefinition profProperty in UserProfile.ProfileProperties)
             {
                 if (IsAdmin && !IsProfile)
@@ -171,7 +171,7 @@ namespace DesktopModules.Admin.Security
                     profProperty.Visible = true;
                 }
 
-                if (!profProperty.Deleted)
+                if (!profProperty.Deleted && (Request.IsAuthenticated || profProperty.DataType != imageType.EntryID))
                 {
                     properties.Add(profProperty);
                 }

@@ -1,10 +1,9 @@
 <%@ Control Language="c#" AutoEventWireup="True" Codebehind="CKEditorOptions.ascx.cs" Inherits="WatchersNET.CKEditor.CKEditorOptions" %>
-<%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
+<%@ Register TagPrefix="dnn" TagName="URL" Src="UrlControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls"  %>
 
 <div id="SettingsBox">
   <h1>CKEditor Provider <asp:Label id="lblSettings" runat="server">Settings</asp:Label></h1>
-  <hr />
   <table style="width:100%;">
     <tr>
       <td>
@@ -17,38 +16,38 @@
           <asp:ListItem Text="Module Instance" Value="minstance"></asp:ListItem>
         </asp:RadioButtonList>
       </td>
-      <td style="text-align:right">
-         <asp:LinkButton id="lnkRemove" runat="server" Text="Delete Settings"></asp:LinkButton>
-      </td>
     </tr>
     <tr>
-      <td>
-        <em><asp:Label id="lblImExport" runat="server" Text="Import/Export Current Settings..."></asp:Label></em>
+        <td></td>
+        <td>
+            <div class="Toolbar">
+                <asp:LinkButton id="lnkRemoveAll" runat="server" Text="Delete All Settings" CssClass="removeButton"></asp:LinkButton>
+                <asp:LinkButton id="lnkRemoveChild" runat="server" Text="Delete Child Settings" CssClass="removeButton"></asp:LinkButton>
+                <asp:LinkButton id="lnkRemove" runat="server" Text="Delete Settings" CssClass="removeButton"></asp:LinkButton>
+            </div>
+            <div class="Toolbar">
+                <a onclick="showDialog('ImportDialog');" id="ckeditoroptions_lnkImport" class="importButton" href="#"><asp:Label id="lblImport" runat="server" Text="Import"></asp:Label></a>
+                <a onclick="showDialog('ExportDialog');" id="ckeditoroptions_Export" href="#" class="exportButton"><asp:Label id="lblExport" runat="server" Text="Export"></asp:Label></a>
+            </div>
       </td>
-      <td>
-        <a onclick="showDialog('ImportDialog');" id="ckeditoroptions_lnkImport" href="#"><asp:Label id="lblImport" runat="server" Text="Import"></asp:Label></a>
-        &nbsp;|&nbsp;
-        <a onclick="showDialog('ExportDialog');" id="ckeditoroptions_Export" href="#"><asp:Label id="lblExport" runat="server" Text="Export"></asp:Label></a>
-      </td>
-      <td></td>
     </tr>
   </table>
-  <div id="ExportDialog" title='<%= DotNetNuke.Services.Localization.Localization.GetString("SettingsExportTitle.Text", this.SResXFile, this.SLang) %>' style="display:none">
+  <div id="ExportDialog" title='<%= DotNetNuke.Services.Localization.Localization.GetString("SettingsExportTitle.Text", this.ResXFile, this.LangCode) %>' style="display:none">
   <asp:UpdatePanel ID="ExportDialogUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="true" runat="server">
             <ContentTemplate>
                 <div><asp:DropDownList id="ExportDir" runat="server" Width="300"></asp:DropDownList></div>
                 <div style="margin-top:6px"><asp:TextBox id="ExportFileName" runat="server" Width="294"></asp:TextBox></div>
-                <asp:LinkButton id="ExportNow" runat="server" OnClick="Export_Click" Text="Export Now" Visible="true" CssClass="Hidden"></asp:LinkButton>
+                <asp:LinkButton id="ExportNow" runat="server" OnClick="Export_Click" Text="Export Now" Visible="true" CssClass="Hidden ExportHidden"></asp:LinkButton>
                 <asp:HiddenField id="HiddenMessage" runat="server" Value=""/>
             </ContentTemplate>
             </asp:UpdatePanel>
   </div>
-  <div id="ImportDialog" title='<%= DotNetNuke.Services.Localization.Localization.GetString("SettingsImportTitle.Text", this.SResXFile, this.SLang) %>' style="display:none">
+  <div id="ImportDialog" title='<%= DotNetNuke.Services.Localization.Localization.GetString("SettingsImportTitle.Text", this.ResXFile, this.LangCode) %>' style="display:none">
   <asp:UpdatePanel ID="upNewUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="true" runat="server">
             <ContentTemplate>
-                <dnn:url id="ctlImportFile" runat="server" width="300" showtabs="False" Required="False" filefilter="xml" showfiles="True" showUrls="False"
+                <dnn:url id="ctlImportFile" runat="server" width="300" showtabs="False" Required="False" filefilter="xml" showupload="False" showfiles="True" showUrls="False"
 					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
-    <asp:LinkButton id="lnkImportNow" runat="server" OnClick="Import_Click" Text="Import Now" Visible="true" CssClass="Hidden"></asp:LinkButton>
+    <asp:LinkButton id="lnkImportNow" runat="server" OnClick="Import_Click" Text="Import Now" Visible="true" CssClass="Hidden ImportHidden"></asp:LinkButton>
             </ContentTemplate>
             </asp:UpdatePanel>
   </div>
@@ -61,14 +60,14 @@
         <asp:HiddenField id="LastTabId" runat="server" Value="1"/>
         <div id="SettingsTabs" class="SettingBox">
           <ul>
-            <li><a href="#InfoTab"><asp:Label id="lblHeader" runat="server">Informations</asp:Label></a></li>
+            <li runat="server" id="InfoTabLi"><a href="#InfoTab"><asp:Label id="lblHeader" runat="server">Informations</asp:Label></a></li>
             <li><a href="#MainSetTab"><asp:label id="lblMainSet" runat="server">Main Settings</asp:label></a></li>
+            <li><a href="#EditorConfigSetTab"><asp:label id="lblEditorConfig" runat="server">Editor Config</asp:label></a></li>
             <li><a href="#BrowserSetTab"><asp:label id="lblBrowsSec" runat="server">File Browser Settings</asp:label></a></li>
-            <li><a href="#StylesSetTab"><asp:label id="lblStyles" runat="server">Style List</asp:label></a></li>
-            <li><a href="#TemplatesSetTab"><asp:label id="lblTemplates" runat="server">Editor Templates</asp:label></a></li>
             <li><a href="#ToolbarsSetTab"><asp:label id="lblCustomToolbars" runat="server">Custom Toolbars</asp:label></a></li>
           </ul>
-          <!-- Info Tab -->
+          <!-- BEGIN Info Tab -->
+           <asp:PlaceHolder runat="server" ID="InfoTabHolder">
           <div id="InfoTab">
             <ul>
               <li><asp:Label id="ProviderVersion" runat="server">Editor Provider Version:</asp:Label></li>
@@ -80,20 +79,27 @@
               <li><asp:Label id="lblUName" runat="server">User Name:</asp:Label></li>
             </ul>
           </div>
-          <!-- /Info Tab -->
+          </asp:PlaceHolder>
+          <!-- END Info Tab -->
+
+          <!-- BEGIN Main Settings Tab -->
     <div id="MainSetTab">
     <table id="tblMainSet">
       <tr>
-	    <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblBlanktext" runat="server">Blank Text:</asp:label></td>
-	    <td style="vertical-align:top;"><dnn:DnnTextBox runat="server" id="txtBlanktext" Width="395px" /></td>
+	    <td class="settingNameColumn"><asp:label id="lblBlanktext" runat="server">Blank Text:</asp:label></td>
+	    <td class="settingValueColumn"><dnn:DnnTextBox runat="server" id="txtBlanktext" Width="395px" /></td>
       </tr>
       <tr>
-	    <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblSkin" runat="server">Skin:</asp:label></td>
-	    <td style="vertical-align:top;"><asp:dropdownlist id="ddlSkin" runat="server" CssClass="DefaultDropDown"></asp:dropdownlist></td>
+	    <td class="settingNameColumn"><asp:label id="lblSkin" runat="server">Skin:</asp:label></td>
+	    <td class="settingValueColumn"><asp:dropdownlist id="ddlSkin" runat="server" CssClass="DefaultDropDown"></asp:dropdownlist></td>
       </tr>
       <tr>
-	    <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblToolbars" runat="server">Toolbars:</asp:label></td>
-	    <td style="vertical-align:top;">
+	    <td class="settingNameColumn"><asp:label id="CodeMirrorLabel" runat="server">CodeMirror Theme (for Source Syntax Highlighting):</asp:label></td>
+	    <td class="settingValueColumn"><asp:dropdownlist id="CodeMirrorTheme" runat="server" CssClass="DefaultDropDown"></asp:dropdownlist></td>
+      </tr>
+      <tr>
+	    <td class="settingNameColumn"><asp:label id="lblToolbars" runat="server">Toolbars:</asp:label></td>
+	    <td class="settingValueColumn">
 	      <asp:GridView id="gvToolbars" runat="server" AutoGenerateColumns="False" Width="400px" GridLines="None" HeaderStyle-HorizontalAlign="Left" HeaderStyle-Font-Bold="false" HeaderStyle-Font-Italic="true">
             <Columns>
               <asp:TemplateField>
@@ -121,45 +127,77 @@
         </td>
       </tr>
        <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblCustomConfig" runat="server">Custom Config File</asp:label></td>
-        <td style="vertical-align:top;"><dnn:url id="ctlConfigUrl" runat="server" width="400" showtabs="False" Required="False" filefilter="js" showfiles="True" showUrls="True"
+        <td class="settingNameColumn"><asp:label id="lblCustomConfig" runat="server">Custom Config File</asp:label></td>
+        <td class="settingValueColumn"><dnn:url id="ctlConfigUrl" runat="server" width="400" showtabs="False" Required="False" filefilter="js" showupload="False" showfiles="True" showUrls="True"
 					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;">
+        <td class="settingNameColumn">
           <asp:label id="lblWidth" runat="server">Editor Width:</asp:label>
         </td>
-        <td style="vertical-align:top;">
-          <dnn:DnnTextBox runat="server" id="txtWidth" Width="395px" />
+        <td class="settingValueColumn">
+          <asp:TextBox runat="server" id="txtWidth" Width="395px" CssClass="settingValueInputNumeric" />
         </td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;">
+        <td class="settingNameColumn">
           <asp:label id="lblHeight" runat="server">Editor Height:</asp:label>
         </td>
-        <td style="vertical-align:top;">
-          <dnn:DnnTextBox runat="server" id="txtHeight" Width="395px" />
+        <td class="settingValueColumn">
+          <asp:TextBox runat="server" id="txtHeight" Width="395px" CssClass="settingValueInputNumeric" />
         </td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblUseJquery" runat="server">Use jQuery Adapter?</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="cbUseJquery" runat="server"></asp:CheckBox></td>
+        <td class="settingNameColumn"><asp:label id="lblInjectSyntaxJs" runat="server">Inject Syntax Highlighter Js Code?</asp:label></td>
+        <td class="settingValueColumn"><asp:CheckBox ID="InjectSyntaxJs" runat="server" Checked="true"></asp:CheckBox></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblInjectSyntaxJs" runat="server">Inject Syntax Highlighter Js Code?</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="InjectSyntaxJs" runat="server" Checked="true"></asp:CheckBox></td>
+           <td class="settingNameColumn">
+                    <asp:label id="lblStylesURL" runat="server">List of available styles for the editor</asp:label>
+           </td>
+           <td class="settingValueColumn">
+                    <dnn:url id="ctlStylesURL" runat="server" width="400" showtabs="False" Required="False" filefilter="xml,js" showupload="False" showfiles="True" showUrls="True"
+					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
+           </td>
+      </tr>
+      <tr>
+           <td class="settingNameColumn">        
+                    <asp:label id="lblCssurl" runat="server">Editor area CSS</asp:label>
+           </td>
+           <td class="settingValueColumn">
+                    <dnn:url id="ctlCssurl" runat="server" width="400" showtabs="False" Required="False" filefilter="css" showupload="False" showfiles="True" showUrls="True"
+					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
+            </td>
+
+      </tr>
+      <tr>
+        <td class="settingNameColumn"><asp:label id="lblTemplFiles" runat="server">Editor Templates File</asp:label></td>
+        <td class="settingValueColumn">
+                <dnn:url id="ctlTemplUrl" runat="server" width="400" showtabs="False" Required="False" filefilter="xml,js" showupload="False" showfiles="True" showUrls="True"
+					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
+        </td>
+      </tr>
+      <tr>
+        <td class="settingNameColumn"><asp:label id="CustomJsFileLabel" runat="server">Custom JS File</asp:label></td>
+        <td class="settingValueColumn">
+                <dnn:url id="ctlCustomJsFile" runat="server" width="400" showtabs="False" Required="False" filefilter="js" showupload="False" showfiles="True" showUrls="True"
+					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
+        </td>
       </tr>
 	</table>
   
         </div>
+        <!-- END Main Settings Tab -->
+            
+
         <div id="BrowserSetTab">
 
 
 
     <table>
     <tr>
-	    <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblBrowser" runat="server">File Browser:</asp:label></td>
-	    <td style="vertical-align:top;">
+	    <td class="settingNameColumn"><asp:label id="lblBrowser" runat="server">File Browser:</asp:label></td>
+	    <td class="settingValueColumn">
 	      <asp:dropdownlist id="ddlBrowser" runat="server" CssClass="DefaultDropDown">
 	        <asp:ListItem Text="None" Value="none" Enabled="true"></asp:ListItem>
 	        <asp:ListItem Text="Standard" Value="standard" ></asp:ListItem>
@@ -167,44 +205,40 @@
 	      </asp:dropdownlist></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblBrowAllow" runat="server">File Browser Security</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBoxList ID="chblBrowsGr" runat="server"></asp:CheckBoxList></td>
+        <td class="settingNameColumn"><asp:label id="lblBrowAllow" runat="server">File Browser Security</asp:label></td>
+        <td class="settingValueColumn"><asp:CheckBoxList ID="chblBrowsGr" runat="server"></asp:CheckBoxList></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="BrowserRootFolder" runat="server">Browser Root Folder</asp:label></td>
-        <td style="vertical-align:top;"><asp:DropDownList ID="BrowserRootDir" runat="server" CssClass="DefaultDropDown"></asp:DropDownList></td>
+        <td class="settingNameColumn"><asp:label id="BrowserRootFolder" runat="server">Browser Root Folder</asp:label></td>
+        <td class="settingValueColumn"><asp:DropDownList ID="BrowserRootDir" runat="server" CssClass="DefaultDropDown"></asp:DropDownList></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblBrowserDirs" runat="server">Use Subdirs for non Admins?</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="cbBrowserDirs" runat="server"></asp:CheckBox></td>
+        <td class="settingNameColumn"><asp:label id="lblBrowserDirs" runat="server">Use Subdirs for non Admins?</asp:label></td>
+        <td class="settingValueColumn"><asp:CheckBox ID="cbBrowserDirs" runat="server"></asp:CheckBox></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="UploadFolderLabel" runat="server">Default Upload Folder</asp:label></td>
-        <td style="vertical-align:top;"><asp:DropDownList ID="UploadDir" runat="server" CssClass="DefaultDropDown"></asp:DropDownList></td>
+        <td class="settingNameColumn"><asp:label id="UploadFolderLabel" runat="server">Default Upload Folder</asp:label></td>
+        <td class="settingValueColumn"><asp:DropDownList ID="UploadDir" runat="server" CssClass="DefaultDropDown"></asp:DropDownList></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblResizeWidth" runat="server">Default Image Resize Width:</asp:label></td>
-        <td style="vertical-align:top;"><dnn:DnnTextBox ID="txtResizeWidth" runat="server" style="width:395px" />px</td>
+        <td class="settingNameColumn"><asp:label id="lblResizeWidth" runat="server">Default Image Resize Width:</asp:label></td>
+        <td class="settingValueColumn"><asp:TextBox ID="txtResizeWidth" runat="server" CssClass="settingValueInputNumeric" />px</td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblResizeHeight" runat="server">Default Image Resize Height:</asp:label></td>
-        <td style="vertical-align:top;"><dnn:DnnTextBox ID="txtResizeHeight" runat="server" />px</td>
+        <td class="settingNameColumn"><asp:label id="lblResizeHeight" runat="server">Default Image Resize Height:</asp:label></td>
+        <td class="settingValueColumn"><asp:TextBox ID="txtResizeHeight" runat="server" CssClass="settingValueInputNumeric" />px</td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblAutoCreateFileThumbNails" runat="server">Auto Create File ThumbNails</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="AutoCreateFileThumbNails" runat="server"></asp:CheckBox></td>
+        <td class="settingNameColumn"><asp:label id="lblUseAnchorSelector" runat="server">Use Anchor Selector</asp:label></td>
+        <td class="settingValueColumn"><asp:CheckBox ID="UseAnchorSelector" runat="server" Checked="True"></asp:CheckBox></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblUseAnchorSelector" runat="server">Use Anchor Selector</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="UseAnchorSelector" runat="server" Checked="True"></asp:CheckBox></td>
+        <td class="settingNameColumn"><asp:label id="lblShowPageLinksTabFirst" runat="server">Show Page Links Tab First</asp:label></td>
+        <td class="settingValueColumn"><asp:CheckBox ID="ShowPageLinksTabFirst" runat="server"></asp:CheckBox></td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblShowPageLinksTabFirst" runat="server">Show Page Links Tab First</asp:label></td>
-        <td style="vertical-align:top;"><asp:CheckBox ID="ShowPageLinksTabFirst" runat="server"></asp:CheckBox></td>
-      </tr>
-      <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="FileListViewModeLabel" runat="server">File List View Mode</asp:label></td>
-        <td style="vertical-align:top;"><asp:dropdownlist id="FileListViewMode" runat="server" CssClass="DefaultDropDown">
+        <td class="settingNameColumn"><asp:label id="FileListViewModeLabel" runat="server">File List View Mode</asp:label></td>
+        <td class="settingValueColumn"><asp:dropdownlist id="FileListViewMode" runat="server" CssClass="DefaultDropDown">
 	        <asp:ListItem Text="DetailView" Value="DetailView" Enabled="true"></asp:ListItem>
 	        <asp:ListItem Text="ListView" Value="ListView" ></asp:ListItem>
 	        <asp:ListItem Text="IconsView" Value="IconsView"></asp:ListItem>
@@ -212,86 +246,136 @@
         </td>
       </tr>
       <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="FileListPageSizeLabel" runat="server">File List Page Size</asp:label></td>
-        <td style="vertical-align:top;"><asp:TextBox ID="FileListPageSize" runat="server"></asp:TextBox></td>
+        <td class="settingNameColumn"><asp:label id="FileListPageSizeLabel" runat="server">File List Page Size</asp:label></td>
+        <td class="settingValueColumn"><asp:TextBox ID="FileListPageSize" runat="server" CssClass="settingValueInputNumeric"></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td class="settingNameColumn">
+            <asp:label id="DefaultLinkModeLabel" runat="server">File List View Mode</asp:label>
+        </td>
+        <td class="settingValueColumn">
+            <asp:dropdownlist id="DefaultLinkMode" runat="server" CssClass="DefaultDropDown">
+                <asp:ListItem Text="RelativeURL" Value="RelativeURL" Enabled="true"></asp:ListItem>
+                <asp:ListItem Text="Absolute URL" Value="AbsoluteURL" ></asp:ListItem>
+                <asp:ListItem Text="RelativeSecuredURL" Value="RelativeSecuredURL"></asp:ListItem>
+                <asp:ListItem Text="Absolute Secured" Value="AbsoluteSecuredURL"></asp:ListItem>
+	      </asp:dropdownlist>
+        </td>
       </tr>
     </table>
  
         </div>
-        <div id="StylesSetTab">
+        <!-- BEGIN Editor Config Tab -->  
+        <div id="EditorConfigSetTab">
+            <div class="ui-widget">
+                <div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+                    <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+                        <asp:Label runat="server" ID="EditorConfigWarning"></asp:Label>
+                    </p>
+                </div>
 
-
-
-    <table>
-      <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblStylesURL" runat="server">List of available styles for the editor</asp:label></td>
-        <td style="vertical-align:top;"><dnn:url id="ctlStylesURL" runat="server" width="400" showtabs="False" Required="False" filefilter="js" showfiles="True" showUrls="True"
-					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url></td>
-      </tr>
-      <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblCssurl" runat="server">Editor area CSS</asp:label></td>
-        <td style="vertical-align:top;"><dnn:url id="ctlCssurl" runat="server" width="400" showtabs="False" Required="False" filefilter="css" showfiles="True" showUrls="True"
-					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url></td>
-      </tr>
-    </table>
-  
+            </div>
+            <asp:Panel runat="server" ID="EditorConfigHolder"></asp:Panel>
         </div>
-        <div id="TemplatesSetTab">
-
-
-
-    <table>
-      <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;"><asp:label id="lblTemplFiles" runat="server">Editor Templates File</asp:label></td>
-        <td style="vertical-align:top;"><dnn:url id="ctlTemplUrl" runat="server" width="400" showtabs="False" Required="False" filefilter="js" showfiles="True" showUrls="True"
-					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url></td>
-      </tr>
-    </table>
-  
-        </div>
+        <!-- END Editor Config Tab -->  
+            
+        <!-- BEGIN Toolbars Tab -->  
         <div id="ToolbarsSetTab">
-
-
-
-    <table>
-      <tr>
-        <td style="width:250px; vertical-align:top;font-weight:bold;">
-          <asp:label id="lblToolbarList" runat="server">Custom Toolbars List</asp:label>
+            <div class="settingNameContainer">
+                <asp:label id="lblToolbarList" runat="server">Custom Toolbars List</asp:label>
+            </div>
+            <div class="settingValueContainer">
+                <asp:DropDownList id="dDlCustomToolbars" runat="server"></asp:DropDownList>
+            </div>
+            <div class="settingNameContainer">
+            </div>
+            <div class="settingValueContainer">
+                <asp:ImageButton id="iBEdit" runat="server" ImageUrl="~/images/edit.gif" CssClass="DefaultButton" />
+                <asp:ImageButton id="iBDelete" runat="server" ImageUrl="~/images/delete.gif" CssClass="DefaultButton" />
+                
+            </div>
+            <div class="settingNameContainer">
+                <asp:label id="lblToolbName" runat="server">Add/Edit Toolbar Name</asp:label>
+            </div>
+            <div class="settingValueContainer">
+                <asp:TextBox id="dnnTxtToolBName" runat="server" />
+            </div>
+            <div class="settingNameContainer">
+            </div>
+            <div class="settingValueContainer">
+                <asp:ImageButton id="iBAdd" runat="server" ImageUrl="~/images/add.gif" CssClass="DefaultButton" />
+                <asp:ImageButton id="iBCancel" runat="server" ImageUrl="~/images/cancel.gif" Visible="false" CssClass="DefaultButton" />
+            </div>
+            <table>
+                <tr>
+                   <td class="settingValueColumn">
+                   <strong><asp:label id="lblToolbSet" runat="server">Available Toolbars:</asp:label></strong><br />
+           <asp:Repeater ID="AvailableToolbarButtons" runat="server">
+               <HeaderTemplate>
+                   <ul class="availableButtons sortable">
+               </HeaderTemplate>
+               <ItemTemplate>
+                   <li class='ui-state-default ui-corner-all<%# DataBinder.Eval(Container.DataItem, "Button").ToString().Equals("-") ? " separator" : string.Empty%>'>
+                       <img alt='<%# DataBinder.Eval(Container.DataItem, "Button").ToString()%>' class="itemIcon" src='<%# this.ResolveUrl(string.Format("~/Providers/HtmlEditorProviders/CKEditor/icons/{0}", DataBinder.Eval(Container.DataItem, "Icon")))%>'/>&nbsp;
+                       <span class="item"><%# DataBinder.Eval(Container.DataItem, "Button").ToString()%></span>
+                   </li>
+               </ItemTemplate>
+               <FooterTemplate>
+                   </ul>
+               </FooterTemplate>
+           </asp:Repeater>
         </td>
-        <td style="vertical-align:top;">
-          <asp:DropDownList id="dDlCustomToolbars" runat="server" Width="362"></asp:DropDownList>&nbsp;
-          <asp:ImageButton id="iBEdit" runat="server" ImageUrl="~/images/edit.gif" />
-          <asp:ImageButton id="iBDelete" runat="server" ImageUrl="~/images/delete.gif" />
+        <td style="vertical-align: top">
+            <strong><asp:label id="ToolbarGroupsLabel" runat="server">Toolbar Groups:</asp:label></strong><br />
+            <asp:HiddenField ID="ToolbarSet" runat="server" Value=""/>
+            <asp:Repeater ID="ToolbarGroupsRepeater" runat="server">
+                <HeaderTemplate>
+                  <ul class="groups">
+                </HeaderTemplate>
+                <ItemTemplate>
+                  <li class="groupItem<%# DataBinder.Eval(Container.DataItem, "GroupName").ToString().Equals("rowBreak") ? " rowBreakItem" : string.Empty%>">
+                      <span class="ui-icon ui-icon-cancel" title="Delete this Toolbar Group"></span>
+                      <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                      <asp:HiddenField id="GroupListItem" runat="server" Value='<%# DataBinder.Eval(Container.DataItem, "GroupName").ToString()%>' />
+                      <p class="rowBreakLabel"><%= DotNetNuke.Services.Localization.Localization.GetString("RowBreak.Text", this.ResXFile, this.LangCode) %></p>
+                      <a class="groupName" title='<%= DotNetNuke.Services.Localization.Localization.GetString("EditGroupName.Text", this.ResXFile, this.LangCode) %>'><%# DataBinder.Eval(Container.DataItem, "GroupName").ToString()%></a>
+                      <input type="text" class="groupEdit"><div class="ui-state-default ui-corner-all saveGroupName"><span class="ui-icon ui-icon-check" title="<%= DotNetNuke.Services.Localization.Localization.GetString("SaveGroupName.Text", this.ResXFile, this.LangCode) %>"></span></div>
+                      <asp:Repeater ID="ToolbarButtonsRepeater" runat="server">
+                          <HeaderTemplate>
+                              <ul class="groupButtons">
+                          </HeaderTemplate>
+                          <ItemTemplate>
+                              <li class='groupButton ui-state-default ui-corner-all<%# DataBinder.Eval(Container.DataItem, "Button").ToString().Equals("-") ? " separator" : string.Empty%><%# DataBinder.Eval(Container.DataItem, "Button").ToString().Equals("/") ? " rowBreak" : string.Empty%>'>
+                                  <span class="ui-icon ui-icon-cancel" title='<%= DotNetNuke.Services.Localization.Localization.GetString("DeleteToolbarButton.Text", this.ResXFile, this.LangCode) %>'></span>
+                                  <img alt='<%# DataBinder.Eval(Container.DataItem, "Button").ToString()%>' class="itemIcon" src='<%# this.ResolveUrl(string.Format("~/Providers/HtmlEditorProviders/CKEditor/icons/{0}", DataBinder.Eval(Container.DataItem, "Button").ToString().Equals("/") ? "PageBreak.png" : DataBinder.Eval(Container.DataItem, "Icon")))  %>'/>&nbsp;
+                                  <span class="item"><%# DataBinder.Eval(Container.DataItem, "Button").ToString()%></span>
+                              </li>
+                          </ItemTemplate>
+                          <FooterTemplate>
+                              </ul>
+                          </FooterTemplate>
+                      </asp:Repeater>
+                  </li>
+                </ItemTemplate>
+                <FooterTemplate>
+                  </ul>
+                </FooterTemplate>
+              </asp:Repeater>
+              <div class="ui-state-default ui-corner-all createGroupButton" id="createGroup" title='<%= DotNetNuke.Services.Localization.Localization.GetString("CreateGroupTitle.Text", this.ResXFile, this.LangCode) %>'>
+                  <span class="ui-icon ui-icon-document" style="display:inline-block"></span>
+                  <asp:Label ID="CreateGroupLabel" runat="server">Create New Group</asp:Label>
+              </div>
+              <div class="ui-state-default ui-corner-all addRowBreakButton" id="addRowBreak" title='<%= DotNetNuke.Services.Localization.Localization.GetString("AddRowBreakTitle.Text", this.ResXFile, this.LangCode) %>'>
+                  <span class="ui-icon ui-icon-grip-dotted-horizontal" style="display:inline-block"></span>
+                  <asp:Label ID="AddRowBreakLabel" runat="server">Add Row Break</asp:Label>
+              </div>
         </td>
       </tr>
-      <tr>
-        <td>
-           <asp:label id="lblToolbName" runat="server">Add/Edit Toolbar Name</asp:label>
-        </td>
-        <td>
-          <dnn:DnnTextBox id="dnnTxtToolBName" runat="server" Width="372"  />&nbsp;
-          <asp:ImageButton id="iBAdd" runat="server" ImageUrl="~/images/add.gif" />
-          <asp:ImageButton id="iBCancel" runat="server" ImageUrl="~/images/cancel.gif" Visible="false" />
-        </td>
-      </tr>
-      <tr>
-       <td style="vertical-align:top;">
-           <asp:label id="lblToolbSet" runat="server">Add/Edit Toolbar Set</asp:label><br />
-            <a onclick="showDialog('ToolbarGuide');" id="lnkToolbarGuide" href="#"><asp:Label id="lblToolbarGuideLnk" runat="server" Text="Description"></asp:Label></a>
-        </td>
-        <td>
-          <dnn:DnnTextBox id="dnnTxtToolbars" runat="server" TextMode="MultiLine" Width="400" Height="250" />
-          
-          <div id="ToolbarGuide" title="Toolbar Guide" style="display:none">
-            <asp:Label id="lblToolbarGuide" runat="server"></asp:Label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-       <td style="vertical-align:top;">
+      </table>
+         <div class="settingNameContainer">
            <asp:label id="lblToolbarPriority" runat="server">Toolbar Set Priority</asp:label>
-        </td>
-        <td>
+         </div>
+         <div class="settingValueContainer">
           <asp:DropDownList id="dDlToolbarPrio" runat="server">
                       <asp:ListItem Text="01" Value="01"></asp:ListItem>
             <asp:ListItem Text="02" Value="02"></asp:ListItem>
@@ -314,9 +398,7 @@
             <asp:ListItem Text="19" Value="19"></asp:ListItem>
             <asp:ListItem Text="20" Value="20"></asp:ListItem>
           </asp:DropDownList>
-        </td>
-      </tr>
-    </table>
+             </div>
           </div>
           <!-- / Toolbars Set Tab -->
         </div>
@@ -326,9 +408,25 @@
 </div>
 
 <div>
-  <p style="text-align:center;font-weight:bold;"><asp:Label id="lblInfo" runat="server"></asp:Label></p>
   </ContentTemplate>
         </asp:UpdatePanel>
-  <asp:Button id="btnOk" CssClass="DefaultButton" runat="server" Text="OK" />&nbsp;<asp:Button id="btnCancel" runat="server" Text="Close" />
+  <asp:Button id="btnOk" CssClass="DefaultButton ui-state-focus" runat="server" Text="OK" />&nbsp;<asp:Button id="btnCancel" CssClass="DefaultButton" runat="server" Text="Close" />
 </div>
 
+<!-- Loading screen -->
+<asp:Panel id="panelLoading" CssClass="panelLoading" runat="server">
+    <div class="ModalDialog_overlayBG" id="LoadingScreen" ></div>
+    <div class="MessageBox">
+        <div class="ModalDialog">
+            <div class="popup">
+                <div class="DialogContent LoadingContent">
+                    <div class="modalHeader">
+                        <h3><asp:Label id="Wait" runat="server" Text="Please Wait" /></h3>
+                    </div>
+                    <div class="LoadingMessage"><asp:Label id="WaitMessage" runat="server" Text="Loading Page"></asp:Label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Panel>
+<!-- / Loading screen -->

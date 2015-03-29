@@ -9,29 +9,7 @@
     <title id="title" runat="server">WatchersNET.FileBrowser</title>
     <link rel="stylesheet" type="text/css" href="Browser.css" />
     <asp:Placeholder id="favicon" runat="server"></asp:Placeholder>
-     <script type="text/javascript">
-         jQuery(document).ready(function () {
-             jQuery("#BrowserMode input:checked").parent("td").addClass("SelectedPager");
-             jQuery('#dnntreeTabs li .rtIn, #dnntreeTabs li .rtImg').click(function () { jQuery('#panelLoading').show(); });
-
-             SwitchView(jQuery("#ListViewState").val());
-
-             jQuery("select, input:checkbox, #rblLinkType_0, #rblLinkType_1, #rblLinkType_2").uniform();
-         });
-
-         function SwitchView(css) {
-             jQuery("#ListViewState").val(css);
-
-             var list = jQuery("#FilesBox ul");
-             list.removeClass(list.attr('class')).addClass('Files' + css);
-
-             jQuery('.SwitchDetailView').css('font-weight', 'normal');
-             jQuery('.SwitchListView').css('font-weight', 'normal');
-             jQuery('.SwitchIconsView').css('font-weight', 'normal');
-
-             jQuery('.Switch' + css).css('font-weight', 'bold');
-         }
-  </script>
+    <script src="js/Browser.js" type="text/javascript"></script>
   </head>
   <body>
     <form id="fBrowser" method="post" runat="server">
@@ -39,7 +17,8 @@
       <div id="BrowserContainer">
       <h1><asp:Label id="lblModus" runat="server"></asp:Label></h1>
       <hr />
-      <asp:RadioButtonList id="BrowserMode" runat="server" AutoPostBack="true" RepeatDirection="Horizontal">
+      <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="width:820px">
+      <asp:RadioButtonList id="BrowserMode" runat="server" AutoPostBack="true" RepeatDirection="Horizontal" CssClass="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
           <asp:ListItem text="File Link" value="file" Selected="True"></asp:ListItem>
           <asp:ListItem text="Page Link" value="page"></asp:ListItem>
        </asp:RadioButtonList>
@@ -135,7 +114,8 @@
             <asp:TextBox ID="txtCropImageName" runat="server" Width="500"></asp:TextBox>
            </div>
            <div class="PanelSubDivs" style="padding-bottom:5px;">
-              <asp:Button ID="cmdCropNow" CssClass="DefaultButton" Text="Create New Image" runat="server" />&nbsp;
+              <input type="submit" name="CropNow" value='<%= DotNetNuke.Services.Localization.Localization.GetString("cmdCropNow.Text", this.ResXFile, this.LanguageCode) %>' id="CropNow" CssClass="DefaultButton" />
+              <asp:Button ID="cmdCropNow" Text="Create New Image" runat="server" Style="display:none" />&nbsp;
               <asp:Button ID="cmdCropCancel" Text="Cancel Crop" runat="server" />
           </div>
           <div class="CropButtons">
@@ -170,7 +150,7 @@
       </table>
       </asp:Panel>
       <asp:Panel id="panLinkMode" runat="server">
-        <p style="margin-left:5px"><strong><asp:Label id="lblCurrent" runat="server" text="Current Directory:"></asp:Label></strong> <asp:Label id="lblCurrentDir" runat="server"></asp:Label></p>
+        <p style="margin:5px 0 5px 5px"><strong><asp:Label id="lblCurrent" runat="server" text="Current Directory:"></asp:Label></strong> <asp:Label id="lblCurrentDir" runat="server"></asp:Label></p>
       
       <asp:Panel id="panUploadDiv" runat="server" Visible="false">
       <div class="ModalDialog_overlayBG" ></div>
@@ -181,10 +161,16 @@
               <div class="modalHeader">
                 <h3><asp:Label id="UploadTitle" runat="server" Text="Upload a File" /></h3>
               </div>
-              <asp:FileUpload ID="ctlUpload" runat="server" />
+              <div>
+                  <asp:FileUpload ID="ctlUpload" runat="server" />
+              </div>
+              <div class="maximumFileUploadInfo">
+                  <asp:Label ID="MaximumUploadSizeInfo" runat="server"></asp:Label>
+              </div>
               <hr />
               <div class="ModalFooter">
-                <asp:Button ID="cmdUploadNow" CssClass="DefaultButton" Text="Upload Now" runat="server" />&nbsp;
+                <input type="submit" name="UploadNow" value="Upload Now" onclick="GetFileSize('ctlUpload', <%= WatchersNET.CKEditor.Utilities.Utility.GetMaxUploadSize(false) %>,'<%= DotNetNuke.Services.Localization.Localization.GetString("FileToBig.Text", this.ResXFile, this.LanguageCode) %>');" id="UploadNow" />
+                <asp:Button ID="cmdUploadNow" Style="display:none" runat="server" />&nbsp;
                 <asp:Button ID="cmdUploadCancel" Text="Cancel Upload" runat="server" />
               </div>
             </div>
@@ -208,7 +194,7 @@
               <dnn:DnnTextBox id="tbFolderName" runat="server" Width="100%" />
               <hr />
               <div class="ModalFooter">
-                <asp:Button ID="cmdCreateFolder" CssClass="DefaultButton" Text="Create Now" runat="server" />
+                <asp:Button ID="cmdCreateFolder" CssClass="DefaultButton ui-state-focus" Text="Create Now" runat="server" />
                 <asp:Button ID="cmdCreateCancel" Text="Cancel" runat="server" />
               </div>
             </div>
@@ -221,11 +207,31 @@
       
       <table class="LinkModeTable">
         <tr>
-          <td><asp:LinkButton id="cmdCreate"  runat="server" ToolTip="Create a New Sub folder" onclick="Create_Click"><img src="Images/CreateFolder.gif" alt="Create Folder" title="Create a New Sub folder" /> Create New Folder</asp:LinkButton></td>
-          <td><asp:LinkButton id="cmdUpload"  runat="server" ToolTip="Upload a file" onclick="Upload_Click"><img src="Images/UploadButton.gif" alt="Upload File" title="Upload a file" /> Upload File</asp:LinkButton>
-              &nbsp;<asp:LinkButton ToolTip="Download selected file" id="cmdDownload"  runat="server" onclick="Download_Click"><img src="Images/DownloadButton.gif" alt="Download File" title="Download selected a file" /> Download File</asp:LinkButton>
-              &nbsp;<asp:LinkButton ToolTip="Delete the selected file" id="cmdDelete"  runat="server" onclick="Delete_Click"><img src="Images/DeleteFile.gif" alt="Delete File" title="Delete the selected file" /> Delete File</asp:LinkButton> 
-              &nbsp;<asp:LinkButton ToolTip="Image Resizer" id="cmdResizer" runat="server" onclick="Resizer_Click"><img src="Images/ResizeImage.gif" alt="Image Resizer" title="Image Resizer" /> Image Resizer</asp:LinkButton>
+          <td>
+              <span class="Toolbar">
+                  <asp:LinkButton id="cmdCreate"  runat="server" ToolTip="Create a New Sub folder" onclick="Create_Click">
+                      <img src="Images/CreateFolder.gif" alt="Create Folder" title="Create a New Sub folder" /> Create New Folder
+                  </asp:LinkButton>
+                  <asp:LinkButton id="Syncronize"  runat="server" ToolTip="Synchronize Folder" onclick="Syncronize_Click">
+                      <img src="Images/CreateFolder.gif" alt="Sync Folder" title="Synchronize Folder" /> Synchronize Folder
+                  </asp:LinkButton>
+             </span>
+          </td>
+          <td>
+              <span class="Toolbar">
+                  <asp:LinkButton id="cmdUpload"  runat="server" ToolTip="Upload a file" onclick="Upload_Click">
+                      <img src="Images/UploadButton.gif" alt="Upload File" title="Upload a file" /> Upload File
+                  </asp:LinkButton>
+                  &nbsp;<asp:LinkButton ToolTip="Download selected file" id="cmdDownload"  runat="server" onclick="Download_Click">
+                            <img src="Images/DownloadButton.gif" alt="Download File" title="Download selected a file" /> Download File
+                        </asp:LinkButton>
+                  &nbsp;<asp:LinkButton ToolTip="Delete the selected file" id="cmdDelete"  runat="server" onclick="Delete_Click">
+                        <img src="Images/DeleteFile.gif" alt="Delete File" title="Delete the selected file" /> Delete File
+                  </asp:LinkButton> 
+                  &nbsp;<asp:LinkButton ToolTip="Image Resizer" id="cmdResizer" runat="server" onclick="Resizer_Click">
+                        <img src="Images/ResizeImage.gif" alt="Image Resizer" title="Image Resizer" /> Image Resizer
+                  </asp:LinkButton>
+              </span>
           </td>
         </tr>
         <tr>
@@ -234,6 +240,7 @@
             <div id="FoldersBox">
              <dnn:DnnTreeView ID="FoldersTree" runat="server" ExpandDepth="1" Image="Images/folder.gif"/>
             </div>
+            <asp:Label runat="server" ID="FileSpaceUsedLabel" CssClass="fileSpaceUsedLabel"></asp:Label>
           </td>
           <td style="Width:550px">
             <asp:Label id="lblConFiles" runat="server" Text="Contained Files:"></asp:Label>&nbsp;
@@ -254,7 +261,8 @@
                       title='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString().Substring(DataBinder.Eval(Container.DataItem, "PictureURL").ToString().LastIndexOf("/", StringComparison.Ordinal) + 1)%>'>
                     <asp:LinkButton runat="server" ID="FileListItem" CssClass="FilesListItem" 
                        CommandArgument='<%# DataBinder.Eval(Container.DataItem, "FileId").ToString()%>'>
-                      <asp:Image runat="server" ID="FileThumb" CssClass="FilePreview" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString()%>' />
+                      <asp:Image runat="server" ID="FileThumb" CssClass="FilePreview" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString()%>'
+                          AlternateText='<%# DataBinder.Eval(Container.DataItem, "FileName").ToString()%>' ToolTip='<%# DataBinder.Eval(Container.DataItem, "FileName").ToString()%>' />
                       <span class="ItemInfo"><%# DataBinder.Eval(Container.DataItem, "Info").ToString()%></span>
                     </asp:LinkButton>
                   </li>
@@ -264,7 +272,8 @@
                       title='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString().Substring(DataBinder.Eval(Container.DataItem, "PictureURL").ToString().LastIndexOf("/", StringComparison.Ordinal) + 1)%>'>
                                         <asp:LinkButton runat="server" ID="FileListItem" CssClass="FilesListItem" 
                        CommandArgument='<%# DataBinder.Eval(Container.DataItem, "FileId").ToString()%>'>
-                      <asp:Image runat="server" ID="FileThumb" CssClass="FilePreview" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString()%>' />
+                      <asp:Image runat="server" ID="FileThumb" CssClass="FilePreview" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "PictureURL").ToString()%>'
+                          AlternateText='<%# DataBinder.Eval(Container.DataItem, "FileName").ToString()%>' ToolTip='<%# DataBinder.Eval(Container.DataItem, "FileName").ToString()%>' />
                       <span class="ItemInfo"><%# DataBinder.Eval(Container.DataItem, "Info").ToString()%></span>
                     </asp:LinkButton>
                   </li>
@@ -279,6 +288,7 @@
         </tr>
       </table>
       </asp:Panel>
+      </div>
         <asp:Panel id="panInfo" runat="server">
           <table>
             <tr>
@@ -290,15 +300,16 @@
                     RepeatDirection="Vertical" CssClass="ButtonList" AutoPostBack="true">
                   <asp:ListItem Text="Relative URL" Value="relLnk" Selected="True"></asp:ListItem>
                   <asp:ListItem Text="Absolute URL" Value="absLnk"></asp:ListItem>
-                  <asp:ListItem Text="Secure URL (via LinkClick)" Value="lnkClick"></asp:ListItem>
+                  <asp:ListItem Text="Relative Secure URL (via LinkClick)" Value="lnkClick"></asp:ListItem>
+                  <asp:ListItem Text="Absolute Secure URL (via LinkClick)" Value="lnkAbsClick"></asp:ListItem>
                 </asp:RadioButtonList>
                 <asp:CheckBox id="TrackClicks" runat="server" Text="Track User Clicks?" Visible="false" />
             </td>
             </tr>
           </table>
         </asp:Panel>
-        <br />
-        <asp:Button id="cmdClose" CssClass="DefaultButton" runat="server" text="OK" onclick="CmdCloseClick"></asp:Button>&nbsp;<asp:Button id="cmdCancel" runat="server" text="Cancel" ></asp:Button>   
+
+        <asp:Button id="cmdClose" CssClass="DefaultButton ui-state-focus" runat="server" text="OK" onclick="CmdCloseClick"></asp:Button>&nbsp;<asp:Button id="cmdCancel" runat="server" text="Cancel" ></asp:Button>   
       </div>
       <!-- Loading screen -->
       <asp:Panel id="panelLoading" runat="server" style="display:none">

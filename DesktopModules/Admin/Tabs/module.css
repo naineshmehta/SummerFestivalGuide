@@ -126,6 +126,10 @@ p.dnnFormRequired span {
 .dnnPageSettings .urlControl {
     width: 500px;
 }
+
+#DnnPages {
+    width: 705px!important;
+}
 /* ===========   End Page Settings Module Styling   =========== */
 /* ===========   Pages Module Styling   =========== */
 .dnnTabsModule {
@@ -236,6 +240,8 @@ div.um-page-url-container {
 .dnnFormItem div.um-page-url-container-updatable a.dnnSecondaryAction {
     margin: 0;
 }
+.dnnFormItem .dnnFileUploadScope{ width: 430px;}
+.dnnFormItem .dnnFileUploadScope .dnnDropDownList{ width: 160px;}
 
 /* ===========   End Pages Module Styling   =========== */
 

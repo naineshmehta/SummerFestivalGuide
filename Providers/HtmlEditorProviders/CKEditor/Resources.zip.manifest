@@ -10,31 +10,15 @@
     </file>
     <file>
       <path />
-      <name>ckeditor_basic.js</name>
-    </file>
-    <file>
-      <path />
-      <name>ckeditor_basic_source.js</name>
-    </file>
-    <file>
-      <path />
-      <name>ckeditor_source.js</name>
-    </file>
-    <file>
-      <path />
-      <name>config.js</name>
-    </file>
-    <file>
-      <path />
       <name>contents.css</name>
     </file>
     <file>
       <path />
-      <name>jquery.uniform.min.js</name>
+      <name>editor.css</name>
     </file>
     <file>
       <path />
-      <name>LICENSE.html</name>
+      <name>LICENSE.md</name>
     </file>
     <file>
       <path />
@@ -42,15 +26,31 @@
     </file>
     <file>
       <path />
-      <name>uniform.default.css</name>
+      <name>README.md</name>
+    </file>
+    <file>
+      <path />
+      <name>styles.js</name>
+    </file>
+    <file>
+      <path />
+      <name>Tabs.ashx</name>
+    </file>
+    <file>
+      <path />
+      <name>UrlControl.ascx</name>
     </file>
     <file>
       <path>adapters/</path>
-      <name>jquery.js</name>
+      <name>jquery.ckeditor.adapter.js</name>
     </file>
     <file>
       <path>App_LocalResources/</path>
       <name>Options.aspx.de-DE.resx</name>
+    </file>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>Options.aspx.pl-PL.resx</name>
     </file>
     <file>
       <path>App_LocalResources/</path>
@@ -74,6 +74,10 @@
     </file>
     <file>
       <path>Browser/App_LocalResources/</path>
+      <name>Browser.aspx.pl-PL.resx</name>
+    </file>
+    <file>
+      <path>Browser/App_LocalResources/</path>
       <name>Browser.aspx.resx</name>
     </file>
     <file>
@@ -82,11 +86,11 @@
     </file>
     <file>
       <path>Browser/Images/</path>
-      <name>CreateFolder.gif</name>
+      <name>CreateFolder.png</name>
     </file>
     <file>
       <path>Browser/Images/</path>
-      <name>DeleteFile.gif</name>
+      <name>DeleteFile.png</name>
     </file>
     <file>
       <path>Browser/Images/</path>
@@ -94,11 +98,19 @@
     </file>
     <file>
       <path>Browser/Images/</path>
-      <name>DownloadButton.gif</name>
+      <name>DialogBackground.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/</path>
+      <name>DownloadButton.png</name>
     </file>
     <file>
       <path>Browser/Images/</path>
       <name>folder.gif</name>
+    </file>
+    <file>
+      <path>Browser/Images/</path>
+      <name>folderdb.gif</name>
     </file>
     <file>
       <path>Browser/Images/</path>
@@ -142,7 +154,7 @@
     </file>
     <file>
       <path>Browser/Images/</path>
-      <name>ResizeImage.gif</name>
+      <name>ResizeImage.png</name>
     </file>
     <file>
       <path>Browser/Images/</path>
@@ -154,39 +166,99 @@
     </file>
     <file>
       <path>Browser/Images/</path>
-      <name>UploadButton.gif</name>
+      <name>SyncFolder.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/</path>
+      <name>UploadButton.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>css.png</name>
+      <name>7z.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>doc.png</name>
+      <name>Css.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>exe.png</name>
+      <name>Divx.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>html.png</name>
+      <name>Dll.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>images.png</name>
+      <name>Dmg.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>info.png</name>
+      <name>Doc.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>js.png</name>
+      <name>Dvf.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>midi.png</name>
+      <name>Eps.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Exe.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Fla.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Flv.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Gz.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Html.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Iso.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Jar.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Log.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>M4b.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>M4p.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>M4v.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Mcd.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Mdb.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Mid.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
@@ -194,27 +266,75 @@
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>mov.png</name>
+      <name>Mov.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>pdf.png</name>
+      <name>Mp2.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>postscript.png</name>
+      <name>Mp4.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>pps.png</name>
+      <name>Mpeg.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>ps.png</name>
+      <name>Mpg.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>readme.png</name>
+      <name>Msi.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Mswmm.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Ogg.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Pdf.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Png.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Pps.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Ps.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Psd.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Pst.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Ptb.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Pub.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Ram.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Rar.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
@@ -222,15 +342,43 @@
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>swf.png</name>
+      <name>Rm.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>templates.png</name>
+      <name>Rmvb.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>txt.png</name>
+      <name>Rtf.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Swf.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Tgz.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Tif.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Tmp.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Torrent.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Ttf.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Txt.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
@@ -238,27 +386,55 @@
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>vcalendar.png</name>
+      <name>Vcard.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>vcard.png</name>
+      <name>Vcd.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>video.png</name>
+      <name>Video.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>xls.png</name>
+      <name>Vob.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>xml.png</name>
+      <name>Wav.png</name>
     </file>
     <file>
       <path>Browser/Images/types/</path>
-      <name>zip.png</name>
+      <name>Wma.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Wmv.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Wps.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Xls.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Xml.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Xpi.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/types/</path>
+      <name>Zip.png</name>
+    </file>
+    <file>
+      <path>Browser/js/</path>
+      <name>Browser.js</name>
     </file>
     <file>
       <path>Browser/js/</path>
@@ -270,7 +446,7 @@
     </file>
     <file>
       <path>Browser/js/</path>
-      <name>jQuery.ImageSlider.js</name>
+      <name>jquery.ImageSlider.js</name>
     </file>
     <file>
       <path>Browser/js/</path>
@@ -279,6 +455,262 @@
     <file>
       <path>CKFinder/</path>
       <name>config.ascx</name>
+    </file>
+    <file>
+      <path>css/</path>
+      <name>jquery.notification.css</name>
+    </file>
+    <file>
+      <path>css/</path>
+      <name>Options.css</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>About.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Anchor.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>BGColor.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>BidiLtr.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>BidiRtl.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Blockquote.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Bold.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>BulletedList.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Copy.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>CreateDiv.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Cut.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Find.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Flash.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Font.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>FontSize.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Format.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>HorizontalRule.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Iframe.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Image.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Indent.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Italic.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>JustifyBlock.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>JustifyCenter.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>JustifyLeft.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>JustifyRight.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Link.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>mathjax.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Maximize.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>NewPage.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>newsarticleslinks.gif</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>NumberedList.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>oembed.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Outdent.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>PageBreak.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Paste.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>PasteFromWord.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>PasteText.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Preview.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Print.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>qrcodes.jpg</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Redo.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>RemoveFormat.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Replace.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Save.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>SelectAll.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>separator.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>ShowBlocks.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Smiley.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Source.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>SpecialChar.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>SpellChecker.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Strike.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Styles.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Subscript.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Superscript.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>syntaxhighlight.gif</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Table.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Templates.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>TextColor.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Underline.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Undo.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>Unlink.png</name>
     </file>
     <file>
       <path>images/</path>
@@ -290,11 +722,75 @@
     </file>
     <file>
       <path>images/</path>
+      <name>editor_config_large.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>editor_config_small.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>error.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>information.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>loading.gif</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>ModuleHasSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>ModuleNoSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>PageHasSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>PageNoSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>PortalHasSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>PortalNoSetting.png</name>
+    </file>
+    <file>
+      <path>images/</path>
       <name>spacer.gif</name>
     </file>
     <file>
       <path>images/</path>
-      <name>sprite.png</name>
+      <name>tick.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>warning.png</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>jquery.ckeditor.adapter.js</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>jquery.notification.js</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>jquery.ui.controls.js</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>Options.js</name>
     </file>
     <file>
       <path>lang/</path>
@@ -351,10 +847,6 @@
     <file>
       <path>lang/</path>
       <name>en-gb.js</name>
-    </file>
-    <file>
-      <path>lang/</path>
-      <name>en-uk.js</name>
     </file>
     <file>
       <path>lang/</path>
@@ -422,6 +914,10 @@
     </file>
     <file>
       <path>lang/</path>
+      <name>id.js</name>
+    </file>
+    <file>
+      <path>lang/</path>
       <name>is.js</name>
     </file>
     <file>
@@ -443,6 +939,10 @@
     <file>
       <path>lang/</path>
       <name>ko.js</name>
+    </file>
+    <file>
+      <path>lang/</path>
+      <name>ku.js</name>
     </file>
     <file>
       <path>lang/</path>
@@ -498,11 +998,19 @@
     </file>
     <file>
       <path>lang/</path>
+      <name>si.js</name>
+    </file>
+    <file>
+      <path>lang/</path>
       <name>sk.js</name>
     </file>
     <file>
       <path>lang/</path>
       <name>sl.js</name>
+    </file>
+    <file>
+      <path>lang/</path>
+      <name>sq.js</name>
     </file>
     <file>
       <path>lang/</path>
@@ -546,107 +1054,259 @@
     </file>
     <file>
       <path>lang/</path>
-      <name>_languages.js</name>
+      <name>_translationstatus.txt</name>
     </file>
     <file>
-      <path>lang/</path>
-      <name>_translationstatus.txt</name>
+      <path>Module/</path>
+      <name>EditorConfigManager.ascx</name>
+    </file>
+    <file>
+      <path>Module/App_LocalResources/</path>
+      <name>EditorConfigManager.ascx.de-DE.resx</name>
+    </file>
+    <file>
+      <path>Module/App_LocalResources/</path>
+      <name>EditorConfigManager.ascx.pl-PL.resx</name>
+    </file>
+    <file>
+      <path>Module/App_LocalResources/</path>
+      <name>EditorConfigManager.ascx.resx</name>
+    </file>
+    <file>
+      <path>plugins/</path>
+      <name>icons.png</name>
+    </file>
+    <file>
+      <path>plugins/</path>
+      <name>icons_hidpi.png</name>
     </file>
     <file>
       <path>plugins/a11yhelp/dialogs/</path>
       <name>a11yhelp.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ar.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>bg.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>cs.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>cy.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>da.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>de.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>el.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>en.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>eo.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>et.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>fa.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>fi.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>fr-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>fr.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>gl.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>gu.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>he.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>hi.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>hr.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>id.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>it.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ko.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>lt.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>lv.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>mk.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>mn.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>nb.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>nl.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>no.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ro.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>si.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sq.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sr-latn.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sr.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>th.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>tr.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>ug.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>vi.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>zh-cn.js</name>
     </file>
     <file>
-      <path>plugins/a11yhelp/lang/</path>
-      <name>_translationstatus.txt</name>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>zh.js</name>
     </file>
     <file>
-      <path>plugins/about/</path>
-      <name>plugin.js</name>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>_translationstatus.txt</name>
     </file>
     <file>
       <path>plugins/about/dialogs/</path>
@@ -657,36 +1317,56 @@
       <name>logo_ckeditor.png</name>
     </file>
     <file>
-      <path>plugins/adobeair/</path>
-      <name>plugin.js</name>
+      <path>plugins/about/dialogs/hidpi/</path>
+      <name>logo_ckeditor.png</name>
     </file>
     <file>
       <path>plugins/ajax/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/autogrow/</path>
+      <path>plugins/autosave/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/basicstyles/</path>
-      <name>plugin.js</name>
+      <path>plugins/autosave/css/</path>
+      <name>autosave.min.css</name>
     </file>
     <file>
-      <path>plugins/bbcode/</path>
-      <name>plugin.js</name>
+      <path>plugins/autosave/js/</path>
+      <name>extensions.min.js</name>
     </file>
     <file>
-      <path>plugins/blockquote/</path>
-      <name>plugin.js</name>
+      <path>plugins/autosave/lang/</path>
+      <name>de.js</name>
     </file>
     <file>
-      <path>plugins/button/</path>
-      <name>plugin.js</name>
+      <path>plugins/autosave/lang/</path>
+      <name>en.js</name>
     </file>
     <file>
-      <path>plugins/clipboard/</path>
-      <name>plugin.js</name>
+      <path>plugins/autosave/lang/</path>
+      <name>jp.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>pt-BR.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>zh-cn.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>zh.js</name>
     </file>
     <file>
       <path>plugins/clipboard/dialogs/</path>
@@ -698,239 +1378,447 @@
     </file>
     <file>
       <path>plugins/codemirror/css/</path>
-      <name>xmlcolors.css</name>
+      <name>codemirror.min.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/icons/</path>
+      <name>AutoComplete.png</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/icons/</path>
+      <name>AutoFormat.png</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/icons/</path>
+      <name>CommentSelectedRange.png</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/icons/</path>
+      <name>SearchCode.png</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/icons/</path>
+      <name>UncommentSelectedRange.png</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>codemirror.js</name>
+      <name>beautify.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>editor.js</name>
+      <name>codemirror.addons.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>highlight.js</name>
+      <name>codemirror.addons.search.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>mirrorframe.js</name>
+      <name>codemirror.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>parsexml.js</name>
+      <name>codemirror.mode.htmlmixed.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>select.js</name>
+      <name>codemirror.mode.javascript.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
-      <name>stringstream.js</name>
+      <name>codemirror.mode.php.min.js</name>
     </file>
     <file>
-      <path>plugins/codemirror/js/</path>
-      <name>tokenize.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>af.js</name>
     </file>
     <file>
-      <path>plugins/codemirror/js/</path>
-      <name>tokenizejavascript.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>ar.js</name>
     </file>
     <file>
-      <path>plugins/codemirror/js/</path>
-      <name>undo.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>bg.js</name>
     </file>
     <file>
-      <path>plugins/codemirror/js/</path>
-      <name>util.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>bn.js</name>
     </file>
     <file>
-      <path>plugins/colorbutton/</path>
-      <name>plugin.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>bs.js</name>
     </file>
     <file>
-      <path>plugins/colordialog/</path>
-      <name>plugin.js</name>
+      <path>plugins/codemirror/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>cs.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>cy.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>da.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>en-au.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>en-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>eo.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>et.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>eu.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>fa.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>fi.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>fo.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>fr-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>gl.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>gu.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>hi.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>hr.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>is.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>it.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ka.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ko.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>lt.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>lv.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>mk.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>mn.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ms.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>nb.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>no.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ro.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>sr-latn.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>sr.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>th.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>ug.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>vi.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>zh-cn.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/lang/</path>
+      <name>zh.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>3024-day.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>3024-night.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>ambiance-mobile.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>ambiance.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>base16-dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>base16-light.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>blackboard.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>cobalt.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>eclipse.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>elegant.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>erlang-dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>lesser-dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>mbo.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>midnight.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>monokai.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>neat.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>night.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>paraiso-dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>paraiso-light.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>rubyblue.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>solarized.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>the-matrix.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>tomorrow-night-eighties.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>twilight.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>vibrant-ink.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>xq-dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>xq-light.css</name>
     </file>
     <file>
       <path>plugins/colordialog/dialogs/</path>
       <name>colordialog.js</name>
     </file>
     <file>
-      <path>plugins/contextmenu/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>gu.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>plugins/devtools/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
       <path>plugins/dialog/</path>
       <name>dialogDefinition.js</name>
-    </file>
-    <file>
-      <path>plugins/dialog/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/dialogui/</path>
-      <name>plugin.js</name>
     </file>
     <file>
       <path>plugins/div/dialogs/</path>
       <name>div.js</name>
     </file>
     <file>
-      <path>plugins/docprops/</path>
+      <path>plugins/dnnpages/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/docprops/dialogs/</path>
-      <name>docprops.js</name>
+      <path>plugins/dnnpages/lang/</path>
+      <name>de.js</name>
     </file>
     <file>
-      <path>plugins/domiterator/</path>
-      <name>plugin.js</name>
+      <path>plugins/dnnpages/lang/</path>
+      <name>en.js</name>
     </file>
     <file>
-      <path>plugins/editingblock/</path>
-      <name>plugin.js</name>
+      <path>plugins/dnnpages/lang/</path>
+      <name>pl.js</name>
     </file>
     <file>
-      <path>plugins/elementspath/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/enterkey/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/entities/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/fakeobjects/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/filebrowser/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/find/</path>
-      <name>plugin.js</name>
+      <path>plugins/fakeobjects/images/</path>
+      <name>spacer.gif</name>
     </file>
     <file>
       <path>plugins/find/dialogs/</path>
       <name>find.js</name>
-    </file>
-    <file>
-      <path>plugins/flash/</path>
-      <name>plugin.js</name>
     </file>
     <file>
       <path>plugins/flash/dialogs/</path>
@@ -939,22 +1827,6 @@
     <file>
       <path>plugins/flash/images/</path>
       <name>placeholder.png</name>
-    </file>
-    <file>
-      <path>plugins/floatpanel/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/font/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/format/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/forms/</path>
-      <name>plugin.js</name>
     </file>
     <file>
       <path>plugins/forms/dialogs/</path>
@@ -993,18 +1865,6 @@
       <name>hiddenfield.gif</name>
     </file>
     <file>
-      <path>plugins/horizontalrule/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/htmldataprocessor/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/htmlwriter/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
       <path>plugins/iframe/dialogs/</path>
       <name>iframe.js</name>
     </file>
@@ -1017,32 +1877,128 @@
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/image/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
       <path>plugins/image/dialogs/</path>
       <name>image.js</name>
     </file>
     <file>
-      <path>plugins/indent/</path>
+      <path>plugins/image/images/</path>
+      <name>noimage.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog_iequirks.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>editor.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>editor_ie7.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>editor_ie8.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>editor_iequirks.css</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>icons.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>icons_hidpi.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>readme.md</name>
+    </file>
+    <file>
+      <path>plugins/kama/</path>
+      <name>skin.js</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>dialog_sides.gif</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>dialog_sides.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>dialog_sides_rtl.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>mini.gif</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>sprites.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>sprites_ie6.png</name>
+    </file>
+    <file>
+      <path>plugins/kama/images/</path>
+      <name>toolbar_start.gif</name>
+    </file>
+    <file>
+      <path>plugins/language/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/jquery/</path>
+      <path>plugins/language/icons/</path>
+      <name>language.png</name>
+    </file>
+    <file>
+      <path>plugins/language/icons/hidpi/</path>
+      <name>language.png</name>
+    </file>
+    <file>
+      <path>plugins/language/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/lineutils/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/justify/</path>
-      <name>plugin.js</name>
+      <path>plugins/lineutils/dev/</path>
+      <name>dnd.html</name>
     </file>
     <file>
-      <path>plugins/keystrokes/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/link/</path>
-      <name>plugin.js</name>
+      <path>plugins/lineutils/dev/</path>
+      <name>magicfinger.html</name>
     </file>
     <file>
       <path>plugins/link/dialogs/</path>
@@ -1054,15 +2010,11 @@
     </file>
     <file>
       <path>plugins/link/images/</path>
-      <name>anchor.gif</name>
+      <name>anchor.png</name>
     </file>
     <file>
-      <path>plugins/list/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/listblock/</path>
-      <name>plugin.js</name>
+      <path>plugins/link/images/hidpi/</path>
+      <name>anchor.png</name>
     </file>
     <file>
       <path>plugins/liststyle/</path>
@@ -1073,32 +2025,420 @@
       <name>liststyle.js</name>
     </file>
     <file>
-      <path>plugins/maximize/</path>
+      <path>plugins/liststyle/lang/</path>
+      <name>af.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ar.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>bg.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>bn.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>bs.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>cs.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>cy.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>da.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>en-au.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>en-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>eo.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>et.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>eu.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>fa.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>fi.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>fo.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>fr-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>gl.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>gu.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>hi.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>hr.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>id.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>is.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>it.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ka.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ko.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>lt.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>lv.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>mk.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>mn.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ms.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>nb.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>no.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ro.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>si.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sq.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sr-latn.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sr.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>th.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>ug.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>vi.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>zh-cn.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
+      <name>zh.js</name>
+    </file>
+    <file>
+      <path>plugins/magicline/images/</path>
+      <name>icon.png</name>
+    </file>
+    <file>
+      <path>plugins/magicline/images/hidpi/</path>
+      <name>icon.png</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/MediaEmbed/</path>
-      <name>plugin.js</name>
+      <path>plugins/mathjax/dev/</path>
+      <name>mathjax.html</name>
     </file>
     <file>
-      <path>plugins/MediaEmbed/dialogs/</path>
-      <name>mediaembed.html</name>
+      <path>plugins/mathjax/dialogs/</path>
+      <name>mathjax.js</name>
     </file>
     <file>
-      <path>plugins/MediaEmbed/images/</path>
-      <name>icon.gif</name>
+      <path>plugins/mathjax/icons/</path>
+      <name>mathjax.png</name>
     </file>
     <file>
-      <path>plugins/menu/</path>
-      <name>plugin.js</name>
+      <path>plugins/mathjax/icons/hidpi/</path>
+      <name>mathjax.png</name>
     </file>
     <file>
-      <path>plugins/menubutton/</path>
-      <name>plugin.js</name>
+      <path>plugins/mathjax/images/</path>
+      <name>loader.gif</name>
     </file>
     <file>
-      <path>plugins/newpage/</path>
-      <name>plugin.js</name>
+      <path>plugins/mathjax/lang/</path>
+      <name>ar.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>cs.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>cy.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>fa.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>fi.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>gl.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>hr.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>nb.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>no.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>ro.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>zh-cn.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>zh.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/samples/</path>
+      <name>mathjax.html</name>
     </file>
     <file>
       <path>plugins/newsarticleslinks/</path>
@@ -1117,164 +2457,76 @@
       <name>newsarticleslinks.aspx.cs</name>
     </file>
     <file>
-      <path>plugins/pagebreak/</path>
+      <path>plugins/newsarticleslinks/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/newsarticleslinks/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/newsarticleslinks/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/</path>
       <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/icons/</path>
+      <name>oembed.png</name>
+    </file>
+    <file>
+      <path>plugins/oembed/icons/hidpi/</path>
+      <name>oembed.png</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/oembed/libs/</path>
+      <name>jquery.oembed.min.js</name>
     </file>
     <file>
       <path>plugins/pagebreak/images/</path>
       <name>pagebreak.gif</name>
     </file>
     <file>
-      <path>plugins/panel/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/panelbutton/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/pastefromword/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/pastefromword/dialogs/</path>
-      <name>pastefromword.js</name>
-    </file>
-    <file>
       <path>plugins/pastefromword/filter/</path>
       <name>default.js</name>
     </file>
     <file>
-      <path>plugins/pastetext/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/pastetext/dialogs/</path>
-      <name>pastetext.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/</path>
-      <name>placeholder.gif</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/dialogs/</path>
-      <name>placeholder.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>plugins/placeholder/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>plugins/popup/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
       <path>plugins/preview/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/print/</path>
-      <name>plugin.js</name>
+      <name>preview.html</name>
     </file>
     <file>
       <path>plugins/qrcodes/</path>
@@ -1290,6 +2542,10 @@
     </file>
     <file>
       <path>plugins/qrcodes/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/qrcodes/lang/</path>
       <name>en.js</name>
     </file>
     <file>
@@ -1297,24 +2553,16 @@
       <name>fr.js</name>
     </file>
     <file>
-      <path>plugins/removeformat/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/resize/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/richcombo/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/save/</path>
-      <name>plugin.js</name>
+      <path>plugins/qrcodes/lang/</path>
+      <name>pl.js</name>
     </file>
     <file>
       <path>plugins/scayt/</path>
-      <name>plugin.js</name>
+      <name>LICENSE.md</name>
+    </file>
+    <file>
+      <path>plugins/scayt/</path>
+      <name>README.md</name>
     </file>
     <file>
       <path>plugins/scayt/dialogs/</path>
@@ -1323,14 +2571,6 @@
     <file>
       <path>plugins/scayt/dialogs/</path>
       <name>toolbar.css</name>
-    </file>
-    <file>
-      <path>plugins/selection/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/showblocks/</path>
-      <name>plugin.js</name>
     </file>
     <file>
       <path>plugins/showblocks/images/</path>
@@ -1377,10 +2617,6 @@
       <name>block_pre.png</name>
     </file>
     <file>
-      <path>plugins/smiley/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
       <path>plugins/smiley/dialogs/</path>
       <name>smiley.js</name>
     </file>
@@ -1390,7 +2626,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>angel_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>angry_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>angry_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1398,7 +2642,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>broken_heart.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>confused_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>confused_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1406,7 +2658,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>cry_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>devil_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>devil_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1414,7 +2674,19 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>embarrassed_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>embarrassed_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>envelope.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>envelope.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1422,7 +2694,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>heart.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>kiss.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>kiss.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1430,7 +2710,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>lightbulb.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>omg_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>omg_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1438,7 +2726,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>regular_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>sad_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>sad_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1446,7 +2742,15 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>shades_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>teeth_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>teeth_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1454,7 +2758,23 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>thumbs_down.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>thumbs_up.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>thumbs_up.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>tongue_smile.gif</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
+      <name>tongue_smile.png</name>
     </file>
     <file>
       <path>plugins/smiley/images/</path>
@@ -1466,111 +2786,215 @@
     </file>
     <file>
       <path>plugins/smiley/images/</path>
+      <name>whatchutalkingabout_smile.png</name>
+    </file>
+    <file>
+      <path>plugins/smiley/images/</path>
       <name>wink_smile.gif</name>
     </file>
     <file>
-      <path>plugins/sourcearea/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/specialchar/</path>
-      <name>plugin.js</name>
+      <path>plugins/smiley/images/</path>
+      <name>wink_smile.png</name>
     </file>
     <file>
       <path>plugins/specialchar/dialogs/</path>
       <name>specialchar.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>ar.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>bg.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>cs.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>cy.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>de.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>en.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>eo.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>et.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>fa.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>fi.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>fr-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>fr.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>gl.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>hr.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>id.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>it.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>lv.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>nb.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>nl.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>no.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>si.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>sq.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>th.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>tr.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>ug.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>vi.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>zh-cn.js</name>
     </file>
     <file>
-      <path>plugins/specialchar/lang/</path>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>zh.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>plugins/styles/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/styles/styles/</path>
-      <name>default.js</name>
-    </file>
-    <file>
-      <path>plugins/stylescombo/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/stylescombo/styles/</path>
-      <name>default.js</name>
     </file>
     <file>
       <path>plugins/stylesheetparser/</path>
       <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/stylesheetparser/samples/</path>
+      <name>stylesheetparser.html</name>
+    </file>
+    <file>
+      <path>plugins/stylesheetparser/samples/assets/</path>
+      <name>sample.css</name>
     </file>
     <file>
       <path>plugins/syntaxhighlight/</path>
@@ -1590,11 +3014,15 @@
     </file>
     <file>
       <path>plugins/syntaxhighlight/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/syntaxhighlight/lang/</path>
       <name>en.js</name>
     </file>
     <file>
       <path>plugins/syntaxhighlight/lang/</path>
-      <name>zh-cn.js</name>
+      <name>pl.js</name>
     </file>
     <file>
       <path>plugins/syntaxhighlight/scripts/</path>
@@ -1605,14 +3033,6 @@
       <name>shCore.css</name>
     </file>
     <file>
-      <path>plugins/tab/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/table/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
       <path>plugins/table/dialogs/</path>
       <name>table.js</name>
     </file>
@@ -1621,16 +3041,16 @@
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/tabletools/</path>
-      <name>plugin.js</name>
+      <path>plugins/tableresize/samples/</path>
+      <name>tableresize.html</name>
     </file>
     <file>
       <path>plugins/tabletools/dialogs/</path>
       <name>tableCell.js</name>
     </file>
     <file>
-      <path>plugins/templates/</path>
-      <name>plugin.js</name>
+      <path>plugins/templates/dialogs/</path>
+      <name>templates.css</name>
     </file>
     <file>
       <path>plugins/templates/dialogs/</path>
@@ -1653,164 +3073,212 @@
       <name>template3.gif</name>
     </file>
     <file>
-      <path>plugins/toolbar/</path>
+      <path>plugins/textselection/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/</path>
+      <path>plugins/widget/</path>
       <name>plugin.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/</path>
-      <name>uicolor.gif</name>
+      <path>plugins/widget/dev/</path>
+      <name>console.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/dialogs/</path>
-      <name>uicolor.js</name>
+      <path>plugins/widget/images/</path>
+      <name>handle.png</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>bg.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>ar.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>cs.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>cy.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>de.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>el.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>en.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>eo.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>es.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>fa.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>fi.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>fr.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>he.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>gl.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>hr.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>it.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>hu.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>mk.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>ja.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>ko.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>nb.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>nl.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>no.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>pl.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>tr.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>pt-br.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>ug.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>pt.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>uk.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/lang/</path>
+      <path>plugins/widget/lang/</path>
       <name>zh-cn.js</name>
     </file>
     <file>
-      <path>plugins/uicolor/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/</path>
-      <name>yui.js</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/assets/</path>
-      <name>hue_bg.png</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/assets/</path>
-      <name>hue_thumb.png</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/assets/</path>
-      <name>picker_mask.png</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/assets/</path>
-      <name>picker_thumb.png</name>
-    </file>
-    <file>
-      <path>plugins/uicolor/yui/assets/</path>
-      <name>yui.css</name>
-    </file>
-    <file>
-      <path>plugins/undo/</path>
-      <name>plugin.js</name>
+      <path>plugins/widget/lang/</path>
+      <name>zh.js</name>
     </file>
     <file>
       <path>plugins/wordcount/</path>
       <name>plugin.js</name>
     </file>
     <file>
+      <path>plugins/wordcount/css/</path>
+      <name>wordcount.css</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>it.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>jp.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>no.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>pt-BR.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
       <path>plugins/wsc/</path>
-      <name>plugin.js</name>
+      <name>LICENSE.md</name>
+    </file>
+    <file>
+      <path>plugins/wsc/</path>
+      <name>README.md</name>
     </file>
     <file>
       <path>plugins/wsc/dialogs/</path>
       <name>ciframe.html</name>
+    </file>
+    <file>
+      <path>plugins/wsc/dialogs/</path>
+      <name>tmp.html</name>
     </file>
     <file>
       <path>plugins/wsc/dialogs/</path>
@@ -1825,11 +3293,23 @@
       <name>wsc.js</name>
     </file>
     <file>
-      <path>plugins/wysiwygarea/</path>
-      <name>plugin.js</name>
+      <path>plugins/wsc/dialogs/</path>
+      <name>wsc_ie.js</name>
     </file>
     <file>
       <path>plugins/xml/</path>
+      <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/xmlstyles/</path>
+      <name>desktop.ini</name>
+    </file>
+    <file>
+      <path>plugins/xmlstyles/</path>
+      <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/xmltemplates/</path>
       <name>plugin.js</name>
     </file>
     <file>
@@ -1838,7 +3318,35 @@
     </file>
     <file>
       <path>skins/black/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
       <name>editor.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>editor_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/black/</path>
+      <name>editor_ie8.css</name>
     </file>
     <file>
       <path>skins/black/</path>
@@ -1846,15 +3354,7 @@
     </file>
     <file>
       <path>skins/black/</path>
-      <name>icons_rtl.png</name>
-    </file>
-    <file>
-      <path>skins/black/</path>
       <name>skin.js</name>
-    </file>
-    <file>
-      <path>skins/black/</path>
-      <name>templates.css</name>
     </file>
     <file>
       <path>skins/black/images/</path>
@@ -1894,7 +3394,43 @@
     </file>
     <file>
       <path>skins/kama/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>dialog_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
       <name>editor.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>editor_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>editor_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>editor_iequirks.css</name>
     </file>
     <file>
       <path>skins/kama/</path>
@@ -1902,15 +3438,15 @@
     </file>
     <file>
       <path>skins/kama/</path>
-      <name>icons_rtl.png</name>
+      <name>icons_hidpi.png</name>
+    </file>
+    <file>
+      <path>skins/kama/</path>
+      <name>readme.md</name>
     </file>
     <file>
       <path>skins/kama/</path>
       <name>skin.js</name>
-    </file>
-    <file>
-      <path>skins/kama/</path>
-      <name>templates.css</name>
     </file>
     <file>
       <path>skins/kama/images/</path>
@@ -1927,10 +3463,6 @@
     <file>
       <path>skins/kama/images/</path>
       <name>mini.gif</name>
-    </file>
-    <file>
-      <path>skins/kama/images/</path>
-      <name>noimage.png</name>
     </file>
     <file>
       <path>skins/kama/images/</path>
@@ -1945,2232 +3477,1448 @@
       <name>toolbar_start.gif</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
+      <path>skins/moono/</path>
       <name>dialog.css</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
+      <path>skins/moono/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>dialog_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
       <name>editor.css</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
+      <path>skins/moono/</path>
+      <name>editor_gecko.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>editor_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>editor_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
+      <name>editor_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/moono/</path>
       <name>icons.png</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
-      <name>icons_rtl.png</name>
+      <path>skins/moono/</path>
+      <name>icons_hidpi.png</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
-      <name>skin.js</name>
+      <path>skins/moono/</path>
+      <name>readme.md</name>
     </file>
     <file>
-      <path>skins/office2003/</path>
-      <name>templates.css</name>
+      <path>skins/moono/images/</path>
+      <name>arrow.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>dialog_sides.gif</name>
+      <path>skins/moono/images/</path>
+      <name>close.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>dialog_sides.png</name>
+      <path>skins/moono/images/</path>
+      <name>lock-open.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>dialog_sides_rtl.png</name>
+      <path>skins/moono/images/</path>
+      <name>lock.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>mini.gif</name>
+      <path>skins/moono/images/</path>
+      <name>mini.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>noimage.png</name>
+      <path>skins/moono/images/</path>
+      <name>refresh.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>sprites.png</name>
+      <path>skins/moono/images/hidpi/</path>
+      <name>close.png</name>
     </file>
     <file>
-      <path>skins/office2003/images/</path>
-      <name>sprites_ie6.png</name>
+      <path>skins/moono/images/hidpi/</path>
+      <name>lock-open.png</name>
     </file>
     <file>
-      <path>skins/v2/</path>
+      <path>skins/moono/images/hidpi/</path>
+      <name>lock.png</name>
+    </file>
+    <file>
+      <path>skins/moono/images/hidpi/</path>
+      <name>refresh.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>colorpanel.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
       <name>dialog.css</name>
     </file>
     <file>
-      <path>skins/v2/</path>
+      <path>skins/moono-dark/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
       <name>editor.css</name>
     </file>
     <file>
-      <path>skins/v2/</path>
-      <name>icons.png</name>
+      <path>skins/moono-dark/</path>
+      <name>editor_ie.css</name>
     </file>
     <file>
-      <path>skins/v2/</path>
-      <name>icons_rtl.png</name>
+      <path>skins/moono-dark/</path>
+      <name>editor_ie7.css</name>
     </file>
     <file>
-      <path>skins/v2/</path>
-      <name>skin.js</name>
+      <path>skins/moono-dark/</path>
+      <name>editor_ie8.css</name>
     </file>
     <file>
-      <path>skins/v2/</path>
-      <name>templates.css</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>dialog_sides.gif</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>dialog_sides.png</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>dialog_sides_rtl.png</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>mini.gif</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>noimage.png</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>sprites.png</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>sprites_ie6.png</name>
-    </file>
-    <file>
-      <path>skins/v2/images/</path>
-      <name>toolbar_start.gif</name>
-    </file>
-    <file>
-      <path>themes/default/</path>
-      <name>theme.js</name>
-    </file>
-    <file>
-      <path>_source/adapters/</path>
-      <name>jquery.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>ajax.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>ckeditor.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>ckeditor_base.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>ckeditor_basic.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>command.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>commanddefinition.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>config.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>dataprocessor.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>dom.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>dtd.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>editor.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>editor_basic.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>env.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>event.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>eventInfo.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>focusmanager.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>htmlparser.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>imagecacher.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>lang.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>loader.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>plugindefinition.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>plugins.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>resourcemanager.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>scriptloader.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>skins.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>test.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>themes.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>tools.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>ui.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>xml.js</name>
-    </file>
-    <file>
-      <path>_source/core/</path>
-      <name>_bootstrap.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>comment.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>document.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>documentfragment.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>domobject.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>element.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>elementpath.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>event.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>node.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>nodelist.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>range.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>rangelist.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>text.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>walker.js</name>
-    </file>
-    <file>
-      <path>_source/core/dom/</path>
-      <name>window.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>basicwriter.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>cdata.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>comment.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>element.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>filter.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>fragment.js</name>
-    </file>
-    <file>
-      <path>_source/core/htmlparser/</path>
-      <name>text.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>af.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ar.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>bn.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>bs.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ca.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>en-au.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>en-ca.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>en-gb.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>en-uk.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>es.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>eu.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>fo.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>fr-ca.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>gl.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>gu.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>hi.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>hu.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>is.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ja.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ka.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>km.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ko.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>lt.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>lv.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>mk.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>mn.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ms.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>pt-br.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>pt.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ro.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ru.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>sk.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>sl.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>sr-latn.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>sr.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>sv.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>th.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>zh.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>_languages.js</name>
-    </file>
-    <file>
-      <path>_source/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/dialogs/</path>
-      <name>a11yhelp.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>gu.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>mk.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/a11yhelp/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/about/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/about/dialogs/</path>
-      <name>about.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/about/dialogs/</path>
-      <name>logo_ckeditor.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/adobeair/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/ajax/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/autogrow/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/basicstyles/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/bbcode/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/bidi/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/blockquote/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/button/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/clipboard/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/clipboard/dialogs/</path>
-      <name>paste.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/css/</path>
-      <name>xmlcolors.css</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>codemirror.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>editor.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>highlight.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>mirrorframe.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>parsexml.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>select.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>stringstream.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>tokenize.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>tokenizejavascript.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>undo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/codemirror/js/</path>
-      <name>util.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/colorbutton/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/colordialog/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/colordialog/dialogs/</path>
-      <name>colordialog.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/contextmenu/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>gu.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/devtools/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/dialog/</path>
-      <name>dialogDefinition.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/dialog/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/dialogadvtab/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/dialogui/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/div/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/div/dialogs/</path>
-      <name>div.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/docprops/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/docprops/dialogs/</path>
-      <name>docprops.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/domiterator/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/editingblock/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/elementspath/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/enterkey/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/entities/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/fakeobjects/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/filebrowser/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/find/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/find/dialogs/</path>
-      <name>find.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/flash/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/flash/dialogs/</path>
-      <name>flash.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/flash/images/</path>
-      <name>placeholder.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/floatpanel/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/font/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/format/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>button.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>checkbox.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>form.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>hiddenfield.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>radio.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>select.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>textarea.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/dialogs/</path>
-      <name>textfield.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/forms/images/</path>
-      <name>hiddenfield.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/horizontalrule/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/htmldataprocessor/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/htmlwriter/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/iframe/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/iframe/dialogs/</path>
-      <name>iframe.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/iframe/images/</path>
-      <name>placeholder.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/iframedialog/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/image/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/image/dialogs/</path>
-      <name>image.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/indent/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/justify/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/keystrokes/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/link/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/link/dialogs/</path>
-      <name>anchor.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/link/dialogs/</path>
-      <name>link.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/link/images/</path>
-      <name>anchor.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/list/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/listblock/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/liststyle/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/liststyle/dialogs/</path>
-      <name>liststyle.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/maximize/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/menu/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/menubutton/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/newpage/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pagebreak/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pagebreak/images/</path>
-      <name>pagebreak.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/panel/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/panelbutton/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pastefromword/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pastefromword/dialogs/</path>
-      <name>pastefromword.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pastefromword/filter/</path>
-      <name>default.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pastetext/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/pastetext/dialogs/</path>
-      <name>pastetext.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/</path>
-      <name>placeholder.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/dialogs/</path>
-      <name>placeholder.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/placeholder/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/popup/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/preview/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/print/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/removeformat/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/resize/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/richcombo/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/save/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/scayt/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/scayt/dialogs/</path>
-      <name>options.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/scayt/dialogs/</path>
-      <name>toolbar.css</name>
-    </file>
-    <file>
-      <path>_source/plugins/selection/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_address.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_blockquote.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_div.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h1.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h2.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h3.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h4.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h5.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_h6.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_p.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showblocks/images/</path>
-      <name>block_pre.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/showborders/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/dialogs/</path>
-      <name>smiley.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>angel_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>angry_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>broken_heart.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>confused_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>cry_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>devil_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>embaressed_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>envelope.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>heart.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>kiss.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>lightbulb.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>omg_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>regular_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>sad_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>shades_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>teeth_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>thumbs_down.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>thumbs_up.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>tounge_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>whatchutalkingabout_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/smiley/images/</path>
-      <name>wink_smile.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/sourcearea/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/dialogs/</path>
-      <name>specialchar.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/specialchar/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/styles/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/styles/styles/</path>
-      <name>default.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/stylescombo/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/stylescombo/styles/</path>
-      <name>default.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/stylesheetparser/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/tab/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/table/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/table/dialogs/</path>
-      <name>table.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/tableresize/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/tabletools/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/tabletools/dialogs/</path>
-      <name>tableCell.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/dialogs/</path>
-      <name>templates.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/templates/</path>
-      <name>default.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/templates/images/</path>
-      <name>template1.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/templates/images/</path>
-      <name>template2.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/templates/templates/images/</path>
-      <name>template3.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/toolbar/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/</path>
-      <name>uicolor.gif</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/dialogs/</path>
-      <name>uicolor.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>bg.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>cs.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>cy.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>da.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>el.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>eo.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>et.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>fa.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>fi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>fr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>he.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>hr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>it.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>mk.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>nb.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>nl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>no.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>tr.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>ug.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>uk.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>vi.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>zh-cn.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/lang/</path>
-      <name>_translationstatus.txt</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/</path>
-      <name>yui.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/assets/</path>
-      <name>hue_bg.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/assets/</path>
-      <name>hue_thumb.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/assets/</path>
-      <name>picker_mask.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/assets/</path>
-      <name>picker_thumb.png</name>
-    </file>
-    <file>
-      <path>_source/plugins/uicolor/yui/assets/</path>
-      <name>yui.css</name>
-    </file>
-    <file>
-      <path>_source/plugins/undo/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/wordcount/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/wsc/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/wsc/dialogs/</path>
-      <name>ciframe.html</name>
-    </file>
-    <file>
-      <path>_source/plugins/wsc/dialogs/</path>
-      <name>tmpFrameset.html</name>
-    </file>
-    <file>
-      <path>_source/plugins/wsc/dialogs/</path>
-      <name>wsc.css</name>
-    </file>
-    <file>
-      <path>_source/plugins/wsc/dialogs/</path>
-      <name>wsc.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/wysiwygarea/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/plugins/xml/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
-      <name>dialog.css</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
-      <name>editor.css</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>elementspath.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
-      <name>icons.css</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
-      <name>icons.png</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
-      <name>icons_rtl.png</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>mainui.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>menu.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>panel.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>presets.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
+      <name>readme.md</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
       <name>reset.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>richcombo.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>skin.js</name>
     </file>
     <file>
-      <path>_source/skins/kama/</path>
-      <name>templates.css</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/</path>
+      <path>skins/moono-dark/</path>
       <name>toolbar.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>dialog_sides.gif</name>
+      <path>skins/moono-dark/icons/</path>
+      <name>about.png</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>dialog_sides.png</name>
+      <path>skins/moono-dark/icons/</path>
+      <name>anchor-rtl.png</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>dialog_sides_rtl.png</name>
+      <path>skins/moono-dark/icons/</path>
+      <name>anchor.png</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
+      <path>skins/moono-dark/icons/</path>
+      <name>bgcolor.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>bidiltr.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>bidirtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>blockquote.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>bold.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>bulletedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>bulletedlist.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>button.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>checkbox.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>copy-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>copy.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>creatediv.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>cut-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>cut.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>find-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>find.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>flash.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>form.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>hiddenfield.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>horizontalrule.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>iframe.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>image.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>imagebutton.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>indent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>indent.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>italic.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>justifyblock.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>justifycenter.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>justifyleft.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>justifyright.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>link.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>maximize.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>newpage-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>newpage.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>numberedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>numberedlist.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>outdent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>outdent.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pagebreak-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pagebreak.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>paste-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>paste.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pastefromword-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pastefromword.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pastetext-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>pastetext.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>preview-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>preview.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>print.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>radio.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>redo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>redo.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>removeformat.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>replace.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>save.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>scayt.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>select-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>select.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>selectall.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>showblocks-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>showblocks.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>smiley.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>source-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>source.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>specialchar.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>spellchecker.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>strike.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>subscript.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>superscript.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>table.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>templates-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>templates.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>textarea-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>textarea.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>textcolor.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>textfield-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>textfield.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>underline.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>undo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>undo.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/icons/</path>
+      <name>unlink.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
+      <name>arrow.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
+      <name>close.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
       <name>mini.gif</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>noimage.png</name>
+      <path>skins/moono-dark/images/</path>
+      <name>resizer.png</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>sprites.png</name>
+      <path>skins/ozone/</path>
+      <name>colorpanel.css</name>
     </file>
     <file>
-      <path>_source/skins/kama/images/</path>
-      <name>sprites_ie6.png</name>
-    </file>
-    <file>
-      <path>_source/skins/kama/images/</path>
-      <name>toolbar_start.gif</name>
-    </file>
-    <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>dialog.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/ozone/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>skins/ozone/</path>
       <name>editor.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>skins/ozone/</path>
       <name>elementspath.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
-      <name>icons.css</name>
-    </file>
-    <file>
-      <path>_source/skins/office2003/</path>
-      <name>icons.png</name>
-    </file>
-    <file>
-      <path>_source/skins/office2003/</path>
-      <name>icons_rtl.png</name>
-    </file>
-    <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>mainui.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>menu.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>panel.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>presets.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
+      <name>readme.md</name>
+    </file>
+    <file>
+      <path>skins/ozone/</path>
       <name>reset.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>richcombo.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
+      <name>screenshot.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/</path>
       <name>skin.js</name>
     </file>
     <file>
-      <path>_source/skins/office2003/</path>
-      <name>templates.css</name>
-    </file>
-    <file>
-      <path>_source/skins/office2003/</path>
+      <path>skins/ozone/</path>
       <name>toolbar.css</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>dialog_sides.gif</name>
+      <path>skins/ozone/icons/</path>
+      <name>about.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>dialog_sides.png</name>
+      <path>skins/ozone/icons/</path>
+      <name>anchor-rtl.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>dialog_sides_rtl.png</name>
+      <path>skins/ozone/icons/</path>
+      <name>anchor.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>mini.gif</name>
+      <path>skins/ozone/icons/</path>
+      <name>bgcolor.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>noimage.png</name>
+      <path>skins/ozone/icons/</path>
+      <name>bidiltr.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>sprites.png</name>
+      <path>skins/ozone/icons/</path>
+      <name>bidirtl.png</name>
     </file>
     <file>
-      <path>_source/skins/office2003/images/</path>
-      <name>sprites_ie6.png</name>
+      <path>skins/ozone/icons/</path>
+      <name>blockquote.png</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/ozone/icons/</path>
+      <name>bold.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>bulletedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>bulletedlist.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>button.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>checkbox.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>copy-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>copy.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>creatediv.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>cut-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>cut.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>find-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>find.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>flash.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>form.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>hiddenfield.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>horizontalrule.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>iframe.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>image.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>imagebutton.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>indent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>indent.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>italic.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>justifyblock.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>justifycenter.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>justifyleft.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>justifyright.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>link.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>maximize.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>newpage-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>newpage.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>numberedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>numberedlist.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>outdent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>outdent.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pagebreak-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pagebreak.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>paintroller.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>paste-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>paste.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pastefromword-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pastefromword.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pastetext-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>pastetext.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>presentation.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>preview-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>preview.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>print.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>printer.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>radio.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>redo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>redo.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>removeformat.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>replace.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>resize-br.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>save.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>scayt.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>select-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>select.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>selectall.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>showblocks-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>showblocks.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>smiley.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>source-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>source.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>source2.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>specialchar.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>spellchecker.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>strike.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>subscript.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>superscript.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>table.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>templates-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>templates.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>textalt.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>textarea-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>textarea.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>textcolor.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>textfield.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>underline.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>undo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>undo.png</name>
+    </file>
+    <file>
+      <path>skins/ozone/icons/</path>
+      <name>unlink.png</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>colorpanel.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
       <name>dialog.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
+      <name>dialog_ie.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>dialog_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>dialog_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>dialog_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>dialog_opera.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
       <name>editor.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
+      <name>editor_ie.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>editor_ie7.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>editor_ie8.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
+      <name>editor_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
       <name>elementspath.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
-      <name>icons.css</name>
-    </file>
-    <file>
-      <path>_source/skins/v2/</path>
-      <name>icons.png</name>
-    </file>
-    <file>
-      <path>_source/skins/v2/</path>
-      <name>icons_rtl.png</name>
-    </file>
-    <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>mainui.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>menu.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>panel.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>presets.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
+      <name>readme.md</name>
+    </file>
+    <file>
+      <path>skins/silver/</path>
       <name>reset.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>richcombo.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>skin.js</name>
     </file>
     <file>
-      <path>_source/skins/v2/</path>
-      <name>templates.css</name>
-    </file>
-    <file>
-      <path>_source/skins/v2/</path>
+      <path>skins/silver/</path>
       <name>toolbar.css</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/icons/</path>
+      <name>about.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>anchor-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>anchor.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bgcolor.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bidiltr.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bidirtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>blockquote.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bold.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bulletedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>bulletedlist.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>button.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>checkbox.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>copy-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>copy.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>creatediv.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>cut-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>cut.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>docprops-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>docprops.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>find-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>find.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>flash.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>form.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>hiddenfield.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>horizontalrule.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>icons.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>iframe.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>image.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>imagebutton.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>indent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>indent.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>italic.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>justifyblock.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>justifycenter.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>justifyleft.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>justifyright.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>link.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>maximize.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>newpage-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>newpage.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>numberedlist-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>numberedlist.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>outdent-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>outdent.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pagebreak-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pagebreak.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>paste-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>paste.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pastefromword-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pastefromword.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pastetext-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>pastetext.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>preview-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>preview.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>print.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>radio.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>redo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>redo.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>removeformat.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>replace.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>save.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>scayt.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>select-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>select.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>selectall.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>showblocks-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>showblocks.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>smiley.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>source-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>source.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>specialchar.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>spellchecker.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>strike.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>subscript.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>superscript.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>table.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>templates-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>templates.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>textarea-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>textarea.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>textcolor.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>textfield.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>underline.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>undo-rtl.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>undo.png</name>
+    </file>
+    <file>
+      <path>skins/silver/icons/</path>
+      <name>unlink.png</name>
+    </file>
+    <file>
+      <path>skins/silver/images/</path>
       <name>dialog_sides.gif</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>dialog_sides.png</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>dialog_sides_rtl.png</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>mini.gif</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
-      <name>noimage.png</name>
-    </file>
-    <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>sprites.png</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>sprites_ie6.png</name>
     </file>
     <file>
-      <path>_source/skins/v2/images/</path>
+      <path>skins/silver/images/</path>
       <name>toolbar_start.gif</name>
     </file>
     <file>
-      <path>_source/tests/</path>
-      <name>test.css</name>
+      <path>skins/silver/images/custom/</path>
+      <name>comboBg.png</name>
     </file>
     <file>
-      <path>_source/tests/</path>
-      <name>test.js</name>
+      <path>skins/silver/images/custom/</path>
+      <name>comboBgHover.png</name>
     </file>
     <file>
-      <path>_source/tests/</path>
-      <name>testall.html</name>
+      <path>skins/silver/images/custom/</path>
+      <name>resizer.png</name>
     </file>
     <file>
-      <path>_source/tests/</path>
-      <name>yuitest.js</name>
+      <path>skins/silver/images/custom/</path>
+      <name>toolBg.png</name>
     </file>
     <file>
-      <path>_source/tests/core/</path>
-      <name>ajax.html</name>
+      <path>skins/silver/images/custom/</path>
+      <name>toolBgStriped.png</name>
     </file>
     <file>
-      <path>_source/tests/core/</path>
-      <name>bootstrap.html</name>
+      <path>skins/silver/images/custom/</path>
+      <name>toolEnd.png</name>
     </file>
     <file>
-      <path>_source/tests/core/</path>
-      <name>ckeditor.html</name>
+      <path>skins/silver/preview/</path>
+      <name>preview.png</name>
     </file>
     <file>
-      <path>_source/tests/core/</path>
-      <name>editor.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>env.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>event.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>plugins.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>scriptloader.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>tools.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/</path>
-      <name>xml.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>document.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>documentfragment.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>element.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>node.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>range.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>text.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>walker.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/dom/</path>
-      <name>window.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/htmlparser/</path>
-      <name>fragment.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/htmlparser/</path>
-      <name>htmlparser.html</name>
-    </file>
-    <file>
-      <path>_source/tests/core/plugins/myplugins/sample/</path>
-      <name>my_plugin.js</name>
-    </file>
-    <file>
-      <path>_source/tests/core/_editor/</path>
-      <name>custom_config_1.js</name>
-    </file>
-    <file>
-      <path>_source/tests/core/_editor/</path>
-      <name>custom_config_2.js</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/domiterator/</path>
-      <name>domiterator.html</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/htmldataprocessor/</path>
-      <name>htmldataprocessor.html</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/link/</path>
-      <name>link.html</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/list/</path>
-      <name>list.html</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/selection/</path>
-      <name>selection.html</name>
-    </file>
-    <file>
-      <path>_source/tests/plugins/styles/</path>
-      <name>styles.html</name>
-    </file>
-    <file>
-      <path>_source/tests/_assets/</path>
-      <name>sample.css</name>
-    </file>
-    <file>
-      <path>_source/tests/_assets/</path>
-      <name>sample.js</name>
-    </file>
-    <file>
-      <path>_source/tests/_assets/</path>
-      <name>sample.txt</name>
-    </file>
-    <file>
-      <path>_source/tests/_assets/</path>
-      <name>sample.xml</name>
-    </file>
-    <file>
-      <path>_source/tests/_assets/</path>
-      <name>sample_xml.txt</name>
-    </file>
-    <file>
-      <path>_source/themes/default/</path>
-      <name>theme.js</name>
+      <path>skins/silver/preview/</path>
+      <name>uicolor.png</name>
     </file>
   </files>
 </dotnetnuke>

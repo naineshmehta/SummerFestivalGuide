@@ -17,6 +17,10 @@
       <name>VocabularyList.ascx.resx</name>
     </file>
     <file>
+      <path>Scripts/</path>
+      <name>TaxonomyEditor.js</name>
+    </file>
+    <file>
       <path />
       <name>CreateVocabulary.ascx</name>
     </file>
@@ -33,16 +37,16 @@
       <name>module.css</name>
     </file>
     <file>
+      <path />
+      <name>packages.config</name>
+    </file>
+    <file>
       <path>Controls/</path>
       <name>EditTermControl.ascx</name>
     </file>
     <file>
       <path>Controls/</path>
       <name>EditVocabularyControl.ascx</name>
-    </file>
-    <file>
-      <path>Scripts/</path>
-      <name>TaxonomyEditor.js</name>
     </file>
   </files>
 </dotnetnuke>

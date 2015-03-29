@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -23,9 +23,11 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Web.UI.WebControls;
 
 using DotNetNuke.Entities.Portals;
+using DotNetNuke.Entities.Tabs;
 using DotNetNuke.Framework;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
@@ -306,6 +308,17 @@ namespace DotNetNuke.UI.Skins.Controls
             }
         }
 
+		private bool LocaleIsAvailable(Locale locale)
+		{
+			var tab = PortalSettings.ActiveTab;
+			if (tab.DefaultLanguageTab != null)
+			{
+				tab = tab.DefaultLanguageTab;
+			}
+
+            return TabController.Instance.GetTabByCulture(tab.TabID, tab.PortalID, locale) != null;
+		}
+
 		#endregion
 
 		#region Event Handlers
@@ -325,7 +338,9 @@ namespace DotNetNuke.UI.Skins.Controls
                     foreach (Locale loc in LocaleController.Instance.GetLocales(PortalSettings.PortalId).Values)
                     {
                         string defaultRoles = PortalController.GetPortalSetting(string.Format("DefaultTranslatorRoles-{0}", loc.Code), PortalSettings.PortalId, "Administrators");
-                        if (!PortalSettings.ContentLocalizationEnabled || PortalSecurity.IsInRoles(PortalSettings.AdministratorRoleName) || loc.IsPublished || PortalSecurity.IsInRoles(defaultRoles))
+                        if (!PortalSettings.ContentLocalizationEnabled ||
+							(LocaleIsAvailable(loc) &&
+								(PortalSecurity.IsInRoles(PortalSettings.AdministratorRoleName) || loc.IsPublished || PortalSecurity.IsInRoles(defaultRoles))))
                         {
                             locales.Add(loc.Code, loc);
                         }
@@ -340,28 +355,26 @@ namespace DotNetNuke.UI.Skins.Controls
                         rptLanguages.Visible = false;
                     }
                 }
-                if (!Page.IsPostBack)
+                
+                if (ShowMenu)
                 {
-                    if (ShowMenu)
+                    if (!String.IsNullOrEmpty(CssClass))
                     {
-                        if (!String.IsNullOrEmpty(CssClass))
-                        {
-                            selectCulture.CssClass = CssClass;
-                        }
-                        Localization.LoadCultureDropDownList(selectCulture, CultureDropDownTypes.NativeName, CurrentCulture);
-
-                        //only show language selector if more than one language
-                        if (selectCulture.Items.Count <= 1)
-                        {
-                            selectCulture.Visible = false;
-                        }
+                        selectCulture.CssClass = CssClass;
                     }
-                    else
+                    Localization.LoadCultureDropDownList(selectCulture, CultureDropDownTypes.NativeName, CurrentCulture);
+
+                    //only show language selector if more than one language
+                    if (selectCulture.Items.Count <= 1)
                     {
                         selectCulture.Visible = false;
                     }
-                    handleCommonTemplates();
                 }
+                else
+                {
+                    selectCulture.Visible = false;
+                }
+                handleCommonTemplates();
             }
             catch (Exception ex)
             {

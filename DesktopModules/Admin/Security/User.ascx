@@ -17,7 +17,7 @@
 </dnn:DnnFormEditor>
 <div class="dnnFormGroup dnnFormItem dnnFormShort" id="renameUserPortals" runat="server" Visible="False">
     <dnn:Label ID="numSites" runat="server"></dnn:Label>
-    <dnn:DnnComboBox CheckBoxes="false" id="cboSites" runat="server" Width="100" DataMember="PortalName" Visible="False"></dnn:DnnComboBox>
+    <dnn:DnnComboBox CheckBoxes="false" id="cboSites" runat="server" Width="100" DataMember="PortalName" Visible="False" ViewStateMode="Disabled"/>
 </div>
 
 <asp:panel id="pnlAddUser" runat="server" visible="False" CssClass="dnnForm dnnFormPassword">
@@ -45,13 +45,13 @@
         </div>
         <div class="dnnFormItem">
             <dnn:label id="plPassword" runat="server" controlname="txtPassword" cssclass="dnnFormRequired"  />
-            <asp:Panel ID="passwordContainer" runat="server" CssClass="password-strength-container">
-    			<asp:textbox id="txtPassword" runat="server" TextMode="Password" CssClass="password-strength" size="12" maxlength="20" AutoCompleteType="Disabled" />
+            <asp:Panel ID="passwordContainer" runat="server">
+    			<asp:textbox id="txtPassword" runat="server" TextMode="Password" size="12" maxlength="20" AutoCompleteType="Disabled" />
             </asp:Panel>
         </div>
         <div class="dnnFormItem">
             <dnn:label id="plConfirm" runat="server" controlname="txtConfirm" text="Confirm Password:" cssclass="dnnFormRequired"  ></dnn:label>
-			<asp:textbox id="txtConfirm" runat="server" textmode="Password" size="12" maxlength="20" CssClass="password-confirm"/>
+			<asp:textbox id="txtConfirm" runat="server" textmode="Password" size="12" maxlength="20" CssClass="password-confirm" />
             <asp:CompareValidator ID="ComparePasswordsValidator" runat="server"
                                   resourcekey = "ComparePasswordsValidator.ErrorMessage" 
                                   CssClass="dnnFormMessage dnnFormError"    

@@ -211,9 +211,17 @@ if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{
 drop procedure {databaseOwner}[{objectQualifier}EventsCategoryGetByName]
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}EventsLocationGetByName]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}EventsLocationGetByName]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}EventsSignupsGetAnonUser]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}EventsSignupsGetAnonUser]
+GO
+
 /** Drop Functions **/
-if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}SplitIDs]') and xtype in (N'FN', N'IF', N'TF'))
-drop function {databaseOwner}[{objectQualifier}SplitIDs]
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}EventsSplitIDs]') and xtype in (N'FN', N'IF', N'TF'))
+drop function {databaseOwner}[{objectQualifier}EventsSplitIDs]
 GO
 
 /** Drop Constraints **/

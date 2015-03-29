@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -310,7 +310,7 @@
     <value>Default Value:</value>
   </data>
   <data name="DateTime_DefaultValue.Help" xml:space="preserve">
-    <value>New records will use this value as the default value, for example, 2000-01-01T12:00:00.</value>
+    <value>New records will use this value as the default value, for example, 2000-01-01T12:00:00. If no TimeZone information is added , the value will be treated as UTC.  Example for same in CET Summer Time: 2000-01-01T12:00:00+2.00</value>
   </data>
   <data name="Decimal_InputSetting.Text" xml:space="preserve">
     <value>List of Values:</value>
@@ -347,12 +347,6 @@
   </data>
   <data name="Download_DefaultValue.Help" xml:space="preserve">
     <value>New records will use this value as the default value. Enter a valid URL. </value>
-  </data>
-  <data name="Download_NormalizeFlag.Text" xml:space="preserve">
-    <value>Abbreviated URL:</value>
-  </data>
-  <data name="Download_NormalizeFlag.Help" xml:space="preserve">
-    <value>Enable to display file or page name only.</value>
   </data>
   <data name="EMail_InputSetting.Text" xml:space="preserve">
     <value>List of Values:</value>
@@ -465,10 +459,10 @@
   <data name="TextHtml_DefaultValue.Text" xml:space="preserve">
     <value>Default Value:</value>
   </data>
-  <data name="TextHtml_NormalizeFlag.Help" xml:space="preserve">
+  <data name="TextHtml_PlainText.Help" xml:space="preserve">
     <value>Enable to display a Plain Text Box instead of a Rich Text (HTML) editor.</value>
   </data>
-  <data name="TextHtml_NormalizeFlag.Text" xml:space="preserve">
+  <data name="TextHtml_PlainText.Text" xml:space="preserve">
     <value>Plain Text Box?</value>
   </data>
   <data name="TextHtml_DefaultValue.Help" xml:space="preserve">
@@ -567,11 +561,11 @@
   <data name="PagingLast.Text" xml:space="preserve">
     <value>Last</value>
   </data>
-  <data name="Separator_NormalizeFlag.Help" xml:space="preserve">
-    <value>Acts as Fieldset (applies only to CSS based layout), it will be ignored for table based forms.</value>
+  <data name="Separator_IsCollapsible.Help" xml:space="preserve">
+    <value>Collapsible Area</value>
   </data>
-  <data name="Separator_NormalizeFlag.Text" xml:space="preserve">
-    <value>Acts as Fieldset (applies only to CSS based layout)?</value>
+  <data name="Separator_IsCollapsible.Text" xml:space="preserve">
+    <value>Collapsible Area</value>
   </data>
   <data name="Attachment.Text" xml:space="preserve">
     <value>Attachment</value>
@@ -584,5 +578,191 @@
   </data>
   <data name="Boolean_OutputSetting.Text" xml:space="preserve">
     <value>Right label text:</value>
+  </data>
+  <data name="DateTime_ConvertToUserDateTime.Help" xml:space="preserve">
+    <value>By default the date time is returned in the server's time zone. If this setting is enabled, the value will be converted to the timezone of the user.</value>
+  </data>
+  <data name="DateTime_ConvertToUserDateTime.Text" xml:space="preserve">
+    <value>Convert to user's timezone</value>
+  </data>
+  <data name="Download_Abbreviate.Help" xml:space="preserve">
+    <value>By default, the caption of the file inludes path and filename. You can shorten the caption to only return the filename.</value>
+  </data>
+  <data name="Download_Abbreviate.Text" xml:space="preserve">
+    <value>Abbreviate caption</value>
+  </data>
+  <data name="Download_EnforceDownload.Help" xml:space="preserve">
+    <value>Enable to enforce a download</value>
+  </data>
+  <data name="Download_EnforceDownload.Text" xml:space="preserve">
+    <value>Enforce Download</value>
+  </data>
+  <data name="Download_ShowOpenInNewWindow.Help" xml:space="preserve">
+    <value>Enable "Open in new window" inside form.</value>
+  </data>
+  <data name="Download_ShowOpenInNewWindow.Text" xml:space="preserve">
+    <value>Enable "Open in new window"</value>
+  </data>
+  <data name="EMail_NoLink.Help" xml:space="preserve">
+    <value>If enabled, the email address is returned as plain text</value>
+  </data>
+  <data name="EMail_NoLink.Text" xml:space="preserve">
+    <value>No Link</value>
+  </data>
+  <data name="Expression_HideOnEdit.Help" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="Expression_HideOnEdit.Text" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="Expression_RenderInForm.Help" xml:space="preserve">
+    <value>The expression gets executed based on the current data. Doesn't work with all expressions.</value>
+  </data>
+  <data name="Expression_RenderInForm.Text" xml:space="preserve">
+    <value>Render in form</value>
+  </data>
+  <data name="Image_AltCaption.Help" xml:space="preserve">
+    <value>"Alt" caption of the image. [Tokens] are supported here.</value>
+  </data>
+  <data name="Image_AltCaption.Text" xml:space="preserve">
+    <value>Alt caption</value>
+  </data>
+  <data name="Image_AsLink.Help" xml:space="preserve">
+    <value>Link the thumbnail to the original image.</value>
+  </data>
+  <data name="Image_AsLink.Text" xml:space="preserve">
+    <value>Thumbnail As Link</value>
+  </data>
+  <data name="Image_Height.Help" xml:space="preserve">
+    <value>Heigth of thumbnail. Set width and height blank to use original size.</value>
+  </data>
+  <data name="Image_Height.Text" xml:space="preserve">
+    <value>Thumbnail Heigtht</value>
+  </data>
+  <data name="Image_Width.Help" xml:space="preserve">
+    <value>Width of thumbnail. Set width and height blank to use original size.</value>
+  </data>
+  <data name="Image_Width.Text" xml:space="preserve">
+    <value>Thumbnail Width</value>
+  </data>
+  <data name="URL_Abbreviate.Help" xml:space="preserve">
+    <value>By default, the caption of the link inludes path and filename. You can shorten the caption to only return the filename.</value>
+  </data>
+  <data name="URL_Abbreviate.Text" xml:space="preserve">
+    <value>Abbreviate caption</value>
+  </data>
+  <data name="URL_EnforceDownload.Help" xml:space="preserve">
+    <value>Enable to enforce a download</value>
+  </data>
+  <data name="URL_EnforceDownload.Text" xml:space="preserve">
+    <value>Enforce Download</value>
+  </data>
+  <data name="URL_ShowOpenInNewWindow.Help" xml:space="preserve">
+    <value>Enable "Open in new window" inside form.</value>
+  </data>
+  <data name="URL_ShowOpenInNewWindow.Text" xml:space="preserve">
+    <value>Enable "Open in new window"</value>
+  </data>
+  <data name="URL_TrackDownloads.Help" xml:space="preserve">
+    <value>Decide whther the link should use linkclick.aspx instead a direct link.</value>
+  </data>
+  <data name="URL_TrackDownloads.Text" xml:space="preserve">
+    <value>Track Number of Downloads</value>
+  </data>
+  <data name="UserLink_OpenInNewWindow.Help" xml:space="preserve">
+    <value>Link opens a new window/tab</value>
+  </data>
+  <data name="UserLink_OpenInNewWindow.Text" xml:space="preserve">
+    <value>Open in new Window</value>
+  </data>
+  <data name="UserLink_ShowUserName.Help" xml:space="preserve">
+    <value>If enabled, the username will be shown, otherwise the displayname.</value>
+  </data>
+  <data name="UserLink_ShowUserName.Text" xml:space="preserve">
+    <value>Show Username</value>
+  </data>
+  <data name="UserLink_TokenText.Help" xml:space="preserve">
+    <value>Expression based on [Tokens]. If empty, the displayname or username of the user will be returned.</value>
+  </data>
+  <data name="UserLink_TokenText.Text" xml:space="preserve">
+    <value>Expression</value>
+  </data>
+  <data name="String_MultipleValues.Help" xml:space="preserve">
+    <value>This setting will replace radio buttons with checkboxes. Selected values are stored as string separated by semicolons (";")</value>
+  </data>
+  <data name="String_MultipleValues.Text" xml:space="preserve">
+    <value>Multiple Values</value>
+  </data>
+  <data name="ChangedAt_ConvertToUserDateTime.Help" xml:space="preserve">
+    <value>By default the date time is returned in the server's time zone. If this setting is enabled, the value will be converted to the timezone of the user.</value>
+  </data>
+  <data name="ChangedAt_ConvertToUserDateTime.Text" xml:space="preserve">
+    <value>Convert to user's timezone</value>
+  </data>
+  <data name="ChangedAt_HideOnEdit.Help" xml:space="preserve">
+    <value>If enabled, value will be displayed to all users when editing.</value>
+  </data>
+  <data name="ChangedAt_HideOnEdit.Text" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="ChangedBy_AsLink.Help" xml:space="preserve">
+    <value>As Link to User Profile</value>
+  </data>
+  <data name="ChangedBy_AsLink.Text" xml:space="preserve">
+    <value>As Link:</value>
+  </data>
+  <data name="ChangedBy_HideOnEdit.Help" xml:space="preserve">
+    <value>If enabled, value will be displayed to all users when editing.</value>
+  </data>
+  <data name="ChangedBy_HideOnEdit.Text" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="ChangedBy_OpenInNewWindow.Help" xml:space="preserve">
+    <value>Open in new window</value>
+  </data>
+  <data name="ChangedBy_OpenInNewWindow.Text" xml:space="preserve">
+    <value>New window:</value>
+  </data>
+  <data name="ChangedBy_PreferDisplayName.Help" xml:space="preserve">
+    <value>Prefer Displayname over user name</value>
+  </data>
+  <data name="ChangedBy_PreferDisplayName.Text" xml:space="preserve">
+    <value>Prefer Displayname</value>
+  </data>
+  <data name="CreatedAt_ConvertToUserDateTime.Help" xml:space="preserve">
+    <value>By default the date time is returned in the server's time zone. If this setting is enabled, the value will be converted to the timezone of the user.</value>
+  </data>
+  <data name="CreatedAt_ConvertToUserDateTime.Text" xml:space="preserve">
+    <value>Convert to user's timezone</value>
+  </data>
+  <data name="CreatedAt_HideOnEdit.Help" xml:space="preserve">
+    <value>If enabled, value will be displayed to all users when editing.</value>
+  </data>
+  <data name="CreatedAt_HideOnEdit.Text" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="CreatedBy_AsLink.Help" xml:space="preserve">
+    <value>As Link to User Profile</value>
+  </data>
+  <data name="CreatedBy_AsLink.Text" xml:space="preserve">
+    <value>As Link:</value>
+  </data>
+  <data name="CreatedBy_HideOnEdit.Help" xml:space="preserve">
+    <value>If enabled, value will be displayed to all users when editing.</value>
+  </data>
+  <data name="CreatedBy_HideOnEdit.Text" xml:space="preserve">
+    <value>Show on Edit Form?</value>
+  </data>
+  <data name="CreatedBy_OpenInNewWindow.Help" xml:space="preserve">
+    <value>Open in new window</value>
+  </data>
+  <data name="CreatedBy_OpenInNewWindow.Text" xml:space="preserve">
+    <value>New window:</value>
+  </data>
+  <data name="CreatedBy_PreferDisplayName.Help" xml:space="preserve">
+    <value>Prefer Displayname over user name</value>
+  </data>
+  <data name="CreatedBy_PreferDisplayName.Text" xml:space="preserve">
+    <value>Prefer Displayname</value>
   </data>
 </root>

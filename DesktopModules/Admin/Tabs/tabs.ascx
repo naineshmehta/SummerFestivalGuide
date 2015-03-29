@@ -2,10 +2,11 @@
 <%@ Register TagPrefix="dnnweb" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Security.Permissions.Controls" Assembly="DotNetNuke" %>
-<%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
+<%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/DnnUrlControl.ascx" %>
 <script language="javascript" type="text/javascript">
 /*globals jQuery, window, Sys */
 (function ($, Sys) {
+	var needReload = false;
 	function setUpTabsModule() {
 		$('#dnnTabsModule').dnnPanels()
 			.find('.dnnFormExpandContent a').dnnExpandAll({
@@ -23,6 +24,18 @@
 				e.preventDefault();
 			}
 		});
+		
+		$("#<%=cmdUpdate.ClientID%>").click(function() {
+			needReload = true;
+		});
+	    
+        $('input[id$=cmdDeleteModule]').dnnConfirm({
+            text: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("DeleteItem")) %>',
+            yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+            noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+        	title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>',
+        	isButton: true
+        });
 	}
 
 	var searchPages = function(keyword) {
@@ -89,11 +102,15 @@
 				setTimeout(msgQueue[0], 0);
 				msgQueue.splice(0, 1);
 			}
-		}
+		};
 
 		Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
-			setUpTabsModule();
-			processMsgQueue();
+			if (needReload) {
+				location.reload();
+			} else {
+				setUpTabsModule();
+				processMsgQueue();
+			}
 		});
 	});
 
@@ -108,11 +125,17 @@
 			var id = '<%=ctlContext.ClientID%>';
 			var item = eventArgs.get_menuItem();
 			var cmd = item.get_value();
-			if (cmd == 'delete') {
-				if (!confirm('<%=GetConfirmString()%>')) {
-					item.get_menu().hide();
-					eventArgs.set_cancel(true);
-				}
+		    var attributes = item.get_attributes();
+			if (cmd == 'delete' && !attributes.getAttribute("confirm")) {
+			    item.get_menu().hide();
+			    $("<a href='#' />").dnnConfirm({
+			        text: '<%=GetConfirmString()%>',
+			        callbackTrue: function () {
+			            attributes.setAttribute("confirm", true);
+			            item.click();
+			        }
+			    }).click();
+			    eventArgs.set_cancel(true);
 			}
 			/*get current node to set hash*/
 			var nodeValue = eventArgs.get_node().get_value();
@@ -208,6 +231,10 @@
 			<div class="dtlItem">
 				<img runat="server" src="images/Icon_Disabled.png" alt="" />
 				<asp:Literal ID="lblDisabled" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_Redirect.png" alt="" />
+				<asp:Literal ID="lblRedirect" runat="server" />
 			</div>
 		</div>
 	</div>        
@@ -305,7 +332,7 @@
 				</div>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblTags" runat="server" suffix=":" />
-					<dnnweb:TermsSelector ID="termsSelector" runat="server" />
+					<dnnweb:TermsSelector ID="termsSelector" runat="server" IncludeTags="False" />
 				</div>
 			</fieldset>
 		</div>
@@ -329,13 +356,11 @@
 			<fieldset>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblSkin" runat="server" suffix=":" />
-					<%--<asp:DropDownList ID="drpSkin" runat="server" DataTextField="Key" DataValueField ="Value" />--%>
-                    <dnnweb:DnnComboBox ID="drpSkin" runat="server" DataTextField="Key" DataValueField ="Value" />
+                    <dnnweb:DnnSkinComboBox ID="drpSkin" runat="server" />
 				</div>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblContainer" runat="server" suffix=":" />
-					<%--<asp:DropDownList ID="drpContainer" runat="server" DataTextField="Key" DataValueField ="Value"  />--%>
-                    <dnnweb:DnnComboBox ID="drpContainer" runat="server" DataTextField="Key" DataValueField ="Value"  />
+                    <dnnweb:DnnSkinComboBox ID="drpContainer" runat="server"  />
 					
 				</div>
                 <div class="dnnFormItem">

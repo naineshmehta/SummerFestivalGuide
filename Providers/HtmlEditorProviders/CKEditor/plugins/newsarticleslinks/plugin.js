@@ -1,7 +1,7 @@
 /*********************************************************************************************************/
 /**
- * Ventrian News Articles Article Link Selector plugin for CKEditor 3.x by Ingo Herbote
- * Released: On 2012-02-25
+ * Ventrian News Articles Article Link Selector plugin for CKEditor by Ingo Herbote
+ * Released: On 2013-02-17
  */
 /*********************************************************************************************************/
 
@@ -9,13 +9,15 @@
     CKEDITOR.plugins.add( 'newsarticleslinks',
     {
         requires: [ 'iframedialog' ],
+		lang: ['de', 'en', 'pl'],
         init: function( editor )
         {
            var me = this;
+		   
            CKEDITOR.dialog.add( 'newsarticleslinksDialog', function (editor)
            {
               return {
-                 title : 'News Articles Link Selector Dialog',
+                 title : editor.lang.newsarticleslinks.title,
                  minWidth : 550,
                  minHeight : 160,
                  contents :
@@ -57,7 +59,7 @@
 
             editor.ui.addButton( 'newsarticleslinks',
             {
-                label: 'News Article Links',
+                label: editor.lang.newsarticleslinks.button,
                 command: 'newsarticleslinks',
                 icon: this.path + 'icon.gif'
             } );

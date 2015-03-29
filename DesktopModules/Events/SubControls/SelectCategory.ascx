@@ -1,6 +1,5 @@
 <%@ Control Language="vb" AutoEventWireup="false" Codebehind="SelectCategory.ascx.vb" Inherits="DotNetNuke.Modules.Events.SelectCategory" %>
-<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" TagPrefix="dnn" %>
 
 <div class="SelCategoryTR">
     <div class="SelCategory SubHead">

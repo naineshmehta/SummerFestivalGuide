@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -169,7 +169,7 @@
     <value>You are enrolled and approved for this event!</value>
   </data>
   <data name="EnrolledButNotApproved.Text" xml:space="preserve">
-    <value>You are enrolled for this event,&lt;br&gt; but not yet approved!</value>
+    <value>You are enrolled for this event, but not yet approved!</value>
   </data>
   <data name="ControlTitle_details.Text" xml:space="preserve">
     <value>Event Detail</value>
@@ -188,9 +188,6 @@
   </data>
   <data name="cmdNotify.Text" xml:space="preserve">
     <value>Remind me about this Event @</value>
-  </data>
-  <data name="SureYouWantToBeNotified.Text" xml:space="preserve">
-    <value>Are You Sure You Want To Be Reminded?</value>
   </data>
   <data name="StatusPPCancelled.Text" xml:space="preserve">
     <value>You have successfully cancelled the paid enrollment.</value>
@@ -213,15 +210,6 @@
   <data name="Minutes.Text" xml:space="preserve">
     <value>Minutes</value>
   </data>
-  <data name="invalidReminderDays.Text" xml:space="preserve">
-    <value>Invalid Reminder Time (1-30 days)</value>
-  </data>
-  <data name="invalidReminderHours.Text" xml:space="preserve">
-    <value>Invalid Reminder Time (1-24 hours)</value>
-  </data>
-  <data name="invalidReminderMinutes.Text" xml:space="preserve">
-    <value>Invalid Reminder Time (15-60 minutes)</value>
-  </data>
   <data name="LoginToEnroll.Text" xml:space="preserve">
     <value>Login to Enroll for this Event</value>
   </data>
@@ -241,10 +229,10 @@
     <value>Delete Series</value>
   </data>
   <data name="lblNoEnrolee.Text" xml:space="preserve">
-    <value>No. of Enrolees:</value>
+    <value>No. of Enrollees:</value>
   </data>
   <data name="valNoEnrolees.Text" xml:space="preserve">
-    <value>Number of Enrolees must be in range 1 to {0}</value>
+    <value>Number of Enrollees must be in range 1 to {0}</value>
   </data>
   <data name="lblMaxNoEnrolees.Text" xml:space="preserve">
     <value>(Max {0})</value>
@@ -263,5 +251,26 @@
   </data>
   <data name="ConfirmationiCal.Text" xml:space="preserve">
     <value>Event has been emailed as a .ics to {0}</value>
+  </data>
+  <data name="valAnonName.Text" xml:space="preserve">
+    <value>Name must be entered</value>
+  </data>
+  <data name="YouAreAlreadyEnrolledForThisEvent.Text" xml:space="preserve">
+    <value>You are already enrolled for this event!</value>
+  </data>
+  <data name="lblAnonEmail.Text" xml:space="preserve">
+    <value>Email Address:</value>
+  </data>
+  <data name="lblAnonName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="lblAnonTelephone.Text" xml:space="preserve">
+    <value>Phone No:</value>
+  </data>
+  <data name="cmdvEventSignupsDownload.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="cmdvEventSignupsTooltip.Text" xml:space="preserve">
+    <value>Download the enrollees for this event as an XML file</value>
   </data>
 </root>

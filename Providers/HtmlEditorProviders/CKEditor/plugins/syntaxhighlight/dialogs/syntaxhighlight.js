@@ -1,5 +1,4 @@
-CKEDITOR.dialog.add('syntaxhighlight', function(editor)
-{    
+CKEDITOR.dialog.add('syntaxhighlight', function(editor) {
     var parseHtml = function(htmlString) {
         htmlString = htmlString.replace(/<br>/g, '\n');
         htmlString = htmlString.replace(/&amp;/g, '&');
@@ -7,9 +6,8 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
         htmlString = htmlString.replace(/&gt;/g, '>');
         htmlString = htmlString.replace(/&quot;/g, '"');
         return htmlString;
-    }
-    
-    var getDefaultOptions = function(options) {
+    };
+    var getDefaultOptions = function() {
         var options = new Object();
         options.hideGutter = false;
         options.hideControls = false;
@@ -23,8 +21,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
         options.lang = null;
         options.code = '';
         return options;
-    }
-    
+    };
     var getOptionsForString = function(optionsString) {
         var options = getDefaultOptions();
         if (optionsString) {
@@ -34,7 +31,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
                     options.lang = match[1].replace(/^\s+|\s+$/g, "");
                 }
             }
-            
+
             if (optionsString.indexOf("gutter") > -1)
                 options.hideGutter = true;
 
@@ -51,7 +48,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
                     options.firstLine = match[1];
                 }
             }
-            
+
             if (optionsString.indexOf("highlight") > -1) {
                 // make sure we have a comma-seperated list
                 if (optionsString.match(/highlight:[ ]{0,1}\[[0-9]+(,[0-9]+)*\]/)) {
@@ -66,13 +63,12 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
 
             if (optionsString.indexOf("ruler") > -1)
                 options.showColumns = true;
-            
+
             if (optionsString.indexOf("wrap-lines") > -1)
                 options.noWrap = true;
         }
         return options;
-    }
-    
+    };
     var getStringForOptions = function(optionsObject) {
         var result = 'brush:' + optionsObject.lang + ';';
         if (optionsObject.hideGutter)
@@ -90,8 +86,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
         if (optionsObject.highlightChecked && optionsObject.highlight != '')
             result += 'highlight: [' + optionsObject.highlight.replace(/\s/gi, '') + '];';
         return result;
-    }
-    
+    };
     return {
         title: editor.lang.syntaxhighlight.title,
         minWidth: 500,
@@ -102,7 +97,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
             var selection = editor.getSelection();
             var element = selection.getStartElement();
             var preElement = element && element.getAscendant('pre', true);
-            
+
             // Set the content for the textarea
             var text = '';
             var optionsObj = null;
@@ -123,7 +118,7 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
             var data = getDefaultOptions();
             this.commitContent(data);
             var optionsString = getStringForOptions(data);
-            
+
             if (preElement) {
                 preElement.setAttribute('class', optionsString);
                 preElement.setText(data.code);
@@ -134,56 +129,56 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
                 editor.insertElement(newElement);
             }
         },
-        contents : [
+        contents: [
             {
-                id : 'source',
-                label : editor.lang.syntaxhighlight.sourceTab,
-                accessKey : 'S',
-                elements :
+                id: 'source',
+                label: editor.lang.syntaxhighlight.sourceTab,
+                accessKey: 'S',
+                elements:
                 [
                     {
-                        type : 'vbox',
+                        type: 'vbox',
                         children: [
-                          {
-                              id: 'cmbLang',
-                              type: 'select',
-                              labelLayout: 'horizontal',
-                              label: editor.lang.syntaxhighlight.langLbl,
-                              'default': 'plain',
-                              widths : [ '25%','75%' ],
-                              items: [
-                                      ['Plain (Text)', 'plain'],
-									  ['ActionScript3', 'as3'],
-									  ['Bash(shell)', 'bash'],
-									  ['ColdFusion', 'coldfusion'], 
-									  ['C#', 'csharp'],
-									  ['C++', 'cpp'], 
-									  ['CSS', 'css'],
-									  ['Delphi', 'delphi'], 
-									  ['Diff', 'diff'], 
-									  ['Erlang', 'erlang'], 
-									  ['Groovy', 'groovy'], 
-									  ['JavaScript', 'jscript'],
-									  ['Java', 'java'],
-									  ['JavaFX', 'javafx'], 
-									  ['Perl', 'perl'], 
-									  ['PHP', 'php'],
-									  ['PowerShell', 'powershell'], 
-									  ['Pyton', 'python'], 
-									  ['Ruby', 'ruby'],
-									  ['Scala', 'scala'],
-									  ['SQL', 'sql'], 
-									  ['Visual Basic', 'vb'], 
-									  ['XML/XHTML', 'xml'],
-                              ],
-                              setup: function(data) {
-                                  if (data.lang)
-                                      this.setValue(data.lang);
-                              },
-                              commit: function(data) {
-                                  data.lang = this.getValue();
-                              }
-                          }
+                            {
+                                id: 'cmbLang',
+                                type: 'select',
+                                labelLayout: 'horizontal',
+                                label: editor.lang.syntaxhighlight.langLbl,
+                                'default': 'plain',
+                                widths: ['25%', '75%'],
+                                items: [
+                                    ['Plain (Text)', 'plain'],
+                                    ['ActionScript3', 'as3'],
+                                    ['Bash(shell)', 'bash'],
+                                    ['ColdFusion', 'coldfusion'],
+                                    ['C#', 'csharp'],
+                                    ['C++', 'cpp'],
+                                    ['CSS', 'css'],
+                                    ['Delphi', 'delphi'],
+                                    ['Diff', 'diff'],
+                                    ['Erlang', 'erlang'],
+                                    ['Groovy', 'groovy'],
+                                    ['JavaScript', 'jscript'],
+                                    ['Java', 'java'],
+                                    ['JavaFX', 'javafx'],
+                                    ['Perl', 'perl'],
+                                    ['PHP', 'php'],
+                                    ['PowerShell', 'powershell'],
+                                    ['Pyton', 'python'],
+                                    ['Ruby', 'ruby'],
+                                    ['Scala', 'scala'],
+                                    ['SQL', 'sql'],
+                                    ['Visual Basic', 'vb'],
+                                    ['XML/XHTML', 'xml']
+                                ],
+                                setup: function(data) {
+                                    if (data.lang)
+                                        this.setValue(data.lang);
+                                },
+                                commit: function(data) {
+                                    data.lang = this.getValue();
+                                }
+                            }
                         ]
                     },
                     {
@@ -202,170 +197,170 @@ CKEDITOR.dialog.add('syntaxhighlight', function(editor)
                 ]
             },
             {
-                id : 'advanced',
-                label : editor.lang.syntaxhighlight.advancedTab,
-                accessKey : 'A',
-                elements :
+                id: 'advanced',
+                label: editor.lang.syntaxhighlight.advancedTab,
+                accessKey: 'A',
+                elements:
                 [
                     {
-                        type : 'vbox',
+                        type: 'vbox',
                         children: [
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.hideGutter + '</strong>'
-                          },
-                          {
-                              type: 'checkbox',
-                              id: 'hide_gutter',
-                              label: editor.lang.syntaxhighlight.hideGutterLbl,
-                              setup: function(data) {
-                                  this.setValue(data.hideGutter)
-                              },
-                              commit: function(data) {
-                                  data.hideGutter = this.getValue();
-                              }
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.hideControls + '</strong>'
-                          },
-                          {
-                              type: 'checkbox',
-                              id: 'hide_controls',
-                              label: editor.lang.syntaxhighlight.hideControlsLbl,
-                              setup: function(data) {
-                                  this.setValue(data.hideControls)
-                              },
-                              commit: function(data) {
-                                  data.hideControls = this.getValue();
-                              }
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.collapse + '</strong>'
-                          },
-                          {
-                              type: 'checkbox',
-                              id: 'collapse',
-                              label: editor.lang.syntaxhighlight.collapseLbl,
-                              setup: function(data) {
-                                  this.setValue(data.collapse)
-                              },
-                              commit: function(data) {
-                                  data.collapse = this.getValue();
-                              }
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.showColumns + '</strong>'
-                          },
-                          {
-                              type: 'checkbox',
-                              id: 'show_columns',
-                              label: editor.lang.syntaxhighlight.showColumnsLbl,
-                              setup: function(data) {
-                                  this.setValue(data.showColumns)
-                              },
-                              commit: function(data) {
-                                  data.showColumns = this.getValue();
-                              }
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.lineWrap + '</strong>'
-                          },
-                          {
-                              type: 'checkbox',
-                              id: 'line_wrap',
-                              label: editor.lang.syntaxhighlight.lineWrapLbl,
-                              setup: function(data) {
-                                  this.setValue(data.noWrap);
-                              },
-                              commit: function(data) {
-                                  data.noWrap = this.getValue();
-                              }
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.lineCount + '</strong>'
-                          },
-                          {
-                              type: 'hbox',
-                              widths: [ '5%', '95%' ],
-                              children: [
-                                 {
-                                     type: 'checkbox',
-                                     id: 'lc_toggle',
-                                     label: '',
-                                     setup: function(data) {
-                                          this.setValue(data.firstLineChecked);
-                                     },
-                                     commit: function(data) {
-                                         data.firstLineChecked = this.getValue();
-                                     }
-                                 },
-                                 {
-                                     type: 'text',
-                                     id: 'default_lc',
-                                     style: 'width: 15%;',
-                                     label: '',
-                                     setup: function(data) {
-                                         if (data.firstLine > 1)
-                                             this.setValue(data.firstLine);
-                                     },
-                                     commit: function(data) {
-                                         if (this.getValue() && this.getValue() != '')
-                                             data.firstLine = this.getValue();
-                                     }
-                                 }
-                              ]
-                          },
-                          {
-                              type: 'html',
-                              html: '<strong>' + editor.lang.syntaxhighlight.highlight + '</strong>'
-                          },
-                          {
-                              type: 'hbox',
-                              widths: [ '5%', '95%' ],
-                              children: [
-                                 {
-                                     type: 'checkbox',
-                                     id: 'hl_toggle',
-                                     label: '',
-                                     setup: function(data) {
-                                         this.setValue(data.highlightChecked)
-                                     },
-                                     commit: function(data) {
-                                         data.highlightChecked = this.getValue();
-                                     }
-                                 },
-                                 {
-                                     type: 'text',
-                                     id: 'default_hl',
-                                     style: 'width: 40%;',
-                                     label: '',
-                                     setup: function(data) {
-                                         if (data.highlight != null)
-                                             this.setValue(data.highlight);
-                                     },
-                                     commit: function(data) {
-                                         if (this.getValue() && this.getValue() != '')
-                                             data.highlight = this.getValue();
-                                     }
-                                 }
-                              ]
-                          },
-                          {
-                              type: 'hbox',
-                              widths: [ '5%', '95%' ],
-                              children: [
-                                  {type: 'html', html: ''},
-                                  {
-                                      type: 'html',
-                                      html: '<i>' + editor.lang.syntaxhighlight.highlightLbl + '</i>'
-                                  }
-                              ]
-                          }
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.hideGutter + '</strong>'
+                            },
+                            {
+                                type: 'checkbox',
+                                id: 'hide_gutter',
+                                label: editor.lang.syntaxhighlight.hideGutterLbl,
+                                setup: function(data) {
+                                    this.setValue(data.hideGutter);
+                                },
+                                commit: function(data) {
+                                    data.hideGutter = this.getValue();
+                                }
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.hideControls + '</strong>'
+                            },
+                            {
+                                type: 'checkbox',
+                                id: 'hide_controls',
+                                label: editor.lang.syntaxhighlight.hideControlsLbl,
+                                setup: function(data) {
+                                    this.setValue(data.hideControls);
+                                },
+                                commit: function(data) {
+                                    data.hideControls = this.getValue();
+                                }
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.collapse + '</strong>'
+                            },
+                            {
+                                type: 'checkbox',
+                                id: 'collapse',
+                                label: editor.lang.syntaxhighlight.collapseLbl,
+                                setup: function(data) {
+                                    this.setValue(data.collapse);
+                                },
+                                commit: function(data) {
+                                    data.collapse = this.getValue();
+                                }
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.showColumns + '</strong>'
+                            },
+                            {
+                                type: 'checkbox',
+                                id: 'show_columns',
+                                label: editor.lang.syntaxhighlight.showColumnsLbl,
+                                setup: function(data) {
+                                    this.setValue(data.showColumns);
+                                },
+                                commit: function(data) {
+                                    data.showColumns = this.getValue();
+                                }
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.lineWrap + '</strong>'
+                            },
+                            {
+                                type: 'checkbox',
+                                id: 'line_wrap',
+                                label: editor.lang.syntaxhighlight.lineWrapLbl,
+                                setup: function(data) {
+                                    this.setValue(data.noWrap);
+                                },
+                                commit: function(data) {
+                                    data.noWrap = this.getValue();
+                                }
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.lineCount + '</strong>'
+                            },
+                            {
+                                type: 'hbox',
+                                widths: ['5%', '95%'],
+                                children: [
+                                    {
+                                        type: 'checkbox',
+                                        id: 'lc_toggle',
+                                        label: '',
+                                        setup: function(data) {
+                                            this.setValue(data.firstLineChecked);
+                                        },
+                                        commit: function(data) {
+                                            data.firstLineChecked = this.getValue();
+                                        }
+                                    },
+                                    {
+                                        type: 'text',
+                                        id: 'default_lc',
+                                        style: 'width: 15%;',
+                                        label: '',
+                                        setup: function(data) {
+                                            if (data.firstLine > 1)
+                                                this.setValue(data.firstLine);
+                                        },
+                                        commit: function(data) {
+                                            if (this.getValue() && this.getValue() != '')
+                                                data.firstLine = this.getValue();
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                type: 'html',
+                                html: '<strong>' + editor.lang.syntaxhighlight.highlight + '</strong>'
+                            },
+                            {
+                                type: 'hbox',
+                                widths: ['5%', '95%'],
+                                children: [
+                                    {
+                                        type: 'checkbox',
+                                        id: 'hl_toggle',
+                                        label: '',
+                                        setup: function(data) {
+                                            this.setValue(data.highlightChecked);
+                                        },
+                                        commit: function(data) {
+                                            data.highlightChecked = this.getValue();
+                                        }
+                                    },
+                                    {
+                                        type: 'text',
+                                        id: 'default_hl',
+                                        style: 'width: 40%;',
+                                        label: '',
+                                        setup: function(data) {
+                                            if (data.highlight != null)
+                                                this.setValue(data.highlight);
+                                        },
+                                        commit: function(data) {
+                                            if (this.getValue() && this.getValue() != '')
+                                                data.highlight = this.getValue();
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                type: 'hbox',
+                                widths: ['5%', '95%'],
+                                children: [
+                                    { type: 'html', html: '' },
+                                    {
+                                        type: 'html',
+                                        html: '<i>' + editor.lang.syntaxhighlight.highlightLbl + '</i>'
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ]

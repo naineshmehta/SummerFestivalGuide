@@ -1,0 +1,222 @@
+﻿#panelTab {
+    position:fixed;
+    top: 100px;
+    left: 0;
+    height: 104px;
+    width: 26px; 
+    background-image: url(images/tweets.png);
+    cursor:pointer;
+}
+
+#panelTab:hover {
+     -moz-box-shadow: 0px 0px 10px #ccc; /* FF3.5+ */
+  -webkit-box-shadow: 0px 0px 10px #ffffff; /* Saf3.0+, Chrome */
+          box-shadow: 0px 0px 10px #ffffff; /* Opera 10.5, IE 9.0 */
+}
+  
+#sidePanel {
+    display:none;
+	position:fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 400px;
+	border: 1px solid black;
+    background-color: #fff;
+}
+
+#sidePanel .spclose {
+    background-image: url(images/close.png);
+    position:absolute;
+    right:0px;
+    top:0px;
+    cursor:pointer;
+    height:35px;
+    width:35px; 
+
+}
+
+#ssLogo 
+{
+    background-image: url(images/logo.png);
+    float:left;
+    width:125px;
+    height: 35px;
+    margin: 0.5em;
+}
+
+#ssContent
+{
+    clear:both;
+    margin: 0.7em;
+}
+
+#ssTweetlist
+{
+    border: 1px solid #ccc;
+    margin-top: 1em;
+    padding: 0.5em;
+    list-style-type: none;
+    overflow-y:auto;
+    padding-bottom: 3em;
+}
+
+li.ssTweet
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px dashed #aaa;
+    position:relative;
+}
+
+li.ssTweet:after{
+    content: "."; 
+    display: block; 
+    height: 0; 
+    font-size:0;	
+    clear: both; 
+    visibility:hidden;
+}
+
+.ssUser
+{
+    float:left;
+    width: 36px;
+    height: 36px;    
+}
+
+.ssUserImage
+{
+    height: 36px;
+    width: 36px;
+}
+
+.ssOverlay
+{
+    background-image: url(images/overlay.png);
+    position: relative;
+    top: -36px;
+    height: 36px;
+    width: 36px;
+}
+
+.ssText, .ssFooter 
+{
+    margin-left: 45px;
+}
+
+.ssText 
+{
+    margin-bottom: 1.2em;
+}
+
+.ssFooter
+{
+    position: absolute;
+    bottom: 3px;
+    width: 325px;
+}
+.ssDate
+{
+    float:right;
+    
+}
+
+#ssPopupSettings
+{
+    display: none;
+    background: url(images/ssPopup.png) no-repeat;
+    color: #fff;
+    z-index:10000;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #669;
+    -moz-box-shadow:0 0 40px 5px #002;
+	-webkit-box-shadow: 0 0 40px #002;
+	position:relative;
+}
+
+#ssPopupSettings fieldset
+{
+    position: absolute;
+    Top: 20px;
+    right: 20px;
+    background-color: #333;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 530px;
+    width: 380px;
+    padding: 15px 25px;
+}
+
+#ssPopupSettings fieldset h3
+{
+    font-size: 1.3em;
+    color: #c00;
+}
+
+label.ssAbove
+{
+    display:block;
+    margin-bottom: 3px;
+}
+
+#ssPopupSettings div.close {
+	background-image:url(images/close.png);
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+#ssPopupSettings fieldset p.buttonbar 
+{
+    background-color: #fff;  
+    padding: 5px ;
+    padding-left: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+}
+
+p.buttonbar .CommandButton
+{  
+    margin-right: 5px;
+}
+
+#ssConfigure span
+{
+    display:none;
+}
+
+#ssConfigure>a 
+{
+    background: url(images/ssNormal.png) no-repeat;
+    width: 75px;
+    height: 75px;
+    display: block;
+}
+#ssConfigure>a:hover
+{
+    background: url(images/ssHover.png);
+}
+
+.ssControl
+{
+    width: 300px;
+}
+
+.rounded, #ssPopupSettings input {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+

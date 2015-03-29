@@ -85,15 +85,15 @@
     display: none;
 }
 
-#saStopWords input[type="image"] {
+#saStopWords input[type="image"], #saSynonyms input[type="image"] {
     opacity: 0.3;
 }
 
-#saStopWords input[type="image"]:hover {
+#saStopWords input[type="image"]:hover,#saSynonyms input[type="image"]:hover {
     opacity: 1;
 }
 
-#saStopWords input[type="image"].stopwordsCultureSelected {
+#saStopWords input[type="image"].stopwordsCultureSelected, #saSynonyms input[type="image"].stopwordsCultureSelected {
     opacity: 1;
 }
 

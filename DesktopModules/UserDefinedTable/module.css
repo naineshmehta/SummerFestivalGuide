@@ -2,107 +2,8 @@
     CSS STYLES FOR Module DNN.UserDefinedTable
    ================================
 */
-.DNN_UDT_URLContainer
-{
-	border: solid 1px #888888;
-	padding: 0px 10px 0px 10px;
-}
-body.UDT_Help
-{
-	background-color: #ffffea;
-}
-td.UDT_Help_ColHead, col.UDT_Help_RowHead, col.UDT_Help_Row, div.UDT_Help_Text
-{
-	font-family: Verdana;
-	font-size: smaller;
-}
 
-col.UDT_Help_RowHead, td.UDT_Help_ColHead
-{
-	background-color: #dddddd;
-}
-td.UDT_Help_ColHead
-{
-	font-weight: bold;
-}
 
-.Separator
-{
-	margin-top: 14px;
-}
-
-.BelowUrlControl
-{
-	margin-top:-22px;
-}
-
-.tablestyle 
-{
-    border: solid 1px #7f7f7f;
-}
-
-.altrowstyle 
-{
-    background-color: #edf5ff;
-}
-
-.headerstyle th 
-{
-    background: url(img/sprite.png) repeat-x 0px 0px;
-    border-color: #989898 #cbcbcb #989898 #989898;
-    border-style: solid solid solid none;
-    border-width: 1px 1px 1px medium;
-    color: #000;
-    padding: 4px 5px 4px 10px;
-    text-align: center;
-    vertical-align: bottom;
-}  
-
-.headerstyle th a
-{
-    font-weight: normal;
-    text-decoration: none;
-    text-align: center;
-    color: #000;
-    display: block;
-    padding-right: 10px;
-}    
-
-.rowstyle .sortaltrow, .altrowstyle .sortaltrow 
-{
-    background-color: #edf5ff;
-}
-
-.rowstyle .sortrow, .altrowstyle .sortrow 
-{
-    background-color: #dbeaff;
-}
-
-.rowstyle td, .altrowstyle td 
-{
-    padding: 4px 10px 4px 10px;
-    border-right: solid 1px #cbcbcb;
-}
-
-.headerstyle .sortascheader 
-{
-    background: url(img/sprite.png) repeat-x 0px -100px;
-}
-
-.headerstyle .sortascheader a 
-{
-    background: url(img/dt-arrow-up.png) no-repeat right 50%;
-} 
-
-.headerstyle .sortdescheader 
-{
-    background: url(img/sprite.png) repeat-x 0px -100px;
-}   
-
-.headerstyle .sortdescheader a 
-{
-    background: url(img/dt-arrow-dn.png) no-repeat right 50%;
-} 
 
 .UDT_UponSubmit
 {
@@ -111,4 +12,60 @@ td.UDT_Help_ColHead
 .UDT_Caption
 {
 	display:block;
+}
+
+.fnlSettingsWarning {
+    margin: 4% 0 0 32%;
+    padding: 0;
+}
+
+.dnnFormItem span.CommandButton {
+    clear: both;
+    display: block;
+    margin-left: 32%;
+    overflow: hidden;
+}
+.dnnForm .dnnFormItem .dnnFormLabelWithoutHelp label span {
+    line-height: 1.4;
+    padding-right: 1.8em;
+    display: block;
+    position: relative; 
+} 
+.dnnForm .dnnFormItem .dnnFormLabelWithoutHelp
+{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+#dnnFormAndListConfig .Sortable .Draggable
+{
+	cursor: move;
+}
+
+
+.dnnFormAndList .dnnGridHeader th{
+    font-size: 100%;
+     white-space: nowrap;
+}
+
+
+.fnlForm
+{
+margin: 1em auto 1em;
+}
+/*
+#ssPageSettings .dnnTextEditor
+{
+    margin-left: 32%;
+}*/
+
+.pushRight {
+    margin-left: 32%;
+}
+.dnnForm input.dnnFormRequired{
+    border-left: 5px red solid!important;
+    padding-right: -5px!important;
+}
+.dnnFormItem textarea.dnn2rows {
+    min-height: 1em;
 }

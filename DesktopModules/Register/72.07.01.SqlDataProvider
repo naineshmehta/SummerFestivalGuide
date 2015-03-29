@@ -1,0 +1,290 @@
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/* =====================================================================================
+/   TABLE: ModuleControls
+/  ===================================================================================== */
+
+-- DROP  PROCEDURE -------------------------------------------------------------------------------------%>
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsGet') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsGet 
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsGetAll') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsGetAll
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsAdd') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsAdd
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsUpdate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsUpdate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsDelete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsDelete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}ModuleControlsQuery') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}ModuleControlsQuery
+GO
+
+-- Custom Drop -------------------------------------------------------------------------------------%>
+
+
+-- Create PROCEDURE -------------------------------------------------------------------------------------%>
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsGet
+	@ModuleControlID int
+	
+AS
+
+SELECT
+	[ModuleControlID],
+	[ModuleDefID],
+	[ControlKey],
+	[ControlTitle],
+	[ControlSrc],
+	[IconFile],
+	[ControlType],
+	[ViewOrder],
+	[HelpUrl],
+	[SupportsPartialRendering],
+	[CreatedByUserID],
+	[CreatedOnDate],
+	[LastModifiedByUserID],
+	[LastModifiedOnDate],
+	[SupportsPopUps]
+FROM {objectQualifier}ModuleControls
+WHERE
+	([ModuleControlID] = @ModuleControlID OR @ModuleControlID IS NULL)
+	
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsGetAll
+	
+AS
+
+SELECT
+	[ModuleControlID],
+	[ModuleDefID],
+	[ControlKey],
+	[ControlTitle],
+	[ControlSrc],
+	[IconFile],
+	[ControlType],
+	[ViewOrder],
+	[HelpUrl],
+	[SupportsPartialRendering],
+	[CreatedByUserID],
+	[CreatedOnDate],
+	[LastModifiedByUserID],
+	[LastModifiedOnDate],
+	[SupportsPopUps]
+FROM {objectQualifier}ModuleControls
+ 
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsAdd
+	@ModuleDefID int,
+	@ControlKey nvarchar(50),
+	@ControlTitle nvarchar(50),
+	@ControlSrc nvarchar(256),
+	@IconFile nvarchar(100),
+	@ControlType int,
+	@ViewOrder int,
+	@HelpUrl nvarchar(200),
+	@SupportsPartialRendering bit,
+	@CreatedByUserID int,
+	@CreatedOnDate datetime,
+	@LastModifiedByUserID int,
+	@LastModifiedOnDate datetime,
+	@SupportsPopUps bit
+AS
+
+INSERT INTO {objectQualifier}ModuleControls (
+	[ModuleDefID],
+	[ControlKey],
+	[ControlTitle],
+	[ControlSrc],
+	[IconFile],
+	[ControlType],
+	[ViewOrder],
+	[HelpUrl],
+	[SupportsPartialRendering],
+	[CreatedByUserID],
+	[CreatedOnDate],
+	[LastModifiedByUserID],
+	[LastModifiedOnDate],
+	[SupportsPopUps]
+) VALUES (
+	@ModuleDefID,
+	@ControlKey,
+	@ControlTitle,
+	@ControlSrc,
+	@IconFile,
+	@ControlType,
+	@ViewOrder,
+	@HelpUrl,
+	@SupportsPartialRendering,
+	@CreatedByUserID,
+	@CreatedOnDate,
+	@LastModifiedByUserID,
+	@LastModifiedOnDate,
+	@SupportsPopUps
+)
+
+select SCOPE_IDENTITY()
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsUpdate
+	@ModuleControlID int, 
+	@ModuleDefID int, 
+	@ControlKey nvarchar(50), 
+	@ControlTitle nvarchar(50), 
+	@ControlSrc nvarchar(256), 
+	@IconFile nvarchar(100), 
+	@ControlType int, 
+	@ViewOrder int, 
+	@HelpUrl nvarchar(200), 
+	@SupportsPartialRendering bit, 
+	@CreatedByUserID int, 
+	@CreatedOnDate datetime, 
+	@LastModifiedByUserID int, 
+	@LastModifiedOnDate datetime, 
+	@SupportsPopUps bit 
+AS
+
+UPDATE {objectQualifier}ModuleControls SET
+	[ModuleDefID] = @ModuleDefID,
+	[ControlKey] = @ControlKey,
+	[ControlTitle] = @ControlTitle,
+	[ControlSrc] = @ControlSrc,
+	[IconFile] = @IconFile,
+	[ControlType] = @ControlType,
+	[ViewOrder] = @ViewOrder,
+	[HelpUrl] = @HelpUrl,
+	[SupportsPartialRendering] = @SupportsPartialRendering,
+	[CreatedByUserID] = @CreatedByUserID,
+	[CreatedOnDate] = @CreatedOnDate,
+	[LastModifiedByUserID] = @LastModifiedByUserID,
+	[LastModifiedOnDate] = @LastModifiedOnDate,
+	[SupportsPopUps] = @SupportsPopUps
+WHERE
+	[ModuleControlID] = @ModuleControlID
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsDelete
+	@ModuleControlID int
+AS
+
+DELETE FROM {objectQualifier}ModuleControls
+WHERE
+	[ModuleControlID] = @ModuleControlID
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS OFF 
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleControlsQuery
+	@filter as nvarchar(2000),
+	@order  as nvarchar(2000)
+AS
+
+    declare @strSql varchar(4000)
+	set @strSql ='
+	SELECT
+		[ModuleControlID],
+		[ModuleDefID],
+		[ControlKey],
+		[ControlTitle],
+		[ControlSrc],
+		[IconFile],
+		[ControlType],
+		[ViewOrder],
+		[HelpUrl],
+		[SupportsPartialRendering],
+		[CreatedByUserID],
+		[CreatedOnDate],
+		[LastModifiedByUserID],
+		[LastModifiedOnDate],
+		[SupportsPopUps]
+	FROM {objectQualifier}ModuleControls
+	WHERE 1=1 ' + @filter + ' '+	@order
+    exec(@strSql)
+GO
+
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+-- Custom Create -------------------------------------------------------------------------------------%>
+
+
+
+

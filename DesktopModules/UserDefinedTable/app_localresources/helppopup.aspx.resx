@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Help_Tokens_Title.Text" xml:space="preserve">
+  <data name="Help_Tokens_6_Title.Text" xml:space="preserve">
     <value>Available Tokens Reference</value>
   </data>
-  <data name="Help_Tokens_Body.Text" xml:space="preserve">
+  <data name="Help_Tokens_6_Body.Text" xml:space="preserve">
     <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
 &lt;head&gt;
@@ -326,15 +326,23 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;[DateTime:Now]&lt;/td&gt;
-&lt;td&gt;Current Date and Time&lt;/td&gt;
+&lt;td&gt;Current Date and Time (User Time)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[DateTime:UTC]&lt;/td&gt;
+&lt;td&gt;Current Date and Time (UTC)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[DateTime:System]&lt;/td&gt;
+&lt;td&gt;Current Date and Time (Server Time)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;[Ticks:Now]&lt;/td&gt;
-&lt;td&gt;CPU Tick Count for Current Second&lt;/td&gt;
+&lt;td&gt;CPU Tick Count for Current Second (Server Time)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;[Ticks:Today]&lt;/td&gt;
-&lt;td&gt;CPU Tick Count since Midnight&lt;/td&gt;
+&lt;td&gt;CPU Tick Count since Midnight (Server Time)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;[Ticks:TicksPerDay] &lt;/td&gt;

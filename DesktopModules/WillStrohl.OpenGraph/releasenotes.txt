@@ -1,0 +1,36 @@
+﻿<div style="width:100%;height:375px;overflow:auto;">
+
+	<h3>Version 01.01.00</h3>
+	<p><strong>Date Released:</strong> 01/03/2012</p>
+	<ul>
+		<li>Issue 11584 - FEATURE: Inject Open Graph Protocol tags server-side, not client-side</li>
+		<li>Issue 11590 - FEATURE: Health check to determine and report status of the Open Graph Protocol injection</li>
+		<li>FEATURE: Fully compliant with the Facebook debugger</li>
+		<li>FEATURE: Choose the Locale of your content</li>
+		<li>FEATURE: Health check to determine possible issues (Edit Mode only)</li>
+		<li>FEATURE: Enable/disable Open Graph Protocol (Host/Super users only)</li>
+		<li>FEATURE: Supports multiple sites on the same installation of DotNetNuke</li>
+		<li>FEATURE: Secure configuration file storage</li>
+	</ul>
+
+	<h3>Version 01.00.01</h3>
+	<p><strong>Date Released:</strong> 12/30/2011</p>
+	<ul>
+		<li>Issue 11574 - FEATURE: Add support for the Locale Open Graph Protocol tag</li>
+		<li>Issue 11572 - FEATURE: Option to override existing Open Graph Protocol tags</li>
+		<li>Issue 11573 - TASK: Use Site Settings to store shared module settings</li>
+		<li>Issue 11576 - BUG: Cannot delete Facebook settings</li>
+	</ul>
+
+	<h3>Version 01.00.00</h3>
+	<p><strong>Date Released:</strong> 12/30/2011</p>
+	<ul>
+		<li>First release created with a minimal feature set.</li>
+		<li>Incredibly easy to use!</li>
+		<li>Automatically imports the page title, description, url, and website name for you</li>
+		<li>Allows you to override the default page title, description, url and website name</li>
+		<li>Doesn't require site-wide settings to be specified over and over</li>
+		<li>Preventative techniques to not add the OG tags if something else has</li>
+	</ul>
+
+</div>

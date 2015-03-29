@@ -1,4 +1,1 @@
-<%@ WebHandler Language="vb" Class="ThumbNailHandler" %>
-Public Class ThumbNailHandler
-   Inherits DotNetNuke.Modules.UserDefinedTable.MakeThumbnail
-End Class
+﻿<%@ WebHandler Language="C#" CodeBehind="MakeThumbnail.ashx.cs" Class="DotNetNuke.Modules.UserDefinedTable.MakeThumbnail" %>

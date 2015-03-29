@@ -1,5 +1,14 @@
 ﻿<div>
   <div class="row">
+    <div class="medium-9 columns">
+      <div id="LeftPane" runat="server"></div>
+    </div>
+    <div class="medium-3 columns">
+      <div id="RightPane" runat="server"></div>
+    </div>
+  </div>
+  
+  <div class="row">
     <div class="medium-12 columns"><div id="TopPane" runat="server"></div></div>
   </div>
 
@@ -22,15 +31,6 @@
   <div class="row">
     <div class="medium-8 columns"><div id="LeftLargePane" runat="server"></div></div>
     <div class="medium-4 columns"><div id="RightSmalPane" runat="server"></div></div>
-  </div>
-
-  <div class="row">
-    <div class="medium-9 columns">
-      <div id="LeftPane" runat="server"></div>
-    </div>
-    <div class="medium-3 columns">
-      <div id="RightPane" runat="server"></div>
-    </div>
   </div>
   
   <div class="row">

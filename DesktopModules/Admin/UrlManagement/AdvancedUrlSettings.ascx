@@ -9,6 +9,7 @@
 </h2>
 <fieldset class="ssasModuleProviders">
     <div class="dnnFormItem">
+        <asp:label id="providersWarningLabel" runat="server" Visible="False" />
         <dnn:label id="moduleProvidersLabel" runat="server" controlname="moduleProvidersGrid" />
         <div class="dnnFormGroup">
             <asp:DataGrid ID="providersGrid" Runat="server" AutoGenerateColumns="false" width="100%" GridLines="None" CssClass="dnnGrid">

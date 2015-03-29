@@ -1,6 +1,5 @@
 <%@ Control Language="vb" AutoEventWireup="false" Codebehind="EventMyEnrollments.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventMyEnrollments" %>
 <%@ Register TagPrefix="evt" TagName="Icons" Src="~/DesktopModules/Events/SubControls/EventIcons.ascx" %>
-<%@ Register Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn" %>
 <div>
     <div class="EvtHdrLftCol"></div>
     <div class="EvtHdrMdlCol">

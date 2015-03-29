@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System" name="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System" name="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
     <value>Private</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.TrayLargeIcon" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -294,7 +294,7 @@
     <value>Absolute URL  - &lt;em&gt;'http://www.MyWebsite.com/Images/MyImage.jpg'&lt;/em&gt;</value>
   </data>
   <data name="lnkClick.Text" xml:space="preserve">
-    <value>Secured URL  - &lt;em&gt;'/LinkClick.aspx?fileticket=xyz'&lt;/em&gt;</value>
+    <value>Relative Secured URL  - &lt;em&gt;'/LinkClick.aspx?fileticket=xyz'&lt;/em&gt;</value>
   </data>
   <data name="relLnk.Text" xml:space="preserve">
     <value>Relative URL  - &lt;em&gt;'/Images/MyImage.jpg'&lt;/em&gt;</value>
@@ -364,5 +364,26 @@
   </data>
   <data name="SortDescending.Text" xml:space="preserve">
     <value>Sort Descending</value>
+  </data>
+  <data name="lnkAbsClick.Text" xml:space="preserve">
+    <value>Absolute Secured URL  - &lt;em&gt;'http://www.MyWebsite.com/LinkClick.aspx?fileticket=xyz'&lt;/em&gt;</value>
+  </data>
+  <data name="SpaceUsed.Text" xml:space="preserve">
+    <value>Space Used: {0} of {1}</value>
+  </data>
+  <data name="UnlimitedSpace.Text" xml:space="preserve">
+    <value>[unlimited]</value>
+  </data>
+  <data name="Syncronize.Help" xml:space="preserve">
+    <value>Synchronize Folder with Database</value>
+  </data>
+  <data name="Syncronize.Text" xml:space="preserve">
+    <value>Synchronize Folder</value>
+  </data>
+  <data name="FileSizeRestriction.Text" xml:space="preserve">
+    <value>The File Upload Limit is {0} MB. &lt;br /&gt; The Allowed Filetypes are: "{1}"</value>
+  </data>
+  <data name="FileToBig.Text" xml:space="preserve">
+    <value>File is to big to upload.</value>
   </data>
 </root>

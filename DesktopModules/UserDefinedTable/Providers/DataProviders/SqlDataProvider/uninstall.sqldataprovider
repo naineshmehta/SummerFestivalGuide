@@ -1,7 +1,6 @@
 ﻿/************************************************************/
 /*****       SqlDataProvider                            *****/
-/*****       Uninstall for UserDefinedTable 3.3.0       *****/
-/*****       [sleupold] 04/25/2006                      *****/
+/*****       Uninstall for Form and List               *****/
 /*****                                                  *****/
 /*****                                                  *****/
 /***** Note: To manually execute this script you must   *****/
@@ -30,8 +29,16 @@ if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifi
 ALTER TABLE {databaseOwner}[{objectQualifier}UserDefinedData] DROP CONSTRAINT [FK_{objectQualifier}UserDefinedData_{objectQualifier}UserDefinedFields]
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}UserDefinedFieldSettings_{objectQualifier}UserDefinedFields') and OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}UserDefinedFieldSettings] DROP CONSTRAINT [FK_{objectQualifier}UserDefinedFieldSettings_{objectQualifier}UserDefinedFields]
+GO
+
 if exists (select * from dbo.sysobjects where id = object_id(N'{objectQualifier}UserDefinedData') and OBJECTPROPERTY(id, N'IsTable') = 1)
 DROP TABLE {databaseOwner}[{objectQualifier}UserDefinedData]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{objectQualifier}UserDefinedFieldSettings') and OBJECTPROPERTY(id, N'IsTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}UserDefinedFieldSettings]  
 GO
 
 if exists (select * from dbo.sysobjects where id = object_id(N'{objectQualifier}UserDefinedFields') and OBJECTPROPERTY(id, N'IsTable') = 1)

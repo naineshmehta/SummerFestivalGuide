@@ -1,4 +1,1 @@
-<%@ WebHandler Language="vb" Class="ShowXmlHandler" %>
-Public Class ShowXmlHandler
-   Inherits DotNetNuke.Modules.UserDefinedTable.ShowXml
-End Class
+﻿<%@ WebHandler Language="C#" CodeBehind="ShowXml.ashx.cs" Class="DotNetNuke.Modules.UserDefinedTable.ShowXml" %>

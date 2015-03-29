@@ -4,4 +4,3 @@
 <Ventrian:Header id="ucHeader1" SelectedMenu="CurrentArticles" runat="server" MenuPosition="Top" />
 <Ventrian:Listing id="ucListing1" runat="server" />
 <Ventrian:Header id="ucHeader2" SelectedMenu="CurrentArticles" runat="server" MenuPosition="Bottom" />
-<!--<script type="text/javascript"> $(document).ready(function() {$("#disqus_thread").remove();}); script>-->

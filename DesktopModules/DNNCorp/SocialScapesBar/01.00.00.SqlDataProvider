@@ -1,0 +1,85 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}SocialScapes_Settings]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings](
+			[ID] [int] IDENTITY(1,1) NOT NULL,
+			[ModuleID] [int] NOT NULL,
+			[ShowTweetbox] [bit] NOT NULL,
+			[ShowSearchTabs] [bit] NOT NULL,
+			[ShowToolTips] [bit] NOT NULL,
+			[Location] [varchar](1) NOT NULL,
+			[AppKey] [nvarchar](30) NOT NULL
+		) 
+
+
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings]
+			ADD CONSTRAINT [PK_{objectQualifier}SocialScapes_Settings] PRIMARY KEY CLUSTERED 
+			(
+				[ID] ASC
+			) 
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Settings_ShowTweetbox]  DEFAULT ((0)) FOR [ShowTweetbox]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Settings_ShowSearchTabs]  DEFAULT ((0)) FOR [ShowSearchTabs]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Settings_ShowToolTips]  DEFAULT ((1)) FOR [ShowToolTips]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Settings] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Settings_Location]  DEFAULT ('l') FOR [Location]
+	END
+GO
+
+
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}SocialScapes_Search]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search](
+			[ID] [int] IDENTITY(1,1) NOT NULL,
+			[SocialScapesId] [int] NOT NULL,
+			[SearchString] [nvarchar](500) NOT NULL,
+			[Enabled] [bit] NOT NULL,
+			[SearchType] [nvarchar](10) NOT NULL,
+			[Count] [int] NOT NULL,
+			[Refresh] [int] NOT NULL
+		)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search]
+			ADD CONSTRAINT [PK_{objectQualifier}SocialScapes_Search] PRIMARY KEY CLUSTERED 
+			(
+				[ID] ASC
+			) 
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search]  WITH CHECK 
+			ADD  CONSTRAINT [FK_{objectQualifier}SocialScapes_Search_{objectQualifier}SocialScapes_Settings] FOREIGN KEY([SocialScapesId])
+			REFERENCES {databaseOwner}[{objectQualifier}SocialScapes_Settings] ([ID])
+			ON DELETE CASCADE
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search] CHECK CONSTRAINT [FK_{objectQualifier}SocialScapes_Search_{objectQualifier}SocialScapes_Settings]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Search_Enabled]  DEFAULT ((0)) FOR [Enabled]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Search_SearchType]  DEFAULT (N'from') FOR [SearchType]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Search_Count]  DEFAULT ((10)) FOR [Count]
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}SocialScapes_Search] ADD  CONSTRAINT [DF_{objectQualifier}SocialScapes_Search_Refresh]  DEFAULT ((15)) FOR [Refresh]
+
+	END
+GO
+
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

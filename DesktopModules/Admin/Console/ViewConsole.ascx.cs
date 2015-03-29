@@ -2,7 +2,7 @@
 
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -36,13 +36,12 @@ using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Tabs;
-using DotNetNuke.Entities.Tabs.Internal;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Framework;
 using DotNetNuke.Instrumentation;
 using DotNetNuke.Modules.Console.Components;
 using DotNetNuke.Security.Permissions;
-using DotNetNuke.Security.Roles.Internal;
+using DotNetNuke.Security.Roles;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Services.Personalization;
@@ -59,6 +58,7 @@ namespace DesktopModules.Admin.Console
 		private string _defaultSize = string.Empty;
 		private string _defaultView = string.Empty;
 	    private int _groupTabID = -1;
+		private IList<TabInfo> _tabs; 
 
         #region Public Properties
 
@@ -71,6 +71,11 @@ namespace DesktopModules.Admin.Console
         {
             get { return !Settings.ContainsKey("AllowViewChange") || bool.Parse(Settings["AllowViewChange"].ToString()); }
         }
+
+	    public bool IncludeHiddenPages
+	    {
+            get { return Settings.ContainsKey("IncludeHiddenPages") && bool.Parse(Settings["IncludeHiddenPages"].ToString()); }	        
+	    }
 
         public ConsoleController ConsoleCtrl
 		{
@@ -191,6 +196,14 @@ namespace DesktopModules.Admin.Console
             get { return !Settings.ContainsKey("ShowTooltip") || bool.Parse(Settings["ShowTooltip"].ToString()); }
         }
 
+		public bool OrderTabsByHierarchy
+		{
+			get
+			{
+				return Settings.ContainsKey("OrderTabsByHierarchy") && bool.Parse(Settings["OrderTabsByHierarchy"].ToString());
+			}
+		}
+
         #endregion
 
         #region Private Methods
@@ -199,6 +212,7 @@ namespace DesktopModules.Admin.Console
         {
             bool canShowTab = TabPermissionController.CanViewPage(tab) &&
                                 !tab.IsDeleted &&
+                                (IncludeHiddenPages || tab.IsVisible) &&
                                 (tab.StartDate < DateTime.Now || tab.StartDate == Null.NullDate);
 
             if (canShowTab)
@@ -212,7 +226,7 @@ namespace DesktopModules.Admin.Console
                         canShowTab = (UserInfo.Social.Roles.SingleOrDefault(ur => ur.RoleID == GroupId && ur.IsOwner) != null);
                         break;
                     case "Members":
-                        var group = TestableRoleController.Instance.GetRole(PortalId, (r) => r.RoleID == GroupId);
+                        var group = RoleController.Instance.GetRole(PortalId, (r) => r.RoleID == GroupId);
                         canShowTab = (group != null) && UserInfo.IsInRole(group.RoleName);
                         break;
                     case "Friends":
@@ -231,10 +245,9 @@ namespace DesktopModules.Admin.Console
             return canShowTab;
         }
 
-        private string GetIconUrl(object dataItem, string size)
+        private string GetIconUrl(string iconURL, string size)
         {
-            string iconURL = Convert.ToString(DataBinder.Eval(dataItem, size));
-            if ((iconURL == string.Empty))
+            if (string.IsNullOrEmpty(iconURL))
             {
                 iconURL = (size == "IconFile") ? "~/images/icon_unknown_16px.gif" : "~/images/icon_unknown_32px.gif";
             }
@@ -257,7 +270,7 @@ namespace DesktopModules.Admin.Console
             {
                 if (UserInfo != null && UserInfo.IsSuperUser)
                 {
-                    var hostTabs = new TabController().GetTabsByPortal(Null.NullInteger);
+                    var hostTabs = TabController.Instance.GetTabsByPortal(Null.NullInteger);
                     if (hostTabs.Keys.Any(key => key == ConsoleTabID))
                     {
                         returnValue = true;
@@ -332,7 +345,10 @@ namespace DesktopModules.Admin.Console
 			try
 			{
 				jQuery.RequestRegistration();
+
                 ClientResourceManager.RegisterScript(Page, "~/desktopmodules/admin/console/jquery.console.js");
+
+				DetailView.ItemDataBound += RepeaterItemDataBound;
 
 				//Save User Preferences
 				SavePersonalizedSettings();
@@ -348,41 +364,41 @@ namespace DesktopModules.Admin.Console
 			base.OnLoad(e);
 			try
 			{
-				if ((!IsPostBack))
-				{
-					IconSize.Visible = AllowSizeChange;
-					View.Visible = AllowViewChange;
+                IconSize.Visible = AllowSizeChange;
+                View.Visible = AllowViewChange;
 
-					foreach (string val in ConsoleController.GetSizeValues())
-					{
-						IconSize.Items.Add(new ListItem(Localization.GetString(val + ".Text", LocalResourceFile), val));
-                        //IconSize.AddItem(Localization.GetString(val + ".Text", LocalResourceFile), val);
-					}
-					foreach (string val in ConsoleController.GetViewValues())
-					{
-						View.Items.Add(new ListItem(Localization.GetString(val + ".Text", LocalResourceFile), val));
-                        //View.AddItem(Localization.GetString(val + ".Text", LocalResourceFile), val);
-					}
-					IconSize.SelectedValue = DefaultSize;
-					View.SelectedValue = DefaultView;
+                foreach (string val in ConsoleController.GetSizeValues())
+                {
+                    IconSize.Items.Add(new ListItem(Localization.GetString(val + ".Text", LocalResourceFile), val));
+                }
+                foreach (string val in ConsoleController.GetViewValues())
+                {
+                    View.Items.Add(new ListItem(Localization.GetString(val + ".Text", LocalResourceFile), val));
+                }
+                IconSize.SelectedValue = DefaultSize;
+                View.SelectedValue = DefaultView;
+                
+                if ((!IsPostBack))
+                {
+                    Console.Attributes["class"] = Console.Attributes["class"] + " " + Mode.ToLower(CultureInfo.InvariantCulture);
 
-					SettingsBreak.Visible = (IconSize.Visible && View.Visible);
+                    SettingsBreak.Visible = (AllowSizeChange && AllowViewChange);
 
 				    List<TabInfo> tempTabs = (IsHostTab())
-										? TabController.GetTabsBySortOrder(Null.NullInteger).OrderBy(t => t.Level).ThenBy(t => t.HasChildren).ThenBy(t => t.LocalizedTabName).ToList()
-										: TabController.GetTabsBySortOrder(PortalId).OrderBy(t => t.Level).ThenBy(t => t.HasChildren).ThenBy(t => t.LocalizedTabName).ToList();
+										? TabController.GetTabsBySortOrder(Null.NullInteger).OrderBy(t => t.Level).ThenBy(t => t.LocalizedTabName).ToList()
+										: TabController.GetTabsBySortOrder(PortalId).OrderBy(t => t.Level).ThenBy(t => t.LocalizedTabName).ToList();
 
-					IList<TabInfo> tabs = new List<TabInfo>();
+					_tabs = new List<TabInfo>();
 
 					IList<int> tabIdList = new List<int>();
 					tabIdList.Add(ConsoleTabID);
 
                     if(IncludeParent)
                     {
-                        TabInfo consoleTab = TestableTabController.Instance.GetTab(ConsoleTabID, PortalId);
+                        TabInfo consoleTab = TabController.Instance.GetTab(ConsoleTabID, PortalId);
                         if (consoleTab != null)
                         {
-                            tabs.Add(consoleTab);
+							_tabs.Add(consoleTab);
                         }
                     }
 
@@ -398,11 +414,23 @@ namespace DesktopModules.Admin.Console
 							{
 								tabIdList.Add(tab.TabID);
 							}
-							tabs.Add(tab);  
+							_tabs.Add(tab);  
 						}
 					}
 
-					DetailView.DataSource = tabs;
+					//if OrderTabsByHierarchy set to true, we need reorder the tab list to move tabs which have child tabs to the end of list.
+					//so that the list display in UI can show tabs in same level in same area, and not break by child tabs.
+					if (OrderTabsByHierarchy)
+					{
+						_tabs = _tabs.OrderBy(t => t.HasChildren).ToList();
+					}
+
+				    int minLevel = -1;
+                    if (_tabs.Count > 0)
+                    {
+                        minLevel = _tabs.Min(t => t.Level);
+                    }
+					DetailView.DataSource = (minLevel > -1) ? _tabs.Where(t => t.Level == minLevel) : _tabs;
 					DetailView.DataBind();
 				}
 				if ((ConsoleWidth != string.Empty))
@@ -416,9 +444,22 @@ namespace DesktopModules.Admin.Console
 			}
 		}
 
-		protected string GetHtml(object dataItem)
+		private void RepeaterItemDataBound(object sender, RepeaterItemEventArgs e)
 		{
-			var tab = (TabInfo) dataItem;
+			var tab = e.Item.DataItem as TabInfo;
+			e.Item.Controls.Add(new Literal() { Text = GetHtml(tab) });
+			if (_tabs.Any(t => t.ParentId == tab.TabID))
+			{
+				var repeater = new Repeater();
+				repeater.ItemDataBound += RepeaterItemDataBound;
+				e.Item.Controls.Add(repeater);
+				repeater.DataSource = _tabs.Where(t => t.ParentId == tab.TabID);
+				repeater.DataBind();
+			}
+		}
+
+		protected string GetHtml(TabInfo tab)
+		{
 			string returnValue = string.Empty;
 			if ((_groupTabID > -1 && _groupTabID != tab.ParentId))
 			{
@@ -431,8 +472,8 @@ namespace DesktopModules.Admin.Console
 			if ((tab.DisableLink))
 			{
 				const string headerHtml = "<br style=\"clear:both;\" /><br /><h1><span class=\"TitleHead\">{0}</span></h1><br style=\"clear:both\" />";
-				returnValue += string.Format(headerHtml, DataBinder.Eval(dataItem, "TabName"));
-				_groupTabID = int.Parse(DataBinder.Eval(dataItem, "TabID").ToString());
+				returnValue += string.Format(headerHtml, tab.TabName);
+				_groupTabID = tab.TabID;
 			}
 			else
 			{
@@ -472,8 +513,8 @@ namespace DesktopModules.Admin.Console
 
 				returnValue += string.Format(sb.ToString(),
                                              tabUrl,
-											 GetIconUrl(dataItem, "IconFile"),
-											 GetIconUrl(dataItem, "IconFileLarge"),
+											 GetIconUrl(tab.IconFile, "IconFile"),
+											 GetIconUrl(tab.IconFileLarge, "IconFileLarge"),
 											 tab.LocalizedTabName,
 											 tab.Description);
 			}

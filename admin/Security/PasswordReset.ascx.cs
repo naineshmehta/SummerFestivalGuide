@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -21,7 +21,7 @@
 #region Usings
 
 using System;
-
+using System.Web;
 using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
@@ -68,7 +68,10 @@ namespace DotNetNuke.Modules.Admin.Security
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
+            if (PortalSettings.LoginTabId != -1 && PortalSettings.ActiveTab.TabID != PortalSettings.LoginTabId)
+            {
+                Response.Redirect(Globals.NavigateURL(PortalSettings.LoginTabId) + Request.Url.Query);
+            }
             cmdChangePassword.Click +=cmdChangePassword_Click;
             
             hlCancel.NavigateUrl = Globals.NavigateURL();
@@ -83,10 +86,46 @@ namespace DotNetNuke.Modules.Admin.Security
 
         private void cmdChangePassword_Click(object sender, EventArgs e)
         {
+            //1. Check New Password and Confirm are the same
+            if (txtPassword.Text != txtConfirmPassword.Text)
+            {
+                resetMessages.Visible = true;
+                var failed = Localization.GetString("PasswordMismatch");
+                LogFailure(failed);
+                lblHelp.Text = failed;
+                return;
+            }
+
+            if (UserController.ValidatePassword(txtPassword.Text)==false)
+            {
+                resetMessages.Visible = true;
+                var failed = Localization.GetString("PasswordResetFailed");
+                LogFailure(failed);
+                lblHelp.Text = failed;
+                return;    
+            }
+
+            //Check New Password is not same as username or banned
+            var settings = new MembershipPasswordSettings(User.PortalID);
+
+            if (settings.EnableBannedList)
+            {
+                var m = new MembershipPasswordController();
+                if (m.FoundBannedPassword(txtPassword.Text) || txtUsername.Text == txtPassword.Text)
+                {
+                    resetMessages.Visible = true;
+                    var failed = Localization.GetString("PasswordResetFailed");
+                    LogFailure(failed);
+                    lblHelp.Text = failed;
+                    return;  
+                }
+
+            }
+
             if (UserController.ChangePasswordByToken(PortalSettings.PortalId, txtUsername.Text, txtPassword.Text, ResetToken) == false)
             {
                 resetMessages.Visible = true;
-                var failed = Localization.GetString("FailedAttempt", LocalResourceFile);
+                var failed = Localization.GetString("PasswordResetFailed", LocalResourceFile);
                 LogFailure(failed);
                 lblHelp.Text = failed;
             }
@@ -96,10 +135,59 @@ namespace DotNetNuke.Modules.Admin.Security
                 LogSuccess();
                 var loginStatus = UserLoginStatus.LOGIN_FAILURE;
                 UserController.UserLogin(PortalSettings.PortalId, txtUsername.Text, txtPassword.Text, "", "", "", ref loginStatus, false);
-                Response.Redirect("~/Default.aspx", true);
+                RedirectAfterLogin();
             }           
         }
-       
+
+        protected void RedirectAfterLogin()
+        {
+            var redirectURL = "";
+
+            var setting = GetSetting(PortalId, "Redirect_AfterLogin");
+
+            if (Convert.ToInt32(setting) == Null.NullInteger)
+            {
+                if (Request.QueryString["returnurl"] != null)
+                {
+                    //return to the url passed to signin
+                    redirectURL = HttpUtility.UrlDecode(Request.QueryString["returnurl"]);
+                    //redirect url should never contain a protocol ( if it does, it is likely a cross-site request forgery attempt )
+                    if (redirectURL.Contains("://"))
+                    {
+                        redirectURL = "";
+                    }
+                }
+                if (Request.Cookies["returnurl"] != null)
+                {
+                    //return to the url passed to signin
+                    redirectURL = HttpUtility.UrlDecode(Request.Cookies["returnurl"].Value);
+                    //redirect url should never contain a protocol ( if it does, it is likely a cross-site request forgery attempt )
+                    if (redirectURL.Contains("://"))
+                    {
+                        redirectURL = "";
+                    }
+                }
+                if (String.IsNullOrEmpty(redirectURL))
+                {
+                    if (PortalSettings.LoginTabId != -1 && PortalSettings.HomeTabId != -1)
+                    {
+                        //redirect to portal home page specified
+                        redirectURL = Globals.NavigateURL(PortalSettings.HomeTabId);
+                    }
+                    else
+                    {
+                        //redirect to current page 
+                        redirectURL = Globals.NavigateURL();
+                    }
+                }
+            }
+            else //redirect to after login page
+            {
+                redirectURL = Globals.NavigateURL(Convert.ToInt32(setting));
+            }
+            Response.Redirect(redirectURL);
+        }
+
         private void LogSuccess()
         {
             LogResult(string.Empty);
@@ -112,28 +200,25 @@ namespace DotNetNuke.Modules.Admin.Security
 
         private void LogResult(string message)
         {
-            var portalSecurity = new PortalSecurity();
+            var log = new LogInfo
+            {
+                LogPortalID = PortalSettings.PortalId,
+                LogPortalName = PortalSettings.PortalName,
+                LogUserID = UserId
+            };
 
-            var objEventLog = new EventLogController();
-            var objEventLogInfo = new LogInfo();
-            
-            objEventLogInfo.AddProperty("IP", _ipAddress);
-            objEventLogInfo.LogPortalID = PortalSettings.PortalId;
-            objEventLogInfo.LogPortalName = PortalSettings.PortalName;
-            objEventLogInfo.LogUserID = UserId;
-        //    objEventLogInfo.LogUserName = portalSecurity.InputFilter(txtUsername.Text,
-          //                                                           PortalSecurity.FilterFlag.NoScripting | PortalSecurity.FilterFlag.NoAngleBrackets | PortalSecurity.FilterFlag.NoMarkup);
             if (string.IsNullOrEmpty(message))
             {
-                objEventLogInfo.LogTypeKey = "PASSWORD_SENT_SUCCESS";
+                log.LogTypeKey = "PASSWORD_SENT_SUCCESS";
             }
             else
             {
-                objEventLogInfo.LogTypeKey = "PASSWORD_SENT_FAILURE";
-                objEventLogInfo.LogProperties.Add(new LogDetailInfo("Cause", message));
+                log.LogTypeKey = "PASSWORD_SENT_FAILURE";
+                log.LogProperties.Add(new LogDetailInfo("Cause", message));
             }
+            log.AddProperty("IP", _ipAddress);
             
-            objEventLog.AddLog(objEventLogInfo);
+            LogController.Instance.AddLog(log);
         }
 
         #endregion

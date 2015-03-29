@@ -429,4 +429,58 @@
   <data name="ControlTitle_settings.Text" xml:space="preserve">
     <value>Active Forums Settings</value>
   </data>
+  <data name="UsersOnline.Help" xml:space="preserve">
+    <value>Enable or disable the display of users currently using the forum module.</value>
+  </data>
+  <data name="UsersOnline.Text" xml:space="preserve">
+    <value>Enable Users Online Display</value>
+  </data>
+  <data name="UseSkinBreadCrumb.Help" xml:space="preserve">
+    <value>Use the skin breadcrumb for the top breadcrumb display rather than the AF breadcrumb.  Note that this setting does not affect the bottom AF breadcrumb.</value>
+  </data>
+  <data name="UseSkinBreadCrumb.Text" xml:space="preserve">
+    <value>Use Skin Breadcrumb</value>
+  </data>
+  <data name="DateFormat.Help" xml:space="preserve">
+    <value>Format string used to display date values.</value>
+  </data>
+  <data name="DateFormat.Text" xml:space="preserve">
+    <value>Date Format</value>
+  </data>
+  <data name="ProfileDisabled.Text" xml:space="preserve">
+    <value>Profile Links Disabled</value>
+  </data>
+  <data name="TimeFormat.Help" xml:space="preserve">
+    <value>Format string used to display time values.</value>
+  </data>
+  <data name="TimeFormat.Text" xml:space="preserve">
+    <value>Time Format</value>
+  </data>
+  <data name="Admins.Text" xml:space="preserve">
+    <value>Admins</value>
+  </data>
+  <data name="AuthenticatedUsers.Text" xml:space="preserve">
+    <value>Authenticated Users</value>
+  </data>
+  <data name="Disabled.Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Everyone.Text" xml:space="preserve">
+    <value>Everyone</value>
+  </data>
+  <data name="Moderators.Text" xml:space="preserve">
+    <value>Moderators</value>
+  </data>
+  <data name="ProfileVisibility.Help" xml:space="preserve">
+    <value>Determines which users can click to see a users profile.</value>
+  </data>
+  <data name="ProfileVisibility.Text" xml:space="preserve">
+    <value>Profile Visibility</value>
+  </data>
+  <data name="FullTextAzure.Text" xml:space="preserve">
+    <value>Full text searching is not supported on SQL Azure.</value>
+  </data>
+  <data name="FullTextNotInstalled.Text" xml:space="preserve">
+    <value>Full text search is not installed on the SQL Server.</value>
+  </data>
 </root>

@@ -4,7 +4,8 @@
 /*globals jQuery, window, Sys */
 (function ($, Sys) {
     function setUpProfile() {
-        $('.dnnButtonDropdown').dnnSettingDropdown();
+    	$('.dnnButtonDropdown').dnnSettingDropdown();
+	    $('#<%=ProfileProperties.ClientID%>').dnnPanels();
     }
 
     $(document).ready(function () {
@@ -18,6 +19,7 @@
 <div class="dnnForm dnnProfile dnnClear">
 	<dnn:ProfileEditorControl id="ProfileProperties" runat="Server" 
             GroupByMode="Section"
+            ViewStateMode="Disabled"
             enableClientValidation="true" />
     <div class="dnnClear"></div>
 	<ul id="actionsRow" runat="server" class="dnnActions dnnClear">

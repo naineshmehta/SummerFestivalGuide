@@ -1,0 +1,349 @@
+﻿.multiPage
+{
+    float: left;
+    border: 1px solid #CCCCCC;
+    background-color: #EAEAEA;
+    padding: 1px;
+    padding-left: 0;
+    width: 500px;
+    height: auto;
+    margin-left: 1px;
+}
+.multiPage div
+{
+    background-color: #EAEAEA;
+}
+.checkbox
+{
+    margin-left: 6px;
+}
+.pageButton
+{
+    vertical-align: middle;
+    margin-top: 3px;
+}
+.radBinaryImage
+{
+    vertical-align: top;
+    position: relative;
+    top: 4px;
+}
+.title
+{
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 4px;
+    margin-left: 0;
+}
+.propertyValue
+{
+    font-size: 14px;
+    font-family: Calibri, Arial;
+}
+.borderBottom
+{
+    border-bottom: solid 1px #eae5db;
+    margin: 0px 0px 0px 0px;
+    padding-bottom: 5px;
+    float: left;
+    clear: both;
+    width: 173px;
+}
+.imgTable
+{
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 5px;
+}
+.ud_left
+{
+    float: left;
+    width: 185px;
+    height: 355px;
+    margin: 10px 5px 10px 10px;
+}
+.ud_right
+{
+    float: left;
+    width: 400px;
+    height: 355px;
+    margin: 10px 0px 10px 5px;
+}
+.detailBasic
+{
+    width: 100%;
+    text-align: left;
+    font-family: Arial, Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+.basicFirstRow td
+{
+    padding: 5px;
+}
+.detailSecondTable td
+{
+    padding: 5px 5px 5px 0px;
+}
+.basicSpan
+{
+    color: #333333;
+}
+.detailProfiles
+{
+    width: 100%;
+    text-align: left;
+    font-family: Arial, Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+.detailProfiles td
+{
+    padding: 5px;
+}
+.divTableView
+{
+    float: left;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+.divCardView
+{
+    float: left;
+}
+.lblInfo
+{
+    float: left;
+    position: relative;
+}
+.rgAltRow, .rgRow
+{
+    cursor: pointer !important;
+}
+.msg_box
+{
+    border: 1px solid #666;
+    color: #666;
+    background: #e6e6e6;
+    padding: 10px;
+    font-size: 11px;
+    font-family: Arial, Sans-Serif;
+}
+.msg_box.red
+{
+    border: 1px solid #B71717;
+    color: #B71717;
+    background: #FBE1E1;
+}
+
+.RadWindow_itm .rwTopLeft,
+.RadWindow_itm .rwTopRight,
+.RadWindow_itm .rwTitlebar,
+.RadWindow_itm .rwFooterLeft,
+.RadWindow_itm .rwFooterRight,
+.RadWindow_itm .rwFooterCenter,
+.RadWindow_itm .rwTopResize,
+.RadWindow_itm .rwStatusbar div,
+.RadWindow_itm .rwStatusbar,
+.RadWindow_itm .rwPopupButton,
+.RadWindow_itm .rwPopupButton span,
+.RadWindow_itm.rwMinimizedWindow .rwCorner
+{
+    background-image: url('img/Window/WindowHorizontalSprites.gif');
+}
+
+
+/* Vertical */
+.RadWindow_itm .rwBodyLeft,
+.RadWindow_itm .rwBodyRight,
+.RadWindow_itm .rwStatusbarRow .rwCorner
+{
+	background-image: url('img/Window/WindowVerticalSprites.gif');
+}
+
+/* Window Shadows */
+
+/* Horiznotal */
+.RadWindow_itm .rwShadow .rwTopLeft,
+.RadWindow_itm .rwShadow .rwTopRight,
+.RadWindow_itm .rwShadow .rwTitlebar,
+.RadWindow_itm .rwShadow .rwFooterLeft,
+.RadWindow_itm .rwShadow .rwFooterRight,
+.RadWindow_itm .rwShadow .rwFooterCenter,
+.RadWindow_itm .rwShadow .rwTopResize,
+.RadWindow_itm .rwShadow .rwStatusbar div,
+.RadWindow_itm .rwShadow .rwStatusbar,
+.RadWindow_itm .rwShadow .rwPopupButton,
+.RadWindow_itm .rwShadow .rwPopupButton span,
+.RadWindow_itm .rwShadow .rwBodyLeft,
+.RadWindow_itm .rwShadow .rwBodyRight,
+.RadWindow_itm .rwShadow .rwStatusbarRow .rwBodyLeft,
+.RadWindow_itm .rwShadow .rwStatusbarRow .rwBodyRight
+{
+	background-image: url('img/Window/WindowHorizontalSprites.png');
+}
+
+/* Vertical */
+.RadWindow_itm .rwShadow .rwBodyLeft,
+.RadWindow_itm .rwShadow .rwBodyRight,
+.RadWindow_itm .rwShadow .rwStatusbarRow .rwBodyLeft,
+.RadWindow_itm .rwShadow .rwStatusbarRow .rwBodyRight
+{
+	background-image: url('img/Window/WindowVerticalSprites.png');
+}
+
+/* Shadows End */
+
+.RadWindow_itm .rwStatusbar input
+{
+    background-color: #f7f3e9;
+}
+
+.RadWindow_itm .rwControlButtons a
+{
+    background-image: url('img/Window/CommandButtonSprites.gif');
+}
+
+.RadWindow_itm a.rwIcon
+{
+	background-image: url('img/Window/WindowHorizontalSprites.gif');
+    display:none;
+}
+
+div.RadWindow_itm .rwTitlebarControls em
+{
+	color: black;
+}
+
+div.RadWindow_itm .rwDialogInput
+{
+	border-top: solid 1px #abadb3;
+	border-right: solid 1px #dbdfe6;
+	border-bottom: solid 1px #e3e9ef;
+	border-left: solid 1px #e2e3ea;
+}
+
+div.RadWindow_itm .rwDialogInput:hover
+{
+	border-top: solid 1px #5794bf;
+	border-right: solid 1px #b7d5ea;
+	border-bottom: solid 1px #c7e2f1;
+	border-left: solid 1px #c5daed;
+	color: #565656;
+}
+
+.RadWindow_itm td.rwWindowContent
+{
+    background-color: #fff;
+}
+
+/* Loading Indicators */
+div.RadWindow_itm tr td.rwLoading
+{
+	background-color: #fff;
+}
+
+/* When ShowContentDuringLoad="true" */
+.RadWindow_itm td.rwWindowContent.rwLoading
+{
+    background-image: url('img/Common/loading.gif');
+}
+
+/* When ShowContentDuringLoad="false" */
+.RadWindow_itm input.rwLoading
+{
+    background-image: url('img/Common/loading_small.gif');
+}
+
+div.RadWindow_itm a.rwCancel,
+div.RadWindow_itm a.rwCancel span
+{
+    background: none;
+    cursor: pointer;
+}
+
+div.RadWindow_itm a.rwCancel span span
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Shadow Control Buttons */
+
+.RadWindow_itm .rwShadow .rwControlButtons 
+{
+	margin: 5px -2px 0 0;
+}
+
+.RadWindow_itm .rwShadow .rwControlButtons 
+{
+	margin: 5px -1px 0 0\9;
+}
+
+/* ctrl buttons when winodw is minimized */
+.RadWindow_itm.rwMinimizedWindowShadow .rwShadow .rwControlButtons 
+{
+	margin: 7px -8px 0 0;
+}
+
+/* Icon when winodw is minimized */
+.RadWindow_itm.rwMinimizedWindowShadow .rwShadow .rwIcon 
+{
+	margin: 9px 6px 0 0;
+    
+}
+
+/*title buttons when winodw is minimized */
+.RadWindow_itm.rwMinimizedWindowShadow .rwShadow em 
+{
+	margin: 4px 0 0 -1px;
+}
+
+.RadWindow_itm .rwShadow .rwControlButtons li
+{
+	float: left;
+	padding: 0;
+}
+
+.RadWindow_itm .rwShadow .rwControlButtons a
+{
+	width: 26px; 
+}
+
+.rwInactiveWindow .rwShadow .rwTopLeft,
+.rwInactiveWindow .rwShadow .rwTopRight,
+.rwInactiveWindow .rwShadow .rwTitlebar,
+.rwInactiveWindow .rwShadow .rwFooterLeft,
+.rwInactiveWindow .rwShadow .rwFooterRight,
+.rwInactiveWindow .rwShadow .rwFooterCenter,
+.rwInactiveWindow .rwShadow .rwTopResize,
+.rwInactiveWindow .rwShadow .rwStatusbar div,
+.rwInactiveWindow .rwShadow .rwStatusbar,
+.rwInactiveWindow .rwShadow .rwPopupButton,
+.rwInactiveWindow .rwShadow .rwPopupButton span,
+.rwInactiveWindow .rwShadow.rwMinimizedWindow .rwCorner
+{
+    background-image: url('img/Window/WindowHorizontalSprites.gif') !important;
+}
+
+.rwInactiveWindow .rwShadow .rwBodyLeft,
+.rwInactiveWindow .rwShadow .rwBodyRight,
+.rwInactiveWindow .rwShadow .rwStatusbarRow .rwCorner
+{
+	background-image: url('img/Window/WindowVerticalSprites.gif') !important;
+}
+
+
+.RadWindow_itm .rwCloseButton {
+    cursor:pointer !important;
+
+}
+
+.RadWindow_itm .rwTitlebarControls em {
+    color: #848484 !important;
+    font-family: Arial,Verdana,sans-serif !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+
+}

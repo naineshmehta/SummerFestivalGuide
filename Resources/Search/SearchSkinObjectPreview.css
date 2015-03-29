@@ -33,10 +33,14 @@ ul.searchSkinObjectPreview {
     border: 1px solid #c9c9c9;
     width: 350px;
     z-index: 200;
+    padding: 0;
+}
+
+ul.searchSkinObjectPreview li {
+    list-style: none !important;
 }
 
     ul.searchSkinObjectPreview > li {
-        list-style: none;
         padding: 6px 12px 6px 22px;
         border-top: 1px solid #c9c9c9;
         color: #666;
@@ -54,12 +58,20 @@ ul.searchSkinObjectPreview {
         ul.searchSkinObjectPreview > li > span {
         }
 
+        ul.searchSkinObjectPreview > li > span img.userpic {
+            width: 32px;
+            height: 32px;
+            display: block;
+            float: left;
+            margin-right: 4px;
+        }
+
             ul.searchSkinObjectPreview > li > span > b {
                 font-weight: bold;
                 color: #000;
             }
 
-        ul.searchSkinObjectPreview > li > p {
+        ul.searchSkinObjectPreview > li p {
             margin: 0;
             font-size: 10px;
             line-height: 1.2em;
@@ -68,7 +80,7 @@ ul.searchSkinObjectPreview {
             white-space: normal;
         }
 
-            ul.searchSkinObjectPreview > li > p > b {
+            ul.searchSkinObjectPreview > li p b {
                 color: #000;
             }
 
@@ -93,4 +105,5 @@ ul.searchSkinObjectPreview {
             width: auto !important;
             height: auto !important;
             text-indent: inherit !important;
+            float: none !important;
         }

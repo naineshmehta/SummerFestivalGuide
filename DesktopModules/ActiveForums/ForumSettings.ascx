@@ -4,10 +4,7 @@
 <%@ Register TagPrefix="dnnjs" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 <dnnjs:DnnJsInclude runat="server" FilePath="~/DesktopModules/ActiveForums/scripts/afadmin.js" />
 <style>
-	.urlToggle{float: left;
-	left: 450px;
-	position: absolute;
-	top: 10px;}
+	.urlToggle, .fullTextNote {float: left; left: 450px; position: absolute; top: 10px; }
 	.urlOptions, .pointOptions {width:400px;margin-left:185px;display:none;}
 	.pointOptions input[type="text"]{min-width:inherit;}
 </style>
@@ -41,6 +38,21 @@
 		<div class="dnnFormItem">
 			<dnn:label ID="lblDefaultPageSize" runat="server" resourcekey="DefaultPageSize" Suffix=":" />
 			<dnn:DnnNumericTextBox id="txtPageSize" MinValue="5" MaxValue="200" Width="50" Type="0" ShowSpinButtons="True" runat="server" />
+		</div>
+        <div class="dnnFormItem">
+			<dnn:label ID="lblUseSkinBreadCrumb" runat="server" resourcekey="UseSkinBreadCrumb" Suffix=":" />
+			<asp:RadioButtonList ID="rdUseSkinBreadCrumb" runat="server" RepeatDirection="Horizontal">
+				<asp:ListItem Value="True" resourcekey="Yes" />
+				<asp:ListItem Value="False" resourcekey="No" />
+			</asp:RadioButtonList>
+        </div>
+        <div class="dnnFormItem">
+			<dnn:Label ID="lblTimeFormat" resourcekey="TimeFormat" runat="server" Suffix=":" /> 
+			<asp:TextBox ID="txtTimeFormat" runat="server" Width="100" />
+		</div>
+        <div class="dnnFormItem">
+			<dnn:Label ID="lblDateFormat" resourcekey="DateFormat" runat="server" Suffix=":" /> 
+			<asp:TextBox ID="txtDateFormat" runat="server" Width="100" />
 		</div>
 	</fieldset>
 	<h2 id="H1" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("ContentOptions")%></a></h2>
@@ -77,9 +89,13 @@
 	<fieldset>
 
 		<div class="dnnFormItem">
-			<dnn:label ID="lblProfileType" runat="server" resourcekey="ProfileType" Suffix=":" />
-			<asp:DropDownList ID="drpProfileType" runat="server">
-				<asp:ListItem Value="1" resourcekey="DefaultProfile" />
+			<dnn:label ID="lblProfileVisibility" runat="server" resourcekey="ProfileVisibility" Suffix=":" />
+			<asp:DropDownList ID="drpProfileVisibility" runat="server">
+			    <asp:ListItem Value="0" resourcekey="Disabled" />
+				<asp:ListItem Value="1" resourcekey="Everyone" />
+                <asp:ListItem Value="2" resourcekey="AuthenticatedUsers" />
+                <asp:ListItem Value="3" resourcekey="Moderators" />
+                <asp:ListItem Value="4" resourcekey="Admins" />
 			</asp:DropDownList>
 		</div>
         <div class="dnnFormItem">
@@ -117,11 +133,18 @@
 									<asp:ListItem Value="Displayname" resourcekey="DisplayName" />
 									</asp:DropDownList>
 		</div>
+        <div class="dnnFormItem">
+			<dnn:label ID="lblUsersOnline" runat="server" resourcekey="UsersOnline" Suffix=":" />
+			<asp:RadioButtonList ID="rdUsersOnline" runat="server" RepeatDirection="Horizontal">
+				<asp:ListItem Value="True" resourcekey="Yes" />
+				<asp:ListItem Value="False" resourcekey="No" />
+			</asp:RadioButtonList>
+        </div>
 		<div class="dnnFormItem">
 			<dnn:label ID="lblPoints" runat="server" resourcekey="EnablePoints" Suffix=":" />
 			<asp:RadioButtonList ID="rdPoints" runat="server" RepeatDirection="Horizontal">
-				<asp:ListItem Value="true" resourcekey="Yes" />
-				<asp:ListItem Value="false" resourcekey="No" />
+				<asp:ListItem Value="True" resourcekey="Yes" />
+				<asp:ListItem Value="False" resourcekey="No" />
 			</asp:RadioButtonList>
 			<div class="pointOptions">
 				<div class="dnnFormItem">
@@ -181,9 +204,12 @@
 		<div class="dnnFormItem">
 			<dnn:label ID="lblFullTextSearch" runat="server" resourcekey="FullTextSearch" Suffix=":" />
 			<asp:RadioButtonList ID="rdFullTextSearch" RepeatDirection="Horizontal" runat="server">
-				<asp:ListItem Value="True" resourcekey="Yes" />
+                <asp:ListItem Value="True" resourcekey="Yes" />
 				<asp:ListItem Value="False" resourcekey="No" />
 			</asp:RadioButtonList>
+            <span class="fullTextNote">
+                <asp:Literal ID="ltrFullTextMessage" runat="server" />
+            </span>
 		</div>
 		  <div class="dnnFormItem">
 			<dnn:label ID="lblMailQueue" runat="server" resourcekey="MailQueue" Suffix=":" />
@@ -239,12 +265,12 @@
 		});
 
 		var pointsSelected = $("#<%=rdPoints.ClientID%> input:checked").val();
-		if (pointsSelected == 'true') {
+		if (pointsSelected == 'True') {
 			$('.pointOptions').show();
 		}
 		$('#<%=rdPoints.ClientID%> input').click(function() {
 			var selected = $("#<%=rdPoints.ClientID%> input:checked").val();
-			if (selected == 'true') {
+			if (selected == 'True') {
 				$('.pointOptions').show();
 			}else{
 				$('.pointOptions').hide();

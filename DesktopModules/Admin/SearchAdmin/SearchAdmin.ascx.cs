@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -87,14 +87,21 @@ namespace DotNetNuke.Modules.Admin.Search
                 SynonymsSeletedCulture= currentCultureCodeList.FirstOrDefault();
 
             if (string.IsNullOrEmpty(SynonymsSeletedCulture)) SynonymsSeletedCulture = "en-US";
-            
-            rptStopWordsCultureList.DataSource = CurrentCultureCodeList;
-            rptStopWordsCultureList.DataBind();
 
-            rptSynonymsCultureList.DataSource = CurrentCultureCodeList;
-            rptSynonymsCultureList.DataBind();
+	        if (CurrentCultureCodeList.Count() > 1)
+	        {
+		        rptStopWordsCultureList.DataSource = CurrentCultureCodeList;
+		        rptStopWordsCultureList.DataBind();
 
-            CurrentSearchStopWords = LoadSearchStopWords(StopWordsSeletedPortalId, StopWordsSeletedCulture);
+		        rptSynonymsCultureList.DataSource = CurrentCultureCodeList;
+		        rptSynonymsCultureList.DataBind();
+	        }
+	        else
+	        {
+				plCultureList.Visible = rptStopWordsCultureList.Visible = plSynonymsCultureList.Visible = rptSynonymsCultureList.Visible = false;
+	        }
+
+	        CurrentSearchStopWords = LoadSearchStopWords(StopWordsSeletedPortalId, StopWordsSeletedCulture);
             CurrentPortalSynonymsGroups = LoadSynonymsGroup(SynonymsSelectedPortalId, SynonymsSeletedCulture);
             
             hdnSynonymsSelectedPortalID.Value = SynonymsSelectedPortalId.ToString(CultureInfo.InvariantCulture);
@@ -143,7 +150,11 @@ namespace DotNetNuke.Modules.Admin.Search
                 imgBtn.ImageUrl = "~/images/flags/" + locale + ".gif";
                 imgBtn.CommandArgument = locale;
 
-                if (locale == StopWordsSeletedCulture) imgBtn.CssClass = "stopwordsCultureSelected";
+				if ((sender == rptStopWordsCultureList && locale == StopWordsSeletedCulture)
+						|| (sender == rptSynonymsCultureList && locale == SynonymsSeletedCulture))
+				{
+					imgBtn.CssClass = "stopwordsCultureSelected";
+				}
             }
         }
 

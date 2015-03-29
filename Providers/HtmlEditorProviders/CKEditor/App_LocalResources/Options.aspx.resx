@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System" name="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System" name="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
     <value>Private</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.TrayLargeIcon" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -246,7 +246,7 @@
     <value>Toolbar Name:</value>
   </data>
   <data name="lblToolbSet.Text" xml:space="preserve">
-    <value>Toolbar Set:</value>
+    <value>Available Toolbar Buttons:</value>
   </data>
   <data name="SaveToolbar.Text" xml:space="preserve">
     <value>Save the Toolbar Set</value>
@@ -284,17 +284,6 @@
   <data name="Imported.Text" xml:space="preserve">
     <value>Editor Settings Imported for</value>
   </data>
-  <data name="lblToolbarGuide.Text" xml:space="preserve">
-    <value>&amp;lt;h1&amp;gt;Toolbar Sets&amp;lt;/h1&amp;gt;
-            &amp;lt;p&amp;gt;Every toolbar definition is composed of a series of &amp;amp;quot;toolbar bands &amp;amp;quot; that are grouped in the final toolbar layout. The bands items move together on new rows when resizing the editor. &amp;lt;/p&amp;gt;
-            &amp;lt;p&amp;gt;As you can see in the default definitions &amp;#39;Basic&amp;#39; and &amp;#39;Full&amp;#39;, every toolbar set is defined as a separated Java Script array of strings. Every string indicates toolbar item to be used. Toolbar items are defined by plugins. &amp;lt;/p&amp;gt;
-            &amp;lt;p&amp;gt;You can also include a separator in the tool bar band by including the dash (&amp;amp;quot;-&amp;amp;quot;) character on it.&amp;lt;/p&amp;gt;
-            &amp;lt;h1&amp;gt;Forcing Row Break &amp;lt;/h1&amp;gt;
-            &amp;lt;p&amp;gt;Looking at the &amp;amp;quot;Full&amp;amp;quot; definition you will note some slash (&amp;amp;quot;/&amp;amp;quot;) characters between tool bar bands. This slash can be used to force a break at that point, having the next band to be rendered in a new row and not following the previous one.&amp;lt;/p&amp;gt;</value>
-  </data>
-  <data name="lblToolbarGuideLnk.Text" xml:space="preserve">
-    <value>Description</value>
-  </data>
   <data name="lblInjectSyntaxJs.Text" xml:space="preserve">
     <value>Inject Link to SyntaxHighlighter Js?</value>
   </data>
@@ -330,5 +319,176 @@
   </data>
   <data name="FileListPageSizeLabel.Text" xml:space="preserve">
     <value>File List Page Size (0=Non Paging):</value>
+  </data>
+  <data name="Remove.Help" xml:space="preserve">
+    <value>Removes the Setting for the Current {0} only.</value>
+  </data>
+  <data name="Remove.Text" xml:space="preserve">
+    <value>Remove {0} Settings</value>
+  </data>
+  <data name="RemoveAll.Help" xml:space="preserve">
+    <value>Removes the {0} Settings of the Entire Portal</value>
+  </data>
+  <data name="RemoveAll.Text" xml:space="preserve">
+    <value>Remove All {0} Settings</value>
+  </data>
+  <data name="CreateGroupLabel.Text" xml:space="preserve">
+    <value>Create New Group</value>
+  </data>
+  <data name="CreateGroupTitle.Text" xml:space="preserve">
+    <value>Add new Group to Toolbar Set?</value>
+  </data>
+  <data name="DeleteGroup.Text" xml:space="preserve">
+    <value>Delete this Toolbar Group?</value>
+  </data>
+  <data name="DeleteToolbarButton.Text" xml:space="preserve">
+    <value>Remove this Toolbar Button?</value>
+  </data>
+  <data name="EditGroupName.Text" xml:space="preserve">
+    <value>Click to Edit this Group Name</value>
+  </data>
+  <data name="NewGroupName.Text" xml:space="preserve">
+    <value>New Group</value>
+  </data>
+  <data name="SaveGroupName.Text" xml:space="preserve">
+    <value>Save Group Name</value>
+  </data>
+  <data name="lblToolbarPriority.Text" xml:space="preserve">
+    <value>Toolbar Set Priority:</value>
+  </data>
+  <data name="ToolbarGroupsLabel.Text" xml:space="preserve">
+    <value>Toolbar Groups:</value>
+  </data>
+  <data name="CodeMirrorLabel.Text" xml:space="preserve">
+    <value>CodeMirror Theme (for Source Syntax Highlighting):</value>
+  </data>
+  <data name="lblSkin.Text" xml:space="preserve">
+    <value>Skin</value>
+  </data>
+  <data name="NoJava.Text" xml:space="preserve">
+    <value>&lt;strong&gt;CKEditor requires JavaScript to run&lt;/strong&gt;. In a browser with no JavaScript support, like yours, you should still see the contents (HTML data) and you should be able to edit it normally, without a rich editor interface.</value>
+  </data>
+  <data name="lblEditorConfig.Text" xml:space="preserve">
+    <value>Editor Config</value>
+  </data>
+  <data name="ModuleError.Text" xml:space="preserve">
+    <value>The Editor Settings for an Module Instance can only be viewed and loaded from within the Module Instance!</value>
+  </data>
+  <data name="ModuleHeader.Text" xml:space="preserve">
+    <value>CKEditor Provider Config Manager</value>
+  </data>
+  <data name="PortalOnlyLabel.Text" xml:space="preserve">
+    <value>Show Settings only for this Portal or for all Portals?</value>
+  </data>
+  <data name="Wait.Text" xml:space="preserve">
+    <value>Please Wait...</value>
+  </data>
+  <data name="WaitMessage.Text" xml:space="preserve">
+    <value>Loading Options Page.</value>
+  </data>
+  <data name="PortalOnly.Text" xml:space="preserve">
+    <value>This Portal Only</value>
+  </data>
+  <data name="ModuleHasSettingLabel.Text" xml:space="preserve">
+    <value>Contains Module Settings</value>
+  </data>
+  <data name="ModuleNoSettingLabel.Text" xml:space="preserve">
+    <value>Contains No Module Settings</value>
+  </data>
+  <data name="PageHasSettingLabel.Text" xml:space="preserve">
+    <value>Contains Page Settings</value>
+  </data>
+  <data name="PageNoSettingLabel.Text" xml:space="preserve">
+    <value>Contains No Page Settings</value>
+  </data>
+  <data name="PortalHasSettingLabel.Text" xml:space="preserve">
+    <value>Contains Portal Settings</value>
+  </data>
+  <data name="PortalNoSettingLabel.Text" xml:space="preserve">
+    <value>Contains No Portal Settings</value>
+  </data>
+  <data name="IconLegendLabel.Text" xml:space="preserve">
+    <value>Icon Legend</value>
+  </data>
+  <data name="EditorConfigWarning.Text" xml:space="preserve">
+    <value>&lt;strong&gt;Info:&lt;/strong&gt; The Settings bellow are only for Experts, please modify them only if you are know what you are doing. To find out more about the Settings bellow visit the &lt;a href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html"&gt;&lt;strong&gt;CKEditor JavaScript API Documentation Page&lt;/strong&gt;&lt;/a&gt;. You can leave the Settings blank to load the default Settings, when the Editor is loaded.</value>
+  </data>
+  <data name="ModuleInstance.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="Page.Text" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Portal.Text" xml:space="preserve">
+    <value>Portal</value>
+  </data>
+  <data name="RemoveModuleChild.Help" xml:space="preserve">
+    <value>Remove Settings of all Modules on the Current Page</value>
+  </data>
+  <data name="RemoveModuleChild.Text" xml:space="preserve">
+    <value>Remove All Module Settings on Page</value>
+  </data>
+  <data name="RemovePageChild.Help" xml:space="preserve">
+    <value>Removes all Child Page Settings of the Current Page</value>
+  </data>
+  <data name="RemovePageChild.Text" xml:space="preserve">
+    <value>Remove All Child Page Settings</value>
+  </data>
+  <data name="RowBreak.Text" xml:space="preserve">
+    <value>Row Break</value>
+  </data>
+  <data name="AddRowBreakLabel.Text" xml:space="preserve">
+    <value>Add Row Break</value>
+  </data>
+  <data name="AddRowBreakTitle.Text" xml:space="preserve">
+    <value>Add New Row Break to the Toolbar Set</value>
+  </data>
+  <data name="DefaultLinkMode0.Text" xml:space="preserve">
+    <value>Relative URL</value>
+  </data>
+  <data name="DefaultLinkMode1.Text" xml:space="preserve">
+    <value>Absolute URL</value>
+  </data>
+  <data name="DefaultLinkMode2.Text" xml:space="preserve">
+    <value>Relative Secured URL</value>
+  </data>
+  <data name="DefaultLinkMode3.Text" xml:space="preserve">
+    <value>Absolute Secured URL</value>
+  </data>
+  <data name="DefaultLinkModeLabel.Text" xml:space="preserve">
+    <value>Default Link Mode</value>
+  </data>
+  <data name="DetailView.Text" xml:space="preserve">
+    <value>Detail View</value>
+  </data>
+  <data name="IconsView.Text" xml:space="preserve">
+    <value>Icons View</value>
+  </data>
+  <data name="ListView.Text" xml:space="preserve">
+    <value>List View</value>
+  </data>
+  <data name="BlanktextTT.Text" xml:space="preserve">
+    <value>This is the Default Text displayed when the Content of the Module is empty.</value>
+  </data>
+  <data name="NewsArcticlesArticlesList.Text" xml:space="preserve">
+    <value>Select an Article:</value>
+  </data>
+  <data name="NewsArcticlesModuleList.Text" xml:space="preserve">
+    <value>Select the Page and the News Articles Module Instance:</value>
+  </data>
+  <data name="ToolbarNameMissing.Text" xml:space="preserve">
+    <value>You must enter a Toolbar Name</value>
+  </data>
+  <data name="ToolbarSetCreated.Text" xml:space="preserve">
+    <value>New Toolbar Set "{0}" created!</value>
+  </data>
+  <data name="ToolbarSetDeleted.Text" xml:space="preserve">
+    <value>Selected Toolbar Set deleted!</value>
+  </data>
+  <data name="ToolbarSetSaved.Text" xml:space="preserve">
+    <value>Toolbar Set saved!</value>
+  </data>
+  <data name="CustomJsFileLabel.Text" xml:space="preserve">
+    <value>Custom JS File</value>
   </data>
 </root>

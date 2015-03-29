@@ -1,6 +1,4 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EventDetails.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventDetails" %>
-<%@ Register Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn" %>
-<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 
 <asp:Panel ID="pnlEventsModuleDetails" runat="server" class="DetailEvent">
 	<div id="divMessage" runat="server">
@@ -26,11 +24,14 @@
 	            <asp:TextBox ID="txtReminderTime" CssClass="NormalTextBox" runat="server" MaxLength="3" Width="30" Font-Size="8pt">8</asp:TextBox>
                 <asp:DropDownList
                     ID="ddlReminderTimeMeasurement" runat="server" Width="90" Font-Size="8pt" CssClass="NormalTextBox">
+                    <asp:ListItem Value="m" resourcekey="Minutes">Minutes</asp:ListItem>
+                    <asp:ListItem Value="h" resourcekey="Hours" Selected="True">Hours</asp:ListItem>
+                    <asp:ListItem Value="d" resourcekey="Days">Days</asp:ListItem>
                 </asp:DropDownList> <asp:Label ID="lblTimeBefore" resourcekey="lblTimeBefore" runat="server"></asp:Label>
                 <asp:RequiredFieldValidator  ID="valReminderTime2" ValidationGroup="EventEmail" runat="server" cssclass="dnnFormMessage dnnFormError" 
-                        ControlToValidate="txtReminderTime" Display="Dynamic"></asp:RequiredFieldValidator><br />
+                        ControlToValidate="txtReminderTime" Display="Dynamic"></asp:RequiredFieldValidator>
                 <asp:RangeValidator id="valReminderTime" runat="server" ValidationGroup="EventEmail" 
-                    ControlToValidate="txtReminderTime" Display="Dynamic" Type="Integer" cssclass="dnnFormMessage dnnFormError" Text="Test"></asp:RangeValidator>
+                    ControlToValidate="txtReminderTime" Display="Dynamic" Type="Integer" cssclass="dnnFormMessage dnnFormError"></asp:RangeValidator>
             </div>
 		    <div id="rem3" runat="server" visible="false">
 		        <asp:Image ID="imgConfirmation" runat="server" ImageUrl="Images/bell.gif" />
@@ -69,7 +70,7 @@
         </div>
         <div class="SubHead DetailEnrollRight">
             <div id="enroll3" runat="server" visible="false">
-                <asp:Label ID="lblNoEnrolee" runat="server" resourcekey="lblNoEnrolee">No. of Enrolees</asp:Label>&nbsp;
+                <asp:Label ID="lblNoEnrolee" runat="server" resourcekey="lblNoEnrolee" class="DetailEnrollLabel" Width="100px">No. of Enrolees</asp:Label>&nbsp;
                 <asp:TextBox ID="txtNoEnrolees" runat="server" CssClass="NormalTextBox" 
                     Font-Size="8pt" MaxLength="3" Width="30">1</asp:TextBox>&nbsp;
                 <asp:Label ID="lblMaxNoEnrolees" runat="server">(Max 1)</asp:Label>&nbsp;
@@ -79,15 +80,35 @@
                 <asp:RequiredFieldValidator  ID="valNoEnrolees2" ValidationGroup="EventSignup" runat="server" cssclass="dnnFormMessage dnnFormError" 
                         ControlToValidate="txtNoEnrolees" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
+            <div id="enroll5" runat="server" visible="false">
+                <div>
+                    <asp:Label ID="lblAnonEmail" runat="server" resourcekey="lblAnonEmail" class="DetailEnrollLabel" Width="100px">Email Address:</asp:Label>&nbsp;
+                    <asp:TextBox ID="txtAnonEmail" CssClass="NormalTextBox" runat="server" Width="199px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="valAnonEmail" ValidationGroup="EventSignup" runat="server" resourcekey="valEmail" cssclass="dnnFormMessage dnnFormError" 
+                            ControlToValidate="txtAnonEmail" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator  ID="valAnonEmail2" ValidationGroup="EventSignup" runat="server" resourcekey="valEmail" cssclass="dnnFormMessage dnnFormError" 
+                            ControlToValidate="txtAnonEmail" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
+                <div>
+                    <asp:Label ID="lblAnonName" runat="server" resourcekey="lblAnonName" class="DetailEnrollLabel" Width="100px">Name:</asp:Label>&nbsp;
+                    <asp:TextBox ID="txtAnonName" CssClass="NormalTextBox" runat="server" Width="199px"></asp:TextBox>
+                    <asp:RequiredFieldValidator  ID="valAnonName" ValidationGroup="EventSignup" runat="server" resourcekey="valAnonName" cssclass="dnnFormMessage dnnFormError" 
+                            ControlToValidate="txtAnonName" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
+                <div>
+                    <asp:Label ID="lblAnonTelephone" runat="server" resourcekey="lblAnonTelephone" class="DetailEnrollLabel" Width="100px">Name:</asp:Label>&nbsp;
+                    <asp:TextBox ID="txtAnonTelephone" CssClass="NormalTextBox" runat="server" Width="199px"></asp:TextBox>
+                </div>
+            </div>
             <div id="enroll2" runat="server" visible="false">
                 <asp:Image ID="imgSignup" runat="server" ImageUrl="Images/enroll.gif" />&nbsp;
-                <asp:Label ID="lblSignup" runat="server">You are not enrolled for this event!</asp:Label>
+                <asp:Label ID="lblSignup" runat="server">You are not enrolled!</asp:Label>
             </div>
         </div>
     </div>
     <div id="divEventDetails3" runat="server" class="DetailClear DetailEventDetails3" />
     <div id="divEnrollList" Runat="server" class="DetailClear DetailEnrollTableDiv">
-        <div class="SubHead DetailEnrollTableLeft" >
+        <div class="SubHead DetailEnrollTableLeft">
             <asp:Label ID="lblEnrolledUsers" resourcekey="lblEnrolledUsers" runat="server">Enrolled Users</asp:Label>
         </div>
         <div class="SubHead DetailEnrollTableRight">
@@ -122,17 +143,18 @@
                 </Columns>
             </asp:DataGrid>
         </div>
+        <asp:LinkButton ID="cmdvEventSignups" CssClass="" runat="server" resourcekey="cmdvEventSignups" causesvalidation="False" />
     </div>
     <div id="divEventDetails4" runat="server" class="DetailClear DetailEventDetails4" />
+    <div class="DetailClear"></div>
     <ul class="DetailCommands dnnActions dnnClear">
         <li><asp:LinkButton ID="returnButton" CssClass="dnnPrimaryAction" runat="server" resourcekey="returnButton" causesvalidation="False" /></li>
         <li><asp:hyperlink ID="editButton" CssClass="dnnSecondaryAction" runat="server" resourcekey="editButton" causesvalidation="False" /></li>
         <li><asp:hyperlink ID="editSeriesButton" CssClass="dnnSecondaryAction" runat="server" resourcekey="editSeriesButton" causesvalidation="False" Visible="False" /></li>
         <li><asp:LinkButton ID="deleteButton" CssClass="dnnSecondaryAction" runat="server" resourcekey="deleteButton" causesvalidation="False" /></li>
         <li><asp:LinkButton ID="deleteSeriesButton" CssClass="dnnSecondaryAction" runat="server" resourcekey="deleteSeriesButton" causesvalidation="False" Visible="False" /></li>
-        <li class="cmdRight"><asp:HyperLink ID="cmdPrint" runat="server" CssClass="dnnSecondaryAction" ImageUrl="~/Images/action_print.gif"> </asp:HyperLink></li>
+        <li class="cmdRight"><asp:HyperLink ID="cmdPrint" runat="server" CssClass="dnnSecondaryAction" IconKey="Print" > </asp:HyperLink></li>
         <li class="cmdRight"><asp:LinkButton ID="cmdvEventSeries" CssClass="dnnSecondaryAction" runat="server" resourcekey="cmdvEventExportSeries" causesvalidation="False" /></li>
         <li class="cmdRight"><asp:LinkButton ID="cmdvEvent" CssClass="dnnSecondaryAction" runat="server" resourcekey="cmdvEventExport" causesvalidation="False" /></li>
     </ul>
 </asp:Panel>
-

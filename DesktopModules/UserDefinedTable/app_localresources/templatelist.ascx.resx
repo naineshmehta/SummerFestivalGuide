@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -123,9 +123,6 @@
   <data name="Filter.ErrorMessage" xml:space="preserve">
     <value>Unsupported Filter Statement</value>
   </data>
-  <data name="NoFieldsDefined.ErrorMessage" xml:space="preserve">
-    <value>There are no columns defined. Setup the module inside the &lt;a href="{0}"&gt;Form and List Configuration&lt;/a&gt;.</value>
-  </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
     <value>&lt;h1&gt;About the Form and List Module&lt;/h1&gt;
 &lt;p&gt;The Form and List Module allows you to manage an individual table of data, where each column of data is a specific data type and each row represents a single record.&amp;#160;Column headings, when clicked, reorder data alphanumerically&amp;#160;A-Z or Z-A. If the feature is enabled, you may &lt;strong&gt;Search&lt;/strong&gt; through records that contain only select data.&lt;/p&gt;
@@ -136,10 +133,7 @@
     <value>Save as Template</value>
   </data>
   <data name="ChooseTemplateOrManage.Text" xml:space="preserve">
-    <value>Create a new Form or List based on a template from the list above, or design your own in &lt;a class="CommandButton" href="{0}"&gt;Form and List Configuration&lt;/a&gt;.</value>
-  </data>
-  <data name="NoTemplates.Text" xml:space="preserve">
-    <value>&lt;i&gt;No templates available.&lt;/i&gt;</value>
+    <value>Create a new Form or List based on a template from the list above, or design your own in &lt;a class="dnnPrimaryAction" href="{0}"&gt;Form and List Configuration&lt;/a&gt;.</value>
   </data>
   <data name="Name.Header" xml:space="preserve">
     <value>Name</value>
@@ -158,5 +152,14 @@
   </data>
   <data name="CustomizeTemplate.Text" xml:space="preserve">
     <value>&lt;p&gt;You selected the Module Template &lt;b&gt;{0}&lt;/b&gt; which requires an initial configuration:&lt;/p&gt;</value>
+  </data>
+  <data name="lblConfig.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="lblNewConfig.Text" xml:space="preserve">
+    <value>Start with a new</value>
+  </data>
+  <data name="lblTemplate.Text" xml:space="preserve">
+    <value>or choose a template:</value>
   </data>
 </root>

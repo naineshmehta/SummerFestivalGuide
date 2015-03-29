@@ -2,7 +2,7 @@
 
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -104,23 +104,11 @@ namespace DotNetNuke.Modules.Admin.Host
             grdFilters.DataBind();
         }
 
-        private void grdFilters_ItemDataBound(object sender, DataGridItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
-            {
-                var delImage = (ImageButton) e.Item.Cells[2].FindControl("image1");
-                if (delImage != null)
-                {
-                    delImage.OnClientClick = "return confirm('" + Localization.GetString("DeleteItem") + "')";
-                }
-            }
-        }
-
         protected void DeleteFilter(object sender, EventArgs e)
         {
             //Get the index of the row to delete
-            var delImage = ((ImageButton) (sender));
-            int removedIpf = Convert.ToInt32(delImage.CommandArgument);
+            var btnDel = ((LinkButton) (sender));
+            int removedIpf = Convert.ToInt32(btnDel.CommandArgument);
 
             IList<IPFilterInfo> currentRules = IPFilterController.Instance.GetIPFilters();
 
@@ -168,7 +156,6 @@ namespace DotNetNuke.Modules.Admin.Host
             CheckSecurity();
 
             cmdAddFilter.NavigateUrl = EditUrl("EditIPFilters");
-            grdFilters.ItemDataBound += grdFilters_ItemDataBound;
         }
 
         protected override void OnLoad(EventArgs e)

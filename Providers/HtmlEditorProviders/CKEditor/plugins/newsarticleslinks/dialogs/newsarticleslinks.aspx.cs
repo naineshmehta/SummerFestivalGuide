@@ -14,6 +14,7 @@ namespace WatchersNET.CKEditor
 {
     using System;
     using System.Collections.Generic;
+	using System.Globalization;
     using System.Linq;
     using System.Web.UI;
     using System.Web.UI.WebControls;
@@ -23,6 +24,7 @@ namespace WatchersNET.CKEditor
     using DotNetNuke.Entities.Modules;
     using DotNetNuke.Entities.Portals;
     using DotNetNuke.Entities.Tabs;
+	using DotNetNuke.Services.Localization;
 
     using Ventrian.NewsArticles;
 
@@ -31,6 +33,32 @@ namespace WatchersNET.CKEditor
     /// </summary>
     public partial class NewsArticlesLinks : Page
     {
+		/// <summary>
+        ///   Gets Current Language from Url
+        /// </summary>
+        protected string LangCode
+        {
+            get
+            {
+                return CultureInfo.CurrentCulture.Name;
+            }
+        }
+
+        /// <summary>
+        ///   Gets the Name for the Current Resource file name
+        /// </summary>
+        protected string ResXFile
+        {
+            get
+            {
+                return
+                    this.ResolveUrl(
+                        string.Format(
+                            "~/Providers/HtmlEditorProviders/CKEditor/{0}/Options.aspx.resx",
+                            Localization.LocalResourceDirectory));
+            }
+        }
+		
         /// <summary>
         /// Handles the Load event of the Page control.
         /// </summary>
@@ -133,7 +161,7 @@ namespace WatchersNET.CKEditor
                     var objListItem = new ListItem
                     {
                         Value = string.Format("{0}-{1}", objModule.TabID, objModule.ModuleID),
-                        Text = string.Format("Page: {0} -> Module Instance: {1}", strPath, objModule.ModuleTitle)
+                        Text = string.Format("{2}: {0} -> {3}: {1}", strPath, objModule.ModuleTitle, Localization.GetString("Page.Text", this.ResXFile, this.LangCode),Localization.GetString("ModuleInstance.Text", this.ResXFile, this.LangCode))
                     };
 
                     ModuleListDropDown.Items.Add(objListItem);

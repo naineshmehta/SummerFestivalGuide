@@ -1,10 +1,10 @@
 <!-- View.Item -->
-<div class="article">
+<div class="article" itemscope itemtype="http://schema.org/Article">
     <div class="articleCalendar articleCalendarIcon-[PUBLISHSTARTDATE:MM]">
         <div class="articleCalendarDay">[PUBLISHSTARTDATE:dd]</div>
     </div>
-    <div class="articleHeadline"><h1>[EDIT]<a href="[ARTICLELINK]">[TITLE]</a></h1></div>
-    <div class="articleAuthor Normal"><a href="[AUTHORLINK]">[AUTHOR]</a> posted on [PUBLISHSTARTDATE:MMMM dd, yyyy HH:mm][HASRATING] [RATING][/HASRATING]</div>
+    <div class="articleHeadline" itemprop="name"><h1>[EDIT]<a href="[ARTICLELINK]" itemprop="url">[TITLE]</a></h1></div>
+    <div class="articleAuthor Normal"><a href="[AUTHORLINK]"><span itemprop="author">[AUTHOR]</span></a> posted on <span itemprop="datePublished">[PUBLISHSTARTDATE:MMMM dd, yyyy HH:mm]</span>[HASRATING] [RATING][/HASRATING]</div>
 
 <div class="articleSocial Normal">
 <span class='st_fblike_hcount' displayText='Facebook Like'></span>
@@ -12,7 +12,7 @@
 <span class='st_plusone_hcount' displayText='Google +1'></span>
 </div>
 
-    <div class="articleEntry Normal">
+    <div class="articleEntry Normal" itemprop="articleBody">
         [PAGETEXT]
         [HASCUSTOMFIELDS][CUSTOMFIELDS][/HASCUSTOMFIELDS]
         [HASLINK]
@@ -28,13 +28,20 @@
     
     [HASCATEGORIES] 
     <div class="articleCategories Normal">
-        Posted in: [CATEGORIES]
+        Posted in: <span itemprop="articleSection">[CATEGORIES]</span>
+    </div>
+	<div class="articleCategories Normal">
+        View more lineup, ticket, rumors and news about [CATEGORIES] here!
     </div>
     [/HASCATEGORIES]
+    <div class="articleCategories Normal">
+        Find out more about [AUTHOR] on <a href='https://plus.google.com/[AUTHOR:GooglePlusID]?rel=author'>Google+</a>
+    </div>
+
 
 [HASTAGS]
     <div class="articleCategories Normal">
-        Tags: [TAGS]
+        Tags: <span itemprop="keywords">[TAGS]</span>
     </div>
 [/HASTAGS]
 
@@ -43,14 +50,27 @@
         <a rel="nofollow" href="mailto:?subject=[TITLESAFEJS]&amp;body=Thought you might like this: [ARTICLELINK]">E-mail</a> | 
         <a rel="bookmark" href="[ARTICLELINK]">Permalink</a> | 
         [HASCOMMENTSENABLED]<a rel="nofollow" href="[COMMENTLINK]">Comments ([COMMENTCOUNT])</a> [ISSYNDICATIONENABLED]<a rel="nofollow" href="[COMMENTRSS]"><img src="Images/rssbutton.gif" alt="RSS comment feed" style="border-width:0px;" /></a>[/ISSYNDICATIONENABLED] [/HASCOMMENTSENABLED]
+
+		<p style="text-align:center; margin-top:10px;">
+			<!--START MERCHANT:merchant name OutdoorGear UK from affiliatewindow.com.-->
+			<a href="http://www.awin1.com/cread.php?s=24633&v=269&q=2383&r=198165"><img src="http://www.awin1.com/cshow.php?s=24633&v=269&q=2383&r=198165" 
+			border="0"></a>
+			<!--END MERCHANT:merchant name OutdoorGear UK from affiliatewindow.com-->                                            
+		</p>
     </div>
 
+</div>
+<div id="fb-root"></div>
+<div class="articleComments">
+<h2><a name="Comments">Comments</a></h2>
+<div class="fb-comments" data-href="[ARTICLELINK]" data-numposts="5" data-colorscheme="light" data-width="635"></div>
 </div>
 
 [HASIMAGES]
 <div class="articleImages">
     <h2><a name="#Images">Related Images</a></h2>
     <table><tr><td>[IMAGES]</td></tr></table>
+                                    
 </div>
 [/HASIMAGES]
 
@@ -76,20 +96,16 @@
 [/ISRATEABLE]
 
 [HASCOMMENTSENABLED]
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'summerfestivalguide'; // required: replace example with your forum shortname
+<div class="articleComments">
+    <h2><a name="Comments">Comments</a></h2>
+    [HASCOMMENTS][COMMENTS][/HASCOMMENTS]
+    [HASNOCOMMENTS]<span class="Normal">There are currently no comments, be the first to post one.</span>[/HASNOCOMMENTS]
+</div>
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div class="postComment">
+    <h2><a name="PostComment">Post Comment</a></h2>
+    [POSTCOMMENT]
+</div>
 [/HASCOMMENTSENABLED]
 
 <script type="text/javascript">var switchTo5x=true;</script>

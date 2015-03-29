@@ -1,5 +1,4 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.UserDefinedTable.Settings"
-    CodeBehind="Settings.ascx.vb" %>
+<%@ Control Language="C#"  Inherits="DotNetNuke.Modules.UserDefinedTable.Settings" AutoEventWireup="false" CodeBehind="Settings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <div style="margin-top: 14px;">
     <p>
@@ -33,3 +32,4 @@
         </tr>
     </table>
 </div>
+

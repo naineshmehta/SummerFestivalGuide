@@ -1,7 +1,7 @@
 #region Copyright
 // 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2013
+// Copyright (c) 2002-2014
 // by DotNetNuke Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
@@ -26,6 +26,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
+using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Portals;
 using DotNetNuke.Services.Exceptions;
@@ -129,9 +130,7 @@ namespace DotNetNuke.Modules.SearchResults
             {
                 if (Page.IsValid)
                 {
-                    var objModules = new ModuleController();
-                    
-                    objModules.UpdateModuleSetting(ModuleId, "LinkTarget", comboBoxLinkTarget.SelectedValue);
+                    ModuleController.Instance.UpdateModuleSetting(ModuleId, "LinkTarget", comboBoxLinkTarget.SelectedValue);
 
                     var selectedPortals = new StringBuilder();
                     foreach (var p in comboBoxPortals.CheckedItems)
@@ -146,7 +145,7 @@ namespace DotNetNuke.Modules.SearchResults
                         }
                     }
 
-                    objModules.UpdateModuleSetting(ModuleId, "ScopeForPortals", selectedPortals.ToString());
+                    ModuleController.Instance.UpdateModuleSetting(ModuleId, "ScopeForPortals", selectedPortals.ToString());
 
                     var selectedFilters = new StringBuilder();
                     foreach (var p in comboBoxFilters.CheckedItems)
@@ -161,15 +160,17 @@ namespace DotNetNuke.Modules.SearchResults
                         }
                     }
 
-                    objModules.UpdateModuleSetting(ModuleId, "ScopeForFilters", selectedFilters.ToString());
+                    ModuleController.Instance.UpdateModuleSetting(ModuleId, "ScopeForFilters", selectedFilters.ToString());
 
-                    objModules.UpdateModuleSetting(ModuleId, "EnableWildSearch", chkEnableWildSearch.Checked.ToString());
+                    ModuleController.Instance.UpdateModuleSetting(ModuleId, "EnableWildSearch", chkEnableWildSearch.Checked.ToString());
                 }
             }
             catch (Exception exc)
             {
                 Exceptions.ProcessModuleLoadException(this, exc);
             }
+
+			DataCache.RemoveCache(string.Format("ModuleInfos{0}", PortalSettings.PortalId));
         }
 		
 		#endregion
@@ -195,8 +196,7 @@ namespace DotNetNuke.Modules.SearchResults
 
         protected IEnumerable<string> LoadSeachContentSourcesList()
         {
-            var portalCtrl = new PortalController();
-            var portals = portalCtrl.GetPortals();
+            var portals = PortalController.Instance.GetPortals();
 
             var result = new List<string>();
             foreach (var portal in portals)
@@ -208,7 +208,7 @@ namespace DotNetNuke.Modules.SearchResults
                     var list = InternalSearchController.Instance.GetSearchContentSourceList(pi.PortalID);
                     foreach (var src in list)
                     {
-                        if (!result.Contains(src.LocalizedName))
+                        if (!src.IsPrivate && !result.Contains(src.LocalizedName))
                         {
                             result.Add(src.LocalizedName);
                         }

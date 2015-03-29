@@ -2,10 +2,6 @@
   <files>
     <file>
       <path />
-      <name>04.03.00.txt</name>
-    </file>
-    <file>
-      <path />
       <name>ActiveForums.ascx</name>
     </file>
     <file>
@@ -382,6 +378,10 @@
     </file>
     <file>
       <path>controls/</path>
+      <name>af_searchadvanced.ascx</name>
+    </file>
+    <file>
+      <path>controls/</path>
       <name>af_searchquick.ascx</name>
     </file>
     <file>
@@ -410,10 +410,6 @@
     </file>
     <file>
       <path>controls/</path>
-      <name>af_uploader.ascx</name>
-    </file>
-    <file>
-      <path>controls/</path>
       <name>af_usersonline.ascx</name>
     </file>
     <file>
@@ -423,10 +419,6 @@
     <file>
       <path>controls/</path>
       <name>profile_mypreferences.ascx</name>
-    </file>
-    <file>
-      <path>controls/</path>
-      <name>uploader.aspx</name>
     </file>
     <file>
       <path>controls/</path>
@@ -491,6 +483,10 @@
     <file>
       <path>images/</path>
       <name>admin_stop.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>af-fileicon.png</name>
     </file>
     <file>
       <path>images/</path>
@@ -1157,12 +1153,24 @@
       <name>yellow_star_06.gif</name>
     </file>
     <file>
+      <path>Legacy/</path>
+      <name>afattach.js</name>
+    </file>
+    <file>
+      <path>Legacy/</path>
+      <name>uploader.aspx</name>
+    </file>
+    <file>
       <path>scripts/</path>
       <name>afadmin.js</name>
     </file>
     <file>
       <path>scripts/</path>
       <name>afadmin.properties.js</name>
+    </file>
+    <file>
+      <path>scripts/</path>
+      <name>afattach.js</name>
     </file>
     <file>
       <path>scripts/</path>
@@ -1199,6 +1207,18 @@
     <file>
       <path>scripts/</path>
       <name>fck_editor.js</name>
+    </file>
+    <file>
+      <path>scripts/</path>
+      <name>jquery-forumSelector.js</name>
+    </file>
+    <file>
+      <path>scripts/</path>
+      <name>jquery-searchPopup.js</name>
+    </file>
+    <file>
+      <path>scripts/</path>
+      <name>jquery.afFileUpload.js</name>
     </file>
     <file>
       <path>scripts/</path>
@@ -1241,8 +1261,20 @@
       <name>text_editor.js</name>
     </file>
     <file>
+      <path>scripts/</path>
+      <name>usereditor.js</name>
+    </file>
+    <file>
       <path>themes/</path>
       <name>module.css</name>
+    </file>
+    <file>
+      <path>themes/_default/</path>
+      <name>jquery-ui.css</name>
+    </file>
+    <file>
+      <path>themes/_default/</path>
+      <name>jquery-ui.min.css</name>
     </file>
     <file>
       <path>themes/_default/</path>
@@ -1258,10 +1290,6 @@
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
-      <name>atomic.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
       <name>biggrin.gif</name>
     </file>
     <file>
@@ -1271,18 +1299,6 @@
     <file>
       <path>themes/_default/emoticons/</path>
       <name>blush.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>bulb.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>chat.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>clock.gif</name>
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
@@ -1306,14 +1322,6 @@
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
-      <name>document.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>document_new.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
       <name>doze.gif</name>
     </file>
     <file>
@@ -1330,10 +1338,6 @@
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
-      <name>hazardblue.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
       <name>hehe.gif</name>
     </file>
     <file>
@@ -1346,15 +1350,7 @@
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
-      <name>lock.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
       <name>mad.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>mail.gif</name>
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
@@ -1366,15 +1362,7 @@
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
-      <name>pinned.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
       <name>plain.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>question.gif</name>
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
@@ -1403,10 +1391,6 @@
     <file>
       <path>themes/_default/emoticons/</path>
       <name>smile.gif</name>
-    </file>
-    <file>
-      <path>themes/_default/emoticons/</path>
-      <name>star.gif</name>
     </file>
     <file>
       <path>themes/_default/emoticons/</path>
@@ -1771,6 +1755,58 @@
     <file>
       <path>themes/_default/images/</path>
       <name>topic_whosread.gif</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_flat_0_aaaaaa_40x100.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_flat_75_ffffff_40x100.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_glass_55_fbf9ee_1x400.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_glass_65_ffffff_1x400.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_glass_75_dadada_1x400.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_glass_75_e6e6e6_1x400.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_glass_95_fef1ec_1x400.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-bg_highlight-soft_75_cccccc_1x100.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-icons_222222_256x240.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-icons_2e83ff_256x240.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-icons_454545_256x240.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-icons_888888_256x240.png</name>
+    </file>
+    <file>
+      <path>themes/_default/images/</path>
+      <name>ui-icons_cd0a0a_256x240.png</name>
     </file>
     <file>
       <path>themes/_default/images/</path>

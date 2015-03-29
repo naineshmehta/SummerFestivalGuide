@@ -211,7 +211,7 @@
     <value>IM:</value>
   </data>
   <data name="ProfileProperties_IM.Help" xml:space="preserve">
-    <value>Enter an instant messenger id (AOL, MSN, Yahoo etc)</value>
+    <value>Enter an instant messenger id (Skype, Yahoo, Google, etc)</value>
   </data>
   <data name="ProfileProperties_TimeZone.Text" xml:space="preserve">
     <value>Time Zone:</value>
@@ -347,5 +347,50 @@
   </data>
   <data name="Preferences.Text" xml:space="preserve">
     <value>Preferences</value>
+  </data>
+  <data name="ProfileProperties_Facebook.Help" xml:space="preserve">
+    <value>A link to your Facebook profile with a format beginning with facebook.com/</value>
+  </data>
+  <data name="ProfileProperties_Facebook.Required" xml:space="preserve">
+    <value>Facebook is required</value>
+  </data>
+  <data name="ProfileProperties_Facebook.Text" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="ProfileProperties_GooglePlus.Help" xml:space="preserve">
+    <value>A link to your Google+ profile with a format beginning with plus.google.com/</value>
+  </data>
+  <data name="ProfileProperties_GooglePlus.Required" xml:space="preserve">
+    <value>Google+ is required</value>
+  </data>
+  <data name="ProfileProperties_GooglePlus.Text" xml:space="preserve">
+    <value>Google+</value>
+  </data>
+  <data name="ProfileProperties_LinkedIn.Help" xml:space="preserve">
+    <value>A link to your LinkedIn profile with a format beginning with www.linkedin.com/ or [country].linkedin.com/</value>
+  </data>
+  <data name="ProfileProperties_LinkedIn.Required" xml:space="preserve">
+    <value>LinkedIn is required</value>
+  </data>
+  <data name="ProfileProperties_LinkedIn.Text" xml:space="preserve">
+    <value>LinkedIn</value>
+  </data>
+  <data name="ProfileProperties_Twitter.Help" xml:space="preserve">
+    <value>A link to your Twitter profile with a format beginning with twitter.com/</value>
+  </data>
+  <data name="ProfileProperties_Twitter.Required" xml:space="preserve">
+    <value>Twitter is required</value>
+  </data>
+  <data name="ProfileProperties_Twitter.Text" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="ProfileProperties_Skype.Help" xml:space="preserve">
+    <value>A link to your call you on Skype via your username</value>
+  </data>
+  <data name="ProfileProperties_Skype.Required" xml:space="preserve">
+    <value>Skype ID is required</value>
+  </data>
+  <data name="ProfileProperties_Skype.Text" xml:space="preserve">
+    <value>Skype ID</value>
   </data>
 </root>

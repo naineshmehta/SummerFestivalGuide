@@ -1,7 +1,7 @@
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.UserDefinedTable.Token2Xsl"
-    TargetSchema="http://schemas.microsoft.com/intellisense/ie5" Codebehind="Token2Xsl.ascx.vb" %>
+<%@ Control Language="C#" Inherits="DotNetNuke.Modules.UserDefinedTable.Token2Xsl"
+    TargetSchema="http://schemas.microsoft.com/intellisense/ie5" Codebehind="Token2Xsl.ascx.cs" AutoEventWireup="false" %>
 
 <script type="text/javascript">
 	function OpenHelpWindow(url)
@@ -13,17 +13,18 @@
 	function AddCurrentItemIntoTextBox(e, target, source, clear, tags) {
 		var ctrlTarget = document.getElementById(target);
 		//IE support
-		if (document.selection) {
+	    
+	    if (document.selection) {
 			ctrlTarget.focus();
-			sel = document.selection.createRange();
+			var sel = document.selection.createRange();
 			if (tags == "True") {
 				sel.text = "<td>" + document.getElementById(source).value + "</td>";
 			} else {
 				sel.text = document.getElementById(source).value;
 			}
 			ctrlTarget.focus();
-			var ctrlToClear = document.getElementById(clear);
-			if (ctrlToClear != null) ctrlToClear.innerHTML = "";
+	        var ctrlToClear = document.getElementById(clear);
+	        if (ctrlToClear != null) ctrlToClear.innerHTML = "";
 			window.event.returnValue = false;
 		}
 		//MOZILLA/NETSCAPE support
@@ -41,13 +42,13 @@
 						+ document.getElementById(source).value
 						+ ctrlTarget.value.substring(endPos, ctrlTarget.value.length);
 			}
-			var ctrlToClear = document.getElementById(clear);
-			if (ctrlToClear != null) ctrlToClear.innerHTML = "";
+	        ctrlToClear = document.getElementById(clear);
+	        if (ctrlToClear != null) ctrlToClear.innerHTML = "";
 			e.preventDefault();
 		} else {
 			ctrlTarget.value += document.getElementById(source).value;
-			var ctrlToClear = document.getElementById(clear);
-			if (ctrlToClear != null) ctrlToClear.innerHTML = "";
+	        ctrlToClear = document.getElementById(clear);
+	        if (ctrlToClear != null) ctrlToClear.innerHTML = "";
 			window.event.returnValue = false;
 		}
 	}
@@ -73,7 +74,7 @@
                         </td>
                         <td>
                             <asp:DropDownList ID="ddlListTemplateType" runat="server" CssClass="Normal" BorderWidth="1px"
-                                BorderColor="Lightgray" BorderStyle="Solid" AutoPostBack="True">
+                                BorderColor="Lightgray" BorderStyle="Solid" AutoPostBack="True" >
                                 <asp:ListItem Value="table" Selected="true" resourcekey="table" />
                                 <asp:ListItem Value="div" resourcekey="div" />
                                 <asp:ListItem Value="p" resourcekey="p" />
@@ -82,7 +83,7 @@
                                 <asp:ListItem Value="nothing" resourcekey="nothing" />
                             </asp:DropDownList>
                         </td>
-                        <td valign="top" colspan="2">
+                        <td style="vertical-align:top" colspan="2">
                             <asp:LinkButton ID="cmdRebuildContent" resourcekey="cmdRebuildContent" runat="server"
                                 CssClass="CommandButton" />
                         </td>
@@ -158,7 +159,7 @@
                         </td>
                         <td>
                             <asp:LinkButton ID="cmdRebuildDetail" resourcekey="cmdRebuildContent" runat="server"
-                                CssClass="CommandButton" />
+                                CssClass="CommandButton"  />
                         </td>
                     </tr>
                 </table>
@@ -185,7 +186,7 @@
                         </td>
                         <td>
                             <asp:LinkButton ID="cmdRebuildTrackingEmail" resourcekey="cmdRebuildContent" runat="server"
-                                CssClass="CommandButton" />
+                                CssClass="CommandButton"  />
                         </td>
                     </tr>
                 </table>
@@ -229,14 +230,14 @@
                                 ResourceKey="lblShowDetailView" Suffix=":" />
                         </td>
                         <td>
-                            <asp:CheckBox ID="chkShowDetailView" runat="server" AutoPostBack="True" />
+                            <asp:CheckBox ID="chkShowDetailView" runat="server" AutoPostBack="True"  />
                         </td>
                     </tr>
                 </table>
             </div>
             <asp:Label ID="lblXslScriptError" runat="server" CssClass="normalred" Visible="False"></asp:Label><p
                 align="center">
-                <asp:Button ID="cmdGenerateXslt" resourcekey="btnGenerateXslt" runat="server" CssClass="CommandButton">
+                <asp:Button ID="cmdGenerateXslt" resourcekey="btnGenerateXslt" runat="server" CssClass="CommandButton" >
                 </asp:Button>
             </p>
         </div>
@@ -271,7 +272,7 @@
                     <asp:TextBox ID="txtFileName" runat="server" Enabled="False" BackColor="LightGray"></asp:TextBox>
                     &nbsp;&nbsp;
                     <asp:LinkButton ID="cmdSaveFile" resourcekey="cmdSaveFile" runat="server" CssClass="CommandButton"
-                        Enabled="false"></asp:LinkButton>
+                        Enabled="false" ></asp:LinkButton>
                 </td>
             </tr>
             <tr align="center">
@@ -279,7 +280,7 @@
                     <asp:Panel ID="panConfirm" runat="server" Visible="False">
                         <asp:Label ID="lblConfirm" CssClass="normalred" resourcekey="lblConfirm" runat="server"></asp:Label>&nbsp;&nbsp;
                         <asp:LinkButton ID="cmdConfirmOverwriteFile" CssClass="CommandButton" resourcekey="Yes"
-                            runat="server"></asp:LinkButton>&nbsp;&nbsp;
+                            runat="server" ></asp:LinkButton>&nbsp;&nbsp;
                         <asp:LinkButton ID="cmdDenyOverwriteFile" CssClass="CommandButton" resourcekey="No"
                             runat="server"></asp:LinkButton>
                     </asp:Panel>
@@ -288,5 +289,6 @@
         </table>
     </div>
     <asp:LinkButton ID="cmdBack" resourcekey="cmdBack" runat="server" CssClass="CommandButton"
-        Text="Back" BorderStyle="none" CausesValidation="False"></asp:LinkButton>
+        Text="Back" BorderStyle="none" CausesValidation="False" ></asp:LinkButton>
 </div>
+

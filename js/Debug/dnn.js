@@ -13,6 +13,73 @@ if (typeof (Sys.Browser.Chrome) == "undefined") {
         Sys.Browser.hasDebuggerStatement = true;
     }
 }
+else if (Sys.Browser.agent === Sys.Browser.InternetExplorer && Sys.Browser.version > 10) {
+    // when browse in IE11, we need add attachEvent/detachEvent handler to make it works with MS AJAX library.
+    HTMLAnchorElement.prototype.attachEvent = function (eventName, handler) {
+        if (eventName.substr(0, 2) == "on") eventName = eventName.substr(2);
+        this.addEventListener(eventName, handler, false);
+    }
+    HTMLAnchorElement.prototype.detachEvent = function (eventName, handler) {
+        if (eventName.substr(0, 2) == "on") eventName = eventName.substr(2);
+        this.removeEventListener(eventName, handler, false);
+    }
+}
+
+//This is temp fix for jQuery UI issue: http://bugs.jqueryui.com/ticket/9315
+//this code can be safe removed after jQuery UI library upgrade to 1.11.
+if ($ && $.ui && $.ui.dialog) {
+    $.extend($.ui.dialog.prototype.options, {
+        open: function () {
+            var htmlElement = $(document).find('html');
+            htmlElement.css('overflow', 'hidden');
+            var cacheScrollTop = htmlElement.find('body').scrollTop();
+            if (cacheScrollTop > 0) {
+                htmlElement.scrollTop(0);
+                var target = $(this);
+                target.data('cacheScrollTop', cacheScrollTop);
+            }
+
+            var uiDialog = $(this).closest('.ui-dialog');
+            if (!$('html').hasClass('mobileView')) {
+                var maxHeight = $(window).height();
+                var dialogHeight = uiDialog.outerHeight();
+                if (maxHeight - 20 >= dialogHeight) {
+                    uiDialog.css({
+                        position: 'fixed',
+                        left: '50%',
+                        top: '50%',
+                        marginLeft: '-' + (uiDialog.outerWidth() / 2) + 'px',
+                        marginTop: '-' + (uiDialog.outerHeight() / 2) + 'px',
+                        maxHeight: 'inherit',
+                        overflow: 'initial'
+                    });
+                } else {
+                    uiDialog.css({
+                        position: 'fixed',
+                        left: '50%',
+                        top: '0',
+                        marginLeft: '-' + (uiDialog.outerWidth() / 2) + 'px',
+                        marginTop: '0',
+                        maxHeight: (maxHeight - 20) + 'px',
+                        overflow: 'auto'
+                    });
+                }
+            }
+        },
+
+        beforeClose: function () {
+            var htmlElement = $(document).find('html');
+            htmlElement.css('overflow', '');
+            var cacheScrollTop = $(this).data('cacheScrollTop');
+            if (cacheScrollTop) {
+                htmlElement.find('body').scrollTop(cacheScrollTop);
+                $(this).data('cacheScrollTop', null);
+            }
+			var uiDialog = $(this).closest('.ui-dialog');
+            uiDialog.css({ overflow: 'initial' });
+        }
+    });
+}
 
 var DNN_HIGHLIGHT_COLOR = '#9999FF';
 var COL_DELIMITER = String.fromCharCode(18);
@@ -54,7 +121,7 @@ dnn.extend(dnn, {
 
             if (ctl != null) {
                 if (ctl.value.indexOf('`') == 0)
-                    ctl.value = ctl.value.substring(1).replace( /`/g , '"');
+                    ctl.value = ctl.value.substring(1).replace(/`/g, '"');
 
                 if (ctl.value.indexOf('__scdoff') != -1) //back compat
                 {
@@ -295,8 +362,32 @@ dnn.extend(dnn, {
         dnn.isLoaded = true;
         if (dnn._delayedSet)
             dnn.setVar(dnn._delayedSet.key, dnn._delayedSet.val);
-    }
+    },
 
+    addIframeMask: function (ele) { //add an iframe behind the element, so that element will not mask by some special objects.
+        if (dnn.dom.browser.isType('ie') && (ele.previousSibling == null || ele.previousSibling.nodeName.toLowerCase() != "iframe")) {
+            var mask = document.createElement("iframe"); //"$("<iframe src=\"about:blank\" frameborder=\"0\"></iframe>");
+            ele.parentNode.insertBefore(mask, ele);
+            var rect = ele.getBoundingClientRect();
+            mask.style.position = 'absolute';
+            mask.style.left = ele.offsetLeft + "px";
+            mask.style.top = ele.offsetTop + "px";
+            mask.style.width = (rect.right - rect.left) + "px";
+            mask.style.height = (rect.bottom - rect.top) + "px";
+            mask.style.opacity = '0';
+            mask.style.filter = "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+            mask.style.zIndex = "-1";
+
+            return mask;
+        }
+
+        return null;
+    },
+    removeIframeMask: function (ele) {
+        if (dnn.dom.browser.isType('ie') && (ele.previousSibling != null && ele.previousSibling.nodeName.toLowerCase() == "iframe")) {
+            ele.parentNode.removeChild(ele.previousSibling);
+        }
+    }
 });
 
 //delayObject
@@ -492,7 +583,7 @@ dnn.extend(dnn.dom, {
         /// Reference to the function that will react to event
         /// </param>
         /// <returns type="Boolean" />		
-        if (dnn.dom.browser.isType(dnn.dom.browser.InternetExplorer) == false) {
+        if (ctl.addEventListener) {
             var name = type.substring(2);
             ctl.addEventListener(name, function (evt) { dnn.dom.event = new dnn.dom.eventObject(evt, evt.target); return fHandler(); }, false);
         }
@@ -545,7 +636,7 @@ dnn.extend(dnn.dom, {
                             i++;
                         }
                     }
-                    // Handle text areas.
+                        // Handle text areas.
                     else if (tagName == "textarea") {
                         var i = ctl.value.length + 1;
                         var oCaret = document.selection.createRange().duplicate();
@@ -1015,7 +1106,7 @@ dnn.extend(dnn.dom, {
         return false;
     },
 
-    setCookie: function (name, val, days, path, domain, isSecure) {
+    setCookie: function (name, val, days, path, domain, isSecure, milliseconds) {
         /// <summary>
         /// Sets a cookie
         /// </summary>
@@ -1042,6 +1133,12 @@ dnn.extend(dnn.dom, {
         if (days) {
             sExpires = new Date();
             sExpires.setTime(sExpires.getTime() + (days * 24 * 60 * 60 * 1000));
+        }
+
+        if (milliseconds) {
+            sExpires = new Date();
+            sExpires.setTime(sExpires.getTime() + (milliseconds));
+
         }
         document.cookie = name + "=" + escape(val) + ((sExpires) ? "; expires=" + sExpires.toGMTString() : "") +
 				((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((isSecure) ? "; secure" : "");

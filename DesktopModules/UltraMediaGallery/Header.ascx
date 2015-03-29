@@ -1,4 +1,4 @@
-<%@ Control Language="vb" AutoEventWireup="false" Codebehind="Header.ascx.vb" Inherits="BizModules.UltraPhotoGallery.ucHeader" %>
+<%@ Control Language="vb" AutoEventWireup="false" Codebehind="Header.ascx.vb" Inherits="BizModules.UltraPhotoGallery.Header" %>
 <div style="border: 1px dotted #838383; margin-bottom: 5px;">
     <asp:Table ID="Table1" runat="server" CssClass="Normal" CellPadding="5" HorizontalAlign="Center">
         <asp:TableRow>

@@ -55,7 +55,7 @@
         </tr>
         <tr>
             <td style="width:179px">[event:durationdays]</td>
-            <tdDuration of the event in whole integer days</td>
+            <td>Duration of the event in whole integer days</td>
         </tr>
         <tr>
             <td style="width:179px">[event:timezone]</td>
@@ -82,6 +82,18 @@
         <tr>
             <td style="width:179px">[event:description|<i>length</i>]</td>
             <td>Description defined in the event, optionally shortened to specified length</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:summarylabel]</td>
+            <td>
+                Label defined for summary in the resource file</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:summary|<i>length</i>]</td>
+            <td>
+                Summary defined in the event, optionally shortened to specified length</td>
         </tr>
         <tr>
             <td style="width:179px">[event:categorylabel]</td>
@@ -119,6 +131,31 @@
             <td style="width:179px">[event:locationurl]</td>
             <td>URL of location associated with the event</td>
         </tr>
+        <tr>
+            <td style="width:179px">[event:locationaddresslabel]</td>
+            <td>Label defined for address of location in the resource file</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:locationstreet]</td>
+            <td>Street and housenumber of location associated with the event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:locationpostalcode]</td>
+            <td>Postal code of location associated with the event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:locationcity]</td>
+            <td>City of location associated with the event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:locationregion]</td>
+            <td>Region of location associated with the event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:locationcountry]</td>
+            <td>Country of location associated with the event</td>
+        </tr>
+
         <tr>
             <td style="width:179px">[event:recurringlabel]<sup>§</sup></td>
             <td>Label defined for recurrence in the resource file</td>
@@ -254,6 +291,14 @@
             <td>Number of people currently enroled for the event</td>
         </tr>
         <tr>
+            <td style="width:179px">[event:novacancieslabel]</td>
+            <td>Label of No. Vacancies</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:novacancies]</td>
+            <td>Number of vacancies currently available for the event</td>
+        </tr>
+        <tr>
             <td style="width:179px">[event:enrollfeelabel]<sup>§</sup></td>
             <td>Label of Enrolment Fee</td>
         </tr>
@@ -301,16 +346,16 @@
                 display views (Month/Week/Day/List/Repeater) and tooltips.</td>
         </tr>
         <tr>
-            <td style="width:179px">
-                [event:eventid]</td>
-            <td>
-                ID of the event as recorded in the Events table</td>
+            <td style="width:179px">[event:eventid]</td>
+            <td>ID of the event as recorded in the Events table</td>
         </tr>
         <tr>
-            <td style="width:179px">
-                [event:eventmoduleid]</td>
-            <td>
-                ID of the module instance the event was created in</td>
+            <td style="width:179px">[event:eventmoduleid]</td>
+            <td>ID of the module instance the event was created in</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:enrollmentdefaulturl]</td>
+            <td>Default URL of the custom/external enrollment page</td>
         </tr>
         <tr>
             <td style="width:179px">
@@ -322,14 +367,56 @@
             <td colspan="2" style="font-weight: 700">Only available in enrolment emails</td>
         </tr>
         <tr>
-            <td style="width:179px">
-                [event:signupusername]</td>
-            <td>
-                Name of user enrolled to an event</td>
-        </tr>
-        <tr>
             <td style="width:179px">[event:signupuserid</td>
             <td>Userid of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupusername]</td>
+            <td>Full name of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserfirstname]</td>
+            <td>First name of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserlastname]</td>
+            <td>Last name of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuseremail]</td>
+            <td>Email of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserstreet]</td>
+            <td>Street of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserpostalcode]</td>
+            <td>Postal code of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupusercity]</td>
+            <td>City of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserregion]</td>
+            <td>Region of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupusercountry]</td>
+            <td>Country of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupusercompany]</td>
+            <td>Company of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserjobtitle]</td>
+            <td>Job title of user enrolled to an event</td>
+        </tr>
+        <tr>
+            <td style="width:179px">[event:signupuserrefnumber]</td>
+            <td>Reference number of user enrolled to an event</td>
         </tr>
         <tr>
             <td style="width:179px">
@@ -362,8 +449,8 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td colspan="2" style="font-weight: 700">The following tokens are the only ones 
-                allowed in the List View Repeater&nbsp;Templates</td>
+            <td colspan="2" style="font-weight: 700">Only available in List View 
+                Repeater&nbsp;Templates</td>
         </tr>
         <tr>
             <td style="width:179px">
@@ -399,6 +486,66 @@
             <td>
                 Used in format [IFZEROEVENTS][event:repeaterzeroeventstext[/IFZEROEVENTS] to 
                 include the text when there are no events - Header template only.</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: 700">Only available in Social Groups</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialgrouprolenamelabel]</td>
+            <td>
+                Localizable token for the group name label</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialgrouprolename]</td>
+            <td>
+                The name of the group</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialgrouproleid]</td>
+            <td>
+                The ID of the group</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-weight: 700">Only available in User Profiles</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialuserusernamelabel]</td>
+            <td>
+                Localizable token for the user name label</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialuserusername]</td>
+            <td>
+                The user&#39;s username</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialuserdisplaynamelabel]</td>
+            <td>
+                Localizable token for the display name label</td>
+        </tr>
+        <tr>
+            <td style="width:179px">
+                [event:socialuserdisplayname]</td>
+            <td>
+                The user&#39;s displayname</td>
         </tr>
         <tr>
             <td style="width:179px">
@@ -558,6 +705,87 @@ The following tokens can be used to alter what is displayed based on options sto
                 If the event is not longer than 1440 minutes, the text specified within the token is included.</td>
             <td>
                 [IFNOTMULTIDAY]1 day[/IFNOTMULTIDAY]</td>
+        </tr>
+        <tr>
+            <td>
+                HASROLE</td>
+            <td>
+                If the current user is in the specified role, the text specified within the 
+                token is included.</td>
+            <td>
+                [HASROLE_Registered Users][event:customfield2][/HASROLE_Registered Users]</td>
+        </tr>
+        <tr>
+            <td>
+                HASNOTROLE</td>
+            <td>
+                If the current user is not in the specified role, the text specified within the 
+                token is included.</td>
+            <td>
+                [HASNOTROLE_Registered Users]Please login.[/HASNOTROLE_Registered Users]</td>
+        </tr>
+        <tr>
+            <td>
+                IFHASSUMMARY</td>
+            <td>
+                Includes the text specified within the token if the event has a 
+                Summary.</td>
+            <td>
+                [IFHASSUMMARY][event:summary|50][/IFHASSUMMARY]</td>
+        </tr>
+        <tr>
+            <td>
+                IFNOTHASSUMMARY</td>
+            <td>
+                Includes the text specified within the token if the event does not have a Summary.</td>
+            <td>
+                [IFNOTHASSUMMARY]No Summary[/IFNOTHASSUMMARY]</td>
+        </tr>
+        <tr>
+            <td>
+                IFENROLED</td>
+            <td>
+                Includes the text specified within the token if the logged on user is enroled to 
+                the event.</td>
+            <td>
+                [IFENROLED]You are enroled for this event.[/IFENROLED]</td>
+        </tr>
+        <tr>
+            <td>
+                IFNOTENROLED</td>
+            <td>
+                Includes the text specified within the token if the logged on user is not 
+                enroled to the event.</td>
+            <td>
+                [IFNOTENROLED]Login to Enrol[/IFNOTENROLED]</td>
+        </tr>
+        <tr>
+            <td>
+                IFISSOCIALGROUP</td>
+            <td>
+                Includes the text specified within the token if event is in a Social Group.</td>
+            <td>
+                [IFISSOCIALGROUP]([event:socialgrouprolename])[/IFISSOCIALGROUP]</td>
+        </tr>
+        <tr>
+            <td>
+                IFISSOCIALUSER</td>
+            <td>
+                Includes the text specified within the token if event is in a User Profile.</td>
+            <td>
+                [IFISSOCIALUSER]([event:socialuserdisplayname])[/IFISSOCIALUSER]</td>
+        </tr>
+        <tr>
+            <td>IFISFULL</td>
+            <td>Includes the text specified within the token if the event is fully booked  
+                (no vacancies left).</td>
+            <td>[IFISFULL]You cannot enroll for this event as it is fully booked.[/IFISFULL]</td>
+        </tr>
+        <tr>
+            <td>IFNOTISFULL</td>
+            <td>Includes the text specified within the token if the event is not fully booked  
+                (still vacancies left).</td>
+            <td>[IFNOTISFULL]You can still enroll for this event as it is not yet fully booked.[/IFISFULL]</td>
         </tr>
     </tbody>
 </table>

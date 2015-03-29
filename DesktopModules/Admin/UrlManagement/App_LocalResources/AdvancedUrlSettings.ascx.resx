@@ -124,18 +124,24 @@
     <value>Enabled</value>
   </data>
   <data name="ModuleProviders.Text" xml:space="preserve">
-    <value>Module Providers</value>
+    <value>Extension URL Providers</value>
   </data>
   <data name="moduleProvidersLabel.Help" xml:space="preserve">
-    <value>Module Provider URL Management</value>
+    <value>This list shows the currently installed Extension URL Providers.  To enable/disable an Extension URL Provider, click the checkbox in the 'Enabled' column.  To change specific settings for a provider, click the 'Edit' icon in the 'Actions' column.</value>
   </data>
   <data name="moduleProvidersLabel.Text" xml:space="preserve">
-    <value>Module Provider URL Management</value>
+    <value>Extension URL Provider Management</value>
   </data>
   <data name="ProviderName.Header" xml:space="preserve">
-    <value>Module Provider Name</value>
+    <value>Provider Name</value>
   </data>
   <data name="TabText.Text" xml:space="preserve">
     <value>Advanced URL Settings</value>
+  </data>
+  <data name="NoProvidersInstalled.Text" xml:space="preserve">
+    <value>There are no providers installed.</value>
+  </data>
+  <data name="ExtensionProvidersDisabled.Text" xml:space="preserve">
+    <value>Extension Providers are disabled for this site.</value>
   </data>
 </root>

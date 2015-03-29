@@ -1,3 +1,5 @@
 App_Data/Search/*
 Portals/_default/Logs/*
 Portals/0/*
+App_Data/ClientDependency/*
+Install/Temp/*

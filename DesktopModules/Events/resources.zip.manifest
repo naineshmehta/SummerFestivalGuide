@@ -77,6 +77,10 @@
       <name>SelectCategory.ascx</name>
     </file>
     <file>
+      <path>SubControls/</path>
+      <name>SelectLocation.ascx</name>
+    </file>
+    <file>
       <path />
       <name>EventIPN.aspx</name>
     </file>
@@ -87,10 +91,6 @@
     <file>
       <path />
       <name>EventVCal.aspx</name>
-    </file>
-    <file>
-      <path />
-      <name>Module.css</name>
     </file>
     <file>
       <path>Themes/Default/</path>
@@ -127,6 +127,14 @@
     <file>
       <path>Themes/Small/</path>
       <name>Small.css</name>
+    </file>
+    <file>
+      <path />
+      <name>DotNetNuke.Events.sln.GhostDoc.xml</name>
+    </file>
+    <file>
+      <path />
+      <name>EventEnrollees.xslt</name>
     </file>
     <file>
       <path>App_LocalResources/</path>
@@ -217,6 +225,10 @@
       <name>SelectCategory.ascx.resx</name>
     </file>
     <file>
+      <path>SubControls/App_LocalResources/</path>
+      <name>SelectLocation.ascx.resx</name>
+    </file>
+    <file>
       <path>Images/</path>
       <name>bell.gif</name>
     </file>
@@ -246,6 +258,10 @@
     </file>
     <file>
       <path>Images/</path>
+      <name>Categories.gif</name>
+    </file>
+    <file>
+      <path>Images/</path>
       <name>enroll.gif</name>
     </file>
     <file>
@@ -259,6 +275,10 @@
     <file>
       <path>Images/</path>
       <name>iCal.gif</name>
+    </file>
+    <file>
+      <path>Images/</path>
+      <name>Locations.gif</name>
     </file>
     <file>
       <path>Images/</path>

@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.UserDefinedTable.HelpPopup" Codebehind="HelpPopup.aspx.vb" %>
+<%@ Page Language="C#"  Inherits="DotNetNuke.Modules.UserDefinedTable.HelpPopup" Codebehind="HelpPopup.aspx.cs" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -15,3 +15,4 @@
     </form>
 </body>
 </html>
+

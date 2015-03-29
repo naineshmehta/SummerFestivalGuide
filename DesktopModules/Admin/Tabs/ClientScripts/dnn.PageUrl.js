@@ -105,7 +105,6 @@ dnn.createPageUrl = function (options) {
 };
 
 
-
 (function ($, window, document, undefined) {
     "use strict";
 
@@ -118,19 +117,8 @@ dnn.createPageUrl = function (options) {
     // as this (slightly) quickens the resolution process and can be more efficiently
     // minified (especially when both are regularly referenced in your plugin).
 
-    // The actual plugin constructor
-    var PageUrlSynchronizer = this.PageUrlSynchronizer = (function () {
-        var instance = null;
-        return new function() {
-            this.getInstance = function() {
-                if (instance == null) {
-                    instance = new PageUrlSynchronizerInternal();
-                    instance.constructor = null;
-                }
-                return instance;
-            };
-        };
-    })();
+
+    var PageUrlSynchronizer = this.PageUrlSynchronizer = dnn.singletonify(PageUrlSynchronizerInternal);
 
 
     function PageUrlSynchronizerInternal() {

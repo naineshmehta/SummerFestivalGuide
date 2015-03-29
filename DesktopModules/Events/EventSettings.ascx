@@ -1,9 +1,9 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EventSettings.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventSettings" %>
-<%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
-<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"  %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"  %>   
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+
 <asp:Panel ID="pnlEventsModuleSettings" runat="server">
 <div class="dnnForm EventSettings" id="EventSettings">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="100%" CssClass="dnnFormMessage dnnFormValidationSummary" DisplayMode="List"></asp:ValidationSummary>
@@ -11,9 +11,9 @@
         <li><a href="#GeneralSettings"><%=LocalizeString("GeneralSettings")%></a></li>
         <li><a href="#DisplaySettings"><%=LocalizeString("DisplaySettings")%></a></li>
         <li><a href="#EmailandReminderSettings"><%=LocalizeString("EmailandReminderSettings")%></a></li>
-        <li><a href="#EnrollandModSettings"><%=LocalizeString("EnrollandModSettings")%></a></li>
-        <li><a href="#SubcalendarSettings"><%=LocalizeString("SubcalendarSettings")%></a></li>
-        <li><a href="#SEOandSitemapSettings"><%=LocalizeString("SEOandSitemapSettings")%></a></li>
+        <% If ddlSocialGroupModule.SelectedValue <> 3 Then%><li><a href="#EnrollandModSettings"><%=LocalizeString("EnrollandModSettings")%></a></li><% End If%>
+        <% If ddlSocialGroupModule.SelectedValue = 1 Then%><li><a href="#SubcalendarSettings"><%=LocalizeString("SubcalendarSettings")%></a></li><% End If%>
+        <% If ddlSocialGroupModule.SelectedValue <> 3 Then%><li><a href="#SEOandSitemapSettings"><%=LocalizeString("SEOandSitemapSettings")%></a></li><% End If%>
         <li><a href="#IntegrationSettings"><%=LocalizeString("IntegrationSettings")%></a></li>
         <li><a href="#TemplateSettings"><%=LocalizeString("TemplateSettings")%></a></li>
     </ul>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plPreventConflicts" Text="Event Height/Width:" runat="server" ControlName="txtEventWidth"></dnn:Label>
-                    <asp:CheckBox ID="chkPreventConflicts" runat="server"></asp:CheckBox>
+                    <asp:CheckBox ID="chkPreventConflicts" runat="server" ></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plLocationConflict" Text="Location Conflict:" runat="server" ControlName="chkLocationConflict"></dnn:Label>
@@ -47,10 +47,12 @@
                     <dnn:Label ID="plEnableSearch" Text="Event Height/Width:" runat="server" ControlName="txtEventWidth"></dnn:Label>
                     <asp:CheckBox ID="chkEnableSearch" runat="server" Checked="True"></asp:CheckBox>
                 </div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="lblOwnerChangeAllowed" runat="server" Text="Owner Change Allowed" ControlName="lblOwnerChangeAllowed"></dnn:Label>
-                    <asp:CheckBox ID="chkOwnerChangeAllowed" runat="server" Checked="False"></asp:CheckBox>
-                </div>
+                <% If ddlSocialGroupModule.SelectedValue = 1 Then%>
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="lblOwnerChangeAllowed" runat="server" Text="Owner Change Allowed" ControlName="lblOwnerChangeAllowed"></dnn:Label>
+                        <asp:CheckBox ID="chkOwnerChangeAllowed" runat="server" Checked="False"></asp:CheckBox>
+                    </div>
+                <% End If%>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plExpireEvents" runat="server" Text="Expire Events Older Than:" ControlName="txtExpireEvents"></dnn:Label>
                     <asp:TextBox ID="txtExpireEvents" runat="server" CssClass="NormalTextBox" Width="32px"></asp:TextBox>&nbsp;
@@ -61,9 +63,15 @@
                     <asp:TextBox ID="txtPrivateMessage" runat="server" CssClass="NormalTextBox" Width="300px"></asp:TextBox>
                 </div>
                 <div class="dnnFormItem">
-                    <dnn:Label ID="plModuleCategory" runat="server" recourcekey="ModuleCategory" Text="Filter Events by Category:" ControlName="ddlModuleCategory"></dnn:Label>
+                    <dnn:Label ID="plModuleCategory" runat="server" recourcekey="ModuleCategory" Text="Filter Events by Category:" ControlName="ddlModuleCategories"></dnn:Label>
                     <dnn:DnnComboBox ID="ddlModuleCategories" runat="server" width="150px" CheckBoxes="True" EnableCheckAllItemsCheckBox="true"
-		                AllowCustomText="False" DataValueField="Category" DataTextField="CategoryName"  >
+		                AllowCustomText="False" DataValueField="Category" DataTextField="CategoryName">
+		            </dnn:DnnComboBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plModuleLocation" runat="server" recourcekey="ModuleLocation" Text="Filter Events by Location:" ControlName="ddlModuleLocations"></dnn:Label>
+                    <dnn:DnnComboBox ID="ddlModuleLocations" runat="server" width="150px" CheckBoxes="True" EnableCheckAllItemsCheckBox="true"
+		                AllowCustomText="False" DataValueField="Location" DataTextField="LocationName">
 		            </dnn:DnnComboBox>
                 </div>
                 <div class="dnnFormItem">
@@ -126,6 +134,14 @@
                 <div class="dnnFormItem">
                     <dnn:Label ID="lblRestrictCategories" runat="server" ControlName="chkRestrictCategories"></dnn:Label>
                     <asp:CheckBox ID="chkRestrictCategories" runat="server" Checked="false"></asp:CheckBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="lblLocationsEnable" runat="server" ControlName="ddlEnablelocations"></dnn:Label>
+                    <asp:DropDownList ID="ddlEnableLocations" runat="server" CssClass="NormalTextBox" Width="178px" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="lblRestrictLocations" runat="server" ControlName="chkRestrictLocations"></dnn:Label>
+                    <asp:CheckBox ID="chkRestrictLocations" runat="server" Checked="false"></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plEnableEventNav" Text="Enable Date Navigation Controls" runat="server" ControlName="txtEnableEventNav"></dnn:Label>
@@ -193,6 +209,14 @@
                     <asp:CheckBox ID="chkDetailPageAllowed" runat="server" Checked="False"></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
+                    <dnn:Label ID="lblEnrollmentPageAllowed" runat="server" Text="Set Enrollment Page Allowed" ControlName="lblEnrollmentPageAllowed"></dnn:Label>
+                    <asp:CheckBox ID="chkEnrollmentPageAllowed" runat="server" Checked="False"></asp:CheckBox>
+                </div>
+                 <div class="dnnFormItem">
+                    <dnn:Label ID="lblEnrollmentPageDefaultURL" runat="server" Text="Enrollment Page Default URL:" ControlName="txtEnrollmentPageDefaultURL"></dnn:Label>
+                    <asp:TextBox ID="txtEnrollmentPageDefaultURL" runat="server" CssClass="NormalTextBox" Width="300px" MaxLength="250"></asp:TextBox>
+                </div>
+               <div class="dnnFormItem">
                     <dnn:Label ID="lblEnableEnrollPopup" runat="server" Text="Enable Enroll Popup Validation:" ControlName="lblEnableEnrollPopup"></dnn:Label>
                     <asp:CheckBox ID="chkEnableEnrollPopup" runat="server" Checked="True"></asp:CheckBox>
                 </div>
@@ -203,7 +227,7 @@
             <div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="lblMonthCellEvents" runat="server" Text="Enable Month View Cell Events"></dnn:Label>
-                    <asp:CheckBox ID="chkMonthCellEvents" runat="server"></asp:CheckBox>
+                    <asp:CheckBox ID="chkMonthCellEvents" runat="server" ></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plShowEventsAlways" Text="Show Events in Next/Prev Month" runat="server" ControlName="txtShowEventsAlways"></dnn:Label>
@@ -261,7 +285,7 @@
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="lblIncludeEndValue" runat="server" Text="Include End Value" ControlName="txtIncludeEndValue"></dnn:Label>
-                    <asp:CheckBox ID="chkIncludeEndValue" runat="server"></asp:CheckBox>
+                    <asp:CheckBox ID="chkIncludeEndValue" runat="server" ></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="lblShowValueMarks" runat="server" Text="Week View Value Marks" ControlName="txtShowValueMarks"></dnn:Label>
@@ -312,11 +336,11 @@
                     </asp:RadioButtonList>
                 </div>
                 <div class="dnnFormItem">
-                    <dnn:Label ID="plSelectedDays" Text="Selected Days:" runat="server" ControlName="rblSelectionTypeDays"></dnn:Label>
+                    <dnn:Label ID="plSelectedDays" Text="Selected Days:" runat="server" ControlName="rblSelectionTypeDays" ></dnn:Label>
                     <table cellpadding="0" cellspacing="0">
                         <tr>
                             <td style="width: 28px; white-space: nowrap" >
-                                <input id="rblSelectionTypeDays" type="radio" value="DAYS" name="rblSelectionType" runat="server" />
+                                <input id="rblSelectionTypeDays" type="radio" value="DAYS" name="rblSelectionType" runat="server"/>
                             </td>
                             <td style="white-space: nowrap;">
                                 <asp:TextBox ID="txtDaysBefore" runat="server" CssClass="NormalTextBox" Width="32px">1</asp:TextBox>&nbsp;<asp:Label ID="Label4" resourcekey="plDaysBeforeCurrent" runat="server" EnableViewState="False">days before current date</asp:Label>
@@ -348,6 +372,14 @@
                             </td>
                         </tr>
                     </table>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plRestrictCategoriesToTimeFrame" runat="server" Text="Restrict Categories to Time Frame" ControlName="chkRestrictCategoriesToTimeFrame"></dnn:Label>
+                    <asp:CheckBox ID="chkRestrictCategoriesToTimeFrame" runat="server"></asp:CheckBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plRestrictLocationsToTimeFrame" runat="server" Text="Restrict Locations to Time Frame" ControlName="chkRestrictLocationsToTimeFrame"></dnn:Label>
+                    <asp:CheckBox ID="chkRestrictLocationsToTimeFrame" runat="server"></asp:CheckBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plEventsFields" Text="Select the Events Fields to Display:" runat="server" ControlName="tblListColumns"></dnn:Label>
@@ -510,7 +542,7 @@
             <div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plImageEnabled" runat="server" Text="Event Height/Width:" ControlName="txtEventWidth"></dnn:Label>
-                    <asp:CheckBox ID="chkImageEnabled" runat="server" Checked="True"></asp:CheckBox>
+                    <asp:CheckBox ID="chkImageEnabled" runat="server" Checked="True" ></asp:CheckBox>
                 </div>
                 <div id="divImageEnabled" runat="server">
                     <div class="dnnFormItem">
@@ -537,24 +569,26 @@
         <h2 class="dnnFormSectionHead" id="dnnPanel-EventEmailSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("EventEmailSettings")%></a></h2>
         <fieldset class="dnnClear">
             <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="lblNewEventEmail" runat="server" Text="Send New Event Email" ControlName="lblNewEventEmail"></dnn:Label>
-                    <table cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                            <td>
-                                <asp:RadioButtonList ID="rblNewEventEmail" runat="server" RepeatDirection="Vertical" CssClass="dnnFormRadioButtons">
-                                    <asp:ListItem Value="Never" Selected="True" resourcekey="plNewEventEmailNever"></asp:ListItem>
-                                    <asp:ListItem Value="Subscribe" resourcekey="plNewEventEmailSubscribe"></asp:ListItem>
-                                    <asp:ListItem Value="Role" resourcekey="plNewEventEmailRole"></asp:ListItem>
-                                </asp:RadioButtonList>
-                            </td>
-                            <td class="SubHead" valign="bottom">
-                                <asp:DropDownList ID="ddNewEventEmailRoles" AutoPostBack="False" runat="server" Width="300px">
-                                </asp:DropDownList>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <% If ddlSocialGroupModule.SelectedValue = 1 Then%>
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="lblNewEventEmail" runat="server" Text="Send New Event Email" ControlName="lblNewEventEmail"></dnn:Label>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td>
+                                    <asp:RadioButtonList ID="rblNewEventEmail" runat="server" RepeatDirection="Vertical" CssClass="dnnFormRadioButtons dnnRadioButton">
+                                        <asp:ListItem Value="Never" Selected="True" resourcekey="plNewEventEmailNever"></asp:ListItem>
+                                        <asp:ListItem Value="Subscribe" resourcekey="plNewEventEmailSubscribe"></asp:ListItem>
+                                        <asp:ListItem Value="Role" resourcekey="plNewEventEmailRole"></asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </td>
+                                <td class="SubHead" valign="bottom">
+                                    <asp:DropDownList ID="ddNewEventEmailRoles" AutoPostBack="False" runat="server" Width="300px">
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                <% End If%>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plNewPerEventEmail" Text="Allow New Per Event Email:" runat="server" ControlName="plNewPerEventEmail"></dnn:Label>
                     <asp:CheckBox ID="chkNewPerEventEmail" runat="server" Checked="False"></asp:CheckBox>
@@ -566,7 +600,7 @@
             <div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plShowEventNotify" Text="Allow Event Reminders" runat="server" ControlName="plShowEventNotify"></dnn:Label>
-                    <asp:CheckBox ID="chkEventNotify" runat="server" Checked="True"></asp:CheckBox>
+                    <asp:CheckBox ID="chkEventNotify" runat="server" Checked="True" ></asp:CheckBox>
                 </div>
                 <div id="divEventNotify" runat="server">
                     <div class="dnnFormItem">
@@ -588,302 +622,409 @@
             </div>
         </fieldset>
 	</div>
-    <div class="EnrollandModSettings dnnClear" id="EnrollandModSettings">
-        <h2 class="dnnFormSectionHead" id="dnnPanel-EnrollmentSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("EnrollmentSettings")%></a></h2>
-        <fieldset class="dnnClear">
-            <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="plEnrollment" Text="" runat="server" ControlName="chkEventSignup"></dnn:Label>
-                    <asp:CheckBox ID="chkEventSignup" runat="server" Checked="True"></asp:CheckBox>
-                </div>
-                <div id="divEventSignup" runat="server">
+    <% If ddlSocialGroupModule.SelectedValue <> 3 Then%>
+        <div class="EnrollandModSettings dnnClear" id="EnrollandModSettings">
+            <h2 class="dnnFormSectionHead" id="dnnPanel-EnrollmentSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("EnrollmentSettings")%></a></h2>
+            <fieldset class="dnnClear">
+                <div>
                     <div class="dnnFormItem">
-                        <dnn:Label ID="plEventSignupAllowPaid" Text="" runat="server" ControlName="chkEventSignupAllowPaid"></dnn:Label>
-                        <asp:CheckBox ID="chkEventSignupAllowPaid" runat="server" Checked="True"></asp:CheckBox>
+                        <dnn:Label ID="plEnrollment" Text="" runat="server" ControlName="chkEventSignup"></dnn:Label>
+                        <asp:CheckBox ID="chkEventSignup" runat="server" Checked="True" ></asp:CheckBox>
                     </div>
-                    <div id="divEventSignupAllowPaid" runat="server">
+                    <div id="divEventSignup" runat="server">
                         <div class="dnnFormItem">
-                            <dnn:Label ID="plPayPal" Text="PayPal Account (paid enrollments):" runat="server" ControlName="txtPayPalAccount"></dnn:Label>
-                            <asp:TextBox ID="txtPayPalAccount" runat="server" CssClass="NormalTextBox" Wrap="False" MaxLength="100" Width="300px"></asp:TextBox>
+                            <dnn:Label ID="plEventSignupAllowPaid" Text="" runat="server" ControlName="chkEventSignupAllowPaid"></dnn:Label>
+                            <asp:CheckBox ID="chkEventSignupAllowPaid" runat="server" Checked="True" ></asp:CheckBox>
                         </div>
                         <div class="dnnFormItem">
-                            <dnn:Label ID="plPayPalURL" Text="PayPal Account (paid enrollments):" runat="server" ControlName="txtPayPalAccount"></dnn:Label>
-                            <asp:TextBox ID="txtPayPalURL" runat="server" CssClass="NormalTextBox" Width="300px">https://www.paypal.com</asp:TextBox>
+                            <dnn:Label ID="plAllowAnonEnroll" Text="" runat="server" ControlName="chkAllowAnonEnroll"></dnn:Label>
+                            <asp:CheckBox ID="chkAllowAnonEnroll" runat="server" Checked="False"></asp:CheckBox>
+                        </div>
+                        <div id="divEventSignupAllowPaid" runat="server">
+                            <div class="dnnFormItem">
+                                <dnn:Label ID="plPayPal" Text="PayPal Account (paid enrollments):" runat="server" ControlName="txtPayPalAccount"></dnn:Label>
+                                <asp:TextBox ID="txtPayPalAccount" runat="server" CssClass="NormalTextBox" Wrap="False" MaxLength="100" Width="300px"></asp:TextBox>
+                            </div>
+                            <div class="dnnFormItem">
+                                <dnn:Label ID="plPayPalURL" Text="PayPal Account (paid enrollments):" runat="server" ControlName="txtPayPalAccount"></dnn:Label>
+                                <asp:TextBox ID="txtPayPalURL" runat="server" CssClass="NormalTextBox" Width="300px">https://www.paypal.com</asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plDefaultEnrollView" Text="Display Enroll List by Default:" runat="server" ControlName="chkDefaultEnrollView"></dnn:Label>
+                            <asp:CheckBox ID="chkDefaultEnrollView" runat="server" Checked="False"></asp:CheckBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plHideFullEnroll" Text="Hide Full enrolled events:" runat="server" ControlName="chkHideFullEnroll"></dnn:Label>
+                            <asp:CheckBox ID="chkHideFullEnroll" runat="server" Checked="False"></asp:CheckBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plMaxNoEnrolees" Text="Allow Multiple Enrolees:" runat="server" ControlName="txtMaxNoEnrolees"></dnn:Label>
+                            <asp:TextBox ID="txtMaxNoEnrolees" runat="server" CssClass="NormalTextBox" Width="40px">1</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plCancelDays" Text="Cancel Before Days:" runat="server" ControlName="txtCancelDays"></dnn:Label>
+                            <asp:TextBox ID="txtCancelDays" runat="server" CssClass="NormalTextBox" Width="40px">0</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plEnrolListSortDirection" Text="My Enrolments Sorting:" runat="server" />
+                            <asp:DropDownList ID="ddlEnrolListSortDirection" CssClass="NormalTextBox" Width="200px" runat="server" />
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plEnrolListDaysBefore" Text="My Enrolments Days Before:" runat="server" ControlName="txtEnrolListDaysBefore"></dnn:Label>
+                            <asp:TextBox ID="txtEnrolListDaysBefore" runat="server" CssClass="NormalTextBox" Width="40px">0</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plEnrolListDaysAfter" Text="My Enrolments Days After:" runat="server" ControlName="txtEnrolListDaysAfter"></dnn:Label>
+                            <asp:TextBox ID="txtEnrolListDaysAfter" runat="server" CssClass="NormalTextBox" Width="40px">0</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plEnrollColumns" Text="Select the User Fields to display:" runat="server" ControlName="tblEnrollColumns"></dnn:Label>
+                            <table id="tblEnrollColumns" cellspacing="0" cellpadding="2" border="0" style="width:400px">
+                                <tr align="center">
+                                    <td align="left" class="NormalBold" style="width: 30%">
+                                        <asp:Label ID="plEnVisibility" resourcekey="plEnVisibility" runat="server" EnableViewState="False">Visibility</asp:Label>
+                                    </td>
+                                    <td style="width:15%" class="NormalBold">
+                                        <asp:Label ID="plEnNone" resourcekey="plEnNone" runat="server" EnableViewState="False">None</asp:Label>
+                                    </td>
+                                    <td style="width:15%" class="NormalBold">
+                                        <asp:Label ID="plEnEditors" resourcekey="plEnEditors" runat="server" EnableViewState="False">Editors</asp:Label>
+                                    </td>
+                                    <td style="width:15%" class="NormalBold">
+                                        <asp:Label ID="plEnViewers" resourcekey="plEnViewers" runat="server" EnableViewState="False">Viewers</asp:Label>
+                                    </td>
+                                    <td style="width:15%" class="NormalBold">
+                                        <asp:Label ID="plEnAnon" resourcekey="plEnAnon" runat="server" EnableViewState="False">All</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnUser" resourcekey="plEnUser" runat="server" EnableViewState="False">User Name</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnUserNone" type="radio" name="rblEnUser" runat="server"/>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnUserEdit" type="radio" name="rblEnUser" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnUserView" type="radio" name="rblEnUser" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnUserAnon" type="radio" name="rblEnUser" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnDisp" resourcekey="plEnDisp" runat="server" EnableViewState="False">Display Name</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnDispNone" type="radio" name="rblEnDisp" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnDispEdit" type="radio" name="rblEnDisp" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnDispView" type="radio" name="rblEnDisp" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnDispAnon" type="radio" name="rblEnDisp" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnEmail" resourcekey="plEnEmail" runat="server" EnableViewState="False">Email Address</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnEmailNone" type="radio" name="rblEnEmail" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnEmailEdit" type="radio" name="rblEnEmail" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnEmailView" type="radio" name="rblEnEmail" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnEmailAnon" type="radio" name="rblEnEmail" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnPhone" resourcekey="plEnPhone" runat="server" EnableViewState="False">Phone No</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnPhoneNone" type="radio" name="rblEnPhone" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnPhoneEdit" type="radio" name="rblEnPhone" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnPhoneView" type="radio" name="rblEnPhone" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnPhoneAnon" type="radio" name="rblEnPhone" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnApprove" resourcekey="plEnApprove" runat="server" EnableViewState="False">Approved</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnApproveNone" type="radio" name="rblEnApprove" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnApproveEdit" type="radio" name="rblEnApprove" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnApproveView" type="radio" name="rblEnApprove" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnApproveAnon" type="radio" name="rblEnApprove" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr align="center" class="inputCenter">
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="plEnNo" resourcekey="plEnNo" runat="server" EnableViewState="False">No. Enrolled</asp:Label>
+                                    </td>
+                                    <td>
+                                        <input id="rblEnNoNone" type="radio" name="rblEnNo" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnNoEdit" type="radio" name="rblEnNo" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnNoView" type="radio" name="rblEnNo" runat="server" />
+                                    </td>
+                                    <td>
+                                        <input id="rblEnNoAnon" type="radio" name="rblEnNo" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plEnrollEmailsToSend" Text="Select Emails To Send:" runat="server" ControlName="txtEnrollEmailsToSend"></dnn:Label>
+                            <table id="tblEnrollEmailsToSend" cellspacing="0" cellpadding="2" border="0" style="width:350px">
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageApproved" resourcekey="txtEnrollMessageApprovedMsgName" runat="server" EnableViewState="False">EnrollMessageApproved</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold" style="width: 20%">
+                                        <asp:checkbox ID="chkEnrollMessageApproved"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageWaiting" resourcekey="txtEnrollMessageWaitingMsgName" runat="server" EnableViewState="False">EnrollMessageWaiting</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageWaiting"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageDenied" resourcekey="txtEnrollMessageDeniedName" runat="server" EnableViewState="False">EnrollMessageDenied</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageDenied"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageAdded" resourcekey="txtEnrollMessageAddedName" runat="server" EnableViewState="False">EnrollMessageAdded</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageAdded"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageDeleted" resourcekey="txtEnrollMessageDeletedName" runat="server" EnableViewState="False">EnrollMessageDeleted</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageDeleted"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessagePaying" resourcekey="txtEnrollMessagePayingName" runat="server" EnableViewState="False">EnrollMessagePaying</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessagePaying"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessagePending" resourcekey="txtEnrollMessagePendingName" runat="server" EnableViewState="False">EnrollMessagePending</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessagePending"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessagePaid" resourcekey="txtEnrollMessagePaidName" runat="server" EnableViewState="False">EnrollMessagePaid</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessagePaid"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageIncorrect" resourcekey="txtEnrollMessageIncorrectName" runat="server" EnableViewState="False">EnrollMessageIncorrect</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageIncorrect"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="NormalBold">
+                                        <asp:Label ID="lblEnrollMessageCancelled" resourcekey="txtEnrollMessageCancelledName" runat="server" EnableViewState="False">EnrollMessageCancelled</asp:Label>
+                                    </td>
+                                    <td align="left" class="NormalBold">
+                                        <asp:checkbox ID="chkEnrollMessageCancelled"  runat="server" Checked="true"></asp:checkbox>
+                                    </td>
+                                </tr>
+                            </table>
+                          </div>
+                    </div>
+                </div>
+            </fieldset>
+            <h2 class="dnnFormSectionHead" id="dnnPanel-ModerationSettings"><a href="" class=""><%=LocalizeString("ModerationSettings")%></a></h2>
+            <fieldset class="dnnClear">
+                <div>
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="plModerateAll" Text="Moderate ALL Event/Enrollment Changes" runat="server" ControlName="chkModerateAll"></dnn:Label>
+                        <asp:CheckBox ID="chkModerateAll" runat="server"></asp:CheckBox>
+                    </div>
+                </div>
+            </fieldset>
+	    </div>
+    <% End If%>
+    <% If ddlSocialGroupModule.SelectedValue = 1 Then%>
+        <div class="SubcalendarSettings dnnClear" id="SubcalendarSettings" >
+            <fieldset class="dnnClear">
+                <div>
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="plMaster" Text="Master Event" runat="server" ControlName="chkMasterEvent"></dnn:Label>
+                        <asp:CheckBox ID="chkMasterEvent" runat="server" AutoPostBack="True"></asp:CheckBox>
+                    </div>
+                    <div id="divMasterEvent" runat="server">
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblAddSubModuleName" runat="server" Text="Master Event" ControlName="chkMasterEvent"></dnn:Label>
+                            <asp:CheckBox ID="chkAddSubModuleName" runat="server" Checked="True"></asp:CheckBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblEnforceSubCalPerms" runat="server" Text="Enforce View Permissions" ControlName="chkEnforceSubCalPerms"></dnn:Label>
+                            <asp:CheckBox ID="chkEnforceSubCalPerms" runat="server" Checked="True"></asp:CheckBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="plSubEvent" Text="Add/Remove Sub-Calendars:" runat="server" ControlName="ddlPortalEvents"></dnn:Label>
+                            <table cellspacing="0" cellpadding="2" border="0">
+                                <tr>
+                                    <td class="NormalBold" align="center">
+                                        <asp:Label ID="plAvailableCals" resourcekey="plAvailableCals" runat="server" EnableViewState="False">Available</asp:Label>
+                                    </td>
+                                    <td align="center">
+                                        &nbsp;
+                                    </td>
+                                    <td class="NormalBold" align="center">
+                                        <asp:Label ID="plSelectedCals" resourcekey="plSelectedCals" runat="server" EnableViewState="False">Selected</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" align="center">
+                                        <asp:ListBox class="NormalTextBox" ID="lstAvailableCals" runat="server" Width="200px" SelectionMode="Multiple" Height="150px"></asp:ListBox>
+                                    </td>
+                                    <td valign="middle" align="center">
+                                        <table id="Table2" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td valign="top" align="center">
+                                                    <asp:LinkButton ID="cmdAddCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;>&nbsp;"></asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center">
+                                                    <asp:LinkButton ID="cmdRemoveCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;<&nbsp;"></asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="bottom" align="center">
+                                                    <asp:LinkButton ID="cmdAddAllCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;>>&nbsp;"></asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="bottom" align="center">
+                                                    <asp:LinkButton ID="cmdRemoveAllCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;<<&nbsp;"></asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" align="center">
+                                        <asp:ListBox class="NormalTextBox" ID="lstAssignedCals" runat="server" Width="200px" SelectionMode="Multiple" Height="150px"></asp:ListBox>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
+                </div>
+            </fieldset>
+	    </div>
+    <% End If%>
+    <% If Not ddlSocialGroupModule.SelectedValue = 3 Then%>
+        <div class="SEOandSitemapSettings dnnClear" id="SEOandSitemapSettings">
+            <h2 class="dnnFormSectionHead" id="dnnPanel-SEOSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("SEOSettings")%></a></h2>
+            <fieldset class="dnnClear">
+                <div>
                     <div class="dnnFormItem">
-                        <dnn:Label ID="plDefaultEnrollView" Text="Display Enroll List by Default:" runat="server" ControlName="chkDefaultEnrollView"></dnn:Label>
-                        <asp:CheckBox ID="chkDefaultEnrollView" runat="server" Checked="False"></asp:CheckBox>
+                        <dnn:Label ID="lblEnableSEO" runat="server" Text="Enable SEO:" ControlName="lblEnableSEO"></dnn:Label>
+                        <asp:CheckBox ID="chkEnableSEO" runat="server" Checked="True"></asp:CheckBox>
                     </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="plHideFullEnroll" Text="Hide Full enrolled events:" runat="server" ControlName="chkHideFullEnroll"></dnn:Label>
-                        <asp:CheckBox ID="chkHideFullEnroll" runat="server" Checked="False"></asp:CheckBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="plMaxNoEnrolees" Text="Allow Multiple Enrolees:" runat="server" ControlName="txtMaxNoEnrolees"></dnn:Label>
-                        <asp:TextBox ID="txtMaxNoEnrolees" runat="server" CssClass="NormalTextBox" Width="40px">1</asp:TextBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="plCancelDays" Text="Cancel Before Days:" runat="server" ControlName="txtCancelDays"></dnn:Label>
-                        <asp:TextBox ID="txtCancelDays" runat="server" CssClass="NormalTextBox" Width="40px">0</asp:TextBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="plEnrollColumns" Text="Select the User Fields to display:" runat="server" ControlName="tblEnrollColumns"></dnn:Label>
-                        <table id="tblEnrollColumns" cellspacing="0" cellpadding="2" border="0" style="width:400px">
-                            <tr align="center">
-                                <td align="left" class="NormalBold" style="width: 30%">
-                                    <asp:Label ID="plEnVisibility" resourcekey="plEnVisibility" runat="server" EnableViewState="False">Visibility</asp:Label>
-                                </td>
-                                <td style="width:15%" class="NormalBold">
-                                    <asp:Label ID="plEnNone" resourcekey="plEnNone" runat="server" EnableViewState="False">None</asp:Label>
-                                </td>
-                                <td style="width:15%" class="NormalBold">
-                                    <asp:Label ID="plEnEditors" resourcekey="plEnEditors" runat="server" EnableViewState="False">Editors</asp:Label>
-                                </td>
-                                <td style="width:15%" class="NormalBold">
-                                    <asp:Label ID="plEnViewers" resourcekey="plEnViewers" runat="server" EnableViewState="False">Viewers</asp:Label>
-                                </td>
-                                <td style="width:15%" class="NormalBold">
-                                    <asp:Label ID="plEnAnon" resourcekey="plEnAnon" runat="server" EnableViewState="False">All</asp:Label>
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnUser" resourcekey="plEnUser" runat="server" EnableViewState="False">User Name</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnUserNone" type="radio" name="rblEnUser" runat="server"/>
-                                </td>
-                                <td>
-                                    <input id="rblEnUserEdit" type="radio" name="rblEnUser" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnUserView" type="radio" name="rblEnUser" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnUserAnon" type="radio" name="rblEnUser" runat="server" />
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnDisp" resourcekey="plEnDisp" runat="server" EnableViewState="False">Display Name</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnDispNone" type="radio" name="rblEnDisp" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnDispEdit" type="radio" name="rblEnDisp" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnDispView" type="radio" name="rblEnDisp" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnDispAnon" type="radio" name="rblEnDisp" runat="server" />
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnEmail" resourcekey="plEnEmail" runat="server" EnableViewState="False">Email Address</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnEmailNone" type="radio" name="rblEnEmail" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnEmailEdit" type="radio" name="rblEnEmail" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnEmailView" type="radio" name="rblEnEmail" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnEmailAnon" type="radio" name="rblEnEmail" runat="server" />
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnPhone" resourcekey="plEnPhone" runat="server" EnableViewState="False">Phone No</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnPhoneNone" type="radio" name="rblEnPhone" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnPhoneEdit" type="radio" name="rblEnPhone" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnPhoneView" type="radio" name="rblEnPhone" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnPhoneAnon" type="radio" name="rblEnPhone" runat="server" />
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnApprove" resourcekey="plEnApprove" runat="server" EnableViewState="False">Approved</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnApproveNone" type="radio" name="rblEnApprove" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnApproveEdit" type="radio" name="rblEnApprove" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnApproveView" type="radio" name="rblEnApprove" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnApproveAnon" type="radio" name="rblEnApprove" runat="server" />
-                                </td>
-                            </tr>
-                            <tr align="center" class="inputCenter">
-                                <td align="left" class="NormalBold">
-                                    <asp:Label ID="plEnNo" resourcekey="plEnNo" runat="server" EnableViewState="False">No. Enrolled</asp:Label>
-                                </td>
-                                <td>
-                                    <input id="rblEnNoNone" type="radio" name="rblEnNo" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnNoEdit" type="radio" name="rblEnNo" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnNoView" type="radio" name="rblEnNo" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="rblEnNoAnon" type="radio" name="rblEnNo" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
+                    <div id="divSEOEnable" runat="server">
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblSEODescriptionLength" Text="Description Length:" runat="server" ControlName="lblSEODescriptionLength"></dnn:Label>
+                            <asp:TextBox ID="txtSEODescriptionLength" runat="server" CssClass="NormalTextBox" Width="40px">256</asp:TextBox>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </fieldset>
-        <h2 class="dnnFormSectionHead" id="dnnPanel-ModerationSettings"><a href="" class=""><%=LocalizeString("ModerationSettings")%></a></h2>
-        <fieldset class="dnnClear">
-            <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="plModerateAll" Text="Moderate ALL Event/Enrollment Changes" runat="server" ControlName="chkModerateAll"></dnn:Label>
-                    <asp:CheckBox ID="chkModerateAll" runat="server"></asp:CheckBox>
-                </div>
-            </div>
-        </fieldset>
-	</div>
-    <div class="SubcalendarSettings dnnClear" id="SubcalendarSettings">
-        <fieldset class="dnnClear">
-            <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="plMaster" Text="Master Event" runat="server" ControlName="chkMasterEvent"></dnn:Label>
-                    <asp:CheckBox ID="chkMasterEvent" runat="server" AutoPostBack="True"></asp:CheckBox>
-                </div>
-                <div id="divMasterEvent" runat="server">
+            </fieldset>
+            <h2 class="dnnFormSectionHead" id="dnnPanel-SitemapSettings"><a href="" class=""><%=LocalizeString("SitemapSettings")%></a></h2>
+            <fieldset class="dnnClear">
+                <div>
                     <div class="dnnFormItem">
-                        <dnn:Label ID="lblAddSubModuleName" runat="server" Text="Master Event" ControlName="chkMasterEvent"></dnn:Label>
-                        <asp:CheckBox ID="chkAddSubModuleName" runat="server" Checked="True"></asp:CheckBox>
+                        <dnn:Label ID="lblEnableSitemap" runat="server" Text="Enable Sitemap:" ControlName="lblEnableSitemap"></dnn:Label>
+                        <asp:CheckBox ID="chkEnableSitemap" runat="server" Checked="True" ></asp:CheckBox>
                     </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="lblEnforceSubCalPerms" runat="server" Text="Enforce View Permissions" ControlName="chkEnforceSubCalPerms"></dnn:Label>
-                        <asp:CheckBox ID="chkEnforceSubCalPerms" runat="server" Checked="True"></asp:CheckBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="plSubEvent" Text="Add/Remove Sub-Calendars:" runat="server" ControlName="ddlPortalEvents"></dnn:Label>
-                        <table cellspacing="0" cellpadding="2" border="0">
-                            <tr>
-                                <td class="NormalBold" align="center">
-                                    <asp:Label ID="plAvailableCals" resourcekey="plAvailableCals" runat="server" EnableViewState="False">Available</asp:Label>
-                                </td>
-                                <td align="center">
-                                    &nbsp;
-                                </td>
-                                <td class="NormalBold" align="center">
-                                    <asp:Label ID="plSelectedCals" resourcekey="plSelectedCals" runat="server" EnableViewState="False">Selected</asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top" align="center">
-                                    <asp:ListBox class="NormalTextBox" ID="lstAvailableCals" runat="server" Width="200px" SelectionMode="Multiple" Height="150px"></asp:ListBox>
-                                </td>
-                                <td valign="middle" align="center">
-                                    <table id="Table2" cellspacing="0" cellpadding="0" border="0">
-                                        <tr>
-                                            <td valign="top" align="center">
-                                                <asp:LinkButton ID="cmdAddCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;>&nbsp;"></asp:LinkButton>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="center">
-                                                <asp:LinkButton ID="cmdRemoveCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;<&nbsp;"></asp:LinkButton>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                &nbsp;
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="bottom" align="center">
-                                                <asp:LinkButton ID="cmdAddAllCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;>>&nbsp;"></asp:LinkButton>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="bottom" align="center">
-                                                <asp:LinkButton ID="cmdRemoveAllCals" CssClass="CommandButton" runat="server" EnableViewState="False" Text="&nbsp;<<&nbsp;"></asp:LinkButton>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td valign="top" align="center">
-                                    <asp:ListBox class="NormalTextBox" ID="lstAssignedCals" runat="server" Width="200px" SelectionMode="Multiple" Height="150px"></asp:ListBox>
-                                </td>
-                            </tr>
-                        </table>
+                    <div id="divSitemapEnable" runat="server">
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblSitemapPriority" Text="Sitemap Priority:" runat="server" ControlName="lblSitemapPriority"></dnn:Label>
+                            <asp:TextBox ID="txtSitemapPriority" runat="server" CssClass="NormalTextBox" Width="40px">0.5</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblSitemapDaysBefore" Text="Days Before:" runat="server" ControlName="lblSitemapDaysBefore"></dnn:Label>
+                            <asp:TextBox ID="txtSitemapDaysBefore" runat="server" CssClass="NormalTextBox" Width="40px">365</asp:TextBox>
+                        </div>
+                        <div class="dnnFormItem">
+                            <dnn:Label ID="lblSitemapDaysAfter" Text="Days After:" runat="server" ControlName="lblSitemapDaysAfter"></dnn:Label>
+                            <asp:TextBox ID="txtSitemapDaysAfter" runat="server" CssClass="NormalTextBox" Width="40px">365</asp:TextBox>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </fieldset>
-	</div>
-    <div class="SEOandSitemapSettings dnnClear" id="SEOandSitemapSettings">
-        <h2 class="dnnFormSectionHead" id="dnnPanel-SEOSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("SEOSettings")%></a></h2>
-        <fieldset class="dnnClear">
-            <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="lblEnableSEO" runat="server" Text="Enable SEO:" ControlName="lblEnableSEO"></dnn:Label>
-                    <asp:CheckBox ID="chkEnableSEO" runat="server" Checked="True"></asp:CheckBox>
-                </div>
-                <div id="divSEOEnable" runat="server">
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="lblSEODescriptionLength" Text="Description Length:" runat="server" ControlName="lblSEODescriptionLength"></dnn:Label>
-                        <asp:TextBox ID="txtSEODescriptionLength" runat="server" CssClass="NormalTextBox" Width="40px">256</asp:TextBox>
-                    </div>
-                </div>
-            </div>
-        </fieldset>
-        <h2 class="dnnFormSectionHead" id="dnnPanel-SitemapSettings"><a href="" class=""><%=LocalizeString("SitemapSettings")%></a></h2>
-        <fieldset class="dnnClear">
-            <div>
-                <div class="dnnFormItem">
-                    <dnn:Label ID="lblEnableSitemap" runat="server" Text="Enable Sitemap:" ControlName="lblEnableSitemap"></dnn:Label>
-                    <asp:CheckBox ID="chkEnableSitemap" runat="server" Checked="True"></asp:CheckBox>
-                </div>
-                <div id="divSitemapEnable" runat="server">
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="lblSitemapPriority" Text="Sitemap Priority:" runat="server" ControlName="lblSitemapPriority"></dnn:Label>
-                        <asp:TextBox ID="txtSitemapPriority" runat="server" CssClass="NormalTextBox" Width="40px">0.5</asp:TextBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="lblSitemapDaysBefore" Text="Days Before:" runat="server" ControlName="lblSitemapDaysBefore"></dnn:Label>
-                        <asp:TextBox ID="txtSitemapDaysBefore" runat="server" CssClass="NormalTextBox" Width="40px">365</asp:TextBox>
-                    </div>
-                    <div class="dnnFormItem">
-                        <dnn:Label ID="lblSitemapDaysAfter" Text="Days After:" runat="server" ControlName="lblSitemapDaysAfter"></dnn:Label>
-                        <asp:TextBox ID="txtSitemapDaysAfter" runat="server" CssClass="NormalTextBox" Width="40px">365</asp:TextBox>
-                    </div>
-                </div>
-            </div>
-        </fieldset>
-	</div>
+            </fieldset>
+	    </div>
+    <% End If%>
     <div class="IntegrationSettings dnnClear" id="IntegrationSettings">
         <h2 class="dnnFormSectionHead" id="dnnPanel-RSSSettings"><a href="" class="dnnSectionExpanded"><%=LocalizeString("RSSSettings")%></a></h2>
         <fieldset class="dnnClear">
             <div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plRSSEnable" Text="Enable RSS:" runat="server" ControlName="chkRSSEnable"></dnn:Label>
-                    <asp:CheckBox ID="chkRSSEnable" runat="server"></asp:CheckBox>
+                    <asp:CheckBox ID="chkRSSEnable" runat="server" ></asp:CheckBox>
                 </div>
                 <div id="divRSSEnable" runat="server">
                     <div class="dnnFormItem">
@@ -973,12 +1114,28 @@
         <fieldset class="dnnClear">
             <div>
                 <div class="dnnFormItem">
+                    <dnn:Label ID="plSocialGroupModule" runat="server" ControlName="ddlSocialGroupModule"></dnn:Label>
+                    <asp:DropDownList ID="ddlSocialGroupModule" runat="server" CssClass="NormalTextBox" Width="178px" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label id="lblSocialUserPrivate"  Text="Private User Calendars:" runat="server"></dnn:Label>
+                    <asp:CheckBox id="chkSocialUserPrivate" runat="server" cssclass="SubHead"></asp:CheckBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="lblSocialGroupSecurity" runat="server" ControlName="ddlSocialGroupSecurity"></dnn:Label>
+                    <asp:DropDownList ID="ddlSocialGroupSecurity" runat="server" CssClass="NormalTextBox" Width="178px" />
+                </div>
+                <div class="dnnFormItem">
                     <dnn:Label ID="lblFBAdmins" Text="Facebook Admins:" runat="server" ControlName="txtFBAdmins"></dnn:Label>
                     <asp:TextBox ID="txtFBAdmins" runat="server" CssClass="NormalTextBox" Width="400px"></asp:TextBox>
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="lblFBAppID" Text="Facebook App_ID:" runat="server" ControlName="txtFBAppID"></dnn:Label>
                     <asp:TextBox ID="txtFBAppID" runat="server" CssClass="NormalTextBox" Width="400px"></asp:TextBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label id="lblJournalIntegration"  Text="Enable Journal Integration:" runat="server"></dnn:Label>
+                    <asp:CheckBox id="chkJournalIntegration" runat="server" cssclass="SubHead"></asp:CheckBox>
                 </div>
             </div>
         </fieldset>
@@ -1015,14 +1172,14 @@
 <script language="javascript" type="text/javascript">
 
     /*globals jQuery, window, Sys */
-    (function ($, Sys) {
+    (function ($, sys) {
         function setupEditEvents() {
             $('#EventSettings').dnnTabs().dnnPanels();
         }
 
         $(document).ready(function () {
             setupEditEvents();
-            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
                 setupEditEvents();
             });
         });

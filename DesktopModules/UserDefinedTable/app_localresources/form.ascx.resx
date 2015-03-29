@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -140,5 +140,11 @@
   </data>
   <data name="CaptchaError.Text" xml:space="preserve">
     <value>Security Code entered is not the same as displayed or empty.</value>
+  </data>
+  <data name="CaptchaTooltip.Text" xml:space="preserve">
+    <value>CAPTCHA - Completely Automated Public Turing</value>
+  </data>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
 </root>

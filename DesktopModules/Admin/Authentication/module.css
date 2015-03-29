@@ -227,3 +227,9 @@ span.dnnFormMessage.dnnFormError.dnnCaptcha
 	right: 24%;
 	bottom: -55px;
 }
+a.dnnDisabledAction:link, a.dnnDisabledAction:visited, a.dnnDisabledAction:active, a.dnnDisabledAction:hover {
+    text-decoration: none;
+    color: Silver;
+	opacity: 0.5;
+	/*IE8*/ -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	
+}

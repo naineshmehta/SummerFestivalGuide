@@ -9,7 +9,7 @@
 		<meta content="JavaScript" name="vs_defaultClientScript" />
 		<meta content="http://schemas.microsoft.com/intellisense/ie3-2nav3-0" name="vs_targetSchema" />
 	</head>
-	<body style="background-color:#ffffff;color:#000000;margin:0px 0px 0px 0px">
+	<body style="background-color:#ffffff;color:#000000;margin:0 0 0 0">
 		<form id="Form1" method="post" runat="server">
 		</form>
 	</body>

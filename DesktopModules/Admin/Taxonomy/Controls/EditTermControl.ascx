@@ -13,7 +13,7 @@
     <div class="dnnFormItem">
         <div class="dnnLabel">
             <label>
-                <dnn:DnnFieldLabel id="descriptionFieldLabel" runat="server" Text="Description.Text" ToolTip="Description.ToolTip" CssClass="dnnFormRequired" />        
+                <dnn:DnnFieldLabel id="descriptionFieldLabel" runat="server" Text="Description.Text" ToolTip="Description.ToolTip" />        
             </label>
         </div>        
         <asp:TextBox ID="descriptionTextBox" runat="server" TextMode="MultiLine" cssClass="NormalTextBox"/>

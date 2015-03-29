@@ -1,17 +1,45 @@
 <%@ Control Language="vb" AutoEventWireup="false" Codebehind="EventEditLocations.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventEditLocations" %>
 <%@ Register Src="~/controls/LabelControl.ascx" TagName="Label" TagPrefix="dnn" %>
-<%@ Register Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn" %>
+<%@ Register Assembly="CountryListBox" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn2" %>
+<%@ Register TagPrefix="dnn" TagName="Address" Src="~/controls/Address.ascx"%>
+
 <asp:Panel ID="pnlEventsModuleLocations" runat="server">
 <div class="dnnForm EventEditLocations">
     <div style="width:50%;float:left">
         <div class="dnnFormItem">
-            <dnn:Label ID="lblLocationCap" runat="server" CssClass="SubHead" ResourceKey="plLocation" Text="Location"></dnn:Label>
-            <asp:TextBox ID="txtLocationName" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
+            <dnn:Label ID="lblLocationCap" runat="server" cssclass="dnnFormRequired SubHead" ResourceKey="plLocation" Text="Location"></dnn:Label>
+            <asp:TextBox ID="txtLocationName" runat="server" cssclass="dnnFormRequired NormalTextBox" Width="200px"></asp:TextBox>
             <asp:RequiredFieldValidator id="valRequiredName" runat="server" cssclass="dnnFormMessage dnnFormError" resourcekey="valRequiredName" ControlToValidate="txtLocationName" ValidationGroup="EventEditLocation"></asp:RequiredFieldValidator>
         </div>
         <div class="dnnFormItem">
             <dnn:Label ID="lblMapURLCap" runat="server" CssClass="SubHead" ResourceKey="plMapURL" Text="Map URL" />
             <asp:TextBox ID="txtMapURL" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
+        </div>
+<%--        <div class="dnnFormItem">
+            <dnn:Address id="AddressLocation" runat="server"></dnn:Address>
+        </div>--%>
+        <div class="dnnFormItem">
+            <dnn:Label ID="lblStreetCap" runat="server" CssClass="SubHead" ResourceKey="plStreet" Text="Street" />
+            <asp:TextBox ID="txtStreet" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="lblPostalCodeCap" runat="server" CssClass="SubHead" ResourceKey="plPostalCode" Text="Postal Code" />
+            <asp:TextBox ID="txtPostalCode" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="lblCityCap" runat="server" CssClass="SubHead" ResourceKey="plCity" Text="City" />
+            <asp:TextBox ID="txtCity" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="lblCountryCap" runat="server" CssClass="SubHead" ResourceKey="plCountry" Text="Country" />
+            <dnn2:CountryListBox ID="cboCountry" runat="server" GeoIPFile="" TestIP="" LocalhostCountryCode=""
+                DataValueField="Value" DataTextField="Text" AutoPostBack="true"
+                OnSelectedIndexChanged="OnCountryIndexChanged"></dnn2:CountryListBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="lblRegionCap" runat="server" CssClass="SubHead" ResourceKey="plRegion" Text="Region" />
+            <asp:DropDownList ID="cboRegion" runat="server" DataValueField="EntryID" DataTextField="Text"></asp:DropDownList>
+            <asp:TextBox ID="txtRegion" runat="server" CssClass="NormalTextBox" Width="200px"></asp:TextBox>
         </div>
         <ul class="dnnActions dnnClear">
             <li><asp:LinkButton ID="cmdAdd" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdAdd" ValidationGroup="EventEditLocation" /></li>

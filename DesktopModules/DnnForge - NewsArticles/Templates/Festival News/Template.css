@@ -1,6 +1,8 @@
 .article{clear:both;text-align:left;padding-bottom:10px;float:left;border-bottom:1px solid #3A2417;}
 .articleLatest{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
 .articleList{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
+.articleHeadline h1{margin-bottom:0; line-height:150%; border:0px;}
+.articleHeadline a{font-size:110%;}
 .articleAuthor{margin-top:5px;clear:both;}
 .articleCalendar{float:left;margin-right:6px;width:42px;height:42px;}
 .articleCalendarIcon-01{background:url(images/01.gif);}
@@ -53,6 +55,7 @@
 
 .related h2,.postRating h2,.articleComments h2,.articleImages h2,.articleFiles h2,.postComment h2{margin-bottom:5px;background-color:#F0F0F0;border:1px dashed #C8C8C8;padding-left:5px;}
 .articleComments,.articleFiles,.postComment{text-align:left;}
+.articleComments {clear:both;}
 .articleImageList li,.articleFileList li{display:inline;float:left;margin-left:10px;margin-right:10px;margin-top:10px;}
 #lightbox-container-image-details-currentNumber a,lightbox-container-image-details-currentNumber a:hover,#lightbox-container-image-details-nav a,#lightbox-container-image-details-nav a:hover,#lightbox-image-details-close a,#lightbox-image-details-close a:hover{border-bottom:medium none;color:#151410;text-decoration:underline;}
 hr{margin:0px;}

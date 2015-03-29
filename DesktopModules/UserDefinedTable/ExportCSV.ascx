@@ -1,27 +1,30 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ExportCSV.ascx.vb" Inherits="DotNetNuke.Modules.UserDefinedTable.ExportCSV" %>
+<%@ Control Language="C#" CodeBehind="ExportCSV.ascx.cs" Inherits="DotNetNuke.Modules.UserDefinedTable.ExportCsv" AutoEventWireup="false" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<br />
-<table width="560" cellspacing="0" cellpadding="0" border="0" summary="Edit Links Design Table">
-    <tr>
-        <td class="SubHead" valign="top" width="150"><dnn:label id="plFolder" runat="server" controlname="cboFolders" suffix=":"></dnn:label></td>
-        <td><asp:DropDownList ID="cboFolders" Runat="server" CssClass="NormalTextBox" Width="300"></asp:DropDownList></td>
-    </tr>
-    <tr>
-        <td class="SubHead" valign="top" width="150"><dnn:label id="plFile" runat="server" controlname="txtFile" suffix=":"></dnn:label></td>
-        <td><asp:textbox id="txtFile" cssclass="NormalTextBox" runat="server" maxlength="200" width="300"></asp:textbox></td>
-    </tr>
-     <tr>
-        <td class="SubHead" valign="top" width="150"><dnn:label id="plDelimiter" runat="server" controlname="cboFiles" suffix=":"></dnn:label></td>
-        <td>
-            <asp:RadioButtonList ID="rblDelimiter" runat="server"  RepeatDirection="Horizontal" RepeatLayout="Flow">
-                <asp:ListItem Selected="True" Value="," resourcekey="comma"></asp:ListItem>
-                <asp:ListItem Value=";" resourcekey="semicolon"></asp:ListItem>
-            </asp:RadioButtonList>
-         </td>
-    </tr>
-</table>
-<p>
-    <asp:linkbutton id="cmdExport" resourcekey="cmdExport" runat="server" 
-        cssclass="CommandButton" text="Export" borderstyle="none"></asp:linkbutton>&nbsp;
-    <asp:linkbutton id="cmdCancel" resourcekey="cmdCancel" runat="server" cssclass="CommandButton" text="Cancel" borderstyle="none" causesvalidation="False"></asp:linkbutton>
-</p>
+<div class="dnnForm">
+<div class="dnnFormItem">
+    <dnn:Label ID="plFolder" runat="server" ControlName="cboFolders" Suffix=":" />
+    <asp:DropDownList ID="cboFolders" runat="server" CssClass="NormalTextBox" Width="300" />
+</div>
+<div class="dnnFormItem">
+    <dnn:Label ID="plFile" runat="server" ControlName="txtFile" Suffix=":" />
+    <asp:TextBox ID="txtFile" CssClass="NormalTextBox" runat="server" MaxLength="200"
+        Width="300" />
+</div>
+<div class="dnnFormItem">
+    <dnn:label id="plDelimiter" runat="server" controlname="rblDelimiter" suffix=":" />
+    <asp:RadioButtonList ID="rblDelimiter" runat="server"  RepeatDirection="Horizontal"
+        CssClass="dnnFormRadioButtons ">
+        <asp:ListItem Selected="True" Value="," resourcekey="comma"></asp:ListItem>
+        <asp:ListItem Value=";" resourcekey="semicolon"></asp:ListItem>
+    </asp:RadioButtonList>
+</div>
+<ul class="dnnActions dnnClear">
+    <li>
+        <asp:LinkButton ID="cmdExport" resourcekey="cmdExport" runat="server" CssClass="dnnPrimaryAction"
+            Text="Export" BorderStyle="none"></asp:LinkButton></li>
+    <li>
+        <asp:LinkButton ID="cmdCancel" resourcekey="cmdCancel" runat="server" CssClass="dnnSecondaryAction"
+            Text="Cancel" BorderStyle="none" CausesValidation="False"></asp:LinkButton></li>
+</ul>
+
+</div>

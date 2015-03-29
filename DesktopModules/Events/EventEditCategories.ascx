@@ -1,6 +1,5 @@
 <%@ Control Language="vb" AutoEventWireup="false" Codebehind="EventEditCategories.ascx.vb" Inherits="DotNetNuke.Modules.Events.EventEditCategories" %>
 <%@ Register Src="~/controls/LabelControl.ascx" TagName="Label" TagPrefix="dnn" %>
-<%@ Register Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" TagPrefix="dnn" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <asp:Panel ID="pnlEventsModuleCategories" runat="server">
 <div class="dnnForm EventEditCategories">
@@ -11,13 +10,13 @@
     </div>
     <div style="width:50%;float:left">
         <div class="dnnFormItem">
-            <dnn:Label ID="lblCategoryCap" runat="server" CssClass="SubHead" ResourceKey="plCategory" Text="Category:" />
-            <asp:TextBox ID="txtCategoryName" runat="server" CssClass="NormalTextBox"></asp:TextBox>
+            <dnn:Label ID="lblCategoryCap" runat="server" cssclass="dnnFormRequired SubHead" ResourceKey="plCategory" Text="Category:" />
+            <asp:TextBox ID="txtCategoryName" runat="server" cssclass="dnnFormRequired NormalTextBox"></asp:TextBox>
             <asp:RequiredFieldValidator id="valRequiredName" runat="server" cssclass="dnnFormMessage dnnFormError" resourcekey="valRequiredName" ControlToValidate="txtCategoryName" ValidationGroup="CategoryUpdate"></asp:RequiredFieldValidator>
         </div>
         <div class="dnnFormItem">
             <dnn:Label ID="lblColorCap" runat="server" CssClass="SubHead" ResourceKey="plColor" Text="Color:" />
-            <table>
+            <table cellpadding="0" cellspacing="0">
                 <tr>
                     <td style="width:150px;">
                         <asp:TextBox ID="txtCategoryColor" runat="server" CssClass="NormalTextBox" style=""></asp:TextBox>
@@ -34,7 +33,7 @@
         </div>
         <div class="dnnFormItem">
             <dnn:Label ID="lblFontColorCap" runat="server" CssClass="SubHead" ResourceKey="plFontColor" Text="Font Color:" />
-            <table>
+            <table cellpadding="0" cellspacing="0">
                 <tr>
                     <td style="width:150px;">
                         <asp:TextBox ID="txtCategoryFontColor" runat="server" CssClass="NormalTextBox"></asp:TextBox>
@@ -95,8 +94,8 @@
                 </asp:TemplateColumn>
                 <asp:TemplateColumn HeaderText="Category Name">
                     <ItemTemplate>
-                        <asp:Panel runat="server" BackColor="<%# GetColor(Container.DataItem.Color) %>">
-                            <asp:LinkButton ID="lnkCategoryName" runat="server" forecolor="<%# GetColor(Container.DataItem.FontColor) %>" CommandArgument="Select"
+                        <asp:Panel runat="server" BackColor="<%# GetColor(ctype(Container.DataItem.Color,String)) %>">
+                            <asp:LinkButton ID="lnkCategoryName" runat="server" forecolor="<%# GetColor(ctype(Container.DataItem.FontColor,string)) %>" CommandArgument="Select"
                                 CommandName="Select" Text="<%# Container.DataItem.CategoryName %>">
                             </asp:LinkButton>
                         </asp:Panel>

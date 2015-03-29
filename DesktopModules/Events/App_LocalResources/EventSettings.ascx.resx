@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -415,7 +415,7 @@
     <value>Click to enable Event Detail to show in new Page (not embedded)</value>
   </data>
   <data name="lblNotifyAnon.Text" xml:space="preserve">
-    <value>Remind Anonymous:</value>
+    <value>Remind Anonymous Users:</value>
   </data>
   <data name="lblNotifyAnon.Help" xml:space="preserve">
     <value>Allow Anonymous User to request notification.</value>
@@ -514,7 +514,7 @@
     <value>Descending</value>
   </data>
   <data name="plListDefaultSort.Help" xml:space="preserve">
-    <value>Sorts the list by event startdate ascending or descending</value>
+    <value>Sorts the list ascending or descending by the column selected</value>
   </data>
   <data name="plListDefaultSort.Text" xml:space="preserve">
     <value>Default sorting:</value>
@@ -814,10 +814,10 @@
     <value>Change to value other than 1 to allow user to enroll that number of users</value>
   </data>
   <data name="plMaxNoEnrolees.Text" xml:space="preserve">
-    <value>Allow Multiple Enrolees:</value>
+    <value>Allow Multiple Enrollees:</value>
   </data>
   <data name="plCancelDays.Help" xml:space="preserve">
-    <value>Number of days before an event that a user must cancel their enrolment by. Cancellations only allowed for unpaid events.</value>
+    <value>Number of days before an event that a user must cancel their enrollment by. Cancellations only allowed for unpaid events.</value>
   </data>
   <data name="plCancelDays.Text" xml:space="preserve">
     <value>Cancel Before Days:</value>
@@ -1214,5 +1214,116 @@
   </data>
   <data name="lblRestrictCategories.Text" xml:space="preserve">
     <value>Restrict Categories:</value>
+  </data>
+  <data name="plEnrollEmailsToSend.Help" xml:space="preserve">
+    <value>In the select the enrollment emails that you wish to have sent at the appropriate place in the enrollment process.</value>
+  </data>
+  <data name="plEnrollEmailsToSend.Text" xml:space="preserve">
+    <value>Select Emails To Send:</value>
+  </data>
+  <data name="plAllowAnonEnroll.Help" xml:space="preserve">
+    <value>When enabled, event editors may enable anonymous enrollment to their event.</value>
+  </data>
+  <data name="plAllowAnonEnroll.Text" xml:space="preserve">
+    <value>Allow Anonymous Enrollment:</value>
+  </data>
+  <data name="plSocialGroupModule.Help" xml:space="preserve">
+    <value>When set to 'Social Group' the module will use the 'groupid' from the url as the SocialGroupId for new events. When set to 'User Profile' the module will use the' userid' from the url as the SocialUserId for new events. Note that all module settings are common across all Social Group/User Profile pages for this module instance - there is no localization to an individual Social Group.</value>
+  </data>
+  <data name="plSocialGroupModule.Text" xml:space="preserve">
+    <value>Social Module:</value>
+  </data>
+  <data name="SocialGroup.Text" xml:space="preserve">
+    <value>Social Group</value>
+  </data>
+  <data name="UserProfile.Text" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="plEnrolListSortDirection.Help" xml:space="preserve">
+    <value>This sets the sort direction for the My Enrollments view.</value>
+  </data>
+  <data name="plEnrolListSortDirection.Text" xml:space="preserve">
+    <value>My Enrollments Sorting:</value>
+  </data>
+  <data name="plEnrolListDaysAfter.Help" xml:space="preserve">
+    <value>The number of days after today to be displayed.</value>
+  </data>
+  <data name="plEnrolListDaysAfter.Text" xml:space="preserve">
+    <value>My Enrollments Days After:</value>
+  </data>
+  <data name="plEnrolListDaysBefore.Help" xml:space="preserve">
+    <value>The number of days before today to be displayed.</value>
+  </data>
+  <data name="plEnrolListDaysBefore.Text" xml:space="preserve">
+    <value>My Enrollments Days Before:</value>
+  </data>
+  <data name="lblJournalIntegration.Help" xml:space="preserve">
+    <value>When ticked event creation and user enrollment activities will be recorded to the Journal.</value>
+  </data>
+  <data name="lblJournalIntegration.Text" xml:space="preserve">
+    <value>Enable Journal Integration:</value>
+  </data>
+  <data name="lblSocialUserPrivate.Help" xml:space="preserve">
+    <value>When enabled the calendar entries in the user profile are private to the user. When disabled the calendar entries are public and can be viewed by other users visiting the profile.</value>
+  </data>
+  <data name="lblSocialUserPrivate.Text" xml:space="preserve">
+    <value>Private User Calendar:</value>
+  </data>
+  <data name="lblSocialGroupSecurity.Help" xml:space="preserve">
+    <value>When set to Public users with view/edit permissions can see/edit all events. When set to Edit By Group, events are visible to all but only editable by group members who have edit permissions. When set to private, events are only visible by group members.</value>
+  </data>
+  <data name="lblSocialGroupSecurity.Text" xml:space="preserve">
+    <value>Social Group Security:</value>
+  </data>
+  <data name="EditByGroup.Text" xml:space="preserve">
+    <value>Edit By Group</value>
+  </data>
+  <data name="OpenToAll.Text" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="PrivateToGroup.Text" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="lblEnrollmentPageAllowed.Help" xml:space="preserve">
+    <value>If activated event editors can set a specific page as enrollment page, which will hide the standard enrollment fields on the detail page.</value>
+  </data>
+  <data name="lblEnrollmentPageAllowed.Text" xml:space="preserve">
+    <value>Set Enrollment Page Allowed:</value>
+  </data>
+  <data name="lblLocationsEnable.Help" xml:space="preserve">
+    <value>Selecting enables the location selection on all view forms.</value>
+  </data>
+  <data name="lblLocationsEnable.Text" xml:space="preserve">
+    <value>Enable Location Select:</value>
+  </data>
+  <data name="lblRestrictLocations.Help" xml:space="preserve">
+    <value>Enabling restricts the locations that can be displayed to those set in the Filter Events by Location setting.</value>
+  </data>
+  <data name="lblRestrictLocations.Text" xml:space="preserve">
+    <value>Restrict Locations:</value>
+  </data>
+  <data name="plModuleLocation.Help" xml:space="preserve">
+    <value>Events displayed in this calendar are filtered by the selected location.</value>
+  </data>
+  <data name="plModuleLocation.Text" xml:space="preserve">
+    <value>Filter Events by Location:</value>
+  </data>
+  <data name="lblEnrollmentPageDefaultURL.Help" xml:space="preserve">
+    <value>Enrollment Page Default URL.</value>
+  </data>
+  <data name="lblEnrollmentPageDefaultURL.Text" xml:space="preserve">
+    <value>Enrollment Page Default URL:</value>
+  </data>
+  <data name="plRestrictCategoriesToTimeFrame.Help" xml:space="preserve">
+    <value>Enabling restricts the categories that can be selected to those that actually have an event in the time frame defined by the number of days in 'Select Events by Days' or 'Select Events by Number'.</value>
+  </data>
+  <data name="plRestrictCategoriesToTimeFrame.Text" xml:space="preserve">
+    <value>Restrict Categories to Time Frame:</value>
+  </data>
+  <data name="plRestrictLocationsToTimeFrame.Help" xml:space="preserve">
+    <value>Enabling restricts the locations that can be selected to those that actualley have an event in the time frame defined by the number of days in 'Select Events by Days' or 'Select Events by Number'.</value>
+  </data>
+  <data name="plRestrictLocationsToTimeFrame.Text" xml:space="preserve">
+    <value>Restrict Locations to Time Frame:</value>
   </data>
 </root>
