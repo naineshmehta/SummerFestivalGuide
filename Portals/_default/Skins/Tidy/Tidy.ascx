@@ -10,7 +10,6 @@
 <%@ Register TagPrefix="dnn" TagName="MENU" Src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Meta" Src="~/Admin/Skins/Meta.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
-<%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %> 
 
 <dnn:Meta runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 <dnn:DnnCssInclude runat="server" FilePath="css/Tidy.css" PathNameAlias="SkinPath" />
@@ -18,8 +17,8 @@
 <dnn:DnnCssInclude runat="server" FilePath="css/flexslider.css" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="js/jquery.flexslider-min.js" PathNameAlias="SkinPath" />
 
-<fortyfingers:STYLEHELPER ID="STYLEHELPER1" RemoveCssFile="default.css;module.css"  runat="server" />
-
+<%--<fortyfingers:STYLEHELPER ID="STYLEHELPER1" RemoveCssFile="default.css;module.css"  runat="server" />
+--%>
 <div id="tidySkin">
 	<div class="pageWidth">
 		<div class="buttonDiv clearfix">
@@ -67,7 +66,7 @@
 	</div>
 	<div class="pageWidth mainContent">
 		<div class="footerDiv clearfix">
-            <ul class="footerList">
+            <%--<ul class="footerList">
                 <li>Useful Links</li>
                 <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Event_Calendar.aspx" Text="Event Calendar" runat="server"></asp:HyperLink></li>
                 <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Festival_News.aspx" Text="Latest Festival News" runat="server"></asp:HyperLink></li>                    
@@ -103,7 +102,7 @@
                 <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="http://www.instagram.com/summerfestivalguide">Instagram</asp:HyperLink></li>
                 <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="http://www.youtube.com/channel/UCTTUctLwk4Ekn463OI-xvOA">Youtube</asp:HyperLink></li>
 
-            </ul>
+            </ul>--%>
 
             <div style="clear:both;" />     
             <div id="copy_style" class="footer">

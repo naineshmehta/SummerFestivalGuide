@@ -14,8 +14,11 @@
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
 
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1.0" />
+
+<link rel="stylesheet" type="text/css" href="/Portals/_default/Skins/DnnFoundation/css/custom.css"/>
+
 <dnn:DnnCssInclude ID="DnnCssInclude1" runat="server" FilePath="css/normalize.css" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="css/foundation.css" PathNameAlias="SkinPath" />
+<dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="css/foundation.css" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="js/vendor/modernizr.js" PathNameAlias="SkinPath"  />
 
 <!-- Begin top functions bar -->
@@ -82,7 +85,9 @@
 </div><!-- nav bar same size as grid -->
         
 <section class="content-holder">
-    <div id="ContentPane" runat="server"></div>
+    <div class="row clear-container">
+        <div id="ContentPane" runat="server"></div>
+    </div>
     <!-- Begin big slider -->
     <div class="row">
         <div class="large-12 hide-for-small">

@@ -1,9 +1,5 @@
 /* EDITED */
 
-body {
-	background: url(../../SFG.2012/images/bg_pattern.jpg) repeat;
-}
-
 /*========================================================+
 |  Design Elements                                        |
 +========================================================*/
@@ -12,7 +8,7 @@ body {
 	position: relative;
 	display: block;
 	margin: 0 auto;
-	max-width: 100%;
+	max-width: 1280px;
 	min-width: 738px;
 	width: 100%;
 	clear:both;
@@ -679,6 +675,7 @@ img {
 
 /* SFG Custom CSS*/
 #dnn_dnnSearch_ClassicSearch{ margin-left: 10px;}
+
 ul.footerList {
 	list-style: none;
 	margin: 0;

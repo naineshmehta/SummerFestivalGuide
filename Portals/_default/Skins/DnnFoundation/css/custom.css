@@ -1,0 +1,80 @@
+﻿/* DNN Override*/
+.Normal {
+    font-size: 14px;
+    line-height: 1.428;
+}
+
+/*Width of each row 1600px */
+.row {
+	max-width: 100rem;
+}
+
+.top-bar {
+	max-width: 100rem;
+}
+
+.content-holder {
+	padding-top: 10px;
+}
+
+.logo-holder {
+	margin-left: 10px;
+}
+
+.clear-container
+{
+    clear: both;
+}
+
+/*override for dnnLabels in the bootstrap */
+/* everything between 641px and 1920px */
+@media only screen and (min-width: 40em) and (max-width:120em) {
+    .dnnFormShort .dnnLabel,
+    .dnnCaptcha .dnnLabel  {
+        text-align: right;
+        width: 15%;
+    }
+}
+
+/* everything between 641px and 1920px */
+@media only screen and (max-width: 40em) and (max-width:120em) {
+    .dnnActions li  {
+        float:none;
+    }
+}
+
+/* Contact Us and Register Forms */
+.Feedback_FieldLabel .dnnLabel, 
+.Feedback_SectionHead .dnnLabel,
+.Feedback_CaptchaLabel .dnnLabel{
+    text-align: left;
+    width: auto;
+}
+
+div.Feedback_CaptchaLabel{
+    text-align:left;
+}
+
+div.Feedback_CaptchaControl{
+    text-align:left;
+}
+
+.Feedback_FieldValue input[type="text"]{
+display: inline;
+}
+
+div.Feedback_Field span.NormalRed{
+    padding-top:0px;
+    padding-bottom:0px;
+    float:left;
+}
+
+/* News Article Item */
+.articleCategories a{
+    border: 1px solid lightskyblue;
+    color: #fff;
+    background-color: lightskyblue;
+    padding: 5px;
+    margin: 5px 5px;
+    display: inline-block;
+}
