@@ -2,6 +2,10 @@
   <files>
     <file>
       <path />
+      <name>CHANGES.md</name>
+    </file>
+    <file>
+      <path />
       <name>ckeditor.js</name>
     </file>
     <file>
@@ -62,7 +66,11 @@
     </file>
     <file>
       <path>Browser/</path>
-      <name>Browser.css</name>
+      <name>Browser.comb.min.css</name>
+    </file>
+    <file>
+      <path>Browser/</path>
+      <name>FileUploader.ashx</name>
     </file>
     <file>
       <path>Browser/</path>
@@ -151,6 +159,10 @@
     <file>
       <path>Browser/Images/</path>
       <name>Preview.png</name>
+    </file>
+    <file>
+      <path>Browser/Images/</path>
+      <name>progressbar.gif</name>
     </file>
     <file>
       <path>Browser/Images/</path>
@@ -442,6 +454,10 @@
     </file>
     <file>
       <path>Browser/js/</path>
+      <name>jquery.fileupload.comb.min.js</name>
+    </file>
+    <file>
+      <path>Browser/js/</path>
       <name>jquery.ImageResizer.js</name>
     </file>
     <file>
@@ -495,6 +511,10 @@
     <file>
       <path>icons/</path>
       <name>BulletedList.png</name>
+    </file>
+    <file>
+      <path>icons/</path>
+      <name>codesnippet.png</name>
     </file>
     <file>
       <path>icons/</path>
@@ -766,6 +786,10 @@
     </file>
     <file>
       <path>images/</path>
+      <name>progressbar.gif</name>
+    </file>
+    <file>
+      <path>images/</path>
       <name>spacer.gif</name>
     </file>
     <file>
@@ -1034,6 +1058,10 @@
     </file>
     <file>
       <path>lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>lang/</path>
       <name>ug.js</name>
     </file>
     <file>
@@ -1083,6 +1111,10 @@
     <file>
       <path>plugins/a11yhelp/dialogs/</path>
       <name>a11yhelp.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>af.js</name>
     </file>
     <file>
       <path>plugins/a11yhelp/dialogs/lang/</path>
@@ -1286,6 +1318,10 @@
     </file>
     <file>
       <path>plugins/a11yhelp/dialogs/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/a11yhelp/dialogs/lang/</path>
       <name>ug.js</name>
     </file>
     <file>
@@ -1338,6 +1374,10 @@
     </file>
     <file>
       <path>plugins/autosave/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
       <name>de.js</name>
     </file>
     <file>
@@ -1346,7 +1386,15 @@
     </file>
     <file>
       <path>plugins/autosave/lang/</path>
-      <name>jp.js</name>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/autosave/lang/</path>
+      <name>ja.js</name>
     </file>
     <file>
       <path>plugins/autosave/lang/</path>
@@ -1354,7 +1402,7 @@
     </file>
     <file>
       <path>plugins/autosave/lang/</path>
-      <name>pt-BR.js</name>
+      <name>pt-br.js</name>
     </file>
     <file>
       <path>plugins/autosave/lang/</path>
@@ -1382,23 +1430,23 @@
     </file>
     <file>
       <path>plugins/codemirror/icons/</path>
-      <name>AutoComplete.png</name>
+      <name>autocomplete.png</name>
     </file>
     <file>
       <path>plugins/codemirror/icons/</path>
-      <name>AutoFormat.png</name>
+      <name>autoformat.png</name>
     </file>
     <file>
       <path>plugins/codemirror/icons/</path>
-      <name>CommentSelectedRange.png</name>
+      <name>commentselectedrange.png</name>
     </file>
     <file>
       <path>plugins/codemirror/icons/</path>
-      <name>SearchCode.png</name>
+      <name>searchcode.png</name>
     </file>
     <file>
       <path>plugins/codemirror/icons/</path>
-      <name>UncommentSelectedRange.png</name>
+      <name>uncommentselectedrange.png</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
@@ -1415,6 +1463,14 @@
     <file>
       <path>plugins/codemirror/js/</path>
       <name>codemirror.min.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/js/</path>
+      <name>codemirror.mode.bbcode.min.js</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/js/</path>
+      <name>codemirror.mode.bbcodemixed.min.js</name>
     </file>
     <file>
       <path>plugins/codemirror/js/</path>
@@ -1730,6 +1786,10 @@
     </file>
     <file>
       <path>plugins/codemirror/theme/</path>
+      <name>mdn-like.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
       <name>midnight.css</name>
     </file>
     <file>
@@ -1742,6 +1802,10 @@
     </file>
     <file>
       <path>plugins/codemirror/theme/</path>
+      <name>neo.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
       <name>night.css</name>
     </file>
     <file>
@@ -1751,6 +1815,10 @@
     <file>
       <path>plugins/codemirror/theme/</path>
       <name>paraiso-light.css</name>
+    </file>
+    <file>
+      <path>plugins/codemirror/theme/</path>
+      <name>pastel-on-dark.css</name>
     </file>
     <file>
       <path>plugins/codemirror/theme/</path>
@@ -1783,6 +1851,410 @@
     <file>
       <path>plugins/codemirror/theme/</path>
       <name>xq-light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/</path>
+      <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/dialogs/</path>
+      <name>codesnippet.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/icons/</path>
+      <name>codesnippet.png</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/icons/hidpi/</path>
+      <name>codesnippet.png</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>bg.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ca.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>cs.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>da.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>de.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>en-gb.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>eo.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>es.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>et.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>fa.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>fi.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>fr-ca.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>hr.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>it.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ja.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>lt.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>lv.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>nb.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>nl.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>no.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>pl.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>pt-br.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>pt.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ro.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>sl.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>sq.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>sv.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>th.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>ug.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>vi.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>zh-cn.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lang/</path>
+      <name>zh.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/</path>
+      <name>CHANGES.md</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/</path>
+      <name>highlight.pack.js</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/</path>
+      <name>LICENSE</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/</path>
+      <name>README.md</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/</path>
+      <name>README.ru.md</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>arta.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>ascetic.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-dune.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-dune.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-forest.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-forest.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-heath.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-heath.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-lakeside.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-lakeside.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-seaside.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>atelier-seaside.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>brown_paper.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>brown_papersq.png</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>default.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>docco.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>far.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>foundation.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>github.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>googlecode.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>idea.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>ir_black.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>magula.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>mono-blue.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>monokai.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>monokai_sublime.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>obsidian.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>paraiso.dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>paraiso.light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>pojoaque.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>pojoaque.jpg</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>railscasts.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>rainbow.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>school_book.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>school_book.png</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>solarized_dark.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>solarized_light.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>sunburst.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>tomorrow-night-blue.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>tomorrow-night-bright.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>tomorrow-night-eighties.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>tomorrow-night.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>tomorrow.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>vs.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>xcode.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/lib/highlight/styles/</path>
+      <name>zenburn.css</name>
+    </file>
+    <file>
+      <path>plugins/codesnippet/samples/</path>
+      <name>codesnippet.html</name>
     </file>
     <file>
       <path>plugins/colordialog/dialogs/</path>
@@ -2266,6 +2738,10 @@
     </file>
     <file>
       <path>plugins/liststyle/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/liststyle/lang/</path>
       <name>ug.js</name>
     </file>
     <file>
@@ -2286,7 +2762,15 @@
     </file>
     <file>
       <path>plugins/magicline/images/</path>
+      <name>icon-rtl.png</name>
+    </file>
+    <file>
+      <path>plugins/magicline/images/</path>
       <name>icon.png</name>
+    </file>
+    <file>
+      <path>plugins/magicline/images/hidpi/</path>
+      <name>icon-rtl.png</name>
     </file>
     <file>
       <path>plugins/magicline/images/hidpi/</path>
@@ -2318,6 +2802,10 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>af.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>ar.js</name>
     </file>
     <file>
@@ -2334,6 +2822,10 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>da.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>de.js</name>
     </file>
     <file>
@@ -2347,6 +2839,10 @@
     <file>
       <path>plugins/mathjax/lang/</path>
       <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>eo.js</name>
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
@@ -2370,6 +2866,10 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>hr.js</name>
     </file>
     <file>
@@ -2378,11 +2878,23 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>it.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>ja.js</name>
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
       <name>km.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>ku.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>lt.js</name>
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
@@ -2418,6 +2930,10 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>sl.js</name>
     </file>
     <file>
@@ -2426,7 +2942,19 @@
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
       <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/mathjax/lang/</path>
+      <name>vi.js</name>
     </file>
     <file>
       <path>plugins/mathjax/lang/</path>
@@ -2802,6 +3330,10 @@
     </file>
     <file>
       <path>plugins/specialchar/dialogs/lang/</path>
+      <name>af.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>ar.js</name>
     </file>
     <file>
@@ -2819,6 +3351,10 @@
     <file>
       <path>plugins/specialchar/dialogs/lang/</path>
       <name>cy.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
+      <name>da.js</name>
     </file>
     <file>
       <path>plugins/specialchar/dialogs/lang/</path>
@@ -2902,6 +3438,10 @@
     </file>
     <file>
       <path>plugins/specialchar/dialogs/lang/</path>
+      <name>lt.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>lv.js</name>
     </file>
     <file>
@@ -2962,6 +3502,10 @@
     </file>
     <file>
       <path>plugins/specialchar/dialogs/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/specialchar/dialogs/lang/</path>
       <name>ug.js</name>
     </file>
     <file>
@@ -2995,42 +3539,6 @@
     <file>
       <path>plugins/stylesheetparser/samples/assets/</path>
       <name>sample.css</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/</path>
-      <name>readme.txt</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/dialogs/</path>
-      <name>syntaxhighlight.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/images/</path>
-      <name>syntaxhighlight.gif</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/lang/</path>
-      <name>de.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/lang/</path>
-      <name>en.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/lang/</path>
-      <name>pl.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/scripts/</path>
-      <name>shCore.js</name>
-    </file>
-    <file>
-      <path>plugins/syntaxhighlight/styles/</path>
-      <name>shCore.css</name>
     </file>
     <file>
       <path>plugins/table/dialogs/</path>
@@ -3085,8 +3593,48 @@
       <name>console.js</name>
     </file>
     <file>
+      <path>plugins/widget/dev/</path>
+      <name>contents.css</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/</path>
+      <name>nestedwidgets.html</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/</path>
+      <name>widgetstyles.html</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/</path>
+      <name>contents.css</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/</path>
+      <name>sample.jpg</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/simplebox/</path>
+      <name>contents.css</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/simplebox/</path>
+      <name>plugin.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/simplebox/dialogs/</path>
+      <name>simplebox.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/dev/assets/simplebox/icons/</path>
+      <name>simplebox.png</name>
+    </file>
+    <file>
       <path>plugins/widget/images/</path>
       <name>handle.png</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>af.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
@@ -3106,6 +3654,10 @@
     </file>
     <file>
       <path>plugins/widget/lang/</path>
+      <name>da.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>de.js</name>
     </file>
     <file>
@@ -3119,6 +3671,10 @@
     <file>
       <path>plugins/widget/lang/</path>
       <name>en.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>eo.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
@@ -3142,11 +3698,19 @@
     </file>
     <file>
       <path>plugins/widget/lang/</path>
+      <name>he.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>hr.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
       <name>hu.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>it.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
@@ -3159,6 +3723,10 @@
     <file>
       <path>plugins/widget/lang/</path>
       <name>ko.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>ku.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
@@ -3190,6 +3758,10 @@
     </file>
     <file>
       <path>plugins/widget/lang/</path>
+      <name>sk.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>sl.js</name>
     </file>
     <file>
@@ -3198,7 +3770,19 @@
     </file>
     <file>
       <path>plugins/widget/lang/</path>
+      <name>tr.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>tt.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
       <name>uk.js</name>
+    </file>
+    <file>
+      <path>plugins/widget/lang/</path>
+      <name>vi.js</name>
     </file>
     <file>
       <path>plugins/widget/lang/</path>
@@ -3226,6 +3810,10 @@
     </file>
     <file>
       <path>plugins/wordcount/lang/</path>
+      <name>el.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
       <name>en.js</name>
     </file>
     <file>
@@ -3235,6 +3823,10 @@
     <file>
       <path>plugins/wordcount/lang/</path>
       <name>fr.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>hr.js</name>
     </file>
     <file>
       <path>plugins/wordcount/lang/</path>
@@ -3258,11 +3850,15 @@
     </file>
     <file>
       <path>plugins/wordcount/lang/</path>
-      <name>pt-BR.js</name>
+      <name>pt-br.js</name>
     </file>
     <file>
       <path>plugins/wordcount/lang/</path>
       <name>ru.js</name>
+    </file>
+    <file>
+      <path>plugins/wordcount/lang/</path>
+      <name>sv.js</name>
     </file>
     <file>
       <path>plugins/wsc/</path>
@@ -3298,14 +3894,6 @@
     </file>
     <file>
       <path>plugins/xml/</path>
-      <name>plugin.js</name>
-    </file>
-    <file>
-      <path>plugins/xmlstyles/</path>
-      <name>desktop.ini</name>
-    </file>
-    <file>
-      <path>plugins/xmlstyles/</path>
       <name>plugin.js</name>
     </file>
     <file>
@@ -3598,7 +4186,15 @@
     </file>
     <file>
       <path>skins/moono-dark/</path>
+      <name>dialog_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
       <name>editor.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>editor_gecko.css</name>
     </file>
     <file>
       <path>skins/moono-dark/</path>
@@ -3614,7 +4210,19 @@
     </file>
     <file>
       <path>skins/moono-dark/</path>
+      <name>editor_iequirks.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
       <name>elementspath.css</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>icons.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/</path>
+      <name>icons_hidpi.png</name>
     </file>
     <file>
       <path>skins/moono-dark/</path>
@@ -3998,11 +4606,95 @@
     </file>
     <file>
       <path>skins/moono-dark/images/</path>
+      <name>lock-open.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
+      <name>lock.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
       <name>mini.gif</name>
     </file>
     <file>
       <path>skins/moono-dark/images/</path>
+      <name>refresh.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/</path>
       <name>resizer.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/hidpi/</path>
+      <name>close.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/hidpi/</path>
+      <name>lock-open.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/hidpi/</path>
+      <name>lock.png</name>
+    </file>
+    <file>
+      <path>skins/moono-dark/images/hidpi/</path>
+      <name>refresh.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/</path>
+      <name>dialog.css</name>
+    </file>
+    <file>
+      <path>skins/office2013/</path>
+      <name>editor.css</name>
+    </file>
+    <file>
+      <path>skins/office2013/</path>
+      <name>icons.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/</path>
+      <name>icons_hidpi.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/</path>
+      <name>skin.js</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/</path>
+      <name>arrow.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/</path>
+      <name>close.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/</path>
+      <name>lock-open.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/</path>
+      <name>lock.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/</path>
+      <name>refresh.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/hidpi/</path>
+      <name>close.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/hidpi/</path>
+      <name>lock-open.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/hidpi/</path>
+      <name>lock.png</name>
+    </file>
+    <file>
+      <path>skins/office2013/images/hidpi/</path>
+      <name>refresh.png</name>
     </file>
     <file>
       <path>skins/ozone/</path>

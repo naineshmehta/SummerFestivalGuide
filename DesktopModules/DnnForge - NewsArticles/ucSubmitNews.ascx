@@ -75,9 +75,9 @@
 	<td valign="top" width="100%">
 		<table id="tblArticle" cellspacing="2" cellpadding="2" summary="Article Design Table" border="0" width="100%">
 		<tr>
-			<td class="SubHead" width="150"><dnn:label id="plTitle" text="Title:" runat="server" controlname="txtTitle"></dnn:label></td>
+			<td class="SubHead"><dnn:label id="plTitle" text="Title:" runat="server" controlname="txtTitle"></dnn:label></td>
 			<td>    
-			    <asp:textbox id="txtTitle" width="350px" runat="server" cssclass="NormalTextBox" maxlength="255"></asp:textbox>
+			    <asp:textbox id="txtTitle" runat="server" cssclass="NormalTextBox" maxlength="255"></asp:textbox>
 				<asp:requiredfieldvalidator id="valTitle" runat="server" cssclass="NormalRed" resourcekey="valTitle.ErrorMessage"
 					display="None" errormessage="<br>Title Is Required" controltovalidate="txtTitle" SetFocusOnError="True"></asp:requiredfieldvalidator>
             </td>
@@ -89,7 +89,7 @@
 		</tr>
 		<tr>
 		    <td colspan="2" valign="top">
-				<dnn:texteditor id="txtDetails" runat="server" height="400" width="450"></dnn:texteditor>
+				<dnn:texteditor id="txtDetails" runat="server"></dnn:texteditor>
 				<asp:requiredfieldvalidator id="valBody" runat="server" cssclass="NormalRed" resourcekey="valBody.ErrorMessage"
 					display="None" errormessage="<br>Body Is Required" controltovalidate="txtDetails" SetFocusOnError="True"></asp:requiredfieldvalidator>
 		    </td>
@@ -136,26 +136,26 @@
 			        resourcekey="Meta" includerule="True" IsExpanded="False" />
 	            <table id="tblMeta" cellspacing="2" cellpadding="2" summary="Meta Design Table" border="0" runat="server">
 	            <tr>
-		            <td class="SubHead" width="150"><dnn:label id="plMetaTitle" runat="server" suffix=":" controlname="txtMetaTitle"></dnn:label></td>
+		            <td class="SubHead"><dnn:label id="plMetaTitle" runat="server" suffix=":" controlname="txtMetaTitle"></dnn:label></td>
 	                <td>
-					    <asp:textbox id="txtMetaTitle" cssclass="NormalTextBox" runat="server" maxlength="200" width="300"></asp:textbox>
+					    <asp:textbox id="txtMetaTitle" cssclass="NormalTextBox" runat="server" maxlength="200"></asp:textbox>
 	                </td>
 	            </tr>
 	            <tr>
-		            <td class="SubHead" width="150"><dnn:label id="plMetaDescription" runat="server" suffix=":" controlname="txtMetaDescription"></dnn:label></td>
+		            <td class="SubHead"><dnn:label id="plMetaDescription" runat="server" suffix=":" controlname="txtMetaDescription"></dnn:label></td>
 	                <td>
-					    <asp:textbox id="txtMetaDescription" cssclass="NormalTextBox" runat="server" maxlength="500" width="300"
+					    <asp:textbox id="txtMetaDescription" cssclass="NormalTextBox" runat="server" maxlength="500"
 											textmode="MultiLine" rows="3"></asp:textbox>
 	                </td>
 	            </tr>
 	            <tr>
-		            <td class="SubHead" width="150"><dnn:label id="plMetaKeyWords" runat="server" suffix=":" controlname="txtMetaKeyWords"></dnn:label></td>
+		            <td class="SubHead" ><dnn:label id="plMetaKeyWords" runat="server" suffix=":" controlname="txtMetaKeyWords"></dnn:label></td>
 	                <td>
-					    <asp:textbox id="txtMetaKeyWords" cssclass="NormalTextBox" runat="server" maxlength="500" width="300"
+					    <asp:textbox id="txtMetaKeyWords" cssclass="NormalTextBox" runat="server" maxlength="500"
 											textmode="MultiLine" rows="3"></asp:textbox>
 	                </td>
 	            </tr>
-	            <tr>
+	            <tr style="visibility:hidden;">
 		            <td class="SubHead" width="150"><dnn:label id="plPageHeadText" runat="server" suffix=":" controlname="txtPageHeadText"></dnn:label></td>
 	                <td>
 					    <asp:TextBox id="txtPageHeadText" cssclass="NormalTextBox" runat="server" maxlength="500" width="300" textmode="MultiLine"
@@ -288,7 +288,7 @@
 				    display="None" errormessage="<br>Publish Date Is Required" controltovalidate="txtPublishDate" SetFocusOnError="True"></asp:requiredfieldvalidator>
 				<asp:comparevalidator id="valPublishDate" cssclass="NormalRed" runat="server" controltovalidate="txtPublishDate"
 				    errormessage="<br>Invalid publish date!" operator="DataTypeCheck" type="Date" display="None" ResourceKey="valStartDate.ErrorMessage" SetFocusOnError="True"></asp:comparevalidator>
-                <span class="Normal">@&nbsp;<asp:TextBox ID="txtPublishHour" runat="Server" MaxLength="2" Width="25px" CssClass="NormalTextBox" />&nbsp;:&nbsp;<asp:TextBox ID="txtPublishMinute" runat="Server" MaxLength="2" Width="25px" CssClass="NormalTextBox" /></span>
+                <span class="Normal">@&nbsp;<asp:TextBox ID="txtPublishHour" runat="Server" MaxLength="2" Width="50px" CssClass="NormalTextBox" />&nbsp;:&nbsp;<asp:TextBox ID="txtPublishMinute" runat="Server" MaxLength="2" Width="50px" CssClass="NormalTextBox" /></span>
 		    </td>
 		</tr>
 		<tr id="trExpiry" runat="Server">
@@ -298,7 +298,7 @@
 				<asp:hyperlink id="cmdExpiryCalendar" cssclass="CommandButton" runat="server" resourcekey="Calendar">Calendar</asp:hyperlink>
 				<asp:comparevalidator id="valExpiryDate" cssclass="NormalRed" runat="server" controltovalidate="txtExpiryDate"
 					errormessage="<br>Invalid expiry date!" operator="DataTypeCheck" type="Date" display="None" ResourceKey="valEndDate.ErrorMessage" SetFocusOnError="True"></asp:comparevalidator>
-		        <span class="Normal">@&nbsp;<asp:TextBox ID="txtExpiryHour" runat="Server" MaxLength="2" Width="25px" CssClass="NormalTextBox" />&nbsp;:&nbsp;<asp:TextBox ID="txtExpiryMinute" runat="Server" MaxLength="2" Width="25px" CssClass="NormalTextBox" /></span>
+		        <span class="Normal">@&nbsp;<asp:TextBox ID="txtExpiryHour" runat="Server" MaxLength="2" Width="50px" CssClass="NormalTextBox" />&nbsp;:&nbsp;<asp:TextBox ID="txtExpiryMinute" runat="Server" MaxLength="2" Width="50px" CssClass="NormalTextBox" /></span>
 		    </td>
 		</tr>
 		</table>
@@ -326,7 +326,13 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <asp:LinkButton ID="cmdSaveArticle" runat="Server" CssClass="CommandButton" ResourceKey="cmdUpdate" />&nbsp;&nbsp;<asp:LinkButton ID="cmdPublishArticle" runat="Server" CssClass="CommandButton" ResourceKey="cmdPublish" />&nbsp;&nbsp;<asp:LinkButton ID="cmdAddEditPages" runat="Server" CssClass="CommandButton" ResourceKey="cmdAddEditPages" />&nbsp;&nbsp;<asp:LinkButton ID="cmdCancel" runat="Server" CssClass="CommandButton" ResourceKey="cmdCancel" CausesValidation="False" />&nbsp;&nbsp;<asp:LinkButton ID="cmdDelete" runat="Server" CssClass="CommandButton" ResourceKey="cmdDelete" CausesValidation="false" />
+                <ul class="articleButtons">
+                    <li><asp:LinkButton ID="cmdSaveArticle" runat="Server" CssClass="CommandButton" ResourceKey="cmdUpdate" /></li>
+                    <li><asp:LinkButton ID="cmdPublishArticle" runat="Server" CssClass="CommandButton" ResourceKey="cmdPublish" /></li>
+                    <li><asp:LinkButton ID="cmdAddEditPages" runat="Server" CssClass="CommandButton" ResourceKey="cmdAddEditPages" /></li>
+                    <li><asp:LinkButton ID="cmdCancel" runat="Server" CssClass="CommandButton" ResourceKey="cmdCancel" CausesValidation="False" /></li>
+                    <li><asp:LinkButton ID="cmdDelete" runat="Server" CssClass="CommandButton" ResourceKey="cmdDelete" CausesValidation="false" /></li>
+                </ul>
             </td>
         </tr>
         </table>

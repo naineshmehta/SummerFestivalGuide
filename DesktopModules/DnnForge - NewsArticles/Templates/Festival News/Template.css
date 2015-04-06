@@ -21,9 +21,9 @@
 .articleRelated{margin:10px 5px;}
 .articleRelated a{display:block;margin-top:5px;}
 .articlePaging{border-bottom:1px dotted #D8D8D8;padding-bottom:2px;margin-bottom:2px;}
-.articleCategories{border-bottom:1px dotted #D8D8D8;margin-bottom:2px;padding-bottom:2px;float:left;width:100%;}
+.articleCategories, .articleTags{border-bottom:1px dotted #D8D8D8;margin-bottom:2px;padding-bottom:2px;float:left;width:100%;}
 .articleCategoriesListing{margin-bottom:5px;padding-bottom:2px;float:left;width:100%; clear:both;}
-.articleSocial{margin-top:5px;padding-bottom:10px;float:left; border-bottom:1px dotted #D8D8D8; clear:both; width:100%;}
+.articleSocial{margin-top:5px;padding-bottom:10px;float:right; border-bottom:1px dotted #D8D8D8; clear:both; width:100%;}
 .articleSocialListing{margin-top:5px;padding-bottom:5px;float:left; clear:both; width:100%;}
 .articleReadMore{margin-bottom:5px; float:left; clear:both;}
 .articleComment{min-height:100px;height:auto!important;margin:5px 0 0;padding:5px;}

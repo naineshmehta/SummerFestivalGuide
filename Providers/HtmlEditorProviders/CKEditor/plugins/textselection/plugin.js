@@ -7,7 +7,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
      */
     CKEDITOR.plugins.add('textselection',
     {
-        version: 1.01,
+        version: 1.04,
         init: function (editor) {
             // Corresponding text range of wysiwyg bookmark.
             var wysiwygBookmark;
@@ -22,7 +22,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
                             // Fly the range when create bookmark. 
                             delete range.element;
-                            range.createBookmark();
+                            range.createBookmark(editor);
                             sourceBookmark = true;
                             evt.data = range.content;
                         }
@@ -36,25 +36,29 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                             range = new CKEDITOR.dom.range(editor.document),
                             walker,
                             startNode,
-                            endNode;
+                            endNode,
+                            isTextNode = false;
 
                         range.setStartAt(doc.getBody(), CKEDITOR.POSITION_AFTER_START);
                         range.setEndAt(doc.getBody(), CKEDITOR.POSITION_BEFORE_END);
                         walker = new CKEDITOR.dom.walker(range);
-                       // walker.type = CKEDITOR.NODE_COMMENT;
-                        walker.evaluator = function (comment) {
-                           //
-
-
-
-                            var match = /cke_bookmark_\d+(\w)/.exec(comment.$.nodeValue);
+                        // walker.type = CKEDITOR.NODE_COMMENT;
+                        walker.evaluator = function (node) {
+                            //
+                            var match = /cke_bookmark_\d+(\w)/.exec(node.$.nodeValue);
                             if (match) {
-                               
-                                if (match[1] === 'S') {
-                                    startNode = comment;
-                                } else if (match[1] === 'E') {
-                                    endNode = comment;
+                                if(decodeURIComponent(node.$.nodeValue)
+                                    .match(/<!--cke_bookmark_[0-9]+S-->.*<!--cke_bookmark_[0-9]+E-->/)){
+                                    isTextNode = true;
+                                    startNode = endNode = node;
                                     return false;
+                                } else {
+                                    if (match[1] === 'S') {
+                                        startNode = node;
+                                    } else if (match[1] === 'E') {
+                                        endNode = node;
+                                        return false;
+                                    }
                                 }
                             }
                         };
@@ -62,24 +66,35 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                         range.setStartAfter(startNode);
                         range.setEndBefore(endNode);
                         range.select();
-                        // Scroll into view for non-IE. 
-                        // Scroll into view for non-IE. 
+                        // Scroll into view for non-IE.
+                        // Scroll into view for non-IE.
                         if (!CKEDITOR.env.ie || (CKEDITOR.env.ie && CKEDITOR.env.version === 9)) {
                             editor.getSelection().getStartElement().scrollIntoView(true);
-                        } // Remove the comments node which are out of range. 
-                        startNode.remove();
-                        endNode.remove();
+                        } // Remove the comments node which are out of range.
+                        if(isTextNode){
+                            //remove all of our bookmarks from the text node
+                            //then remove all of the cke_protected bits that added because we had a comment
+                            //whatever code is supposed to clean these cke_protected up doesn't work
+                            //when there's two comments in a row like: <!--{cke_protected}{C}--><!--{cke_protected}{C}-->
+                            startNode.$.nodeValue = decodeURIComponent(startNode.$.nodeValue).
+                                replace(/<!--cke_bookmark_[0-9]+[SE]-->/g,'').
+                                replace(/<!--[\s]*\{cke_protected}[\s]*\{C}[\s]*-->/g,'');
+                        } else {
+                            //just remove the comment nodes
+                            startNode.remove();
+                            endNode.remove();
+                        }
                     }
                 }, null, null, 10);
 
                 editor.on('beforeGetModeData', function () {
-                    if (editor.mode === 'wysiwyg') {
+                    if (editor.mode === 'wysiwyg' && editor.getData()) {
                         if (CKEDITOR.env.gecko && !editor.focusManager.hasFocus) {
                             return;
                         }
                         var sel = editor.getSelection(), range;
                         if (sel && (range = sel.getRanges()[0])) {
-                            wysiwygBookmark = range.createBookmark(true);
+                            wysiwygBookmark = range.createBookmark(editor);
                         }
                     }
                 });
@@ -87,7 +102,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                 editor.on('afterModeUnload', function (evt) {
                     if (editor.mode === 'wysiwyg' && wysiwygBookmark) {
                         textRange = new CKEDITOR.dom.textRange(evt.data);
-                        textRange.moveToBookmark(wysiwygBookmark);
+                        textRange.moveToBookmark(wysiwygBookmark, editor);
 
                         evt.data = textRange.content;
                     }
@@ -97,6 +112,11 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                         textRange.element = new CKEDITOR.dom.element(editor._.editable.$);
                         textRange.select();
                     }
+                });
+
+                editor.on('destroy', function () {
+                    textRange = null;
+                    sourceBookmark = null;
                 });
             }
         }
@@ -287,9 +307,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
          * text removed. 
          * @param {Object} bookmark Exactly the one created by CKEDITOR.dom.range.createBookmark( true ). 
          */
-        moveToBookmark: function(bookmark) {
+        moveToBookmark: function(bookmark, editor) {
             var content = this.content;
-
             function removeBookmarkText(bookmarkId) {
 
                 var bookmarkRegex = new RegExp('<span[^<]*?' + bookmarkId + '.*?/span>'),
@@ -305,6 +324,10 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
             this.endOffset = removeBookmarkText(bookmark.endNode);
             this.content = content;
             this.updateElement();
+
+            if (editor.undoManager) {
+                editor.undoManager.unlock();
+            }
         },
 
         /** 
@@ -335,7 +358,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
             this.endOffset = end;
         },
 
-        createBookmark: function() {
+        createBookmark: function(editor) {
             // Enlarge the range to avoid tag partial selection. 
             this.enlarge();
             var content = this.content,
@@ -347,6 +370,10 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
             content = content.substring(0, start) + bookmarkTemplate.replace('%1', id + 'S')
                 + content.substring(start, end) + bookmarkTemplate.replace('%1', id + 'E')
                 + content.substring(end);
+
+            if (editor.undoManager) {
+                editor.undoManager.lock();
+            }
 
             this.content = content;
             this.updateElement();

@@ -372,4 +372,22 @@
   <data name="WaitMessage.Text" xml:space="preserve">
     <value>Wczytywanie strony i przetwarzanie kotwic...</value>
   </data>
+  <data name="OverrideFile.Text" xml:space="preserve">
+    <value>Override File if exists, otherwise a new File with underscore _1 will be created?</value>
+  </data>
+  <data name="FileToBigMessage.Text" xml:space="preserve">
+    <value>Uploaded File is bigger then the allowed file size!</value>
+  </data>
+  <data name="AddFiles.Text" xml:space="preserve">
+    <value>Add file(s)...</value>
+  </data>
+  <data name="DropHere.Text" xml:space="preserve">
+    <value>Drop file(s) here</value>
+  </data>
+  <data name="StartUploads.Text" xml:space="preserve">
+    <value>Start upload(s)</value>
+  </data>
+  <data name="Root.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
 </root>

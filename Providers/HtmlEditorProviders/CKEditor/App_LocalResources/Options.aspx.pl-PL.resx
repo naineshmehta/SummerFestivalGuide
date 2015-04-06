@@ -309,9 +309,6 @@
   <data name="lblStyles.Text" xml:space="preserve">
     <value>Style edytora</value>
   </data>
-  <data name="lblStylesURL.Text" xml:space="preserve">
-    <value>Lista dostępnych styli:</value>
-  </data>
   <data name="lblTemplates.Text" xml:space="preserve">
     <value>Szablony edytora</value>
   </data>
@@ -411,9 +408,6 @@
   <data name="PortalOnlyLabel.Text" xml:space="preserve">
     <value>Wyświetlać tylko ustawienia dla tej witryny, czy dla wszystkich?</value>
   </data>
-  <data name="Refresh.Text" xml:space="preserve">
-    <value>Odśwież edytor</value>
-  </data>
   <data name="Remove.Help" xml:space="preserve">
     <value>Usuwa ustawienie tylko dla bieżącej {0}.</value>
   </data>
@@ -469,12 +463,33 @@
     <value>Należy wprowadzić nazwę dla paska narzędziowego</value>
   </data>
   <data name="ToolbarSetCreated.Text" xml:space="preserve">
- 	<value>Stworzono nowy zestaw pasków narzędziowych "{0}"!</value>
+    <value>Stworzono nowy zestaw pasków narzędziowych "{0}"!</value>
   </data>
   <data name="ToolbarSetDeleted.Text" xml:space="preserve">
- 	<value>Wybrany zestaw pasków narzędziowych został usunięty!</value>
+    <value>Wybrany zestaw pasków narzędziowych został usunięty!</value>
   </data>
   <data name="ToolbarSetSaved.Text" xml:space="preserve">
- 	<value>Zestaw pasków narzędziowych zapisany!</value>
-  </data> 
+    <value>Zestaw pasków narzędziowych zapisany!</value>
+  </data>
+  <data name="OverrideFileOnUploadLabel.Text" xml:space="preserve">
+    <value>Override File if exists on upload, otherwise a new File with underscore _1 will be created?</value>
+  </data>
+  <data name="CopyPageChild.Help" xml:space="preserve">
+    <value>Copy current Page Settings to all Child Pages</value>
+  </data>
+  <data name="CopyPageChild.Text" xml:space="preserve">
+    <value>Copy Settings to Child Pages</value>
+  </data>
+  <data name="lblInfoCopyAll.Text" xml:space="preserve">
+    <value>Settings copied to all Child Pages.</value>
+  </data>
+  <data name="SizeLimitLabel.Text" xml:space="preserve">
+    <value>Upload File Size Limit</value>
+  </data>
+  <data name="UploadFileLimitLabel.Text" xml:space="preserve">
+    <value>Upload File Limits:</value>
+  </data>
+  <data name="LoadingEditor.Text" xml:space="preserve">
+    <value>CKEditor is loading, please wait...</value>
+  </data>
 </root>

@@ -70,11 +70,55 @@ div.Feedback_Field span.NormalRed{
 }
 
 /* News Article Item */
-.articleCategories a{
-    border: 1px solid lightskyblue;
+.articleTags a{
+    border: 1px solid #8cc63f;
     color: #fff;
-    background-color: lightskyblue;
+    background-color: #8cc63f;
     padding: 5px;
     margin: 5px 5px;
     display: inline-block;
+}
+
+.articleSocial span *,.articleSocial span *:before, .articleSocial span *:after {
+    box-sizing: inherit;
+    -webkit-box-sizing: content-box;
+}
+
+/* Create News Article */
+#tblArticle table{
+    width:100%;
+}
+
+#tblArticle input[type="text"]{
+    width:100%;
+}
+
+td > .dnnLabel {
+    width: 10em;
+}
+
+td.SubHead{
+    width: 10em;
+}
+
+#tblArticle label{
+    display:inline-block;
+}
+
+#tblPublishDetail input[type="text"]{
+    display: inline-block;
+}
+
+#tblActionDetail a{
+    font-size:1.5em;
+}
+
+.articleButtons{
+    list-style: none
+}
+
+.articleButtons li{
+    float:left;
+    width:20%;
+    text-align:center;
 }

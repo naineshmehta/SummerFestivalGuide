@@ -179,9 +179,6 @@
   <data name="lblStyles.Text" xml:space="preserve">
     <value>Editor Styles</value>
   </data>
-  <data name="lblStylesURL.Text" xml:space="preserve">
-    <value>Liste der verfügbaren Styles</value>
-  </data>
   <data name="lblToolbars.Text" xml:space="preserve">
     <value>Toolbars:</value>
   </data>
@@ -205,9 +202,6 @@
   </data>
   <data name="Options.Text" xml:space="preserve">
     <value>Editor Optionen</value>
-  </data>
-  <data name="Refresh.Text" xml:space="preserve">
-    <value>Editor Neuladen</value>
   </data>
   <data name="lblMainSet.Text" xml:space="preserve">
     <value>Haupt Einstellungen</value>
@@ -493,5 +487,26 @@
   </data>
   <data name="CustomJsFileLabel.Text" xml:space="preserve">
     <value>Eigene JS Datei</value>
+  </data>
+  <data name="OverrideFileOnUploadLabel.Text" xml:space="preserve">
+    <value>Datei beim hochladen überschreiben wenn existiert, ansonsten wird eine neue Datei erzeugt?</value>
+  </data>
+  <data name="CopyPageChild.Help" xml:space="preserve">
+    <value>Kopiert die aktuellen Einstellungen für alle Unterseiten</value>
+  </data>
+  <data name="CopyPageChild.Text" xml:space="preserve">
+    <value>Einstellungen für Unterseiten kopieren</value>
+  </data>
+  <data name="lblInfoCopyAll.Text" xml:space="preserve">
+    <value>Settings copied to all Child Pages.</value>
+  </data>
+  <data name="SizeLimitLabel.Text" xml:space="preserve">
+    <value>Upload File Size Limit</value>
+  </data>
+  <data name="UploadFileLimitLabel.Text" xml:space="preserve">
+    <value>Upload File Limits:</value>
+  </data>
+  <data name="LoadingEditor.Text" xml:space="preserve">
+    <value>CKEditor wird geladen...</value>
   </data>
 </root>

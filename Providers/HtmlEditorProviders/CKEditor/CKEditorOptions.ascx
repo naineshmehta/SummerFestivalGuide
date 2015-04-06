@@ -1,4 +1,5 @@
 <%@ Control Language="c#" AutoEventWireup="True" Codebehind="CKEditorOptions.ascx.cs" Inherits="WatchersNET.CKEditor.CKEditorOptions" %>
+<%@ Register TagPrefix="asp" Namespace="System.Web.UI" Assembly="System.Web"%>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="UrlControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls"  %>
 
@@ -20,6 +21,9 @@
     <tr>
         <td></td>
         <td>
+            <div class="Toolbar">
+                <asp:LinkButton id="CopyToAllChild" runat="server" Text="Copy Settings to Child Pages" CssClass="copyButton"></asp:LinkButton>
+            </div>
             <div class="Toolbar">
                 <asp:LinkButton id="lnkRemoveAll" runat="server" Text="Delete All Settings" CssClass="removeButton"></asp:LinkButton>
                 <asp:LinkButton id="lnkRemoveChild" runat="server" Text="Delete Child Settings" CssClass="removeButton"></asp:LinkButton>
@@ -118,7 +122,7 @@
                   <asp:Label id="lblSelToolb" runat="server"></asp:Label>
                 </HeaderTemplate>
                 <ItemTemplate>
-                  <asp:dropdownlist id="ddlToolbars" runat="server" Width="200">
+                  <asp:dropdownlist id="ddlToolbars" runat="server" CssClass="DefaultDropDown" Width="200">
 	              </asp:dropdownlist>
                 </ItemTemplate>
               </asp:TemplateField>
@@ -150,15 +154,6 @@
       <tr>
         <td class="settingNameColumn"><asp:label id="lblInjectSyntaxJs" runat="server">Inject Syntax Highlighter Js Code?</asp:label></td>
         <td class="settingValueColumn"><asp:CheckBox ID="InjectSyntaxJs" runat="server" Checked="true"></asp:CheckBox></td>
-      </tr>
-      <tr>
-           <td class="settingNameColumn">
-                    <asp:label id="lblStylesURL" runat="server">List of available styles for the editor</asp:label>
-           </td>
-           <td class="settingValueColumn">
-                    <dnn:url id="ctlStylesURL" runat="server" width="400" showtabs="False" Required="False" filefilter="xml,js" showupload="False" showfiles="True" showUrls="True"
-					urltype="F" showlog="False" shownewwindow="False" showtrack="False"></dnn:url>
-           </td>
       </tr>
       <tr>
            <td class="settingNameColumn">        
@@ -219,6 +214,38 @@
       <tr>
         <td class="settingNameColumn"><asp:label id="UploadFolderLabel" runat="server">Default Upload Folder</asp:label></td>
         <td class="settingValueColumn"><asp:DropDownList ID="UploadDir" runat="server" CssClass="DefaultDropDown"></asp:DropDownList></td>
+      </tr>
+      <tr>
+        <td class="settingNameColumn"><asp:label id="OverrideFileOnUploadLabel" runat="server">Override File on Upload?</asp:label></td>
+        <td class="settingValueColumn"><asp:Checkbox ID="OverrideFileOnUpload" runat="server"></asp:Checkbox></td>
+      </tr>
+      <tr>
+	    <td class="settingNameColumn"><asp:label id="UploadFileLimitLabel" runat="server">Upload File Limits:</asp:label></td>
+	    <td class="settingValueColumn">
+	      <asp:GridView id="UploadFileLimits" runat="server" AutoGenerateColumns="False" Width="400px" GridLines="None" HeaderStyle-HorizontalAlign="Left" HeaderStyle-Font-Bold="false" HeaderStyle-Font-Italic="true">
+            <Columns>
+              <asp:TemplateField>
+                <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                <HeaderTemplate>
+                  <asp:Label id="lblRole" runat="server"></asp:Label>
+                </HeaderTemplate>
+                <ItemStyle Width="200"></ItemStyle>
+                <ItemTemplate>
+                  <asp:Label ID="lblRoleName" runat="server" Text="<%# Container.DataItem.ToString()%>"></asp:Label>
+                </ItemTemplate>
+              </asp:TemplateField>
+              <asp:TemplateField>
+                <HeaderStyle HorizontalAlign="Left"></HeaderStyle>                  
+                <HeaderTemplate>
+                  <asp:Label id="SizeLimitLabel" runat="server"></asp:Label>
+                </HeaderTemplate>
+                <ItemTemplate>
+                  <asp:TextBox ID="SizeLimit" runat="server" CssClass="settingValueInputNumeric" Text="-1" />
+                </ItemTemplate>
+              </asp:TemplateField>
+            </Columns>
+          </asp:GridView>
+        </td>
       </tr>
       <tr>
         <td class="settingNameColumn"><asp:label id="lblResizeWidth" runat="server">Default Image Resize Width:</asp:label></td>
