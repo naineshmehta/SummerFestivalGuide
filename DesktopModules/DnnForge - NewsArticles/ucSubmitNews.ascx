@@ -89,7 +89,7 @@
 		</tr>
 		<tr>
 		    <td colspan="2" valign="top">
-				<dnn:texteditor id="txtDetails" runat="server"></dnn:texteditor>
+				<dnn:texteditor id="txtDetails" runat="server" Width="100%"></dnn:texteditor>
 				<asp:requiredfieldvalidator id="valBody" runat="server" cssclass="NormalRed" resourcekey="valBody.ErrorMessage"
 					display="None" errormessage="<br>Body Is Required" controltovalidate="txtDetails" SetFocusOnError="True"></asp:requiredfieldvalidator>
 		    </td>

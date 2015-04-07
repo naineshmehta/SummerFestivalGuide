@@ -16,10 +16,12 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1.0" />
 
 <link rel="stylesheet" type="text/css" href="/Portals/_default/Skins/DnnFoundation/css/custom.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
 
 <dnn:DnnCssInclude ID="DnnCssInclude1" runat="server" FilePath="css/normalize.css" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="css/foundation.css" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="js/vendor/modernizr.js" PathNameAlias="SkinPath"  />
+<script type="text/javascript" src="/Portals/_default/Skins/DNNFoundation/js/sfg.js"></script>
 
 <!-- Begin top functions bar -->
 <div class="contain-to-grid topbar">
@@ -40,8 +42,8 @@
             <!-- Begin login and users -->
             <div id="login-holder" class="text-right">                      
                 <div id="login">
-                    <dnn:LOGIN ID="dnnLogin" runat="server" CssClass="LoginLink" LegacyMode="false" />
                     <dnn:USER ID="dnnUser" runat="server" CssClass="LoginLink" LegacyMode="false" /> 
+                    <dnn:LOGIN ID="dnnLogin" runat="server" CssClass="LoginLink" LegacyMode="false" />
                 </div>
 
             </div><!-- End login and users -->
@@ -114,14 +116,15 @@
 </footer><!-- End footer -->
 
 <!--ForceProvider="DnnFormBottomProvider"-->
+<%--<dnn:DnnJsInclude ID="DnnJsInclude5" runat="server" FilePath="js/sfg.js" PathNameAlias="SkinPath"   />--%>
+
 <dnn:DnnJsInclude ID="DnnJsInclude2" runat="server" FilePath="js/foundation.min.js" PathNameAlias="SkinPath"   />
 <dnn:DnnJsInclude ID="DnnJsInclude3" runat="server" FilePath="js/vendor/fastclick.js" PathNameAlias="SkinPath"  />
+<dnn:DnnJsInclude ID="DnnJsInclude4" runat="server" FilePath="js/masonry/masonry.js" PathNameAlias="SkinPath"  />
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 
 <script>
     $(document).foundation();
-    $(document).ready(function () {
-        $('div.DnnModule-562, div.DnnModule-571, div.DnnModule-541').addClass('show-for-medium-up');
-    });
 </script>
 <!-- END FOUNDATION temaplate -->
 

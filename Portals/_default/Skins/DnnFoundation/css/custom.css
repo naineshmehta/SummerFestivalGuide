@@ -13,6 +13,10 @@
 	max-width: 100rem;
 }
 
+.topbar{
+    height:auto;
+}
+
 .content-holder {
 	padding-top: 10px;
 }
@@ -40,6 +44,19 @@
 @media only screen and (max-width: 40em) and (max-width:120em) {
     .dnnActions li  {
         float:none;
+    }
+}
+
+@media only screen and (max-width: 40em){
+    .articleLatest{
+        width:auto;
+    }
+}
+
+/* min-width 641px and max-width 1024px */
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em){
+    .articleLatest{
+        width: auto;
     }
 }
 
@@ -121,4 +138,28 @@ td.SubHead{
     float:left;
     width:20%;
     text-align:center;
+}
+
+/* Login on Menu */
+#login .loginGroup, #login .registerGroup { 
+    display: block;
+	margin: 0px 10px 0 0;
+	border: 1px solid #8cc63f;
+    background-color: #8cc63f;
+    border-radius: 5px;
+}
+
+#login .loginGroup a, #login .registerGroup a{ 
+    font-weight:bold;
+    font-size:0.8em;
+    padding: 0px 15px;
+}
+
+#login .userNotifications a span{
+    margin-top: 7px;
+    margin-right: -12px;
+}
+
+ul.buttonGroup{
+    margin-left:0px;
 }

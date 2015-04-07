@@ -1,5 +1,17 @@
 .article{clear:both;text-align:left;padding-bottom:10px;float:left;border-bottom:1px solid #3A2417;}
-.articleLatest{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
+
+.articleLatest{text-align:left;padding:5px;float:left; width:350px; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
+.articleLatestImage{width:100%; text-align:center;margin-top:5px;}
+.articleLatestHeadline h1{font-size:2em;}
+.articleLatestAuthor{margin-top:5px;clear:both;background-color:#3c271a;color:#fff;border-radius:5px;font-weight:bold;text-align:center;}
+
+.articleLatestReview{text-align:left;padding:5px;float:left; width:100%; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
+.articleLatestReview .Image{width:100%; text-align:center;margin-top:5px;}
+.articleLatestReview .Headline h2{font-size:1.5em;}
+.articleLatestReview .Author{margin-top:5px;clear:both;background-color:#3c271a;color:#fff;border-radius:5px;font-weight:bold;text-align:center;}
+.articleLatestReview .Author a{color:#fff;}
+
+
 .articleList{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
 
 .articleAuthor{margin-top:5px;clear:both;}
