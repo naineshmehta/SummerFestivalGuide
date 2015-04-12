@@ -1,7 +1,7 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* Gravity Container Set styles */
 /* NoTitle */
-.DnnF_noTitle {  }
+.DnnF_noTitle { display:block; margin-bottom:5px;  }
 
 .DnnF_Title_h1 h1 .TitleH2 { display: block; } /* Title_h1 */
 .DnnF_Title_h2 h2 .TitleH2 { display: block; } /* Title_h2 */

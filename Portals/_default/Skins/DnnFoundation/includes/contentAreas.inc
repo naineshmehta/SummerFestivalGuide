@@ -1,9 +1,9 @@
 ﻿<div>
   <div class="row">
-    <div class="large-9 columns">
+    <div class="medium-9 columns">
       <div id="LeftPane" runat="server"></div>
     </div>
-    <div class="large-3 columns">
+    <div class="medium-3 columns">
       <div id="RightPane" runat="server"></div>
     </div>
   </div>
