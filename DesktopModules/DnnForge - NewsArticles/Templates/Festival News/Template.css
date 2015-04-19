@@ -1,13 +1,16 @@
 .article{clear:both;text-align:left;padding-bottom:10px;float:left;border-bottom:1px solid #3A2417;}
 
-.articleLatest{text-align:left;padding:5px;float:left; width:350px; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
+.articleLatest{text-align:left;padding:0px;float:left; width:350px; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
 .articleLatestImage{width:100%; text-align:center;margin-top:5px;}
-.articleLatestAuthor{margin-top:5px;clear:both;background-color:#3c271a;color:#fff;border-radius:5px;font-weight:bold;text-align:center;}
+.articleLatestAuthor{clear:both;background-color:#3c271a;color:#fff;font-weight:bold;text-align:center;}
+.articleLatestEntry {padding: 5px;}
+.articleLatestHeadline {padding: 5px;}
+articleLatestReadMore{}
 
-.articleLatestReview{text-align:left;padding:5px;float:left; width:100%; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
+.articleLatestReview{text-align:left;float:left; width:100%; margin-top:5px; margin-bottom:10px; border:1px solid #3c271a; border-radius:5px;}
 .articleLatestReview .Image{width:100%; text-align:center;margin-top:5px;}
-.articleLatestReview .Headline h2{font-size:1.5em;}
-.articleLatestReview .Author{margin-top:5px;clear:both;background-color:#3c271a;color:#fff;border-radius:5px;font-weight:bold;text-align:center;}
+.articleLatestReview .Headline{padding:5px;}
+.articleLatestReview .Author{clear:both;background-color:#3c271a;color:#fff;font-weight:bold;text-align:center;}
 .articleLatestReview .Author a{color:#fff;}
 
 
