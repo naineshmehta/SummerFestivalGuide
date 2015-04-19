@@ -4,4 +4,5 @@ App_Data/Search/*
 Portals/_default/Logs/*
 Portals/0/*
 Portals/0-System/*
+Portals/0-System/Cache/*
 Install/Temp/*

@@ -50,6 +50,8 @@
     .articleLatest{
         width:auto;
     }
+
+    .NewsArchive{height:200px; overflow:auto;}
 }
 
 /* min-width 641px and max-width 1024px */
@@ -163,6 +165,10 @@ td.SubHead{
     text-align:center;
 }
 
+/* News Archive */
+.NewsArchive{display:block}
+.NewsArchive li{list-style-type:none;}
+
 /* Login on Menu */
 #login .loginGroup, #login .registerGroup { 
     display: block;
@@ -188,6 +194,6 @@ ul.buttonGroup{
 }
 
 /* Facebook responsive */
-.fb-like-box, .fb-like-box span, .fb-like-box.fb_iframe_widget span iframe {
-    width: 100% !important;
-}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget iframe[style]  {width: 100% !important;}
