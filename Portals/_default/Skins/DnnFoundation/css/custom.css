@@ -31,6 +31,24 @@
     clear: both;
 }
 
+h1 {
+    font-size: 1.8rem; }
+
+h2 {
+    font-size: 1.6rem; }
+
+h3 {
+    font-size: 1.3rem; }
+
+h4 {
+    font-size: 1.1rem; }
+
+h5 {
+    font-size: 1.05rem; }
+
+h6 {
+    font-size: 1rem; }
+
 /*override for dnnLabels in the bootstrap */
 /* everything between 641px and 1920px */
 @media only screen and (min-width: 40em) and (max-width:120em) {
@@ -41,7 +59,7 @@
     }
 
     .dnnActions li  {
-        float:none;
+        /*float:none;*/
     }
 }
 
@@ -59,23 +77,6 @@
     .articleLatest{
         width: 49%;
     }
-    h1 {
-    font-size: 1.8rem; }
-
-    h2 {
-      font-size: 1.6rem; }
-
-    h3 {
-      font-size: 1.3rem; }
-
-    h4 {
-      font-size: 1.1rem; }
-
-    h5 {
-      font-size: 1.05rem; }
-
-    h6 {
-      font-size: 1rem; }
 }
 
 /* min-width 1024px and max-width 1440px */
@@ -197,3 +198,14 @@ ul.buttonGroup{
 .fb_iframe_widget,
 .fb_iframe_widget span,
 .fb_iframe_widget iframe[style]  {width: 100% !important;}
+
+.fb-comments, 
+.fb-comments iframe[style], 
+.fb-comments span {
+   width: 100% !important;
+}
+
+/* Event List */
+#eventStartDate{display:block;}
+#eventTitle{ display:block;}
+#eventDesc{display:block;}
