@@ -10,12 +10,12 @@
     Feel free to add what you need
 // -->
 <ul class="social-links">
-    <li><a href="#" target="_blank" title="Facebook"><i class="fi-social-facebook"></i></a></li><!-- Facebook -->
-    <li><a href="#" target="_blank" title="Google+"><i class="fi-social-google-plus"></i></a></li><!-- Google + -->
-    <li><a href="#" target="_blank" title="Pinterest"><i class="fi-social-pinterest"></i></a></li><!-- Pinterest -->
-    <li><a href="#" target="_blank" title="Twitter"><i class="fi-social-twitter"></i></a></li><!-- Twitter -->
-  
-    <!--<li><a href="#" target="_blank" title="Delicious"><i class="fi-social-delicious"></i></a></li>  Delicious -->
+    <li><a href="http://www.facebook.com/summerfestivalguide" target="_blank" title="Facebook"><i class="fi-social-facebook"></i></a></li><!-- Facebook -->
+    <li><a href="https://plus.google.com/b/113524402586185730024/113524402586185730024/posts" target="_blank" title="Google+"><i class="fi-social-google-plus"></i></a></li><!-- Google + -->
+    <li><a href="http://www.twitter.com/ukfestivalguide" target="_blank" title="Twitter"><i class="fi-social-twitter"></i></a></li><!-- Twitter -->
+    <li><a href="http://www.flickr.com/photos/summerfestivalguide" target="_blank" title="Flickr"><i class="fi-social-flickr"></i></a></li>
+
+  <!--<li><a href="#" target="_blank" title="Delicious"><i class="fi-social-delicious"></i></a></li>  Delicious -->
     <!--<li><a href="#" target="_blank" title="Digg"><i class="fi-social-digg"></i></a></li> Digg -->
     <!-- <li><a href="#" target="_blank" title="Dribbble"><i class="fi-social-dribbble"></i></a></li> Dribble -->  
     <!--<li><a href="#" target="_blank" title="Flickr"><i class="fi-social-flickr"></i></a></li> Flickr -->    

@@ -209,3 +209,9 @@ ul.buttonGroup{
 #eventStartDate{display:block;}
 #eventTitle{ display:block;}
 #eventDesc{display:block;}
+
+/* Footer */
+ul.footerList{margin-left:0px;}
+li.footerTitle {color:#fff; list-style-type:none;text-decoration:underline;font-weight:bold;}
+li.footerItem {list-style-type:none;
+}

@@ -155,7 +155,8 @@ body {
 /* ReSharper disable Html.PathError */
 .logo-holder        { line-height:100px;}
 /* ReSharper restore Html.PathError */
-.logofullwidth { background: url('../img/banner.jpg') 0px -300px; }
+/*.logofullwidth { background: url('../img/banner.jpg') 0px -300px; }*/
+.logofullwidth { background: url('../img/banner-cropped.jpg') 0px 0px; }
 .logo-holder img    { max-width: 100%; height:auto; }
 .seach-button       { font-size: 20px; line-height: 24px; padding:0; margin:0; }
 

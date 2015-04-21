@@ -6,6 +6,7 @@
 
     if (window.location.pathname == '/')
     {
+        $('div.DnnModule-645').addClass('show-for-medium-up');
         $('#dnn_ctr645_ModuleContent').find('#iframe').width('100%');
         $('.galleria-container').css('width', '100%').css('height', '100%');
     }
