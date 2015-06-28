@@ -5,6 +5,15 @@
     line-height: 1.428;
 }
 
+.dnnFormItem input[type="text"] {width:100%;}
+.LoginPanel input[type="text"] {width:200px;}
+
+#dnnModuleDigitalAssetsMainToolbar{height:40px;}
+#dnnModuleDigitalAssetsSelectionToolbar, 
+#dnnModuleDigitalAssetsListViewToolbar, 
+#dnnModuleDigitalAssetsListContainer, 
+.dnnModuleDigitalAssetsGrid > table > thead > tr {min-height:40px}
+
 /*Width of each row 1600px */
 .row {
 	max-width: 100rem;
@@ -112,6 +121,10 @@ div.Feedback_Field span.NormalRed{
     float:left;
 }
 
+span.min-length-text{margin-left:20px;display:inline-block;}
+
+div.meter {margin-left:20px;display:inline-block;}
+
 /* News Article Item */
 .articleTags a{
     border: 1px solid #8cc63f;
@@ -165,6 +178,8 @@ td.SubHead{
     width:20%;
     text-align:center;
 }
+
+.dnnTextPanel{width:100%;}
 
 /* News Archive */
 .NewsArchive{display:block}
