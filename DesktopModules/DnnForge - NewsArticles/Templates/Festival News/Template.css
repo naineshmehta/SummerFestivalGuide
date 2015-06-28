@@ -14,7 +14,7 @@ articleLatestReadMore{}
 .articleLatestReview .Author a{color:#fff;}
 
 
-.articleList{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;}
+.articleList{clear:both;text-align:left;padding-bottom:5px;float:left;border-bottom:1px solid #3A2417;width:100%;}
 
 .articleAuthor{margin-top:5px;clear:both;}
 .articleCalendar{float:left;margin-right:6px;width:42px;height:42px;}
