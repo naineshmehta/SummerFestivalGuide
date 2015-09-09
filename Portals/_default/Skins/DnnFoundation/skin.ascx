@@ -21,11 +21,20 @@
 <dnn:DnnCssInclude ID="DnnCssInclude1" runat="server" FilePath="css/normalize.css" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="css/foundation.css" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="js/vendor/modernizr.js" PathNameAlias="SkinPath"  />
-<script type="text/javascript" src="/Portals/_default/Skins/DNNFoundation/js/sfg.js"></script>
+<dnn:DnnJsInclude ID="DnnJsInclude5" runat="server" FilePath="js/sfg.js" PathNameAlias="SkinPath"  />
 
-<!-- Begin top functions bar -->
+<!--<script type="text/javascript" src="/Portals/_default/Skins/DNNFoundation/js/sfg.js"></script>-->
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://www.summerfestivalguide.co.uk/cookies.aspx","theme":"dark-bottom"};
+</script>
+
+<script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
 <div class="contain-to-grid topbar">
-    <div class="row" style="color:#fff; padding:3px 0 3px 0;">
+        <div class="row" style="color:#fff; padding:3px 0 3px 0;">
         <div class="hide-for-small medium-4 columns left text-left social-holder"><!--#include file = "includes/socialButtons.inc" --></div>
         <div class="small-12 medium-8 columns right text-right">
 
@@ -57,7 +66,9 @@
     <!-- Begin Logo area -->
     <div class="row logofullwidth">
         <div class="large-12 text-center large-text-left medium-text-left">
-            <div class="logo-holder"><dnn:LOGO runat="server" id="dnnLOGO" /></div>
+            <div class="logo-holder left">
+                <dnn:LOGO runat="server" id="dnnLOGO" />
+            </div>    
         </div>
     </div><!-- End Logo area -->
 
@@ -116,8 +127,6 @@
 </footer><!-- End footer -->
 
 <!--ForceProvider="DnnFormBottomProvider"-->
-<%--<dnn:DnnJsInclude ID="DnnJsInclude5" runat="server" FilePath="js/sfg.js" PathNameAlias="SkinPath"   />--%>
-
 <dnn:DnnJsInclude ID="DnnJsInclude2" runat="server" FilePath="js/foundation.min.js" PathNameAlias="SkinPath"   />
 <dnn:DnnJsInclude ID="DnnJsInclude3" runat="server" FilePath="js/vendor/fastclick.js" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude ID="DnnJsInclude4" runat="server" FilePath="js/masonry/masonry.js" PathNameAlias="SkinPath"  />
@@ -127,4 +136,3 @@
     $(document).foundation();
 </script>
 <!-- END FOUNDATION temaplate -->
-

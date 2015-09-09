@@ -79,7 +79,7 @@
                             lineWrapping: config.lineWrapping,
                             autoCloseTags: config.autoCloseTags,
                             autoCloseBrackets: config.autoCloseBrackets,
-                            highligctionMatches: config.highlightMatches,
+                            highlightSelectionMatches: config.highlightMatches,
                             continueComments: config.continueComments,
                             indentWithTabs: config.indentWithTabs,
                             theme: config.theme,
@@ -93,8 +93,16 @@
                                     if (config.enableCodeFolding) {
                                         window["foldFunc_" + editor.id](codeMirror_Editor, codeMirror_Editor.getCursor().line);
                                     }
+                                },
+                                "'>'": function (codeMirror_Editor) {
+                                    codeMirror_Editor.closeTag(codeMirror_Editor, '>');
+                                },
+                                "'/'": function (codeMirror_Editor) {
+                                    codeMirror_Editor.closeTag(codeMirror_Editor, '/');
                                 }
                             },
+                            foldGutter: true,
+                            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
                             onKeyEvent: function (codeMirror_Editor, evt) {
                                 if (config.enableCodeFormatting) {
                                     var range = getSelectedRange();
@@ -189,7 +197,7 @@
                                 CKEDITOR.document.appendStyleSheet(rootPath + 'css/codemirror.min.css');
                             }
 
-                            if (config.theme.length && config.theme != 'default' && !IsStyleSheetAlreadyLoaded(rootPath + 'css/codemirror.min.css')) {
+                            if (config.theme.length && config.theme != 'default' && !IsStyleSheetAlreadyLoaded(rootPath + 'theme/' + config.theme + '.css')) {
                                 CKEDITOR.document.appendStyleSheet(rootPath + 'theme/' + config.theme + '.css');
                             }
 
@@ -524,7 +532,7 @@
                     CKEDITOR.document.appendStyleSheet(rootPath + 'css/codemirror.min.css');
                 }
 
-                if (config.theme.length && config.theme != 'default' && !IsStyleSheetAlreadyLoaded(rootPath + 'css/codemirror.min.css')) {
+                if (config.theme.length && config.theme != 'default' && !IsStyleSheetAlreadyLoaded(rootPath + 'theme/' + config.theme + '.css')) {
                     CKEDITOR.document.appendStyleSheet(rootPath + 'theme/' + config.theme + '.css');
                 }
 
@@ -686,6 +694,12 @@
                         if (config.enableCodeFolding) {
                             window["foldFunc_" + editor.id](codeMirror_Editor, codeMirror_Editor.getCursor().line);
                         }
+                    },
+                    "'>'": function (codeMirror_Editor) {
+                        codeMirror_Editor.closeTag(codeMirror_Editor, '>');
+                    },
+                    "'/'": function (codeMirror_Editor) {
+                        codeMirror_Editor.closeTag(codeMirror_Editor, '/');
                     }
                 };
 
@@ -699,7 +713,7 @@
                     workTime: 35,
                     readOnly: editor.config.readOnly,
                     lineNumbers: config.lineNumbers,
-                    lineWrapping: config.lineWrapping,
+                    lineWrapping: true,
                     autoCloseTags: config.autoCloseTags,
                     autoCloseBrackets: config.autoCloseBrackets,
                     highlightSelectionMatches: config.highlightMatches,
@@ -711,6 +725,8 @@
                     styleActiveLine: config.styleActiveLine,
                     //extraKeys: {"Ctrl-Space": "autocomplete"},
                     extraKeys: extraKeys,
+                    foldGutter: true,
+                    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
                     onKeyEvent: function (codeMirror_Editor, evt) {
                         
                         if (config.enableCodeFormatting) {

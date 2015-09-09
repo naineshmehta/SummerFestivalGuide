@@ -457,6 +457,10 @@
       <name>Validation.js</name>
     </file>
     <file>
+      <path>Documentation/</path>
+      <name>old_ReleaseNotes.txt</name>
+    </file>
+    <file>
       <path>handlers/</path>
       <name>adminhelper.ashx</name>
     </file>
@@ -487,6 +491,10 @@
     <file>
       <path>images/</path>
       <name>af-fileicon.png</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>af-logo.png</name>
     </file>
     <file>
       <path>images/</path>
@@ -1251,6 +1259,10 @@
     <file>
       <path>scripts/</path>
       <name>resx.js</name>
+    </file>
+    <file>
+      <path>scripts/</path>
+      <name>splitmanager.js</name>
     </file>
     <file>
       <path>scripts/</path>

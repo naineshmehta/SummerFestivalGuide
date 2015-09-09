@@ -11,13 +11,8 @@ Disallow: /App_GlobalResources/
 Disallow: /bin/
 Disallow: /Components/
 Disallow: /Config/
-Disallow: /controls/
 Disallow: /Documentation/
-Disallow: /HttpModules/
-Disallow: /images/
 Disallow: /Install/
-Disallow: /js/
-Disallow: /Providers/
 
 User-agent: Twitterbot
 Allow: /Portals/

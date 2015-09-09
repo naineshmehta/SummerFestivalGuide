@@ -31,9 +31,9 @@
 	padding-top: 10px;
 }
 
-.logo-holder {
-	margin-left: 10px;
-}
+
+/* Header */
+.logo-holder {margin-left: 10px;}
 
 .clear-container
 {
@@ -79,6 +79,8 @@ h6 {
     }
 
     .NewsArchive{height:200px; overflow:auto;}
+
+    .logo-holder {width:100%;}
 }
 
 /* min-width 641px and max-width 1024px */
@@ -86,6 +88,8 @@ h6 {
     .articleLatest{
         width: 49%;
     }
+    .logo-holder {width:100%;}
+
 }
 
 /* min-width 1024px and max-width 1440px */

@@ -34,20 +34,19 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                         editor.focus();
                         var doc = editor.document,
                             range = new CKEDITOR.dom.range(editor.document),
-                            walker,
                             startNode,
                             endNode,
                             isTextNode = false;
 
                         range.setStartAt(doc.getBody(), CKEDITOR.POSITION_AFTER_START);
                         range.setEndAt(doc.getBody(), CKEDITOR.POSITION_BEFORE_END);
-                        walker = new CKEDITOR.dom.walker(range);
+                        var walker = new CKEDITOR.dom.walker(range);
                         // walker.type = CKEDITOR.NODE_COMMENT;
                         walker.evaluator = function (node) {
                             //
                             var match = /cke_bookmark_\d+(\w)/.exec(node.$.nodeValue);
                             if (match) {
-                                if(decodeURIComponent(node.$.nodeValue)
+                                if (unescape(node.$.nodeValue)
                                     .match(/<!--cke_bookmark_[0-9]+S-->.*<!--cke_bookmark_[0-9]+E-->/)){
                                     isTextNode = true;
                                     startNode = endNode = node;
@@ -61,29 +60,35 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                                     }
                                 }
                             }
+                            return false;
                         };
                         walker.lastForward();
-                        range.setStartAfter(startNode);
-                        range.setEndBefore(endNode);
-                        range.select();
-                        // Scroll into view for non-IE.
-                        // Scroll into view for non-IE.
-                        if (!CKEDITOR.env.ie || (CKEDITOR.env.ie && CKEDITOR.env.version === 9)) {
-                            editor.getSelection().getStartElement().scrollIntoView(true);
-                        } // Remove the comments node which are out of range.
-                        if(isTextNode){
-                            //remove all of our bookmarks from the text node
-                            //then remove all of the cke_protected bits that added because we had a comment
-                            //whatever code is supposed to clean these cke_protected up doesn't work
-                            //when there's two comments in a row like: <!--{cke_protected}{C}--><!--{cke_protected}{C}-->
-                            startNode.$.nodeValue = decodeURIComponent(startNode.$.nodeValue).
-                                replace(/<!--cke_bookmark_[0-9]+[SE]-->/g,'').
-                                replace(/<!--[\s]*\{cke_protected}[\s]*\{C}[\s]*-->/g,'');
-                        } else {
-                            //just remove the comment nodes
-                            startNode.remove();
-                            endNode.remove();
+                        try {
+                            range.setStartAfter(startNode);
+                            range.setEndBefore(endNode);
+                            range.select();
+
+                            // Scroll into view for non-IE.
+                            if (!CKEDITOR.env.ie || (CKEDITOR.env.ie && CKEDITOR.env.version === 9)) {
+                                editor.getSelection().getStartElement().scrollIntoView(true);
+                            } // Remove the comments node which are out of range.
+                            if (isTextNode) {
+                                //remove all of our bookmarks from the text node
+                                //then remove all of the cke_protected bits that added because we had a comment
+                                //whatever code is supposed to clean these cke_protected up doesn't work
+                                //when there's two comments in a row like: <!--{cke_protected}{C}--><!--{cke_protected}{C}-->
+                                startNode.$.nodeValue = unescape(startNode.$.nodeValue).
+                                    replace(/<!--cke_bookmark_[0-9]+[SE]-->/g, '').
+                                    replace(/<!--[\s]*\{cke_protected}[\s]*\{C}[\s]*-->/g, '');
+                            } else {
+                                //just remove the comment nodes
+                                startNode.remove();
+                                endNode.remove();
+                            }
+                        } catch (excec)  {
+                            
                         }
+                        
                     }
                 }, null, null, 10);
 
@@ -334,7 +339,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
          * If startOffset/endOffset anchor inside element tag, start the range before/after the element 
          */
         enlarge: function() {
-            var htmlTagRegexp = /<[^>]+>/g;
+            var htmlOpenTagRegexp = /<[a-zA-Z]+(>|.*?[^?]>)/g;
+            var htmlCloseTagRegexp = /<\/[^>]+>/g;
             var content = this.content,
                 start = this.startOffset,
                 end = this.endOffset,
@@ -343,16 +349,40 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
                 tagEndIndex;
 
             // Adjust offset position on parsing result. 
-            while (match = htmlTagRegexp.exec(content)) {
-                tagStartIndex = match.index;
-                tagEndIndex = tagStartIndex + match[0].length;
-                if (start > tagStartIndex && start < tagEndIndex)
-                    start = tagStartIndex;
-                if (end > tagStartIndex && end < tagEndIndex) {
-                    end = tagEndIndex;
-                    break;
-                }
-            }
+             while (match = htmlCloseTagRegexp.exec(content)) {
+
+                 tagStartIndex = match.index;
+
+                 if (start > tagStartIndex) {
+                     start = tagStartIndex;
+                 }
+
+                 if (end > tagStartIndex) {
+                     end = tagStartIndex;
+                     break;
+                 }
+
+                break;
+             }
+
+             while (match = htmlOpenTagRegexp.exec(content)) {
+
+                 tagStartIndex = match.index;
+
+                 tagEndIndex = tagStartIndex + match[0].length;
+
+                 if (start < tagEndIndex) {
+                     start = tagEndIndex;
+                 }
+
+                 if (end < tagEndIndex) {
+                     end = tagEndIndex;
+                     break;
+                 }
+
+                 break;
+             }
+            
 
             this.startOffset = start;
             this.endOffset = end;

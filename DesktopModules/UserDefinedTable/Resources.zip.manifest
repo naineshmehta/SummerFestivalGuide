@@ -62,10 +62,6 @@
     </file>
     <file>
       <path />
-      <name>New Text Document.txt</name>
-    </file>
-    <file>
-      <path />
       <name>releasenotes.htm</name>
     </file>
     <file>
@@ -151,6 +147,10 @@
     <file>
       <path>Controls/</path>
       <name>FieldSettings.ascx</name>
+    </file>
+    <file>
+      <path>packages/</path>
+      <name>datatypes.config</name>
     </file>
     <file>
       <path>xslstylesheets/</path>
