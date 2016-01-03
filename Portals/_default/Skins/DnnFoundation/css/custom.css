@@ -8,6 +8,13 @@
 .dnnFormItem input[type="text"] {width:100%;}
 .LoginPanel input[type="text"] {width:200px;}
 
+.dnnDropDownList .selected-item a, .dnnDropDownList .selected-item a:link, .dnnDropDownList .selected-item a:visited, .dnnDropDownList .selected-item a:hover, .dnnDropDownList .selected-item a:active{ height: 35px !important;}
+.dnnDropDownList .dt-container .dt-content {margin: 50px 0 0 0;}
+.dnnDropDownList .dt-container .dt-header { height: 50px !important;}
+ul.dnnAdminTabNav { height: 45px;}
+#dnnModuleDigitalAssetsGridViewNoItems, #dnnModuleDigitalAssetsListViewNoItems {height: 50px;}
+#dnnModuleDigitalAssetsSearchBox > input.searchInput {display: block;float: left;margin: 0px;height: 100%;min-width: 90%;}
+
 #dnnModuleDigitalAssetsMainToolbar{height:40px;}
 #dnnModuleDigitalAssetsSelectionToolbar, 
 #dnnModuleDigitalAssetsListViewToolbar, 
