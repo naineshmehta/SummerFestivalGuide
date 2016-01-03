@@ -92,6 +92,7 @@ function initxmodulebrowser()
 	calendar.css("width", calendar.width() * months.length);
 
 	var currentmonth = months.filter("[data-offset="+0+"]");
+	if(currentmonth.length == 0) currentmonth=months.first();
 	scrollToMonth(months.index(currentmonth));
 
 	$(".xmodulecalendar>img").click(function(){

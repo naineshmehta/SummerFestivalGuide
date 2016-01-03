@@ -616,10 +616,10 @@ namespace DotNetNuke.Modules.Admin.Users
             ctlUser.UserUpdateCompleted += UserUpdateCompleted;
             ctlUser.UserUpdateError += UserUpdateError;
 
-            ctlServices.SubscriptionUpdated += SubscriptionUpdated;
+            //ctlServices.SubscriptionUpdated += SubscriptionUpdated;
             ctlProfile.ProfileUpdateCompleted += ProfileUpdateCompleted;
-            ctlPassword.PasswordUpdated += PasswordUpdated;
-            ctlPassword.PasswordQuestionAnswerUpdated += PasswordQuestionAnswerUpdated;
+            //ctlPassword.PasswordUpdated += PasswordUpdated;
+            //ctlPassword.PasswordQuestionAnswerUpdated += PasswordQuestionAnswerUpdated;
             ctlMembership.MembershipAuthorized += MembershipAuthorized;
             ctlMembership.MembershipPasswordUpdateChanged += MembershipPasswordUpdateChanged;
             ctlMembership.MembershipUnAuthorized += MembershipUnAuthorized;

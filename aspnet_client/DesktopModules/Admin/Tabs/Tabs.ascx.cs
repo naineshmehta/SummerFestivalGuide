@@ -1418,7 +1418,7 @@ namespace DotNetNuke.Modules.Admin.Pages
                 objTab.TabPath = Globals.GenerateTabPath(objTab.ParentId, objTab.TabName);
             }
 
-            DataProvider.Instance().UpdateTabOrder(objTab.TabID, objTab.TabOrder, objTab.Level, objTab.ParentId, objTab.TabPath, UserController.GetCurrentUserInfo().UserID);
+            //DataProvider.Instance().UpdateTabOrder(objTab.TabID, objTab.TabOrder, objTab.Level, objTab.ParentId, objTab.TabPath, UserController.GetCurrentUserInfo().UserID);
             DataProvider.Instance().UpdateTabVersion(TabId, Guid.NewGuid());
 
             var objEventLog = new EventLogController();

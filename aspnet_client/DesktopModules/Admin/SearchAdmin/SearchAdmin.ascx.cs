@@ -104,11 +104,11 @@ namespace DotNetNuke.Modules.Admin.Search
                     var se = new SearchEngine();
 					if (Globals.IsHostTab(ModuleContext.PortalSettings.ActiveTab.TabID))
                     {
-                        se.IndexContent();
+                        //se.IndexContent();
                     }
                     else
                     {
-                        se.IndexContent(ModuleContext.PortalId);
+                        //se.IndexContent(ModuleContext.PortalId);
                     }
                     UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("Indexed", LocalResourceFile), ModuleMessage.ModuleMessageType.GreenSuccess);
                 }

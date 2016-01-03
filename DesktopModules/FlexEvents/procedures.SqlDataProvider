@@ -1055,6 +1055,10 @@ CREATE PROCEDURE {databaseOwner}{objectQualifier}FlexEventDelete
 	@ItemId Int
 AS
 
+DELETE FROM {databaseOwner}{objectQualifier}FlexBooking
+WHERE 
+	PaymentStatus = 1
+
 DELETE FROM {databaseOwner}{objectQualifier}FlexEvent
 WHERE
 	ItemId = @ItemId
