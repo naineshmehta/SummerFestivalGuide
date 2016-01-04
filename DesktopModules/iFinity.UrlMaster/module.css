@@ -141,7 +141,7 @@
 	.migrateDialog{ display: none;padding: 20px;background-color: white;}
 	.migrateStatus { width: 90%;height: 140px;}
 	/* ui-dialog from jquery theme overridden to allow for divergence with DNN6 theme */
-	.umdialog {background-color:white;color:Black;}
+	.umdialog {background-color:white;color:Black;z-index: 100;}
 	.umdialog .ui-dialog-titlebar {background-color:Yellow;}
 	.umdialog .ui-dialog-titlebar {POSITION: relative; PADDING-BOTTOM: 0.4em; PADDING-LEFT: 1em; PADDING-RIGHT: 1em; PADDING-TOP: 0.4em}
 	.umdialog .ui-dialog-title {MARGIN: 0.1em 16px 0.1em 0px; FLOAT: left}
