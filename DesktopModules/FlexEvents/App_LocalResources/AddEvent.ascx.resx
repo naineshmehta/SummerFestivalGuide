@@ -319,4 +319,11 @@
   <data name="CategoryRequired.Text">
     <value>Event category is required</value>
   </data>
+  <data name="SelectLocation.Text">
+    <value>Please select a location</value>
+  </data>
+  <data name="LocationRequired.Text">
+    <value>The location is required</value>
+  </data>
+
 </root>

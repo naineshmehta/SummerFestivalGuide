@@ -37,6 +37,8 @@
                 <td>
                     <asp:DropDownList ID="cboLocations" runat="server" DataTextField="Name" DataValueField="ItemId" Width="300px" CssClass="locationlist">
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                        ControlToValidate="cboLocations" Display="None" resourcekey="LocationRequired"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>

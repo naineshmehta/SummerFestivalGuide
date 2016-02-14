@@ -25,5 +25,11 @@
 	<data name="EventModules.Help">
 		<value>Retrive data from chosen event modules, leave it blank to retrieve data from all modules in this portal</value>
 	</data>
+	<data name="DefaultCategory.Text">
+		<value>Default Category</value>
+	</data>
+	<data name="DefaultCategory.Help">
+		<value>Enter the full name of the default category you wish to choose. Leave is blank to choose all categories. Please note the deafult category only applies when the category filter is visible</value>
+	</data>
 
 </root>

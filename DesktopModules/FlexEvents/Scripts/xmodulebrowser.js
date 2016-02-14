@@ -92,6 +92,7 @@ function initxmodulebrowser()
 	calendar.css("width", calendar.width() * months.length);
 
 	var currentmonth = months.filter("[data-offset="+0+"]");
+	if(currentmonth.length == 0) currentmonth=months.first();
 	scrollToMonth(months.index(currentmonth));
 
 	$(".xmodulecalendar>img").click(function(){
@@ -114,7 +115,7 @@ function initxmodulebrowser()
 		categories.prop("checked", checked);
 	});
 
-	$("#xbrowserfilter .categoryfilter .module input, #xbrowserfilter .locationfilter input").click(function(){
+	$("#xbrowserfilter .categoryfilter input, #xbrowserfilter .locationfilter input").click(function(){
 		updateResult();
 	});
 
@@ -215,7 +216,7 @@ function getFilters()
 {
 	var o = new Object();
 	var categories = "", locations="";
-	$(".categoryfilter .module ul input:checked").each(function(){if(categories!="")categories+=",";categories+=this.value});
+	$(".categoryfilter ul input:checked").each(function(){if(categories!="")categories+=",";categories+=this.value});
 	$(".locationfilter ul input:checked").each(function(){if(locations!="")locations+=",";locations+=this.value});
 	o.categories = categories;
 	o.locations = locations;

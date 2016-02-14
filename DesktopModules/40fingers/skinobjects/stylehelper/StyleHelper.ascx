@@ -1,2 +1,0 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="FortyFingers.Dnn.SkinObjects.StyleHelper" CodeFile="StyleHelper.ascx.vb" %>
-<asp:Literal ID="ltShowInfo" runat="server"></asp:Literal>

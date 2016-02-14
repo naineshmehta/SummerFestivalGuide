@@ -344,6 +344,13 @@
   <data name="FreeAdmission.Text">
     <value>Free</value>
   </data>
+  <data name="Upcoming.Text">
+    <value>Upcoming Events</value>
+  </data>
 
+
+  <data name="EventCannotBeDeleted.Text">
+    <value>This event cannot be deleted becausse it has already been booked</value>
+  </data>
 
 </root>

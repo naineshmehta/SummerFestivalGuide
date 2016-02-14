@@ -6,7 +6,20 @@
 <meta property="og:title" content="[TITLE]" />
 <meta property="og:description" content="[DETAILS:200]">
 <meta property="og:type" content="article" />
-<meta property="og:url" content="[ARTICLELINK]" />
+<input type="hidden" id="articleID" value=[ARTICLEID]>
+<input type="hidden" id="articleUrl" value=[ARTICLELINK]>
+<script type='text/javascript'>
+var articleid = $('#articleID').val();
+var url = $('#articleUrl').val();
+if (articleid <= 2847)
+{
+	$('head').append('<meta property="og:url" content="' + url + '.aspx" />');
+}
+else
+{
+	$('head').append('<meta property="og:url" content=' + url + ' />');
+}
+</script>
 [HASIMAGE]
 <meta property="og:image" content="http://www.summerfestivalguide.co.uk[IMAGELINK]" />[/HASIMAGE]
 <meta property="fb:app_id" content="476669525683318"/>

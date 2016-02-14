@@ -10,25 +10,19 @@
     </div>
 
     <asp:Panel ID="pnlCategoryFilter" runat="server" CssClass="categoryfilter">
+        <h5>
+            <input type="checkbox" class="agroup" value='<%# DataBinder.Eval(Container,"DataItem.Key").ToString()%>' id="chkCategories" checked="checked" />
+            <label for="chkCategories"><asp:Label ID="Label3" runat="server" resourcekey="Categories"></asp:Label></label>
+        </h5>
         <ul>
-            <asp:Repeater ID="rptModules" runat="server" 
-                onitemdatabound="rptModules_ItemDataBound">
+            <asp:Repeater ID="rptCategories" runat="server">
                 <ItemTemplate>
-                    <li class="module">
-                        <h5>
-                            <input type="checkbox" class="agroup" value='<%# DataBinder.Eval(Container,"DataItem.Key").ToString()%>' id="chkModule<%# DataBinder.Eval(Container,"DataItem.Key").ToString()%>" checked="checked" />
-                            <label for="chkModule<%# DataBinder.Eval(Container,"DataItem.Key").ToString()%>"><%# DataBinder.Eval(Container,"DataItem.Value")%></label>
-                            <asp:Label ID="lblModuleId" runat="server" Text='<%# DataBinder.Eval(Container,"DataItem.Key")%>' Visible="false"></asp:Label>
-                        </h5>
-                        <ul>
-                            <asp:Repeater ID="rptCategories" runat="server">
-                                <ItemTemplate>
-                                    <li>
-                                        <input type="checkbox" value='<%# DataBinder.Eval(Container,"DataItem.ItemId").ToString()%>' id="chkCategory<%# DataBinder.Eval(Container,"DataItem.ItemId").ToString()%>" checked="checked" /><label for="chkCategory<%# DataBinder.Eval(Container,"DataItem.ItemId").ToString()%>"><span style='background-color:#<%# DataBinder.Eval(Container,"DataItem.BackgroundColor")%>;'></span><%# DataBinder.Eval(Container,"DataItem.Category")%></label>
-                                    </li>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </ul>
+                    <li>
+                        <!--The first 1 lables are for server side use-->
+                        <asp:Label ID="lblCategory" runat="server" Text='<%# DataBinder.Eval(Container,"DataItem.Key")%>' Visible="false" />
+                        <asp:CheckBox ID="chkCategory" runat="server" AutoPostBack="false" Text='<%# DataBinder.Eval(Container,"DataItem.Value.Item2")%>' />
+                        <asp:Label ID="lblLabel" AssociatedControlID="chkCategory" runat="server" Text='<%# "<span style=\"background-color:#" + DataBinder.Eval(Container,"DataItem.Value.Item3").ToString() + ";\"></span>" + DataBinder.Eval(Container,"DataItem.Key")%>'>
+                        </asp:Label>
                     </li>
                 </ItemTemplate>
             </asp:Repeater>

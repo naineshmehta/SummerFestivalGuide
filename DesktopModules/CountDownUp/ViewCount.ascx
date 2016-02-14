@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ViewCount.ascx.cs" Inherits="DesktopModules_CountDownUp_ViewCount" %>
-<table id="table1" cellspacing="0" cellpadding="0" width="172px"  style="height:46px" border="0">
+<table id="table1" cellspacing="0" cellpadding="0" width="100%"  style="height:46px" border="0">
 	<tr valign="top">
 		<td style="vertical-align:middle"><asp:label id="lbldays" runat="server">Days</asp:label></td>
 		<td></td>

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statuses type="array">
+<status>
+  <created_at>Sat Jun 09 14:37:52 +0000 2012</created_at>
+  <id>211467150483931138</id>
+  <text>Farm Festival daily lineups and DJ Comp announced #farmfestival http://t.co/zQZlHtpw</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+<status>
+  <created_at>Sat Jun 09 09:13:52 +0000 2012</created_at>
+  <id>211385615974010880</id>
+  <text>Check out Anna's review of Download Festival which The Prodigy headlined last night! #DLFest2012 #review http://t.co/CTeSLtuM</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>1</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+<status>
+  <created_at>Fri Jun 08 11:14:49 +0000 2012</created_at>
+  <id>211053666453569536</id>
+  <text>RT @downloadfest: EVERYONE: The Arena opening has been delayed by 1 to 2 hours due to site conditions. Apologies - bear with us people....</text>
+  <source>&lt;a href=&quot;http://www.hootsuite.com&quot; rel=&quot;nofollow&quot;&gt;HootSuite&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1035</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <contributors/>
+</status>
+<status>
+  <created_at>Fri Jun 08 08:15:58 +0000 2012</created_at>
+  <id>211008653862510592</id>
+  <text>Another massive weekend of festivals for us, find us at Download Festival, RockNess &amp;amp; Summer Break UK #summerfestivalguide</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1035</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <contributors/>
+</status>
+<status>
+  <created_at>Fri Jun 08 08:09:49 +0000 2012</created_at>
+  <id>211007109293281281</id>
+  <text>RT @downloadfest: The Download Arena opens in T minus 4 hours. Which means it's going to be getting very loud very soon #DL2012</text>
+  <source>&lt;a href=&quot;http://www.hootsuite.com&quot; rel=&quot;nofollow&quot;&gt;HootSuite&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1411</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <contributors/>
+</status>
+<status>
+  <created_at>Fri Jun 08 08:07:53 +0000 2012</created_at>
+  <id>211006623123124225</id>
+  <text>Tulisa joins this years V Festival lineup #vfestival #tulisa http://t.co/PA1ZJb17</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+<status>
+  <created_at>Thu Jun 07 10:30:35 +0000 2012</created_at>
+  <id>210680145365835776</id>
+  <text>Example added to the Swedish House Mafia @ Milton Keynes Bowl #SHM2012 http://t.co/IUHoU6CP</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+<status>
+  <created_at>Thu Jun 07 09:43:45 +0000 2012</created_at>
+  <id>210668358629208064</id>
+  <text>The Coronas, Dot Rotten and more added to T in the Park 2012 lineup #tinthepark2012 http://t.co/EmSLgWWL</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1034</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1411</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+<status>
+  <created_at>Wed Jun 06 17:47:08 +0000 2012</created_at>
+  <id>210427616669335552</id>
+  <text>Machine Head confirmed for this years Bloodstock Festival #bloodstock http://t.co/6dhu9vwq</text>
+  <source>&lt;a href=&quot;http://www.facebook.com/twitter&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt;</source>
+  <truncated>false</truncated>
+  <favorited>false</favorited>
+  <in_reply_to_status_id></in_reply_to_status_id>
+  <in_reply_to_user_id></in_reply_to_user_id>
+  <in_reply_to_screen_name></in_reply_to_screen_name>
+  <retweet_count>0</retweet_count>
+  <retweeted>false</retweeted>
+  <user>
+    <id>52172866</id>
+    <name>Summr Festival Guide</name>
+    <screen_name>UKFestivalGuide</screen_name>
+    <location>London</location>
+    <description>UK &amp; European Summer Festival news, lineups, tickets, details, artists and more!</description>
+    <profile_image_url>http://a0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/973645515/12153-summer_normal.gif</profile_image_url_https>
+    <url>http://www.summerfestivalguide.co.uk</url>
+    <protected>false</protected>
+    <followers_count>1035</followers_count>
+    <profile_background_color>B2DFDA</profile_background_color>
+    <profile_text_color>333333</profile_text_color>
+    <profile_link_color>93A644</profile_link_color>
+    <profile_sidebar_fill_color>ffffff</profile_sidebar_fill_color>
+    <profile_sidebar_border_color>eeeeee</profile_sidebar_border_color>
+    <friends_count>111</friends_count>
+    <created_at>Mon Jun 29 20:11:20 +0000 2009</created_at>
+    <favourites_count>0</favourites_count>
+    <utc_offset>0</utc_offset>
+    <time_zone>London</time_zone>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/111393458/twitter-back2.jpg</profile_background_image_url_https>
+    <profile_background_tile>false</profile_background_tile>
+    <profile_use_background_image>true</profile_use_background_image>
+    <notifications></notifications>
+    <geo_enabled>false</geo_enabled>
+    <verified>false</verified>
+    <following></following>
+    <statuses_count>1412</statuses_count>
+    <lang>en</lang>
+    <contributors_enabled>false</contributors_enabled>
+    <follow_request_sent></follow_request_sent>
+    <listed_count>22</listed_count>
+    <show_all_inline_media>false</show_all_inline_media>
+    <default_profile>false</default_profile>
+    <default_profile_image>false</default_profile_image>
+    <is_translator>false</is_translator>
+  </user>
+  <geo/>
+  <coordinates/>
+  <place/>
+  <possibly_sensitive>false</possibly_sensitive>
+  <contributors/>
+</status>
+</statuses>

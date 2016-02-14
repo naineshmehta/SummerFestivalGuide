@@ -4,9 +4,6 @@
   <data name="Latest.Text">
     <value>Latestly Added Events</value>
   </data>
-  <data name="Upcoming.Text">
-    <value>Upcoming Events</value>
-  </data>
   <data name="UpcomingOfCurrentCategory.Text">
     <value>Upcoming Events of Current Category</value>
   </data>

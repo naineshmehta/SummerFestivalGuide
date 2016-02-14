@@ -221,7 +221,7 @@
 	.tabSingleSelect input, .tabSingleSelect select {padding:1px; margin: 0px 1px 0px 1px;}
 	/* portal urls control, test urls tab */
 	.exampleTestPages a{margin-right:9px;}
-	.exampleTestPages{width:220px;height:210px;float:left;text-align:center;margin-top:20px; clear:both;}
+	.exampleTestPages{width:220px;float:left;text-align:center;margin-top:20px; clear:both;}
 	.exampleTestPages select{height:170px;width:90%;position:relative;right:10px;}
 	.exampleTestPages input {padding:0px; margin: 0px 0px 0px 0px;}
 	.exampleTestPages select {padding:0px; margin: 0px 0px 0px 0px;}

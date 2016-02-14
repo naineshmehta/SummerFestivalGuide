@@ -90,6 +90,11 @@ a.roundbtn:hover
 	background-color:#f8f8f8;
 }
 
+div.topreturn
+{
+	margin:0.5em 0em;
+}
+
 a.flexbtn:link,a.flexbtn:active,a.flexbtn:visited, .flexbtn
 {
 	text-shadow: 0px 1px 1px #fff;
@@ -2176,7 +2181,7 @@ div#xbrowserfilter ul, div#xbrowserfilter li
 	padding:0em;
 }
 
-div#xbrowserfilter .module ul span
+div#xbrowserfilter ul span
 {
 	display:inline-block;
 	width:1em;

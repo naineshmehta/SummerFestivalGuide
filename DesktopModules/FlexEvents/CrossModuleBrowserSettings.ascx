@@ -35,15 +35,21 @@
             </ul>
         </td>
     </tr>
-            <tr>
-                <td><dnn:label id="Label5" runat="server" resourcekey="ListViewPageSize" suffix=":"></dnn:label></td>
-                <td>
-                    <asp:TextBox ID="txtListViewPageSize" runat="server" Width="100px" type="number"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="rev2" runat="server" 
-                        ControlToValidate="txtListViewPageSize" resourcekey="invalid" ForeColor="Red" 
-                        ValidationExpression="^-*[0-9,\.]+$"></asp:RegularExpressionValidator>
-                </td>
-            </tr>
+    <tr>
+        <td><dnn:label id="Label5" runat="server" resourcekey="ListViewPageSize" suffix=":"></dnn:label></td>
+        <td>
+            <asp:TextBox ID="txtListViewPageSize" runat="server" Width="150px" type="number"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="rev2" runat="server" 
+                ControlToValidate="txtListViewPageSize" resourcekey="invalid" ForeColor="Red" 
+                ValidationExpression="^-*[0-9,\.]+$"></asp:RegularExpressionValidator>
+        </td>
+    </tr>
+    <tr>
+        <td><dnn:label id="Label6" runat="server" resourcekey="DefaultCategory" suffix=":"></dnn:label></td>
+        <td>
+            <asp:TextBox ID="txtDefaultCategory" runat="server" Width="150px"></asp:TextBox>
+        </td>
+    </tr>
 </table>
 
 <script type="text/javascript">

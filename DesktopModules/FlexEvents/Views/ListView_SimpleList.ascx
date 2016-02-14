@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListView_SimpleList.ascx.cs" Inherits="BizModules.FlexEvents.Views.ListView_Grid" %>
 
-<h5 class="title">Upcoming Events</h5>
+<h5 class="title"><asp:Label ID="Label1" runat="server" resourcekey="Upcoming"></asp:Label></h5>
 
 <div class="simplelistview">
     <%=FirstPage %>

@@ -14,7 +14,7 @@
 		<value>We found [X] events by this criteria</value>
 	</data>
 	<data name="WeFoundXEventsInTotal.Text">
-		<value>We found [X] events in all categories</value>
+		<value>We found [X] events in total</value>
 	</data>
 
 </root>

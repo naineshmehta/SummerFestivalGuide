@@ -227,7 +227,7 @@ function loadScript() {
 
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
-	script.src = 'http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&' +
+	script.src = location.protocol + '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&' +
 		  'callback=initialize';
 	document.body.appendChild(script);
 	scriptLoaded = true;
