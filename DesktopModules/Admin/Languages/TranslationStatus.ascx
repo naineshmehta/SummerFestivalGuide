@@ -1,5 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="false" CodeFile="TranslationStatus.ascx.cs" Inherits="DotNetNuke.Modules.Admin.Languages.TranslationStatus" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Languages.TranslationStatus" Codebehind="TranslationStatus.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
 <%@ Register TagPrefix="dnn" TagName="ModuleLocalization" Src="~/Admin/Modules/ModuleLocalization.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="TabLocalization" Src="~/DesktopModules/Admin/Tabs/TabLocalization.ascx" %>

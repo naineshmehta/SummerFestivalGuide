@@ -17,16 +17,16 @@
       <name>module.css</name>
     </file>
     <file>
-      <path />
-      <name>packages.config</name>
-    </file>
-    <file>
       <path>Resources/</path>
       <name>defaultDevices.xml</name>
     </file>
     <file>
       <path>Resources/</path>
       <name>highlightDevices.xml</name>
+    </file>
+    <file>
+      <path>Views/</path>
+      <name>ProfileManagerView.ascx</name>
     </file>
   </files>
 </dotnetnuke>

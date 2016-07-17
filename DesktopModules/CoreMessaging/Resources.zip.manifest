@@ -100,9 +100,5 @@
       <path />
       <name>subscriptions.css</name>
     </file>
-    <file>
-      <path />
-      <name>packages.config</name>
-    </file>
   </files>
 </dotnetnuke>

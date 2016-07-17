@@ -1,8 +1,10 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.SQL.SQL" CodeFile="SQL.ascx.cs" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Sql.Sql" Codebehind="SQL.ascx.cs" %>
 <%@ Import Namespace="DotNetNuke.Entities.Icons" %>
+<%@ Import Namespace="DotNetNuke.Services.Localization" %>
 
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 
 <%-- Custom CSS Registration --%>
@@ -201,7 +203,7 @@
             lineWrapping: true,
             indentWithTabs: true,
             theme: 'dnn-sql light',
-            mode: 'text/x-sql'            
+            mode: 'text/x-sql'
         });
 
         editor.on("blur", function (cm) {

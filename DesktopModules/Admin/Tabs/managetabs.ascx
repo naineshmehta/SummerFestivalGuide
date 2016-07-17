@@ -1,11 +1,12 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Tabs.ManageTabs" CodeFile="ManageTabs.ascx.cs" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Tabs.ManageTabs" Codebehind="ManageTabs.ascx.cs" %>
+<%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/DnnUrlControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Security.Permissions.Controls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="Audit" Src="~/controls/ModuleAuditControl.ascx" %>
 <%@ Register tagPrefix="dnnext" Namespace="DotNetNuke.ExtensionPoints" Assembly="DotNetNuke"%>
-<%@ Register TagPrefix="dnn" Src="~/DesktopModules/Admin/Languages/CLControl.ascx" TagName="CLControl" %>
 
 <div class="dnnForm dnnPageSettings dnnClear" id="tabSettingsForm">
 	<ul class="dnnAdminTabNav dnnClear" id="TabStrip">
@@ -50,6 +51,7 @@
 					<dnn:Label ID="plTags" runat="server" ControlName="termsSelector" />
 					<dnn:TermsSelector ID="termsSelector" runat="server" IncludeTags="False" />
 				</div>    
+               <dnnext:UserControlExtensionControl  runat="server" ID="PageDetailsExtensionControl" Module="ManageTabs" Group="PageSettingsPageDetails"/>
 				<div class="dnnFormItem">
 					<dnn:Label ID="plParentTab" runat="server" ResourceKey="ParentTab" ControlName="cboParentTab" />
                     <dnn:DnnPageDropDownList ID="cboParentTab" runat="server" IncludeAllTabTypes="True" IncludeDisabledTabs="True" IncludeActiveTab="true"/>
@@ -76,7 +78,7 @@
 				</div>    
 				<div  id="templateRow2" class="dnnFormItem" runat="server" visible="false">
 					<dnn:label id="plTemplate" runat="server" controlname="cboTemplate" />
-                    <dnn:DnnComboBox id="cboTemplate" runat="server" ViewStateMode="Disabled" />
+                    <dnn:DnnComboBox id="cboTemplate" runat="server" />
 				</div>    
 				<div class="dnnFormItem">
 					<dnn:Label ID="plMenu" runat="server" ResourceKey="Menu" Suffix="?" HelpKey="MenuHelp" ControlName="chkMenu" />
@@ -161,7 +163,9 @@
 					<asp:Label ID="defaultCultureMessageLabel" runat="server" CssClass="dnnFormError" Text="**" />
 					<asp:Label ID="defaultCultureMessage" runat="server" resourcekey="DefaultCulture" />
 				</div>
-                <dnn:CLControl ID="CLControl1" runat="server" />
+				<div id="localizationControlRow" runat="server">
+					
+				</div>
                 <ul class="dnnActions dnnClear">
                     <li><asp:LinkButton ID="cmdUpdateLocalization" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdateLocalization" OnClick="cmdUpdateLocalization_Click"></asp:LinkButton></li>
                     <li><asp:LinkButton runat="server" ID="MakeTranslatable" CssClass="dnnSecondaryAction" resourcekey="MakeTranslatable" OnClick="MakeTranslatable_Click"></asp:LinkButton></li>
@@ -200,11 +204,11 @@
 				<div id="tabSkinSettings">
 					<div class="dnnFormItem">
 						<dnn:Label ID="plSkin" ControlName="pageSkinCombo" runat="server" />
-                        <dnn:DnnSkinComboBox ID="pageSkinCombo" runat="Server" ViewStateMode="Disabled" />
+                        <dnn:DnnSkinComboBox ID="pageSkinCombo" runat="Server" />
 					</div>
 					<div class="dnnFormItem">
 						<dnn:Label ID="plContainer" ControlName="pageContainerCombo" runat="server" />
-                        <dnn:DnnSkinComboBox ID="pageContainerCombo" runat="Server" ViewStateMode="Disabled"  />
+                        <dnn:DnnSkinComboBox ID="pageContainerCombo" runat="Server" />
                     </div>
 					<div class="dnnFormItem">
 						<dnn:Label ID="plCustomStylesheet" ControlName="txtCustomStylesheet" runat="server" />
@@ -232,7 +236,8 @@
 				<div class="dnnFormItem">
 					<dnn:Label ID="plPageHeadText" runat="server" ResourceKey="PageHeadText" Suffix=":" HelpKey="PageHeadText.Help" ControlName="txtPageHeadText" />
 					<asp:TextBox ID="txtPageHeadText" runat="server" TextMode="MultiLine" Rows="4" Columns="50" />
-				</div>       
+				</div>   
+                
 			</fieldset>
 			<h2 id="dnnPanel-TabsCacheSettings"  class="dnnFormSectionHead"><a href="" class=""><%=LocalizeString("CacheSettings")%></a></h2>
 			<fieldset>
@@ -355,7 +360,7 @@
             skinSelector: '<%= pageSkinCombo.ClientID %>',
             containerSelector: '<%= pageContainerCombo.ClientID %>',
             baseUrl: '<%= DotNetNuke.Common.Globals.NavigateURL(this.TabId) %>',
-            noSelectionMessage: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("PreviewNoSelectionMessage.Text")) %>',
+            noSelectionMessage: '<%= LocalizeSafeJsString("PreviewNoSelectionMessage.Text") %>',
             alertCloseText: '<%= Localization.GetSafeJSString("Close.Text", Localization.SharedResourceFile)%>',
             alertOkText: '<%= Localization.GetSafeJSString("Ok.Text", Localization.SharedResourceFile)%>',
             useComboBox: true

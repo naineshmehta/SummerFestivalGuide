@@ -1,10 +1,13 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.UserAndLogin" CodeFile="UserAndLogin.ascx.cs" ViewStateMode="Disabled" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.UserAndLogin" ViewStateMode="Disabled" Codebehind="UserAndLogin.ascx.cs" %>
 <div class="userProperties">
     <ul>
         <%  if (!IsAuthenticated)
             {
+                if (CanRegister)
+                {
         %> 
                 <li class="userRegister"><asp:HyperLink ID="registerLink" runat="server"><% =LocalizeString("Register") %></asp:HyperLink>
+        <%      } %>
                 <li class="userLogin"><asp:HyperLink ID="loginLink" runat="server"><% =LocalizeString("Login") %></asp:HyperLink>
         <%  }
             else

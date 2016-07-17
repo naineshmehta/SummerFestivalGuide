@@ -1,4 +1,4 @@
-<%@ Control Language="C#" Inherits="DotNetNuke.Modules.Admin.Authentication.Login" AutoEventWireup="false" CodeFile="Login.ascx.cs" %>
+<%@ Control Language="C#" Inherits="DotNetNuke.Modules.Admin.Authentication.DNN.Login" AutoEventWireup="false" Codebehind="Login.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <div class="dnnForm dnnLoginService dnnClear">
     <div class="dnnFormItem">
@@ -22,7 +22,7 @@
     <div class="dnnFormItem">
         <asp:label id="lblLogin" runat="server" AssociatedControlID="cmdLogin" CssClass="dnnFormLabel" ViewStateMode="Disabled" />
         <asp:LinkButton id="cmdLogin" resourcekey="cmdLogin" cssclass="dnnPrimaryAction" text="Login" runat="server" />
-		<asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" CausesValidation="false" />
+		<asp:HyperLink id="cancelLink" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" CausesValidation="false" />
         
     </div>
 	<div class="dnnFormItem">
@@ -43,7 +43,7 @@
 	/*globals jQuery, window, Sys */
 	(function ($, Sys) {
 		function setUpLogin() {
-			var actionLinks = $("a[id$=DNN_cmdLogin]");
+			var actionLinks = $("a#dnn_ctr<%#ModuleId%>_Login_Login_DNN_cmdLogin");
 			actionLinks.click(function () {
 				if ($(this).hasClass("dnnDisabledAction")) {
 					return false;
@@ -54,6 +54,21 @@
 		}
 		
 		$(document).ready(function () {
+
+			$('.dnnLoginService').on('keydown', function(e) {
+				if (e.keyCode === 13) {
+					var $loginButton = $('#dnn_ctr<%#ModuleId%>_Login_Login_DNN_cmdLogin');
+					if ($loginButton.hasClass("dnnDisabledAction")) {
+						return false;
+					}
+
+					$loginButton.addClass("dnnDisabledAction");
+					eval($loginButton.attr('href'));
+					e.preventDefault();
+					return false;
+				}
+			});
+
 			setUpLogin();
 			Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
 				setUpLogin();

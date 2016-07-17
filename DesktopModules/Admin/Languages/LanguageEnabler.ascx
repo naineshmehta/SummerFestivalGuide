@@ -1,5 +1,7 @@
-<%@ Control Language="C#" Inherits="DotNetNuke.Modules.Admin.Languages.LanguageEnabler" AutoEventWireup="false" Explicit="True" CodeFile="LanguageEnabler.ascx.cs" %>
+<%@ Control Language="C#" Inherits="Dnn.Modules.Languages.LanguageEnabler" AutoEventWireup="false" Explicit="True" Codebehind="LanguageEnabler.ascx.cs" %>
+<%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Src="~/DesktopModules/Admin/Languages/CLControl.ascx" TagName="CLControl" %>
 
@@ -285,11 +287,11 @@
                     <asp:CheckBox ID="chkUrl" runat="server" />
                 </div>
                 <div class="dnnFormItem">
-                    <dnn:Label ID="detectBrowserLable" runat="server" />
+                    <dnn:Label ID="detectBrowserLable" ControlName="chkBrowser" runat="server" />
                     <asp:CheckBox ID="chkBrowser" runat="server" />
                 </div>
                 <div class="dnnFormItem">
-                    <dnn:Label ID="allowUserCulture" runat="server" />
+                    <dnn:Label ID="allowUserCulture" ControlName="chkUserCulture" runat="server" />
                     <asp:CheckBox ID="chkUserCulture" runat="server" />
                 </div>
                 <ul class="dnnActions dnnClear">
@@ -305,10 +307,10 @@
 <script type="text/javascript">
     var serviceFramework;
     var baseServicepath;
-    var closeText = '<%= LocalizeString("Close")%>';
-    var titleText = '<%= LocalizeString("NonLocalizedPagesTitle")%> ';
-    var view = '<%= LocalizeString("ViewPage")%> ';
-    var edit = '<%= LocalizeString("EditPage")%> ';
+    var closeText = '<%= LocalizeSafeJsString("Close")%>';
+    var titleText = '<%= LocalizeSafeJsString("NonLocalizedPagesTitle")%> ';
+    var view = '<%= LocalizeSafeJsString("ViewPage")%> ';
+    var edit = '<%= LocalizeSafeJsString("EditPage")%> ';
 
     function getNonTranslatedPages(code, lang) {
         $.ajax({

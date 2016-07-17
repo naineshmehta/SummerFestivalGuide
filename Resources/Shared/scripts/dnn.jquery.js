@@ -42,7 +42,8 @@
             });
 
             if (window.location.hash && window.location.hash != '#') {
-                $('a[href="' + window.location.hash + '"]', $wrap).trigger('click');
+                var substr = window.location.hash.substr(0, 50);
+                $('a[href="' + encodeURI(substr) + '"]', $wrap).trigger('click');
             }
 
             // page validation integration - select tab that contain tripped validators
@@ -101,7 +102,6 @@
                         open: function () {
                             $('.ui-dialog-buttonpane').find('button:contains("' + opts.noText + '")').addClass('dnnConfirmCancel');
                         },
-                        position: 'center',
                         draggable: false,
                         buttons: [
                         {
@@ -356,6 +356,13 @@
                     }
                     params += "ContainerSrc=" + container;
                 }
+                if (opts.ModuleId) {
+                    if (params !== "?") {
+                        params += "&ModuleID=" + opts.ModuleId;
+                    } else {
+                        params += "ModuleID=" + opts.ModuleId;
+                    }
+                }
                 if (params != "?") {
                     window.open(encodeURI(opts.baseUrl + params.replace(/.ascx/gi, '')), "skinpreview");
                 }
@@ -441,7 +448,16 @@
                     hoverOnPd = true;
                     var tooltipHeight = helpSelector.height();
                     var top = -(tooltipHeight + 30);
-                    helpSelector.parent().css({ top: top + 'px' });
+                    if ((tooltipHeight + 30) <= $this.parent().offset().top) {
+                        helpSelector.parent().css({ top: top + 'px' });
+                        $this.find("div.dnnFormHelpContent span").addClass("bottomArrow");
+                        $this.find("div.dnnFormHelpContent span").removeClass("topArrow");
+
+                    } else {
+                        helpSelector.parent().css({ top: 30 + 'px' });                  
+                        $this.find("div.dnnFormHelpContent span").addClass("topArrow");
+                        $this.find("div.dnnFormHelpContent span").removeClass("bottomArrow");
+                    }
                     helpSelector.css('visibility', 'visible');
                 },
                 out: function () {
@@ -543,7 +559,7 @@
             if (parentCheckBoxHolder.length || parentRadioButtonHolder.length) return;
             var $ch = addEvents(ch);
             if (ch.wrapper) ch.wrapper.remove();
-            ch.wrapper = $('<span class="' + settings.cls + '"><span class="mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" /></span></span>');
+            ch.wrapper = $('<span class="' + settings.cls + '"><span class="mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAF0Uk5TAEDm2GYAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAAAASUVORK5CYII=" alt="checkbox" /></span></span>');
             ch.wrapperInner = ch.wrapper.children('span:eq(0)');
             ch.wrapper.hover(
                 function (e) { ch.wrapperInner.addClass(settings.cls + '-hover'); cb(e); },
@@ -568,10 +584,7 @@
                 label.addClass(settings.labelClass);
                 if (!parentLabel) {
                     label.click(function (e) {
-                        $ch.triggerHandler('focus');
-                        ch.click();
-                        $ch.trigger('change', [e]);
-                        cb(e);
+                        clickHandler(e);
                         return false;
                     });
                 }
@@ -581,23 +594,29 @@
                         if ($this.is('input')) return;
 
                         $this.click(function (e) {
-                            $ch.triggerHandler('focus');
-                            ch.click();
-                            $ch.trigger('change', [e]);
-                            cb(e);
+                            clickHandler(e);
                             return false;
                         });
                     });
                 }
             }
+
             if (!parentLabel) {
                 ch.wrapper.click(function (e) {
-                    $ch.triggerHandler('focus');
-                    ch.click();
-                    $ch.trigger('change', [e]);
-                    cb(e);
+                    clickHandler(e);
                     return false;
                 });
+            }
+
+            function clickHandler(e) {
+                $ch.triggerHandler('focus');
+                var previousChecked = ch.checked;
+                ch.click();
+                if (ch.checked == previousChecked && ch.type == 'checkbox') {
+                    ch.checked = !ch.checked;  //Fix for Firefox browser
+                }
+                $ch.trigger('change', [e]);
+                cb(e);
             }
 
             $ch.bind('disable', function () { ch.wrapperInner.addClass(settings.cls + '-disabled'); }).bind('enable', function () { ch.wrapperInner.removeClass(settings.cls + '-disabled'); });
@@ -1155,7 +1174,7 @@
         };
         $elem.blur(function () {
             if (self.finishOnBlur_) {
-                self.finishTimeout_ = setTimeout(onBlurFunction, 200);
+                self.finishTimeout_ = setTimeout(onBlurFunction, 1000);
             }
         });
 
@@ -1757,29 +1776,21 @@
     };
 
     $.fn.dnnResetAutosize = function (options) {
-        var minWidth = $(this).data('minwidth') || options.minInputWidth || $(this).width(),
-            maxWidth = $(this).data('maxwidth') || options.maxInputWidth || ($(this).closest('.dnnTagsInput').width() - options.inputPadding),
-            input = $(this),
-            testSubject = $('<tester/>').css({
-                position: 'absolute',
-                top: -9999,
-                left: -9999,
-                width: 'auto',
-                fontSize: input.css('fontSize'),
-                fontFamily: input.css('fontFamily'),
-                fontWeight: input.css('fontWeight'),
-                letterSpacing: input.css('letterSpacing'),
-                whiteSpace: 'nowrap'
-            }),
-            testerId = $(this).attr('id') + '_autosize_tester';
-        if (!$('#' + testerId).length > 0) {
-            testSubject.attr('id', testerId);
-            testSubject.appendTo('body');
-        }
-        input.data('minwidth', minWidth);
-        input.data('maxwidth', maxWidth);
-        input.data('tester_id', testerId);
-        input.css('width', minWidth);
+	    var minWidth = $(this).data('minwidth') || options.minInputWidth || $(this).width(),
+	        maxWidth = $(this).data('maxwidth') || options.maxInputWidth || ($(this).closest('.dnnTagsInput').width() - options.inputPadding),
+	        $input = $(this);
+
+		var left = 0;
+		var $lastSpan = $(this).closest('.dnnTagsInput').find('> span').last();
+		if ($lastSpan.length > 0) {
+			left = $lastSpan.offset().left - $lastSpan.parent().offset().left + $lastSpan.outerWidth();
+		}
+		var availableWidth = maxWidth - left;
+	    if (availableWidth < parseInt(minWidth)) {
+		    availableWidth = maxWidth;
+	    }
+
+        $input.css('width', availableWidth);
     };
 
     $.fn.dnnAddTag = function (value, options) {
@@ -1968,30 +1979,22 @@
                 'min-height': settings.height
             });
 
+            $(data.fake_input).attr("maxlength", settings.maxChars);
+
             if ($(data.real_input).val() != '') {
                 $.fn.dnnTagsInput.importTags($(data.real_input), $(data.real_input).val());
             }
             if (settings.interactive) {
                 // placeholder stuff
-                var placeholderSupported = ('placeholder' in $(data.fake_input)[0]);
-                if (placeholderSupported)
-                    $(data.fake_input).attr('placeholder', $(data.fake_input).attr('data-default'));
-                else {
-                    $(data.fake_input).val($(data.fake_input).attr('data-default'));
-                    $(data.fake_input).css('color', settings.placeholderColor);
-                }
+                $(data.fake_input).dnnPlaceholder({
+	                color: [settings.normalColor, settings.placeholderColor]
+                });
 
                 $(data.fake_input).dnnResetAutosize(settings);
                 $(data.holder).bind('click', data, function (event) {
                     $(event.data.real_input).triggerHandler('focus');
                     $(event.data.fake_input).triggerHandler('focus');
                     return false;
-                });
-                $(data.fake_input).bind('focus', data, function (event) {
-                    if ($(event.data.fake_input).val() == $(event.data.fake_input).attr('data-default')) {
-                        $(event.data.fake_input).val('');
-                    }
-                    $(event.data.fake_input).css('color', settings.normalColor);
                 });
                 if (settings.autocomplete_url != undefined) {
                     if ($.dnnAutocompleter !== undefined) {
@@ -2046,19 +2049,16 @@
 								for(var i = 0; i < tags.length; i++){
 									$(event.data.real_input).dnnAddTag(tags[i], { focus: true, unique: (settings.unique) });
 								}
-							}
-                        } else {
-                            $(event.data.fake_input).val($(event.data.fake_input).attr('data-default'));
-                            $(event.data.fake_input).css('color', settings.placeholderColor);
+                            }
+                            $(event.data.fake_input).dnnResetAutosize(settings);
                         }
+
                         return false;
                     });
 
                 }
-                // if user types a comma, create a new tag
-                $(data.fake_input).bind('keypress', data, function (event) {
-                    if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13) {
-                        event.preventDefault();
+
+                function tagItems(data, event) {
                         var tagslist = $(event.data.real_input).val().split(delimiter[id]);
                         if (tagslist[0] == '') {
                             tagslist = new Array();
@@ -2078,15 +2078,41 @@
                                 triggerOnError(event.data.onErrorMoreThanMaxTags);
                             $(data.fake_input).val('');
                         }
-                        else{
-							var tags = $(event.data.fake_input).val().split(delimiter[id]);
-							for(var i = 0; i < tags.length; i++){
-								$(event.data.real_input).dnnAddTag(tags[i], { focus: true, unique: (settings.unique) });
-							}
-						}
+                        else {
+                            var tags = $(event.data.fake_input).val().split(delimiter[id]);
+                            for (var i = 0; i < tags.length; i++) {
+                                $(event.data.real_input).dnnAddTag(tags[i], { focus: true, unique: (settings.unique) });
+                            }
+                        }
 
                         $(event.data.fake_input).dnnResetAutosize(settings);
                         return false;
+                }
+
+                var clickedOnAutoComplete = false;
+
+                $(document).mousedown(function (e) {
+                    if ($(e.target).hasClass("dnn_acSelect") || $(e.target).parent().hasClass('dnn_acSelect')) {
+                        clickedOnAutoComplete = true;
+                    }
+                });
+
+                var tagTooLongErrMsg = $('<span class="dnnFormError dnnFormMessage">' + String.format(settings.moreThanMaxCharsErrorText, settings.maxChars) + '</span>');
+                // if user types a comma, create a new tag
+                $(data.fake_input).bind('keypress keydown blur', data, function (event) {
+                    if ($(this).val() === "" || clickedOnAutoComplete) {
+                        return;
+                    }
+                    var currValLength = $(this).val().length;
+                    if ((currValLength >= settings.maxChars) && !(event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9)) {
+                        tagTooLongErrMsg.insertAfter($(this)).show().delay(1500).fadeOut(1000);
+                    }
+                    if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur") {
+                        event.preventDefault();
+                        if (!clickedOnAutoComplete) {
+                            tagItems(data, event);
+                        }
+                        clickedOnAutoComplete = false;
                     } else if (event.data.autosize) {
                         $(event.data.fake_input).dnnDoAutosize(settings);
                     }
@@ -2137,6 +2163,60 @@
             f.call(obj, obj, tags[i]);
         }
     };
+
+    $.fn.dnnPlaceholder = function (options) {
+	    options = $.extend({}, {
+	    	cssClass: 'dnnPlaceholder',
+			color: []
+	    }, options);
+
+	    this.each(function () {
+		    var $this = $(this);
+			var instance = $this.data('dnnPlaceHolder');
+			if (instance) return true;
+			$this.data('dnnPlaceHolder', true);
+
+			var placeholderSupported = ('placeholder' in $this[0]);
+            if (placeholderSupported)
+                $this.attr('placeholder', $this.attr('data-default'));
+            else {
+            	var $fakeInput = $('<input type="text" />')
+					.attr('class', $this.attr('class'))
+					.attr('style', $this.attr('style'))
+					.val($this.attr('data-default'));
+
+            	$this.hide().after($fakeInput);
+				if (options.color.length === 2) {
+					$fakeInput.css('color', options.color[1]);
+					$this.css('color', options.color[0]);
+				} else {
+					$fakeInput.addClass(options.cssClass);
+				}
+
+
+	            $fakeInput.on('focus', function(event) {
+		            $fakeInput.hide();
+		            $this.show().focus();
+	            });
+
+				$this.on('blur', function (event) {
+					var d = $this.attr('data-default');
+					if ($this.val() === '') {
+						$this.hide();
+						$fakeInput.show();
+					}
+				});
+
+				var events = $._data(this, 'events')['blur'];
+				var first = events.pop();
+				events.splice(0, 0, first);
+            }
+
+		    return true;
+	    });
+
+		return this;
+	};
 })(jQuery);
 
 (function ($) {
@@ -4116,6 +4196,47 @@
     });
 })(jQuery);
 
+(function ($) {
+	$.fn.dnnSliderInput = function (options) {
+		var sliderOptions = $.extend({}, $.fn.dnnSliderInput.defaults, options);
+    	return $(this).each(function () {
+    		var $this = $(this);
+		    var value = $this.val();
+		    var $slider = $('<div class="dnnSliderInput"></div>');
+		    $this.hide().after($slider);
+
+		    $slider.slider(sliderOptions);
+		    $slider.slider('value', value);
+
+		    var $tooltip = $('<span class="dnnTooltip"><span class="dnnFormHelpContent dnnClear"><span class="dnnHelpText bottomArrow"></span></span></span>');
+
+		    var calcTooltipPosition = function () {
+			    setTimeout(function() {
+				    var left = $slider.find('.ui-slider-handle')[0].style.left;
+				    $tooltip.css('left', left);
+			    }, 0);
+		    };
+
+		    $tooltip.find('.dnnHelpText').html(value);
+		    $tooltip.data('initialized', true);
+			$slider.append($tooltip);
+
+		    calcTooltipPosition();
+		    $slider.on('slide', function(event, ui) {
+		    	$tooltip.find('.dnnHelpText').html(ui.value);
+		    	$this.val(ui.value);
+			    calcTooltipPosition();
+		    });
+	    });
+    };
+
+	$.fn.dnnSliderInput.defaults = {
+		min: 0,
+		max: 100,
+		step: 1
+	}
+})(jQuery);
+
 // please keep this func at last of this file, thanks
 (function ($) {
     /* Start customised controls */
@@ -4136,6 +4257,7 @@
             $('.dnnTooltip').dnnTooltip();
             $('.dnnForm input[type="text"], .dnnForm input[type="password"]').unbind('focus', inputFocusFix).bind('focus', inputFocusFix);
             $('.dnnForm :file').dnnFileInput();
+	        $('.dnnForm input[data-default]').dnnPlaceholder();
         }, 200);
         //change the window confirm style to DNN style
         $("*[onclick*='return confirm']").each(function () {
@@ -4143,7 +4265,7 @@
             var isButton = this.nodeName.toLowerCase() == "img" || this.nodeName.toLowerCase() == "input";
             var script = /return confirm\((['"])([\s\S]*?)\1\)/g.exec(instance.attr("onclick"));
             if (script != null) {
-                var confirmContent = script[2];
+                var confirmContent = script[2].split("\\" + script[1]).join(script[1]);
                 instance.attr("onclick", instance.attr("onclick").replace(script[0], "void(0)")).dnnConfirm({
                     text: confirmContent,
                     isButton: isButton

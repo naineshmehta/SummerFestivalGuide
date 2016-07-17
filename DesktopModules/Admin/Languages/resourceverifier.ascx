@@ -1,5 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Languages.ResourceVerifier" CodeFile="ResourceVerifier.ascx.cs" %>
-<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Languages.ResourceVerifier" Codebehind="ResourceVerifier.ascx.cs" %>
 <div class="dnnForm dnnResourceVerifier dnnClear">
 	<div class="dnnFormItem"><asp:placeholder id="PlaceHolder1" runat="server"></asp:placeholder></div>
 	<ul class="dnnActions dnnClear">

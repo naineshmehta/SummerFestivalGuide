@@ -37,10 +37,6 @@
       <name>module.css</name>
     </file>
     <file>
-      <path />
-      <name>packages.config</name>
-    </file>
-    <file>
       <path>Controls/</path>
       <name>EditTermControl.ascx</name>
     </file>

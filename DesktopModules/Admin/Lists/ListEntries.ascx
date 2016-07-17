@@ -1,8 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Common.Lists.ListEntries" CodeFile="ListEntries.ascx.cs" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Lists.ListEntries" Codebehind="ListEntries.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnntv" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke.WebControls" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <div class="dnnForm dnnListEntries dnnClear">
     <div id="rowListdetails" runat="server">
         <div id="rowListParent" runat="server" class="dnnFormItem">

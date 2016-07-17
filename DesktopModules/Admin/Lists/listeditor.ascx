@@ -1,6 +1,8 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Common.Lists.ListEditor" CodeFile="ListEditor.ascx.cs" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="Dnn.Modules.Lists.ListEditor" Codebehind="ListEditor.ascx.cs" %>
+<%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
-<%@ Register TagPrefix="dnn" TagName="ListEntries" Src="~/DesktopModules/Admin/Lists/ListEntries.ascx" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
+<%@ Register TagPrefix="dnn" TagName="ListEntries" Src="ListEntries.ascx" %>
 <div class="dnnForm dnnListEditor dnnClear" id="dnnListEditor">
    
         <div class="dnnFormItem">

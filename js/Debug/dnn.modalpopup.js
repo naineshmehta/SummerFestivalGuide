@@ -92,7 +92,7 @@
                 $modal.remove();
             }
 
-            $modal = $("<iframe id=\"iPopUp\" src=\"about:blank\" scrolling=\"auto\" frameborder=\"0\"></iframe>");
+            $modal = $("<iframe id=\"iPopUp\" name=\"iPopUp\" src=\"about:blank\" scrolling=\"auto\" frameborder=\"0\"></iframe>");
             $(document.body).append($modal);
             $(document).find('html').css('overflow', 'hidden'); 
 			
@@ -144,7 +144,7 @@
 								iframeBody.className += 'mobileView dnnFormPopup dnnFormPopupMobileView';	
 								var iframeHeight = Math.max(iframeBody.scrollHeight, iframeBody.offsetHeight, iframeHtml.clientHeight, iframeHtml.scrollHeight, iframeHtml.offsetHeight);
 								$modal.css('height', iframeHeight + 100)
-									  .dialog('option', 'position', 'top');
+									  .dialog('option', 'position', { my: "top", at: "top" });
 							}
 							
 							iframe.contentWindow.dnnModal.show = function (sUrl, sShowReturn, sHeight, sWidth, sRefresh, sClosingUrl) {
@@ -179,7 +179,7 @@
                     modal: true,
                     autoOpen: true,
                     dialogClass: "dnnFormPopup",
-                    position: "center",
+                    position: { my: "center", at: "center" },
                     minWidth: width,
                     minHeight: height,
                     maxWidth: 1920,
@@ -200,30 +200,33 @@
                     $modal.parent().find('.ui-dialog-titlebar-close').wrap($dnnModalCtrl);
                     var $dnnToggleMax = $('<a href="#" class="dnnToggleMax"><span>Max</span></a>');
                     $modal.parent().find('.ui-dialog-titlebar-close').before($dnnToggleMax);
-
-                    $dnnToggleMax.click(function(e) {
+                    
+                    $dnnToggleMax.click(function (e) {
                         e.preventDefault();
 
                         var $window = $(window),
                             newHeight,
-                            newWidth;
+                            newWidth,
+                            JQUERY_UI_HEIGHT_SHRINK_OFFSET = 100;
 
                         if ($modal.data('isMaximized')) {
-                            newHeight = $modal.data('height');
+                            newHeight = $modal.data('height') + JQUERY_UI_HEIGHT_SHRINK_OFFSET;
                             newWidth = $modal.data('width');
                             $modal.data('isMaximized', false);
+
                         } else {
                             $modal.data('height', $modal.dialog("option", "minHeight"))
-                                .data('width', $modal.dialog("option", "minWidth"))
-                                .data('position', $modal.dialog("option", "position"));
+                                .data('width', $modal.dialog("option", "minWidth"));
 
                             newHeight = $window.height() - 46;
                             newWidth = $window.width() - 40;
+
                             $modal.data('isMaximized', true);
                         }
 
-                        $modal.dialog({ height: newHeight, width: newWidth });
-                        $modal.dialog({ position: 'center' });
+                        $modal.dialog("option", "height", newHeight);
+                        $modal.dialog("option", "width", newWidth);
+                        $modal.dialog("option", "position", { my: "center", at: "center", of: window });
                     });
                 }
             } else {
@@ -238,7 +241,7 @@
                     refresh: refresh,
                     showReturn: showReturn,
                     closingUrl: closingUrl,
-                    position: "top",
+                    position: { my: "top", at: "top" },
                     draggable: false,
 					open: function() { 
 							$('#Form').hide();

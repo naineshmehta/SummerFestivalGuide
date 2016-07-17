@@ -127,25 +127,25 @@
     <value>Child of</value>
   </data>
   <data name="DefaultSkin.Text" xml:space="preserve">
-    <value>&lt;Use Default Site Skin&gt;</value>
+    <value>&lt;Use Default Site Theme&gt;</value>
   </data>
   <data name="Err.DeserializePanesFailed" xml:space="preserve">
     <value>Unable to process page template.</value>
   </data>
   <data name="Err.Header" xml:space="preserve">
-    <value>An error occurred while updating the page:</value>
+    <value>An error occurred while updating the page: </value>
   </data>
   <data name="Err.HostBeforeAfterError" xml:space="preserve">
-    <value>You cannot add or move pages before or after the host tab.</value>
+    <value>You cannot add or move pages before or after the Host tab.</value>
   </data>
   <data name="Err.PageEditorPermissionError" xml:space="preserve">
-    <value>You do not have permissions to add or move pages to that location. You can only add or move pages as children of pages you can edit.</value>
+    <value>You do not have permissions to add or move pages to that location.  You can only add or move pages as children of pages you can edit.</value>
   </data>
   <data name="Err.PageExists" xml:space="preserve">
-    <value>A page with the same name already exists. Please choose a different name.</value>
+    <value>A page with the same name already exists.  Please choose a different name.</value>
   </data>
   <data name="Err.PageNameInvalid" xml:space="preserve">
-    <value>Page name is invalid. Please choose a different name.</value>
+    <value>Page name is invalid.  Please choose a different name.</value>
   </data>
   <data name="Err.PageNameRequired" xml:space="preserve">
     <value>Page name is required.</value>
@@ -154,10 +154,10 @@
     <value>Error</value>
   </data>
   <data name="HostSkins.Text" xml:space="preserve">
-    <value>Host Skins</value>
+    <value>Host Themes</value>
   </data>
   <data name="IncludeInMenu.Text" xml:space="preserve">
-    <value>Include in menu</value>
+    <value>Include in Menu</value>
   </data>
   <data name="Location.Text" xml:space="preserve">
     <value>Move</value>
@@ -172,13 +172,13 @@
     <value>Permissions</value>
   </data>
   <data name="PortalSkins.Text" xml:space="preserve">
-    <value>Website Skins</value>
+    <value>Website Themes</value>
   </data>
   <data name="Secured.Text" xml:space="preserve">
     <value>Secure (https)</value>
   </data>
   <data name="Secured.ToolTip" xml:space="preserve">
-    <value>Page must use SSL. This option is only enabled when SSL is enabled for the site.</value>
+    <value>Page must use SSL.  This option is only enabled when SSL is enabled for the site.</value>
   </data>
   <data name="SkinLstSeparator.Text" xml:space="preserve">
     <value>-----------------------------------------</value>

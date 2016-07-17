@@ -7,6 +7,9 @@
 .dnnLanguageEditor .dnnLangEditorTree {
     width: 20%;
 }
+.dnnLanguageEditor .dnnLangEditorTree > .dnnLabel {
+    width: 85px;
+}
 .dnnLanguageEditor .dnnLangEditorContent {
     width: 80%;
 }
@@ -72,6 +75,9 @@
     padding-left: 5px;
     font-weight: normal;
     margin-top: 0;
+}
+.dnnFormItem .dnnLanguageCombo > div {
+    width: 100%;
 }
 
 .dnnLanguagePackWriter .lpwCheckBoxes {

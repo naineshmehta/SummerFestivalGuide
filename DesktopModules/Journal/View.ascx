@@ -5,7 +5,6 @@
 
 <div id="userFileManager"></div>
 
-<dnn:DnnJsInclude runat="server" PathNameAlias="SharedScripts" FilePath="knockout.js" AddTag="false" />
 <dnn:DnnJsInclude runat="server" FilePath="~/Resources/Shared/Components/UserFileManager/jquery.dnnUserFileUpload.js" Priority="102" AddTag="false" />
 <dnn:DnnJsInclude runat="server" FilePath="~/Resources/Shared/Components/UserFileManager/UserFileManager.js" Priority="105" AddTag="false"></dnn:DnnJsInclude>
 <dnn:DnnCssInclude runat="server" FilePath="~/Resources/Shared/Components/UserFileManager/UserFileManager.css" AddTag="false"></dnn:DnnCssInclude>
@@ -27,11 +26,18 @@
                 <div class="handle"></div>
                 <ul>
                     <li><b><%= LocalizeString("WhoWillSee.Text") %></b></li>
+                    <% if (IsGroup && !IsPublicGroup)
+                    { %>
+                    <li><input type="radio" name="privacy" value="R" checked="checked" /><%= LocalizeString("GroupMembers.Text") %></li>
+                    <% }
+                    else
+                    { %>
                     <li><input type="radio" name="privacy" value="E" checked="checked" /><%= LocalizeString("Everyone.Text") %></li>
                     <li><input type="radio" name="privacy" value="C" /><%= LocalizeString("Community.Text") %></li>
                     <li><input type="radio" name="privacy" value="F" /><%= LocalizeString("Friends.Text") %></li>
                     <% if (!IsGroup) { %>
                     <li><input type="radio" name="privacy" value="U" /><%= LocalizeString("Private.Text") %></li>
+                    <% } %>
                     <% } %>
                 </ul>
             </div>
@@ -121,6 +127,7 @@
 
     var pid = <%= Pid.ToString()%>;
     var gid = <%= Gid.ToString()%>;
+    var ispublicgroup = <%= IsPublicGroup ? "true" : "false" %>;
 
     var journalOptions = {};
     journalOptions.servicesFramework = $.ServicesFramework(<%=ModuleId %>);

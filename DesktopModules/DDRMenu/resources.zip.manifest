@@ -22,10 +22,6 @@
     </file>
     <file>
       <path />
-      <name>SolPartMenu.ascx</name>
-    </file>
-    <file>
-      <path />
       <name>DefaultTemplate.xslt</name>
     </file>
     <file>
@@ -55,18 +51,6 @@
     <file>
       <path>DumpXML/</path>
       <name>DumpXML.xslt</name>
-    </file>
-    <file>
-      <path>SolPart/</path>
-      <name>SolPart-menudef.xml</name>
-    </file>
-    <file>
-      <path>SolPart/</path>
-      <name>SolPartMenu.js</name>
-    </file>
-    <file>
-      <path>SolPart/</path>
-      <name>SolPartMenu.min.js</name>
     </file>
     <file>
       <path>js/</path>

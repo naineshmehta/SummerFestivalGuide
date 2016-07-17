@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" %>
 <%@ Register TagPrefix="dnn" TagName="ACTIONS" src="~/DesktopModules/DDRMenu/Actions.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web.Deprecated" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 <dnn:DnnJsInclude runat="server" FilePath="~/admin/menus/dnnactions/dnnactions.debug.js" />
 
@@ -10,7 +11,7 @@
 	(function($) {
 		$(document).ready(function() {
 		    //Regular Confirm
-			var confirmString = "confirm('<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(Localization.GetString("DeleteModule.Confirm"))%>')";
+			var confirmString = "confirm('<%= Localization.GetSafeJSString("DeleteModule.Confirm")%>')";
 			$("a[href*=\"" + confirmString +"\"]").attr("href", function () {
 				return $(this).attr("href").replace( /if\(.+?\)\{(.+?)\}/ , "$1");//remove its original confirm function
 			}).dnnConfirm({
@@ -21,7 +22,7 @@
 			});
 
 		    //Module Sharing Confirm
-			confirmString = "confirm('<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(Localization.GetString("DeleteSharedModule.Confirm"))%>')";
+			confirmString = "confirm('<%= Localization.GetSafeJSString("DeleteSharedModule.Confirm")%>')";
 			$("a[href*=\"" + confirmString +"\"]").attr("href", function () {
 				return $(this).attr("href").replace( /if\(.+?\)\{(.+?)\}/ , "$1");//remove its original confirm function
 			}).dnnConfirm({

@@ -46,13 +46,17 @@
                 return false;
             }
             this._focusOutHandler = $.proxy(this._onFocusOut, this);
-            this._$firstElement.on('focusout', this._focusOutHandler);
-            this._$secondElement.on('focusout', this._focusOutHandler);
+            this._$firstElement.on('focusout change keyup paste input propertychange', this._focusOutHandler);
+            this._$secondElement.on('focusout change keyup paste input propertychange', this._focusOutHandler);
 
             return true;
         },
 
         _onFocusOut: function (eventObject) {
+            if (eventObject.type === 'propertychange' && eventObject.originalEvent.propertyName.toLowerCase() !== 'value') {
+		        return;
+            }
+
             if (eventObject.target === this._$firstElement[0]) {
                 // leaving the first element
                 this._isSecondElementVisited && this._compare(this._$firstElement, this._$secondElement);
@@ -137,7 +141,7 @@
 
             this._$confirmElement = this._$container.find(this.options.secondElementSelector);
 
-            this._$confirmElement.tooltip({
+            this._$confirmElement.dnntooltip({
                 getTooltipMarkup: $.proxy(this._getTooltipMarkup, this),
                 cssClass: "confirm-password-tooltip",
                 left: 214,
@@ -179,7 +183,9 @@
             else {
                 this._$confirmElement.addClass(this.options.unmatchedCssClass);
             }
-            this._$confirmElement.tooltip("disabled", (!val1 && !val2));
+
+            var disabled = !val1 || !val2;
+            this._$confirmElement.dnntooltip("disabled", disabled);
 
             this._updateTooltipState(this._isMatched);
         }
